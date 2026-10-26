@@ -93,7 +93,7 @@ export async function boxScore(game: EspnGame, opts: { useCache?: boolean } = {}
         teamId,
         opponentId,
         playerId: String(a.athlete.id),
-        playerName: a.athlete.displayName,
+        playerName: a.athlete.displayName ?? a.athlete.fullName ?? a.athlete.shortName ?? String(a.athlete.id),
         minutes: played ? num(iMin) : 0,
         pts: played ? num(iPts) : 0,
         reb: played ? num(iReb) : 0,

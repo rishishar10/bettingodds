@@ -49,12 +49,18 @@ export function openHistory(path = "data/history.sqlite") {
       return Boolean(db.prepare("SELECT 1 FROM logs WHERE game_id = ? LIMIT 1").get(gameId));
     },
     insertLogs(logs: GameLog[]) {
-      db.exec("BEGIN");
-      const ins = db.prepare(`INSERT OR REPLACE INTO logs VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
-      for (const l of logs)
-        ins.run(l.gameId, l.date, l.tipUtc, l.season, l.teamId, l.opponentId, l.playerId, l.playerName,
-          l.minutes, l.pts, l.reb, l.ast, l.starter ? 1 : 0);
-      db.exec("COMMIT");
+      // IMMEDIATE takes the write lock up front so concurrent ingests wait instead of deadlocking.
+      db.exec("BEGIN IMMEDIATE");
+      try {
+        const ins = db.prepare(`INSERT OR REPLACE INTO logs VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+        for (const l of logs)
+          ins.run(l.gameId, l.date, l.tipUtc, l.season, l.teamId, l.opponentId, l.playerId, l.playerName,
+            l.minutes, l.pts, l.reb, l.ast, l.starter ? 1 : 0);
+        db.exec("COMMIT");
+      } catch (e) {
+        db.exec("ROLLBACK");
+        throw e;
+      }
     },
     gamesOn(date: string, seasonType = 2): EspnGame[] {
       return (db.prepare("SELECT * FROM games WHERE date = ? AND season_type = ? ORDER BY tip_utc").all(date, seasonType) as any[]).map(toGame);
