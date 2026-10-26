@@ -101,6 +101,26 @@ export function rosterOnDate(history: History, teamId: string, logs: GameLog[], 
   return [...seen.values()];
 }
 
+/**
+ * Tonight's teammates: on this team now, and either seen in this team's box
+ * scores in its current season (DNP rows count) or listed by tonight's source.
+ * Players who left the league or the roster drop out. Before a team's first
+ * game, last season's box scores stand in.
+ */
+export function currentTeammates(
+  roster: RosterPlayer[],
+  logs: GameLog[],
+  teamId: string,
+  season: string,
+  lastSeason: string,
+  listed: Map<string, TonightStatus>,
+): RosterPlayer[] {
+  const teamLogs = logs.filter((l) => l.teamId === teamId);
+  const rosterSeason = teamLogs.some((l) => l.season === season) ? season : lastSeason;
+  const seen = new Set(teamLogs.filter((l) => l.season === rosterSeason).map((l) => l.playerId));
+  return roster.filter((r) => r.teamId === teamId && (seen.has(r.playerId) || listed.has(r.playerId)));
+}
+
 export const projKey = (playerId: string, stat: Stat) => `${playerId}|${stat}`;
 
 export function evaluateSlate(input: SlateInput): SlateResult {
@@ -158,8 +178,11 @@ export function evaluateSlate(input: SlateInput): SlateResult {
         unsupported.push({ ...base, reason: "unresolved_status", detail: `player ${own}` });
         continue;
       }
-      const teammates: TeammateTonight[] = roster
-        .filter((r) => r.teamId === teamId && r.playerId !== playerId)
+      // Report: anyone listed. Oracle: anyone who plays tonight (a season-long absentee returning).
+      const listed = avail.source === "report" ? avail.status
+        : new Map([...avail.status].filter(([, st]) => st === "active"));
+      const teammates: TeammateTonight[] = currentTeammates(roster, logsBy.get(teamId) as GameLog[], teamId, season, lastSeason, listed)
+        .filter((r) => r.playerId !== playerId)
         .map((r) => ({ playerId: r.playerId, status: avail.status.get(r.playerId) ?? "active" }));
       const pools = buildPools({
         playerId, teamId, boardDate: input.boardDate, season, lastSeason,

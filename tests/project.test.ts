@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { alphaMoM, buildPools, project, sensitivity, type PoolContext } from "../lib/project.ts";
+import { alphaMoM, buildPools, momentsFor, project, sensitivity, type PoolContext } from "../lib/project.ts";
+import { countDist } from "../lib/negbin.ts";
 import { P, TEAM, teamGames } from "./fixtures.ts";
 
 const ctx = (logs: PoolContext["logs"], extra: Partial<PoolContext> = {}): PoolContext => ({
@@ -130,8 +131,13 @@ describe("projection", () => {
     expect(pr.alpha).toBe(0);
     expect(pr.alphaPositive).toBe(false);
     expect(pr.flags).toContain("dispersion_floor");
-    expect(pr.distKind).toBe("poisson");
-    expect(pr.variance).toBeCloseTo(pr.mean, 9);
+    // Only estimation uncertainty remains above the Poisson variance.
+    const est = pr.uncertainty.varRate * (pr.varMinutes + pr.expMinutes ** 2) + pr.rateFinal ** 2 * pr.uncertainty.varMeanMinutes;
+    expect(pr.variance - pr.mean).toBeCloseTo(est, 9);
+    // With no estimation uncertainty the moments are exactly Poisson.
+    const m = momentsFor(pr.rateFinal, 0, pr.expMinutes, 0);
+    expect(m.variance).toBe(m.mean);
+    expect(countDist(m.mean, m.variance).kind).toBe("poisson");
   });
 
   it("uses last season's minutes only when this season has under 3 matched games", () => {

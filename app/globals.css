@@ -55,6 +55,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   font-size: clamp(56px, 11vw, 112px);
   line-height: 0.9;
   letter-spacing: -0.01em;
+  word-spacing: 0.12em;
   margin: 0;
 }
 .claim { font-size: 20px; max-width: 62ch; margin: 16px 0 4px; }
@@ -78,7 +79,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   padding: 20px 22px;
   border-left: 6px solid var(--edge);
 }
-.line { font-stretch: 62%; font-weight: 800; font-size: 46px; line-height: 0.95; margin: 0; }
+.line { font-stretch: 62%; font-weight: 800; font-size: 46px; line-height: 0.95; margin: 0; word-spacing: 0.12em; }
 .who { margin: 6px 0 0; font-weight: 600; }
 .who span { color: var(--muted); font-weight: 400; }
 .reasons { margin: 0; padding: 0; list-style: none; font-size: 15.5px; }

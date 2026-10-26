@@ -171,6 +171,7 @@ export interface Projection {
   rateBase: number;
   rateMatched: number;
   rateFinal: number;
+  uncertainty: Uncertainty;
   counts: { rateBase: number; rateMatched: number; alpha: number; minutes: number; matched: number };
   flags: string[];
   matchedGameIds: string[];
@@ -206,17 +207,30 @@ export function alphaMoM(games: { x: number; m: number }[], r: number): { alpha:
   return { alpha: (resid / n - mu / n) / (mu2 / n), n };
 }
 
+/**
+ * Estimation uncertainty, so the predictive variance is not just the
+ * plug-in variance: Var(rate_final) from the matched sample under the NB
+ * model, and Var of the minutes mean, Var(M) / n.
+ */
+export interface Uncertainty {
+  varRate: number;
+  varMeanMinutes: number;
+}
+
 export function momentsFor(
   rateFinal: number,
   alpha: number,
   expMinutes: number,
   varMinutes: number,
+  u: Uncertainty = { varRate: 0, varMeanMinutes: 0 },
 ): { mean: number; variance: number } {
   const r = rateFinal;
   const eMu = r * expMinutes;
-  const eMu2 = r * r * (varMinutes + expMinutes * expMinutes);
+  const eM2 = varMinutes + expMinutes * expMinutes;
+  const eMu2 = r * r * eM2;
   const varMu = r * r * varMinutes;
-  return { mean: eMu, variance: eMu + alpha * eMu2 + varMu };
+  const estimation = u.varRate * (eM2 + u.varMeanMinutes) + r * r * u.varMeanMinutes;
+  return { mean: eMu, variance: eMu + alpha * eMu2 + varMu + estimation };
 }
 
 export function project(pools: Pools, stat: Stat): Projection {
@@ -257,7 +271,17 @@ export function project(pools: Pools, stat: Stat): Projection {
   const varMinutes =
     mins.length > 1 ? mins.reduce((s, x) => s + (x - expMinutes) ** 2, 0) / (mins.length - 1) : 0;
 
-  const { mean, variance } = momentsFor(rateFinal, alpha, expMinutes, varMinutes);
+  // Var(sum of matched stat) under the model, divided by the blended exposure squared.
+  let varStatSum = 0;
+  for (const g of longMatched) {
+    const e = rateFinal * g.minutes;
+    varStatSum += e + alpha * e * e;
+  }
+  const uncertainty: Uncertainty = {
+    varRate: varStatSum / (matched.minSum + MODEL.PRIOR_MINUTES) ** 2,
+    varMeanMinutes: mins.length > 1 ? varMinutes / mins.length : 0,
+  };
+  const { mean, variance } = momentsFor(rateFinal, alpha, expMinutes, varMinutes, uncertainty);
   const dist = countDist(mean, variance);
 
   return {
@@ -273,6 +297,7 @@ export function project(pools: Pools, stat: Stat): Projection {
     rateBase: base.rate,
     rateMatched: matched.rate,
     rateFinal,
+    uncertainty,
     counts: {
       rateBase: longBase.length,
       rateMatched: longMatched.length,
@@ -311,8 +336,8 @@ export function sensitivity(
     return expectedValue(shrink(raw, SHRINK), decimal);
   };
   const lowMin = Math.max(0, p.expMinutes - MODEL.SENSITIVITY_MINUTES);
-  const lo = momentsFor(p.rateFinal, p.alpha, lowMin, p.varMinutes);
-  const hi = momentsFor(p.rateFinal, p.alpha, p.expMinutes + MODEL.SENSITIVITY_MINUTES, p.varMinutes);
+  const lo = momentsFor(p.rateFinal, p.alpha, lowMin, p.varMinutes, p.uncertainty);
+  const hi = momentsFor(p.rateFinal, p.alpha, p.expMinutes + MODEL.SENSITIVITY_MINUTES, p.varMinutes, p.uncertainty);
   const minusMinutes = evAt(lo.mean, lo.variance);
   const plusMinutes = evAt(hi.mean, hi.variance);
   const wideVariance = evAt(p.mean, p.variance * MODEL.SENSITIVITY_SIGMA ** 2);

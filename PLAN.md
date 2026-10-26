@@ -200,3 +200,16 @@ The report prints both hashes and both replays.
 - A heuristic NB model may simply have no edge against prop prices. The plan is built to say so cheaply. The free projection check and the $30 coverage probe are the two places to stop early.
 - stats.nba.com may rate-limit or change shape. Ingest is cached, so a failure only blocks refreshes.
 - The injury PDF format changes from season to season, so the parser needs fixtures from each season.
+
+---
+
+## Build log: what the free work changed (2026-10-25)
+
+- **Sources.** stats.nba.com needs browser-spoofed headers, so it's out. Box scores come from ESPN's public JSON instead: plain requests, every game for 2022-23 → 2026-27 is ingested, and DNP rows are kept. The **official NBA injury-report PDF archive exists back to 2023-24**. Its URL format changed mid-2025-26 from `10AM` to `10_00AM`. That makes the non-oracle replay possible for free, so the "demonstrated edge" gate is evaluable.
+- **Injury rule.** About 18 teams show "NOT YET SUBMITTED" at 10:30 ET. Those teams use the previous evening's entries for tonight's game. Otherwise their players are unsupported, with reason "injury report not submitted".
+- **Free projection check** (2023-24 and 2024-25, oracle availability, 52,055 player-games; `reports/projection-check-2023-24_2024-25.md`):
+  - Phantom teammates. Players who had left the league counted as rotation teammates. Teammates now must appear in this team's box scores this season or be listed tonight.
+  - The rotation threshold of 15 minutes made about 8 teammates binding, and support was 17%. It's now **24 minutes**; support is 37% of all players who played, which is higher among players with posted props. The sweep reports are in `reports/`.
+  - Predictive variance was plug-in only, and points were overconfident. It now adds **estimation uncertainty**: Var(rate_final) under the model, plus Var(M)/n. This is not a tuned floor.
+  - Result: rebounds 49.0% / 79.2%, assists 49.8% / 79.8% in the 50% / 80% bands. Points are 43.5% / 72.4%, still slightly overconfident with a heavy left tail from in-game exits. SHRINK, fit on log loss, absorbs that.
+- **Hosting.** GitHub Actions cron, a force-pushed `data` branch for state, and a GitHub Pages static export.
