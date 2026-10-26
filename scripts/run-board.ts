@@ -1,0 +1,106 @@
+// The 8:00am Pacific job: one fetch of every prop per event, rank once,
+// publish that ranking or fail. A failed run leaves the previous board up.
+//   node scripts/run-board.ts [--date YYYY-MM-DD] [--dry-run]
+import { existsSync } from "node:fs";
+import { boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
+import { POLICY } from "../lib/constants.ts";
+import { openHistory } from "../lib/history.ts";
+import { modelState, paths, writeSnapshot } from "../lib/publish.ts";
+import { availabilityFor, injuryInputs, matchEvents, slateRoster } from "../lib/slate-inputs.ts";
+import { scoreboard } from "../lib/sources/espn.ts";
+import { fetchEventOdds, listEvents, usage, type RawPrice } from "../lib/sources/odds.ts";
+import { openStore } from "../lib/store.ts";
+import { boardInstant, pacificDate } from "../lib/time.ts";
+
+const arg = (n: string) => { const i = process.argv.indexOf(`--${n}`); return i >= 0 ? process.argv[i + 1] : undefined; };
+const dryRun = process.argv.includes("--dry-run");
+const buildTimeUtc = new Date().toISOString();
+const boardDate = arg("date") ?? pacificDate(buildTimeUtc);
+const P = paths(dryRun);
+
+if (!dryRun && !existsSync("reports/test.md")) {
+  console.error("The live board does not start until the test-season report (reports/test.md) is in the repo. Use --dry-run.");
+  process.exit(1);
+}
+
+const store = openStore(P.db);
+if (store.getPublication(boardDate)) {
+  console.log(`board for ${boardDate} already published; nothing to do`);
+  store.logRun(boardDate, buildTimeUtc, "skipped", "already published");
+  process.exit(0);
+}
+
+const h = openHistory();
+try {
+  const boardUtc = boardInstant(boardDate);
+  const games = (await scoreboard(boardDate.replaceAll("-", ""), { useCache: false }))
+    .filter((g) => g.seasonType === 2 && g.date === boardDate && Date.parse(g.tipUtc) > Date.parse(boardUtc));
+  for (const g of games) h.upsertGame(g);
+
+  const { matched, missing } = games.length ? matchEvents(games, await listEvents()) : { matched: [], missing: [] };
+  const prices: RawPrice[] = [];
+  for (const { eventId } of matched) {
+    const { prices: p } = await fetchEventOdds(eventId); // any failure fails the run
+    prices.push(...p);
+  }
+  const fetchedAt = new Date().toISOString();
+  store.saveObservations(prices.map((p) => ({ ...p, fetchedAt })));
+
+  const injuries = await injuryInputs(boardDate, buildTimeUtc);
+  if (games.length && !injuries.morning) throw new Error("no injury report available before the build");
+  const roster = slateRoster(h, matched.map((m) => m.game), boardDate);
+  const stats = { unmatchedInjuryNames: [] as string[], teamsFromFallback: [] as string[], teamsUnresolved: [] as string[] };
+  const avail = games.length ? availabilityFor("report", h, boardDate, roster, injuries, stats) : () => { throw new Error("no games"); };
+  const model = modelState();
+  const slate = evaluateSlate({
+    boardDate, buildTimeUtc: fetchedAt, games: matched, prices, history: h, availability: avail!,
+    SHRINK: model.SHRINK, evMin: POLICY.EV_MIN, maxAgeMinutes: POLICY.ODDS_MAX_AGE_MINUTES,
+  });
+  const rows = boardRows(slate, model.SHRINK, POLICY.EV_MIN);
+  const teams: Record<string, string> = {};
+  for (const g of games) { teams[g.home.id] = g.home.abbr; teams[g.away.id] = g.away.abbr; }
+
+  const payload = {
+    boardDate,
+    publishedAt: new Date().toISOString(),
+    buildTimeUtc: fetchedAt,
+    modelVersion: model.modelVersion,
+    label: model.label,
+    shrunk: true,
+    SHRINK: model.SHRINK,
+    ruleHash: model.ruleHash,
+    evMin: POLICY.EV_MIN,
+    injury: injuries.morning ? { url: injuries.morning.url, timeUtc: injuries.morning.reportTimeUtc, teamsFromFallback: stats.teamsFromFallback, teamsUnresolved: stats.teamsUnresolved } : null,
+    games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: matched.some((m) => m.game.gameId === g.gameId) })),
+    teams,
+    rows,
+    conditional: slate.conditional,
+    coverage: slate.coverage,
+    unmatchedNames: slate.unmatchedNames.length,
+    anomalies: slate.rank.anomalies,
+    emptyReason: emptyReason(slate, games.length),
+    missingEvents: missing,
+    closeCollected: process.env.CAPTURES_ENABLED === "1",
+    dryRun,
+  };
+  store.publish(
+    { boardDate, publishedAt: payload.publishedAt, modelVersion: model.modelVersion, ruleHash: model.ruleHash, payload },
+    slate.rank.evaluated,
+    slate.unsupported.map((u) => ({ playerId: u.playerId, reason: u.reason, detail: u.detail })),
+  );
+  for (const c of slate.conditional) {
+    if (c.stat && c.line !== null && c.side)
+      store.setConditionalState({ boardDate, subjectPlayerId: c.subjectPlayerId, playerId: c.playerId, stat: c.stat, line: c.line, side: c.side, state: "initially_qualifying", oddsSourceTime: c.sourceUpdatedAt, fetchedAt, decimal: c.decimal, ev: c.ev });
+  }
+  writeSnapshot(P.published, boardDate, payload);
+  store.logRun(boardDate, buildTimeUtc, "published", `${rows.length} rows`);
+  console.log(`published ${boardDate}: ${rows.length} rows, ${slate.rank.evaluated.length} evaluated, ${slate.conditional.length} if-they-sit cards, coverage ${JSON.stringify(slate.coverage)}, credits remaining ${usage().remaining ?? "?"}`);
+  if (payload.emptyReason) console.log(`empty board: ${payload.emptyReason}`);
+} catch (e) {
+  store.logRun(boardDate, buildTimeUtc, "failed", (e as Error).message);
+  console.error(`run failed; previous board stays up: ${(e as Error).message}`);
+  process.exitCode = 1;
+} finally {
+  h.close();
+  store.close();
+}

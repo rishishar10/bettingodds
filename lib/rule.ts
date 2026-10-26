@@ -41,10 +41,7 @@ export function guardTestRun(
   if (!committed) return { ok: false, reason: "rule hash is not committed" };
   if (committed !== hash) return { ok: false, reason: `rule hash ${hash} != committed ${committed}` };
   if (canonicalJson(rule.model) !== canonicalJson(MODEL)) return { ok: false, reason: "code MODEL constants differ from the rule" };
-  const { ODDS_MAX_AGE_MINUTES: _a, ...policy } = POLICY;
-  const rp = { ...(rule.policy as Record<string, unknown>) };
-  delete rp.ODDS_MAX_AGE_MINUTES;
-  if (canonicalJson(rp) !== canonicalJson(policy)) return { ok: false, reason: "code POLICY constants differ from the rule" };
+  if (canonicalJson(rule.policy) !== canonicalJson(POLICY)) return { ok: false, reason: "code POLICY constants differ from the rule" };
   if (env.lockExists() && !opts.postHoc) return { ok: false, reason: "test season already scored; rerun only with --post-hoc" };
   return { ok: true, hash };
 }

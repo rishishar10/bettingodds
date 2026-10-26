@@ -31,7 +31,7 @@ export interface Pools {
 
 export type PoolResult =
   | { ok: true; pools: Pools }
-  | { ok: false; reason: UnsupportedReason; detail: string };
+  | { ok: false; reason: UnsupportedReason; detail: string; ids?: string[] };
 
 export interface PoolContext {
   playerId: string;
@@ -46,6 +46,8 @@ export interface PoolContext {
   startersKnown: boolean;
   /** Override a teammate as out, for the if-they-sit card. */
   assumeOut?: string;
+  /** Minimum matched games; the if-they-sit card uses 3. */
+  minMatchedGames?: number;
 }
 
 function median(xs: number[]): number {
@@ -126,6 +128,7 @@ export function buildPools(ctx: PoolContext): PoolResult {
       ok: false,
       reason: "teammate_status_unresolved",
       detail: `teammate status unresolved: ${unresolved.map((r) => r.playerId).join(",")}`,
+      ids: unresolved.map((r) => r.playerId),
     };
   }
 
@@ -145,7 +148,7 @@ export function buildPools(ctx: PoolContext): PoolResult {
     };
   }
   const matchedMinutes = matched.reduce((s, g) => s + g.minutes, 0);
-  if (matched.length < MODEL.MIN_MATCHED_GAMES || matchedMinutes < MODEL.MIN_MATCHED_MINUTES) {
+  if (matched.length < (ctx.minMatchedGames ?? MODEL.MIN_MATCHED_GAMES) || matchedMinutes < MODEL.MIN_MATCHED_MINUTES) {
     return {
       ok: false,
       reason: "too_few_games",

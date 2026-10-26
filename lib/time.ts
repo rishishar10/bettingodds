@@ -1,7 +1,11 @@
 const PACIFIC = "America/Los_Angeles";
+export const EASTERN = "America/New_York";
 
-const fmt = new Intl.DateTimeFormat("en-US", {
-  timeZone: PACIFIC,
+const formatters = new Map<string, Intl.DateTimeFormat>();
+const fmtFor = (timeZone: string) => {
+  let f = formatters.get(timeZone);
+  if (!f) formatters.set(timeZone, (f = new Intl.DateTimeFormat("en-US", {
+  timeZone,
   year: "numeric",
   month: "2-digit",
   day: "2-digit",
@@ -9,11 +13,13 @@ const fmt = new Intl.DateTimeFormat("en-US", {
   minute: "2-digit",
   second: "2-digit",
   hourCycle: "h23",
-});
+  })));
+  return f;
+};
 
-function parts(d: Date): Record<string, number> {
+function parts(d: Date, timeZone = PACIFIC): Record<string, number> {
   const out: Record<string, number> = {};
-  for (const p of fmt.formatToParts(d)) if (p.type !== "literal") out[p.type] = Number(p.value);
+  for (const p of fmtFor(timeZone).formatToParts(d)) if (p.type !== "literal") out[p.type] = Number(p.value);
   return out;
 }
 
@@ -25,13 +31,18 @@ export function pacificDate(utc: string | Date): string {
 
 /** UTC ISO instant of a Pacific wall-clock time on a Pacific date; handles DST. */
 export function pacificToUtc(date: string, hhmm: string): string {
+  return zonedToUtc(date, hhmm, PACIFIC);
+}
+
+/** UTC ISO instant of a wall-clock time in a time zone. */
+export function zonedToUtc(date: string, hhmm: string, timeZone: string): string {
   const [y, mo, d] = date.split("-").map(Number);
   const [h, mi] = hhmm.split(":").map(Number);
   const guess = Date.UTC(y, mo - 1, d, h, mi);
   // Offset at the guess, then correct once (enough away from the 2am switch).
   let t = guess;
   for (let i = 0; i < 2; i++) {
-    const p = parts(new Date(t));
+    const p = parts(new Date(t), timeZone);
     const asUtc = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second);
     t += guess - asUtc;
   }

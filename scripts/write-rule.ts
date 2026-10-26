@@ -1,0 +1,62 @@
+// Writes rules/gate.json from the code constants. With --commit, also writes
+// rules/gate.sha256; commit both before the test season is scored.
+import { writeFileSync } from "node:fs";
+import { MODEL, POLICY } from "../lib/constants.ts";
+import { hashOf } from "../lib/hash.ts";
+import { RULE_HASH_PATH, RULE_PATH } from "../lib/rule.ts";
+
+export const RULE = {
+  version: 1,
+  model_version_on_fit: "fitted-v1",
+  seasons: {
+    regular_season_only: true,
+    train: { season: "2024-25", from: "2025-01-01", snapshots: ["morning"] },
+    test: { season: "2025-26", snapshots: ["morning", "close"] },
+  },
+  snapshots: {
+    morning: "08:00 America/Los_Angeles on the board date; games tipping at or before it are excluded",
+    close: "last observation at or before tip minus 10 minutes, same book, same side",
+  },
+  features: {
+    code: "lib/project.ts",
+    base_pool: "most recent 30 same-team played games (minutes > 0), this season and last, before the board date",
+    matched_pool: "most recent 30 same-team played games matching every rotation teammate: out => teammate under 10 min; active => 10+ min",
+    rotation: "median minutes >= 15 over the teammate's last 15 games played for this team",
+    rate: "(matched stat + 200 * rate_base) / (matched minutes + 200); games under 8 minutes excluded from rates and alpha",
+    minutes: "E[M], Var(M) (n-1) from this season's matched games (minutes > 0, short appearances included) if >= 3, else last season's",
+    distribution: "negative binomial with Var = E[mu] + alpha E[mu^2] + Var(mu); Poisson when Var <= mean",
+  },
+  shrink_fit: "conditional log loss over decisive outcomes, over side, all evaluated train props, report availability; golden section on [0,1]",
+  blend_w: "logit p = w logit(raw model conditional) + (1-w) logit(no-vig), half-point props with both sides at the same book; log loss",
+  no_vig: "proportional",
+  bootstrap: { clusters: ["game", "player"], interval: "wider of the two", reps: 2000, w_reps: 500, level: 0.95, seed: 20251021 },
+  missing_data: [
+    "a prop with one side missing, stale, or unmatched is dropped from both log-loss scores and counted",
+    "selected rows without a same-book same-line close are excluded from CLV and counted; line moves reported separately",
+    "zero minutes voids; players absent from the box score are not graded",
+  ],
+  injury: "latest official report printed >= 30 minutes before the snapshot; a team not yet submitted uses the previous evening's entries for tonight, otherwise its players are unsupported",
+  clv: "morning decimal / closing decimal - 1, same book, side and line",
+  gate: {
+    demonstrated_edge_requires: [
+      "report-availability replay: lower bound of w interval > 0",
+      "report-availability replay: lower bound of selected-row CLV interval > 0",
+      "report-availability replay: >= MIN_CLV_GAMES unique games with a same-line close",
+    ],
+    oracle: "printed as an upper bound; never sufficient",
+    delta_ll: "printed with the DLL_MARGIN; not gating",
+    post_hoc: "a rerun after a code fix is labeled post-hoc and cannot earn demonstrated edge",
+  },
+  model: MODEL,
+  policy: POLICY,
+};
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  writeFileSync(RULE_PATH, JSON.stringify(RULE, null, 2) + "\n");
+  const hash = hashOf(RULE);
+  console.log(`rule hash ${hash}`);
+  if (process.argv.includes("--commit")) {
+    writeFileSync(RULE_HASH_PATH, hash + "\n");
+    console.log(`wrote ${RULE_HASH_PATH}; commit both files before scoring the test season`);
+  }
+}
