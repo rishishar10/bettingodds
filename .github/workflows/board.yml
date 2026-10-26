@@ -1,0 +1,57 @@
+name: Morning board
+
+on:
+  schedule:
+    # 8:00am Pacific is 15:00 UTC in summer and 16:00 UTC in winter; the job skips the early one.
+    - cron: "0 15 * * *"
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no live publication)"
+        type: boolean
+        default: true
+
+concurrency:
+  group: board-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    env:
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+      CAPTURES_ENABLED: ${{ vars.CAPTURES_ENABLED }}
+      REPO_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: scripts/ci/data-branch.sh pull
+      - name: Refresh recent box scores
+        run: node scripts/ingest-boxscores.ts --recent 3
+      - name: Build the board
+        run: node scripts/run-board.ts ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '--dry-run' || '' }}
+      - name: Grade
+        if: always()
+        run: node scripts/grade.ts ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '--dry-run' || '' }}
+      - name: Save state
+        if: always()
+        run: scripts/ci/data-branch.sh push
+      - name: Build site
+        run: npm run build
+        env:
+          NEXT_BASE_PATH: /${{ github.event.repository.name }}
+          BOARD_DATA_DIR: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && 'data/dev-published' || 'data/published' }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - uses: actions/deploy-pages@v4

@@ -23,6 +23,11 @@ if (!dryRun && !existsSync("reports/test.md")) {
   process.exit(1);
 }
 
+if (!arg("date") && Date.parse(buildTimeUtc) < Date.parse(boardInstant(boardDate))) {
+  console.log(`before 8:00am Pacific on ${boardDate}; nothing to do`);
+  process.exit(0);
+}
+
 const store = openStore(P.db);
 if (store.getPublication(boardDate)) {
   console.log(`board for ${boardDate} already published; nothing to do`);

@@ -49,7 +49,8 @@ export async function scoreboard(yyyymmdd: string, opts: { useCache?: boolean } 
     const comp = e.competitions[0];
     const team = (side: string) => {
       const c = comp.competitors.find((x: any) => x.homeAway === side);
-      return { id: String(c.team.id), abbr: c.team.abbreviation, name: c.team.displayName };
+      // Exhibition opponents can lack fields; only regular-season games are used.
+      return { id: String(c.team.id), abbr: c.team.abbreviation ?? "", name: c.team.displayName ?? c.team.name ?? "" };
     };
     const tipUtc = new Date(e.date).toISOString();
     const date = pacificDate(tipUtc);
@@ -58,7 +59,7 @@ export async function scoreboard(yyyymmdd: string, opts: { useCache?: boolean } 
       tipUtc,
       date,
       season: seasonOf(date),
-      seasonType: e.season?.type ?? comp.type?.id,
+      seasonType: Number(e.season?.type ?? comp.type?.id ?? 0),
       completed: Boolean(comp.status?.type?.completed),
       home: team("home"),
       away: team("away"),

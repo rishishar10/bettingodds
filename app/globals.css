@@ -1,0 +1,110 @@
+:root {
+  --paper: #edf0f3;
+  --sheet: #f7f8fa;
+  --ink: #14213a;
+  --muted: #5b6577;
+  --rule: #cfd5de;
+  --edge: #2442c8;
+  --risk: #8a5a12;
+  --risk-bg: #f3e6cf;
+  --bad: #9b2c2c;
+  --good: #22663f;
+  --focus: #2442c8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1626;
+    --sheet: #152036;
+    --ink: #e6eaf2;
+    --muted: #9aa5b8;
+    --rule: #2a3651;
+    --edge: #8fa6ff;
+    --risk: #e7b766;
+    --risk-bg: #3a2e17;
+    --bad: #f19a9a;
+    --good: #8fd3a8;
+    --focus: #8fa6ff;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1626; --sheet: #152036; --ink: #e6eaf2; --muted: #9aa5b8; --rule: #2a3651;
+  --edge: #8fa6ff; --risk: #e7b766; --risk-bg: #3a2e17; --bad: #f19a9a; --good: #8fd3a8; --focus: #8fa6ff;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.page { max-width: 920px; margin: 0 auto; padding: 32px 16px 80px; }
+.nav { display: flex; gap: 20px; font-size: 15px; color: var(--muted); margin-bottom: 40px; }
+.nav a[aria-current="page"] { color: var(--ink); text-decoration-thickness: 2px; }
+
+.date {
+  font-stretch: 62%;
+  font-weight: 800;
+  font-size: clamp(56px, 11vw, 112px);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.claim { font-size: 20px; max-width: 62ch; margin: 16px 0 4px; }
+.label { font-weight: 700; }
+.fine { color: var(--muted); font-size: 15px; max-width: 70ch; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px 24px; margin: 28px 0 12px; padding: 0; }
+.facts div { border-top: 2px solid var(--ink); padding-top: 6px; }
+.facts dt { color: var(--muted); font-size: 14px; }
+.facts dd { margin: 0; font-stretch: 75%; font-weight: 700; font-size: 26px; }
+
+.coverage { font-size: 15px; color: var(--muted); margin: 0 0 40px; }
+.coverage b { color: var(--ink); font-weight: 600; }
+
+.slips { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.slip {
+  background: var(--sheet);
+  display: grid;
+  grid-template-columns: minmax(180px, 1.1fr) 2fr auto;
+  gap: 8px 28px;
+  padding: 20px 22px;
+  border-left: 6px solid var(--edge);
+}
+.line { font-stretch: 62%; font-weight: 800; font-size: 46px; line-height: 0.95; margin: 0; }
+.who { margin: 6px 0 0; font-weight: 600; }
+.who span { color: var(--muted); font-weight: 400; }
+.reasons { margin: 0; padding: 0; list-style: none; font-size: 15.5px; }
+.reasons li { margin-bottom: 6px; }
+.reasons b { font-weight: 600; }
+.ev { text-align: right; }
+.ev strong { display: block; font-stretch: 62%; font-weight: 800; font-size: 46px; line-height: 0.95; color: var(--edge); }
+.ev span { color: var(--muted); font-size: 14px; }
+.flag { display: inline-block; background: var(--risk-bg); color: var(--risk); font-size: 13px; padding: 1px 7px; margin: 2px 4px 0 0; border-radius: 3px; }
+
+.empty { background: var(--sheet); padding: 28px 24px; font-size: 19px; }
+
+h2 { font-stretch: 75%; font-weight: 800; font-size: 32px; margin: 56px 0 8px; }
+.cards { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.card { border: 1px dashed var(--rule); padding: 14px 18px; font-size: 15.5px; }
+
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th { text-align: left; font-weight: 600; color: var(--muted); border-bottom: 2px solid var(--ink); padding: 6px 8px 6px 0; }
+td { border-bottom: 1px solid var(--rule); padding: 7px 8px 7px 0; vertical-align: top; }
+td.num, th.num { text-align: right; }
+.win { color: var(--good); font-weight: 600; }
+.loss { color: var(--bad); font-weight: 600; }
+.scroll { overflow-x: auto; }
+
+@media (max-width: 680px) {
+  .slip { grid-template-columns: 1fr; }
+  .ev { text-align: left; }
+  .line, .ev strong { font-size: 40px; }
+}

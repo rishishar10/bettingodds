@@ -22,6 +22,8 @@ const STATUS_MAP: Record<InjuryEntry["status"], TonightStatus> = {
   out: "out", doubtful: "doubtful", questionable: "questionable", probable: "active", available: "active",
 };
 
+const addOnce = (xs: string[], x: string) => { if (!xs.includes(x)) xs.push(x); };
+
 export interface ReportAvailabilityStats {
   unmatchedInjuryNames: string[];
   teamsFromFallback: string[];
@@ -52,18 +54,18 @@ export function reportAvailability(
       const fb = fallback?.entries.filter((e) => isTeam(e) && e.gameDate === boardDate) ?? [];
       if (fb.length === 0) {
         // Not submitted this morning and no entries for tonight last evening: nothing known.
-        stats.teamsUnresolved.push(teamName);
+        addOnce(stats.teamsUnresolved, teamName);
         return { source: "report", sourceTime: null, status: new Map(), unresolved: true };
       }
       entries = fb;
       sourceTime = (fallback as InjuryReport).reportTimeUtc;
-      stats.teamsFromFallback.push(teamName);
+      addOnce(stats.teamsFromFallback, teamName);
     }
     const status = new Map<string, TonightStatus>();
     for (const e of entries) {
       const j = resolvePlayer(e.playerName, roster, [teamId]);
       if (!j.ok) {
-        stats.unmatchedInjuryNames.push(`${e.team}: ${e.playerName}`);
+        addOnce(stats.unmatchedInjuryNames, `${e.team}: ${e.playerName}`);
         continue;
       }
       status.set(j.playerId, STATUS_MAP[e.status]);

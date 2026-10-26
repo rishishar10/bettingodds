@@ -1,0 +1,34 @@
+name: Captures (paid plan only)
+
+on:
+  schedule:
+    # Every 30 minutes, 9:00am to 7:30pm Pacific (covers both DST offsets).
+    - cron: "0,30 16-23 * * *"
+    - cron: "0,30 0-3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: board-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    if: vars.CAPTURES_ENABLED == '1'
+    runs-on: ubuntu-latest
+    env:
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+      CAPTURES_ENABLED: "1"
+      REPO_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: scripts/ci/data-branch.sh pull
+      - run: node scripts/capture-close.ts
+      - run: scripts/ci/data-branch.sh push
