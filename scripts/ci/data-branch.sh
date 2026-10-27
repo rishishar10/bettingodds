@@ -15,7 +15,8 @@ case "${1:-}" in
   push)
     tmp=$(mktemp -d)
     mkdir -p "$tmp/data"
-    for f in $FILES; do [ -e "$f" ] && cp -R "$f" "$tmp/data/"; done
+    for f in $FILES; do if [ -e "$f" ]; then cp -R "$f" "$tmp/data/"; fi; done
+    if [ -z "$(ls -A "$tmp/data")" ]; then echo "no state to save"; exit 0; fi
     cd "$tmp"
     git init -q -b data
     git add -A

@@ -1,3 +1,5 @@
+import { mkdirSync } from "node:fs";
+import { dirname } from "node:path";
 import { DatabaseSync } from "node:sqlite";
 import type { EvaluatedRow } from "./rank.ts";
 import type { Result } from "./grade.ts";
@@ -97,6 +99,7 @@ export interface Publication {
 }
 
 export function openStore(path: string) {
+  if (path !== ":memory:") mkdirSync(dirname(path), { recursive: true });
   const db = new DatabaseSync(path);
   db.exec("PRAGMA journal_mode = WAL;");
   db.exec(SCHEMA);

@@ -1,9 +1,12 @@
+import { mkdirSync } from "node:fs";
+import { dirname } from "node:path";
 import { DatabaseSync } from "node:sqlite";
 import type { EspnGame } from "./sources/espn.ts";
 import type { GameLog } from "./types.ts";
 
 /** Box-score history: games and player lines. Separate from the board store. */
 export function openHistory(path = "data/history.sqlite") {
+  if (path !== ":memory:") mkdirSync(dirname(path), { recursive: true });
   const db = new DatabaseSync(path);
   db.exec(`
     PRAGMA busy_timeout = 30000;
