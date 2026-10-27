@@ -234,3 +234,17 @@ The report prints both hashes and both replays.
 - **Train window** is every 4th game date of both 2023-24 and 2024-25, about 19.7k credits; the test season is about 74.3k. That fits one 100K month.
 - **Line moves** use the same line if it's still posted, otherwise the book's two-sided main closing line (no-vig nearest 50%), otherwise no close. A stray alternate is never used.
 - **Odds note.** `replay.ts collect` and `write-rule.ts --commit` refuse until `reports/odds-coverage.md` exists with its decision filled in and `ODDS_MAX_AGE_SET` is true.
+
+## Availability after the Jalen Williams miss (2026-10-26)
+
+- **What happened.** OKC had not filed by the 10:30 ET report. The evening fallback treated OKC as resolved with only its long-term absences, so the board priced Jalen Williams as active. He was listed out at 5:00pm ET.
+- **Strict availability.**
+  - The evening fallback is removed.
+  - A team marked "not yet submitted" for tonight is unresolved, and so is a game where neither team appears.
+  - A team absent while its opponent appears has filed with no injuries.
+  - Not-yet-submitted rows now carry their game date, so tomorrow's pending filing doesn't block tonight.
+- **Parser fix.** On pages after the first, the table starts higher, and the first rows of every later page were being dropped (for example, the Suns and Grizzlies blocks). The column-title row is now found per page. The Jan 15, 2024 report goes from 95 to 105 entries.
+- **News watch.** It runs hourly and costs nothing.
+  - It compares each board's saved availability with, for each game, the latest official report before tip, plus ESPN notes posted after publish and before tip.
+  - Rows are flagged "news after publish" when their player or a rotation teammate got worse. They are never re-ranked, and the publication is unchanged.
+  - The ESPN feed has no archive, so it is live-only and never part of a replay.

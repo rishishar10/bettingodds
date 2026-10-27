@@ -29,43 +29,33 @@ const addOnce = (xs: string[], x: string) => { if (!xs.includes(x)) xs.push(x); 
 
 export interface ReportAvailabilityStats {
   unmatchedInjuryNames: string[];
-  teamsFromFallback: string[];
   teamsUnresolved: string[];
 }
 
 /**
- * Availability from the morning report. A team marked "not yet submitted"
- * uses the previous evening's entries for tonight's game when it appears
- * there; otherwise the team is unresolved.
+ * Availability from the morning report only. A team marked "not yet
+ * submitted" for tonight is unresolved. A team absent from the report has
+ * filed with no injuries, but only if its game is in the report (its
+ * opponent appears); if neither team appears, the game is unresolved.
  */
 export function reportAvailability(
   morning: InjuryReport,
-  fallback: InjuryReport | null,
   boardDate: string,
   roster: RosterPlayer[],
   stats: ReportAvailabilityStats,
 ) {
+  const tonight = morning.entries.filter((e) => e.gameDate === boardDate);
+  const nys = morning.notYetSubmitted.filter((n) => n.gameDate === boardDate).map((n) => normalizeTeam(n.team));
+  const appears = (team: string) => nys.includes(team) || tonight.some((e) => normalizeTeam(e.team) === team);
   return (teamId: string, game: EspnGame): TeamAvailability => {
     const teamName = normalizeTeam(teamId === game.home.id ? game.home.name : game.away.name);
-    const isTeam = (e: { team: string }) => normalizeTeam(e.team) === teamName;
-    const nys = morning.notYetSubmitted.some((t) => normalizeTeam(t) === teamName);
-    let entries: InjuryEntry[];
-    let sourceTime = morning.reportTimeUtc;
-    if (!nys) {
-      entries = morning.entries.filter((e) => isTeam(e) && e.gameDate === boardDate);
-    } else {
-      const fb = fallback?.entries.filter((e) => isTeam(e) && e.gameDate === boardDate) ?? [];
-      if (fb.length === 0) {
-        // Not submitted this morning and no entries for tonight last evening: nothing known.
-        addOnce(stats.teamsUnresolved, teamName);
-        return { source: "report", sourceTime: null, status: new Map(), unresolved: true };
-      }
-      entries = fb;
-      sourceTime = (fallback as InjuryReport).reportTimeUtc;
-      addOnce(stats.teamsFromFallback, teamName);
+    const opponent = normalizeTeam(teamId === game.home.id ? game.away.name : game.home.name);
+    if (nys.includes(teamName) || (!appears(teamName) && !appears(opponent))) {
+      addOnce(stats.teamsUnresolved, teamName);
+      return { source: "report", sourceTime: null, status: new Map(), unresolved: true };
     }
     const status = new Map<string, TonightStatus>();
-    for (const e of entries) {
+    for (const e of tonight.filter((x) => normalizeTeam(x.team) === teamName)) {
       const j = resolvePlayer(e.playerName, roster, [teamId]);
       if (!j.ok) {
         addOnce(stats.unmatchedInjuryNames, `${e.team}: ${e.playerName}`);
@@ -73,6 +63,6 @@ export function reportAvailability(
       }
       status.set(j.playerId, STATUS_MAP[e.status]);
     }
-    return { source: "report", sourceTime, status, unresolved: false };
+    return { source: "report", sourceTime: morning.reportTimeUtc, status, unresolved: false };
   };
 }

@@ -67,6 +67,29 @@ describe("injury report", () => {
       { gameDate: "2024-01-15", matchup: "HOU@PHI", team: "Houston Rockets", playerName: "Tari Eason", status: "out", reason: "Injury/Illness - Left Lower Leg;" },
       { gameDate: "2024-01-15", matchup: "HOU@PHI", team: "Houston Rockets", playerName: "Nate Hinton", status: "questionable", reason: "" },
     ]);
-    expect(r.notYetSubmitted).toEqual(["Philadelphia 76ers"]);
+    expect(r.notYetSubmitted).toEqual([{ team: "Philadelphia 76ers", gameDate: "2024-01-15" }]);
+  });
+
+  it("keeps the first rows of later pages, whose table starts higher than page 1's", () => {
+    const items = [
+      { x: 288, y: 533, str: "Injury Report: 10/26/26 05:00 PM", page: 1 },
+      { x: 201, y: 480, str: "Matchup", page: 1 },
+      { x: 24, y: 452, str: "10/26/2026", page: 1 },
+      { x: 201, y: 452, str: "MIN@CLE", page: 1 },
+      { x: 265, y: 452, str: "Minnesota Timberwolves", page: 1 },
+      { x: 426, y: 452, str: "Edwards, Anthony", page: 1 },
+      { x: 587, y: 452, str: "Questionable", page: 1 },
+      { x: 201, y: 520, str: "Matchup", page: 2 },
+      { x: 201, y: 504, str: "PHX@OKC", page: 2 },
+      { x: 265, y: 504, str: "Phoenix Suns", page: 2 },
+      { x: 426, y: 504, str: "Booker, Devin", page: 2 },
+      { x: 587, y: 504, str: "Out", page: 2 },
+      { x: 399, y: 50, str: "Page 2 of 2", page: 2 },
+    ];
+    const r = parseItems(items);
+    expect(r.entries.map((e) => [e.matchup, e.team, e.playerName, e.status])).toEqual([
+      ["MIN@CLE", "Minnesota Timberwolves", "Anthony Edwards", "questionable"],
+      ["PHX@OKC", "Phoenix Suns", "Devin Booker", "out"],
+    ]);
   });
 });

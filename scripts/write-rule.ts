@@ -37,7 +37,7 @@ export const RULE = {
     "selected rows without a same-book same-line close are excluded from CLV and counted; line moves reported separately",
     "zero minutes voids; players absent from the box score are not graded",
   ],
-  injury: "latest official report printed >= 30 minutes before the snapshot; a team not yet submitted uses the previous evening's entries for tonight, otherwise its players are unsupported",
+  injury: "latest official report printed >= 30 minutes before the snapshot; a team marked not yet submitted for tonight, or a game where neither team appears, is unresolved and its players are unsupported; a team absent while its opponent appears filed with no injuries",
   clv: "morning decimal / closing decimal - 1, same book, side and line",
   gate: {
     demonstrated_edge_requires: [

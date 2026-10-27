@@ -1,5 +1,5 @@
 import type { BoardRow } from "../../lib/board.ts";
-import { american, bookName, pacificTime, pct, STAT_NAMES } from "../../lib/view.ts";
+import { american, bookName, pacificTime, pct, STAT_NAMES, type NewsFile } from "../../lib/view.ts";
 import { Age } from "./Age.tsx";
 
 const FLAG_TEXT: Record<string, string> = {
@@ -22,12 +22,14 @@ const BOOK_STATUS: Record<string, string> = {
   invalid_odds: "rejected, invalid odds",
 };
 
-export function Slip({ row, teams }: { row: BoardRow; teams: Record<string, string> }) {
+const SOURCE: Record<string, string> = { official: "official report", espn: "ESPN" };
+
+export function Slip({ row, teams, news }: { row: BoardRow; teams: Record<string, string>; news?: NewsFile["rows"][string] }) {
   const side = row.side === "over" ? "Over" : "Under";
   const others = Object.entries(row.books).filter(([, s]) => s !== "best");
   const failing = row.sensitivity.failing.map((f) => SENS_TEXT[f]);
   return (
-    <li className="slip">
+    <li className={news?.length ? "slip stale" : "slip"}>
       <div>
         <p className="line">
           {side} {row.line} {STAT_NAMES[row.stat]}
@@ -37,6 +39,13 @@ export function Slip({ row, teams }: { row: BoardRow; teams: Record<string, stri
         </p>
       </div>
       <ul className="reasons">
+        {news?.length ? (
+          <li className="news">
+            <b>News after publish.</b>{" "}
+            {news.map((n) => `${n.kind === "player" ? "" : "Teammate "}${n.playerName} now ${n.to} (${SOURCE[n.source] ?? n.source}, ${pacificTime(n.sourceTime)})`).join("; ")}.
+            {" "}This row was priced assuming {news.some((n) => n.kind === "player") ? "he plays" : "the morning lineup"}; it is not re-ranked.
+          </li>
+        ) : null}
         <li>
           <b>Edge.</b> Shrunk model probability {pct(row.pWinFinal)} (raw {pct(row.pWinRaw)}) against a{" "}
           {pct(row.breakEven)} break-even{row.pPush > 0 ? `, push ${pct(row.pPush)}` : ""}. Projected mean {row.mean.toFixed(1)} in{" "}

@@ -154,6 +154,20 @@ export function teammatesTonight(
   return { teammates, startersKnown };
 }
 
+/** The availability a board was built on, per team, for the news watch to compare against. */
+export function availabilitySnapshot(
+  games: { game: EspnGame }[],
+  availability: (teamId: string, game: EspnGame) => TeamAvailability,
+): Record<string, { unresolved: boolean; status: Record<string, TonightStatus> }> {
+  const out: Record<string, { unresolved: boolean; status: Record<string, TonightStatus> }> = {};
+  for (const { game } of games)
+    for (const t of [game.home.id, game.away.id]) {
+      const a = availability(t, game);
+      out[t] = { unresolved: a.unresolved, status: Object.fromEntries(a.status) };
+    }
+  return out;
+}
+
 export const projKey = (playerId: string, stat: Stat) => `${playerId}|${stat}`;
 
 export function evaluateSlate(input: SlateInput): SlateResult {

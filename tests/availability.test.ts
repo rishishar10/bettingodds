@@ -3,50 +3,52 @@ import { reportAvailability } from "../lib/availability.ts";
 import type { EspnGame } from "../lib/sources/espn.ts";
 import type { InjuryReport } from "../lib/sources/injuries.ts";
 
-const game: EspnGame = {
+const game = (home: [string, string], away: [string, string]): EspnGame => ({
   gameId: "g", tipUtc: "2026-01-21T03:00:00Z", date: "2026-01-20", season: "2025-26", seasonType: 2, completed: false,
-  home: { id: "LAC", abbr: "LAC", name: "LA Clippers" }, away: { id: "DEN", abbr: "DEN", name: "Denver Nuggets" },
-};
+  home: { id: home[0], abbr: home[0], name: home[1] }, away: { id: away[0], abbr: away[0], name: away[1] },
+});
+const DEN_LAC = game(["LAC", "LA Clippers"], ["DEN", "Denver Nuggets"]);
+const MIL_IND = game(["MIL", "Milwaukee Bucks"], ["IND", "Indiana Pacers"]);
+const SAS_SAC = game(["SAS", "San Antonio Spurs"], ["SAC", "Sacramento Kings"]);
 const roster = [
   { playerId: "1", playerName: "Kawhi Leonard", teamId: "LAC" },
   { playerId: "2", playerName: "Jamal Murray", teamId: "DEN" },
-  { playerId: "3", playerName: "Aaron Gordon", teamId: "DEN" },
 ];
-const entry = (team: string, playerName: string, status: any, gameDate = "2026-01-20") => ({ gameDate, matchup: "DEN@LAC", team, playerName, status, reason: "" });
+const entry = (team: string, playerName: string, status: any, gameDate = "2026-01-20") => ({ gameDate, matchup: "", team, playerName, status, reason: "" });
+const report: InjuryReport = {
+  url: "m", reportTimeUtc: "2026-01-20T15:30:00Z",
+  entries: [
+    entry("LA Clippers", "Kawhi Leonard", "questionable"),
+    entry("LA Clippers", "Unknown Rookie", "out"),
+    entry("Indiana Pacers", "Somebody", "out"),
+    entry("Sacramento Kings", "Tomorrow Guy", "out", "2026-01-21"),
+  ],
+  notYetSubmitted: [{ team: "Denver Nuggets", gameDate: "2026-01-20" }, { team: "Milwaukee Bucks", gameDate: "2026-01-21" }],
+};
+const stats = () => ({ unmatchedInjuryNames: [] as string[], teamsUnresolved: [] as string[] });
 
-describe("report availability", () => {
-  const morning: InjuryReport = {
-    url: "m", reportTimeUtc: "2026-01-20T15:30:00Z",
-    entries: [entry("LA Clippers", "Kawhi Leonard", "questionable"), entry("LA Clippers", "Unknown Rookie", "out")],
-    notYetSubmitted: ["Denver Nuggets"],
-  };
-  const evening: InjuryReport = {
-    url: "e", reportTimeUtc: "2026-01-20T01:00:00Z",
-    entries: [entry("Denver Nuggets", "Jamal Murray", "out"), entry("Denver Nuggets", "Aaron Gordon", "probable"), entry("Denver Nuggets", "Aaron Gordon", "out", "2026-01-19")],
-    notYetSubmitted: [],
-  };
-
-  it("matches LA Clippers across spellings and maps statuses", () => {
-    const stats = { unmatchedInjuryNames: [], teamsFromFallback: [], teamsUnresolved: [] };
-    const a = reportAvailability(morning, evening, "2026-01-20", roster, stats)("LAC", game);
+describe("report availability (strict)", () => {
+  it("maps statuses across team spellings and records unmatched names", () => {
+    const s = stats();
+    const a = reportAvailability(report, "2026-01-20", roster, s)("LAC", DEN_LAC);
     expect(a.status.get("1")).toBe("questionable");
     expect(a.sourceTime).toBe("2026-01-20T15:30:00Z");
-    expect(stats.unmatchedInjuryNames).toEqual(["LA Clippers: Unknown Rookie"]);
+    expect(s.unmatchedInjuryNames).toEqual(["LA Clippers: Unknown Rookie"]);
   });
 
-  it("a team not yet submitted uses last evening's entries for tonight only", () => {
-    const stats = { unmatchedInjuryNames: [], teamsFromFallback: [] as string[], teamsUnresolved: [] };
-    const a = reportAvailability(morning, evening, "2026-01-20", roster, stats)("DEN", game);
+  it("a team not yet submitted for tonight is unresolved; there is no fallback", () => {
+    const s = stats();
+    expect(reportAvailability(report, "2026-01-20", roster, s)("DEN", DEN_LAC).unresolved).toBe(true);
+    expect(s.teamsUnresolved).toEqual(["denver nuggets"]);
+  });
+
+  it("a team absent from the report filed with no injuries when its game appears; not-submitted for tomorrow does not count", () => {
+    const a = reportAvailability(report, "2026-01-20", roster, stats())("MIL", MIL_IND);
     expect(a.unresolved).toBe(false);
-    expect(a.status.get("2")).toBe("out");
-    expect(a.status.get("3")).toBe("active");
-    expect(a.sourceTime).toBe("2026-01-20T01:00:00Z");
-    expect(stats.teamsFromFallback).toEqual(["denver nuggets"]);
+    expect(a.status.size).toBe(0);
   });
 
-  it("is unresolved when neither report covers tonight", () => {
-    const stats = { unmatchedInjuryNames: [], teamsFromFallback: [], teamsUnresolved: [] as string[] };
-    const a = reportAvailability(morning, null, "2026-01-20", roster, stats)("DEN", game);
-    expect(a.unresolved).toBe(true);
+  it("a game where neither team appears for tonight is unresolved", () => {
+    expect(reportAvailability(report, "2026-01-20", roster, stats())("SAS", SAS_SAC).unresolved).toBe(true);
   });
 });

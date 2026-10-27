@@ -1,17 +1,19 @@
 #!/bin/zsh
-# Installs two user launch agents: the 8:05am morning reset (local time) and a
-# static server for out/ on http://localhost:4173. Remove with --uninstall.
+# Installs three user launch agents: the 8:05am morning reset, the hourly
+# status watch, and a static server for out/ on http://localhost:4173.
+# Remove with --uninstall.
 set -euo pipefail
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 AGENTS="$HOME/Library/LaunchAgents"
 MORNING=com.nbaboard.morning
+WATCH=com.nbaboard.watch
 SERVER=com.nbaboard.server
 
-for label in $MORNING $SERVER; do
+for label in $MORNING $WATCH $SERVER; do
   launchctl bootout "gui/$(id -u)/$label" 2>/dev/null || true
   rm -f "$AGENTS/$label.plist"
 done
-if [ "${1:-}" = "--uninstall" ]; then echo "removed both agents"; exit 0; fi
+if [ "${1:-}" = "--uninstall" ]; then echo "removed all agents"; exit 0; fi
 
 mkdir -p "$AGENTS" "$REPO/data"
 cat > "$AGENTS/$MORNING.plist" <<PLIST
@@ -21,6 +23,19 @@ cat > "$AGENTS/$MORNING.plist" <<PLIST
   <key>Label</key><string>$MORNING</string>
   <key>ProgramArguments</key><array><string>/bin/zsh</string><string>$REPO/scripts/morning.sh</string></array>
   <key>StartCalendarInterval</key><dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>5</integer></dict>
+  <key>StandardOutPath</key><string>$REPO/data/morning.log</string>
+  <key>StandardErrorPath</key><string>$REPO/data/morning.log</string>
+</dict></plist>
+PLIST
+HOURS=""
+for hr in 9 10 11 12 13 14 15 16 17 18 19; do HOURS="$HOURS<dict><key>Hour</key><integer>$hr</integer><key>Minute</key><integer>15</integer></dict>"; done
+cat > "$AGENTS/$WATCH.plist" <<PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>$WATCH</string>
+  <key>ProgramArguments</key><array><string>/bin/zsh</string><string>$REPO/scripts/watch.sh</string></array>
+  <key>StartCalendarInterval</key><array>$HOURS</array>
   <key>StandardOutPath</key><string>$REPO/data/morning.log</string>
   <key>StandardErrorPath</key><string>$REPO/data/morning.log</string>
 </dict></plist>
@@ -38,6 +53,6 @@ cat > "$AGENTS/$SERVER.plist" <<PLIST
 PLIST
 pkill -f "http.server 4173" 2>/dev/null || true
 pkill -f "scripts/serve.py" 2>/dev/null || true
-for label in $MORNING $SERVER; do launchctl bootstrap "gui/$(id -u)" "$AGENTS/$label.plist"; done
-echo "installed: morning reset at 8:05am local time (runs on wake if the Mac was asleep); server on http://localhost:4173"
+for label in $MORNING $WATCH $SERVER; do launchctl bootstrap "gui/$(id -u)" "$AGENTS/$label.plist"; done
+echo "installed: morning reset at 8:05am, status watch hourly at :15 from 9:15am to 7:15pm (local time; runs on wake if asleep), server on http://localhost:4173"
 echo "log: $REPO/data/morning.log · remove with: scripts/install-local-schedule.sh --uninstall"

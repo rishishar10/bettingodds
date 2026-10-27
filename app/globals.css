@@ -85,6 +85,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .reasons { margin: 0; padding: 0; list-style: none; font-size: 15.5px; }
 .reasons li { margin-bottom: 6px; }
 .reasons b { font-weight: 600; }
+.slip.stale { border-left-color: var(--bad); }
+.slip.stale .line, .slip.stale .ev strong { opacity: 0.55; }
+.news { color: var(--bad); }
 .ev { text-align: right; }
 .ev strong { display: block; font-stretch: 62%; font-weight: 800; font-size: 46px; line-height: 0.95; color: var(--edge); }
 .ev span { color: var(--muted); font-size: 14px; }

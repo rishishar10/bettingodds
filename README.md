@@ -51,6 +51,8 @@ scripts/install-local-schedule.sh              # installs two user launch agents
 scripts/install-local-schedule.sh --uninstall  # removes them
 ```
 
+The installer also adds an hourly status watch at :15, from 9:15am to 7:15pm (`scripts/watch.sh`). It compares the availability each board was built on with the latest pre-tip official report and ESPN's injury feed. It then marks any row whose player or a rotation teammate got worse, without re-ranking or editing the publication. GitHub Actions runs the same watch in `.github/workflows/status.yml`.
+
 The log is `data/morning.log`. If the Mac is asleep at 8:05, the job runs when it wakes.
 
 ## Layout

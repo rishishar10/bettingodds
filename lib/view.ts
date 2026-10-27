@@ -11,7 +11,7 @@ export interface BoardSnapshot {
   SHRINK: number;
   evMin: number;
   ruleHash: string | null;
-  injury: { url: string; timeUtc: string; teamsFromFallback: string[]; teamsUnresolved: string[] } | null;
+  injury: { url: string; timeUtc: string; teamsUnresolved: string[] } | null;
   games: { gameId: string; tipUtc: string; home: string; away: string; hasOdds: boolean }[];
   teams: Record<string, string>;
   rows: BoardRow[];
@@ -20,6 +20,7 @@ export interface BoardSnapshot {
   unmatchedNames: number;
   anomalies: unknown[];
   emptyReason: string | null;
+  availability?: Record<string, { unresolved: boolean; status: Record<string, "out" | "active" | "questionable" | "doubtful"> }>;
   closeCollected: boolean;
   dryRun: boolean;
 }
@@ -37,6 +38,19 @@ export function listDates(): string[] {
 
 export function loadBoard(date: string): BoardSnapshot {
   return JSON.parse(readFileSync(join(dataDir(), `${date}.json`), "utf8"));
+}
+
+export interface NewsFile {
+  checkedAt: string;
+  officialReport: { url: string; timeUtc: string } | null;
+  espnNotesAfterPublish: number;
+  changes: { playerName: string; teamId: string; from: string; to: string; source: string; sourceTime: string; note: string }[];
+  rows: Record<string, { kind: "player" | "teammate"; playerName: string; to: string; source: string; sourceTime: string; note: string }[]>;
+}
+
+export function loadNews(date: string): NewsFile | null {
+  const f = join(dataDir(), `news-${date}.json`);
+  return existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : null;
 }
 
 export interface GradeFile {

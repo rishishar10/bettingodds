@@ -1,7 +1,7 @@
 // UI preview only: real box scores and injury report, made-up prices set
 // near the projection. Writes to a scratch directory, never to data/published.
 //   node scripts/demo-snapshot.ts <out-dir> [YYYY-MM-DD]
-import { boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
+import { availabilitySnapshot, boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
 import { POLICY } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
 import { modelState, writeSnapshot } from "../lib/publish.ts";
@@ -19,8 +19,8 @@ const boardUtc = boardInstant(boardDate);
 const games = (await scoreboard(boardDate.replaceAll("-", ""), { useCache: false })).filter((g) => g.seasonType === 2);
 const matched = games.map((g) => ({ game: g, eventId: `demo-${g.gameId}` }));
 const roster = slateRoster(h, games, boardDate);
-const injuries = await injuryInputs(boardDate, boardUtc);
-const stats = { unmatchedInjuryNames: [] as string[], teamsFromFallback: [] as string[], teamsUnresolved: [] as string[] };
+const injuries = await injuryInputs(boardUtc);
+const stats = { unmatchedInjuryNames: [] as string[], teamsUnresolved: [] as string[] };
 const avail = availabilityFor("report", h, boardDate, roster, injuries, stats)!;
 
 // First pass with no prices to get projections, then post a made-up line per player and stat.
@@ -50,8 +50,9 @@ writeSnapshot(outDir, boardDate, {
   injury: injuries.morning ? { url: injuries.morning.url, timeUtc: injuries.morning.reportTimeUtc, ...stats } : null,
   games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: true })),
   teams, rows: boardRows(slate, model.SHRINK, POLICY.EV_MIN), conditional: slate.conditional, coverage: slate.coverage,
+  availability: availabilitySnapshot(matched, avail),
   unmatchedNames: slate.unmatchedNames.length, anomalies: slate.rank.anomalies, emptyReason: emptyReason(slate, games.length),
   closeCollected: false, dryRun: true,
 });
-console.log(`demo: ${games.length} games, coverage ${JSON.stringify(slate.coverage)}, rows ${slate.rank.published.length}, cards ${slate.conditional.length}, injury fallback ${stats.teamsFromFallback.length}, unresolved ${stats.teamsUnresolved.length}, unmatched injury names ${new Set(stats.unmatchedInjuryNames).size}: ${[...new Set(stats.unmatchedInjuryNames)].slice(0, 25).join("; ")}`);
+console.log(`demo: ${games.length} games, coverage ${JSON.stringify(slate.coverage)}, rows ${slate.rank.published.length}, cards ${slate.conditional.length}, unresolved ${stats.teamsUnresolved.length}, unmatched injury names ${new Set(stats.unmatchedInjuryNames).size}: ${[...new Set(stats.unmatchedInjuryNames)].slice(0, 25).join("; ")}`);
 h.close();

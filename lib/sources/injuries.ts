@@ -23,7 +23,7 @@ export interface InjuryReport {
   /** Report time printed in the header, as UTC. This is the source time. */
   reportTimeUtc: string;
   entries: InjuryEntry[];
-  notYetSubmitted: string[];
+  notYetSubmitted: { team: string; gameDate: string }[];
 }
 
 const COLS = { time: 110, matchup: 195, team: 260, player: 420, status: 580, reason: 660 } as const;
@@ -44,13 +44,22 @@ export function flipName(s: string): string {
 interface Item { x: number; y: number; str: string; page: number }
 
 /** Parses positioned text items from the PDF into entries. Exported for fixtures. */
-export function parseItems(items: Item[]): { header: string | null; entries: InjuryEntry[]; notYetSubmitted: string[] } {
+export function parseItems(items: Item[]): { header: string | null; entries: InjuryEntry[]; notYetSubmitted: InjuryReport["notYetSubmitted"] } {
+  // The column-title row ("Game Date ... Matchup ...") sits at a different height on
+  // page 1 (under the report header) than on later pages; find it per page.
   let header: string | null = null;
+  const titleY = new Map<number, number>();
+  for (const it of items) {
+    if (it.str.trim() === "Matchup") titleY.set(it.page, Math.max(titleY.get(it.page) ?? -Infinity, it.y));
+    // The report header ("Injury Report: 01/15/24 10:30 AM") is the top line of page 1.
+    if (it.page === 1 && it.y > 520 && it.str.trim()) header = header ? `${header} ${it.str}` : it.str;
+  }
   const body: Item[] = [];
   for (const it of items) {
     if (!it.str.trim()) continue;
-    if (it.y > 520) { header = header ? `${header} ${it.str}` : it.str; continue; }
-    if (it.y < 60 || it.y >= 475) continue; // footer and column titles
+    const top = titleY.get(it.page);
+    if (top !== undefined ? it.y >= top - 2 : it.y > 520) continue;
+    if (it.y < 60) continue; // footer: "Page x of y"
     body.push(it);
   }
   // Rows: top to bottom per page; tokens within 3pt of y share a row per column.
@@ -66,7 +75,7 @@ export function parseItems(items: Item[]): { header: string | null; entries: Inj
 
   const entries: InjuryEntry[] = [];
   const at: { page: number; y: number }[] = [];
-  const notYetSubmitted: string[] = [];
+  const notYetSubmitted: InjuryReport["notYetSubmitted"] = [];
   const looseReasons: { page: number; y: number; text: string }[] = [];
   let gameDate = "", matchup = "", team = "";
   for (const r of rows) {
@@ -81,7 +90,7 @@ export function parseItems(items: Item[]): { header: string | null; entries: Inj
       entries.push({ gameDate, matchup, team, playerName: flipName(r.cells.player), status, reason: (r.cells.reason ?? "").trim() });
       at.push({ page: r.page, y: r.y });
     } else if (r.cells.reason && /not yet submitted/i.test(r.cells.reason)) {
-      notYetSubmitted.push(team);
+      notYetSubmitted.push({ team, gameDate });
     } else if (r.cells.reason) {
       looseReasons.push({ page: r.page, y: r.y, text: r.cells.reason.trim() });
     }

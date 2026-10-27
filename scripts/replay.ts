@@ -113,8 +113,8 @@ async function collect(mode: "train" | "test", availability: "oracle" | "report"
     }
 
     const roster = slateRoster(h, matched.map((m) => m.game), date);
-    const injuries = availability === "report" ? await injuryInputs(date, boardUtc) : null;
-    const stats = { unmatchedInjuryNames: [], teamsFromFallback: [], teamsUnresolved: [] };
+    const injuries = availability === "report" ? await injuryInputs(boardUtc) : null;
+    const stats = { unmatchedInjuryNames: [], teamsUnresolved: [] };
     const avail = availabilityFor(availability, h, date, roster, injuries, stats);
     if (!avail) {
       console.log(`${date}: no injury report before the snapshot; skipped`);

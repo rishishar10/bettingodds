@@ -6,7 +6,7 @@ import type { RosterPlayer } from "./sources/crosswalk.ts";
 import type { EspnGame } from "./sources/espn.ts";
 import { reportBefore, type InjuryReport } from "./sources/injuries.ts";
 import type { OddsEvent } from "./sources/odds.ts";
-import { addDays, EASTERN, pacificDate, previousSeason, seasonOf, zonedToUtc } from "./time.ts";
+import { pacificDate, previousSeason, seasonOf } from "./time.ts";
 
 /** Matches odds events to ESPN games by both team names and Pacific date. */
 export function matchEvents(games: EspnGame[], events: OddsEvent[]) {
@@ -36,15 +36,11 @@ export function slateRoster(history: History, games: EspnGame[], boardDate: stri
 
 export interface InjuryInputs {
   morning: InjuryReport | null;
-  fallback: InjuryReport | null;
 }
 
-/** The morning report (>= 30 min before the snapshot) and the previous evening's last report. */
-export async function injuryInputs(boardDate: string, boardUtc: string): Promise<InjuryInputs> {
-  const morning = await reportBefore(boardUtc, { bufferMinutes: 30, earliestHourEt: 5 });
-  const prev = addDays(boardDate, -1);
-  const fallback = await reportBefore(zonedToUtc(prev, "23:59", EASTERN), { bufferMinutes: 0, earliestHourEt: 17 });
-  return { morning, fallback };
+/** The latest official report printed at least 30 minutes before the snapshot. */
+export async function injuryInputs(boardUtc: string): Promise<InjuryInputs> {
+  return { morning: await reportBefore(boardUtc, { bufferMinutes: 30, earliestHourEt: 5 }) };
 }
 
 export function availabilityFor(
@@ -59,5 +55,5 @@ export function availabilityFor(
     return (teamId, game) => oracleAvailability(history, game, roster)(teamId);
   }
   if (!injuries?.morning) return null;
-  return reportAvailability(injuries.morning, injuries.fallback, boardDate, roster, stats);
+  return reportAvailability(injuries.morning, boardDate, roster, stats);
 }

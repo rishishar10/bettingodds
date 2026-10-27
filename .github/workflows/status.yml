@@ -1,0 +1,42 @@
+name: Status watch
+
+on:
+  schedule:
+    # Hourly at :15, 9:15am to 7:15pm Pacific (covers both DST offsets).
+    - cron: "15 16-23 * * *"
+    - cron: "15 0-3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: board-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    env:
+      REPO_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: scripts/ci/data-branch.sh pull
+      - run: node scripts/status-watch.ts --dir data/published
+      - run: scripts/ci/data-branch.sh push
+      - name: Build site
+        run: npm run build
+        env:
+          NEXT_BASE_PATH: /${{ github.event.repository.name }}
+          BOARD_DATA_DIR: data/published
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - uses: actions/deploy-pages@v4

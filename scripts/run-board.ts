@@ -2,7 +2,7 @@
 // publish that ranking or fail. A failed run leaves the previous board up.
 //   node scripts/run-board.ts [--date YYYY-MM-DD] [--dry-run]
 import { existsSync } from "node:fs";
-import { boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
+import { availabilitySnapshot, boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
 import { POLICY } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
 import { modelState, paths, writeSnapshot } from "../lib/publish.ts";
@@ -51,10 +51,10 @@ try {
   const fetchedAt = new Date().toISOString();
   store.saveObservations(prices.map((p) => ({ ...p, fetchedAt })));
 
-  const injuries = await injuryInputs(boardDate, buildTimeUtc);
+  const injuries = await injuryInputs(buildTimeUtc);
   if (games.length && !injuries.morning) throw new Error("no injury report available before the build");
   const roster = slateRoster(h, matched.map((m) => m.game), boardDate);
-  const stats = { unmatchedInjuryNames: [] as string[], teamsFromFallback: [] as string[], teamsUnresolved: [] as string[] };
+  const stats = { unmatchedInjuryNames: [] as string[], teamsUnresolved: [] as string[] };
   const avail = games.length ? availabilityFor("report", h, boardDate, roster, injuries, stats) : () => { throw new Error("no games"); };
   const model = modelState();
   const slate = evaluateSlate({
@@ -75,11 +75,12 @@ try {
     SHRINK: model.SHRINK,
     ruleHash: model.ruleHash,
     evMin: POLICY.EV_MIN,
-    injury: injuries.morning ? { url: injuries.morning.url, timeUtc: injuries.morning.reportTimeUtc, teamsFromFallback: stats.teamsFromFallback, teamsUnresolved: stats.teamsUnresolved } : null,
+    injury: injuries.morning ? { url: injuries.morning.url, timeUtc: injuries.morning.reportTimeUtc, teamsUnresolved: stats.teamsUnresolved } : null,
     games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: matched.some((m) => m.game.gameId === g.gameId) })),
     teams,
     rows,
     conditional: slate.conditional,
+    availability: games.length ? availabilitySnapshot(matched, avail!) : {},
     coverage: slate.coverage,
     unmatchedNames: slate.unmatchedNames.length,
     anomalies: slate.rank.anomalies,

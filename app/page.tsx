@@ -1,4 +1,4 @@
-import { listDates, loadBoard, longDate, pacificTime, pct, STAT_NAMES, bookName, american, type BoardSnapshot } from "../lib/view.ts";
+import { listDates, loadBoard, loadNews, longDate, pacificTime, pct, STAT_NAMES, bookName, american, type BoardSnapshot, type NewsFile } from "../lib/view.ts";
 import { decimalToAmerican } from "../lib/ev.ts";
 import { Age } from "./components/Age.tsx";
 import { Footer, Nav } from "./components/Nav.tsx";
@@ -15,7 +15,15 @@ const COVERAGE: [string, string][] = [
   ["stale_or_invalid_odds", "stale or invalid odds"],
 ];
 
-function Header({ b }: { b: BoardSnapshot }) {
+function statusLine(news: NewsFile): string {
+  if (!news.changes.length) return "no changes since publish.";
+  const flagged = Object.keys(news.rows).length;
+  const touching = [...new Set(Object.values(news.rows).flat().map((f) => `${f.playerName} ${f.to}`))];
+  return `${news.changes.length} status change${news.changes.length > 1 ? "s" : ""} before tip-off since publish` +
+    (flagged ? `; ${flagged} row${flagged > 1 ? "s" : ""} affected (${touching.join(", ")}), marked below.` : "; none affect a published row.");
+}
+
+function Header({ b, news }: { b: BoardSnapshot; news: NewsFile | null }) {
   return (
     <header>
       <h1 className="date">{longDate(b.boardDate)}</h1>
@@ -43,6 +51,11 @@ function Header({ b }: { b: BoardSnapshot }) {
         . An unsupported player is one whose role cannot be estimated yet, not an uninteresting one.
         {b.closeCollected ? "" : " Closing prices are not collected on the free plan."}
       </p>
+      <p className={news?.changes.length ? "coverage news" : "coverage"}>
+        {news
+          ? `Injury status checked ${pacificTime(news.checkedAt)}: ${statusLine(news)}`
+          : "Injury status has not been rechecked since publish."}
+      </p>
     </header>
   );
 }
@@ -60,13 +73,14 @@ export default function Page() {
     );
   }
   const b = loadBoard(dates[0]);
+  const news = loadNews(b.boardDate);
   return (
     <main className="page">
       <Nav current="board" />
-      <Header b={b} />
+      <Header b={b} news={news} />
       {b.rows.length ? (
         <ol className="slips">
-          {b.rows.map((r) => <Slip key={r.key} row={r} teams={b.teams} />)}
+          {b.rows.map((r) => <Slip key={r.key} row={r} teams={b.teams} news={news?.rows[r.key]} />)}
         </ol>
       ) : (
         <p className="empty">Empty board. {b.emptyReason} A sparse board is not a night with no edges; it is a night where nothing the model can support cleared the bar.</p>
