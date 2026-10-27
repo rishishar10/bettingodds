@@ -30,13 +30,14 @@ cat > "$AGENTS/$SERVER.plist" <<PLIST
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
   <key>Label</key><string>$SERVER</string>
-  <key>ProgramArguments</key><array><string>/usr/bin/python3</string><string>-m</string><string>http.server</string><string>4173</string><string>--bind</string><string>127.0.0.1</string><string>-d</string><string>$REPO/out</string></array>
+  <key>ProgramArguments</key><array><string>/usr/bin/python3</string><string>$REPO/scripts/serve.py</string><string>4173</string></array>
   <key>RunAtLoad</key><true/>
   <key>KeepAlive</key><true/>
   <key>StandardErrorPath</key><string>$REPO/data/server.log</string>
 </dict></plist>
 PLIST
 pkill -f "http.server 4173" 2>/dev/null || true
+pkill -f "scripts/serve.py" 2>/dev/null || true
 for label in $MORNING $SERVER; do launchctl bootstrap "gui/$(id -u)" "$AGENTS/$label.plist"; done
 echo "installed: morning reset at 8:05am local time (runs on wake if the Mac was asleep); server on http://localhost:4173"
 echo "log: $REPO/data/morning.log · remove with: scripts/install-local-schedule.sh --uninstall"
