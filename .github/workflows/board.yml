@@ -23,6 +23,7 @@ jobs:
     env:
       ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
       CAPTURES_ENABLED: ${{ vars.CAPTURES_ENABLED }}
+      ODDS_PAID_PLAN: ${{ vars.ODDS_PAID_PLAN }}
       REPO_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
     steps:
       - uses: actions/checkout@v4

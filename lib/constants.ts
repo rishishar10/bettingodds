@@ -34,5 +34,17 @@ export const POLICY = {
   DLL_MARGIN: 0.005,
 } as const;
 
+/**
+ * Free-plan credit policy (not part of the model): skip the odds fetch on
+ * slates with fewer games than this, and whenever this month's remaining
+ * credits cannot cover the slate. A paid plan sets ODDS_PAID_PLAN=1.
+ */
+export const FREE_PLAN = {
+  MIN_SLATE_GAMES: 4,
+  CREDITS_PER_GAME: 3,
+  /** Day of the month the free credits reset (the signup day). Override with ODDS_CYCLE_DAY. */
+  CYCLE_RESET_DAY: 26,
+} as const;
+
 /** Shrinkage before the train fit. Replaced by the fitted value in rules/fitted.json. */
 export const HEURISTIC_SHRINK = 0.5;

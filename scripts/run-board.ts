@@ -3,7 +3,8 @@
 //   node scripts/run-board.ts [--date YYYY-MM-DD] [--dry-run]
 import { existsSync } from "node:fs";
 import { availabilitySnapshot, boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
-import { POLICY } from "../lib/constants.ts";
+import { FREE_PLAN, POLICY } from "../lib/constants.ts";
+import { datesUntilReset, shouldBuildTonight } from "../lib/credits.ts";
 import { openHistory } from "../lib/history.ts";
 import { modelState, paths, writePrices, writeSnapshot } from "../lib/publish.ts";
 import { availabilityFor, injuryInputs, matchEvents, slateRoster } from "../lib/slate-inputs.ts";
@@ -43,6 +44,39 @@ try {
   for (const g of games) h.upsertGame(g);
 
   const { matched, missing } = games.length ? matchEvents(games, await listEvents()) : { matched: [], missing: [] };
+
+  // Free plan: keep credits for fuller slates. The events list above is free and reports remaining credits.
+  const paid = process.env.ODDS_PAID_PLAN === "1";
+  let skipReason: string | null = null;
+  if (!paid && matched.length) {
+    const remaining = usage().remaining ?? 0;
+    const resetDay = Number(process.env.ODDS_CYCLE_DAY ?? FREE_PLAN.CYCLE_RESET_DAY);
+    const upcoming: number[] = [];
+    for (const d of datesUntilReset(boardDate, resetDay)) {
+      upcoming.push((await scoreboard(d.replaceAll("-", ""), { useCache: false })).filter((g) => g.seasonType === 2).length);
+    }
+    const plan = shouldBuildTonight(matched.length, upcoming, remaining);
+    if (!plan.build) skipReason = plan.reason;
+    else console.log(`credit plan: build tonight (${matched.length} games, ${remaining} credits left, ${upcoming.length} more days in the cycle)`);
+  }
+  if (skipReason) {
+    const model = modelState();
+    const teams: Record<string, string> = {};
+    for (const g of games) { teams[g.home.id] = g.home.abbr; teams[g.away.id] = g.away.abbr; }
+    const payload = {
+      boardDate, publishedAt: new Date().toISOString(), buildTimeUtc, modelVersion: model.modelVersion, label: model.label,
+      shrunk: true, SHRINK: model.SHRINK, ruleHash: model.ruleHash, evMin: POLICY.EV_MIN, injury: null,
+      games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: false, eventId: null })),
+      teams, rows: [], conditional: [], coverage: {}, unmatchedNames: 0, anomalies: [], emptyReason: skipReason,
+      availability: {}, missingEvents: missing, closeCollected: false, dryRun, skipped: true,
+    };
+    store.publish({ boardDate, publishedAt: payload.publishedAt, modelVersion: model.modelVersion, ruleHash: model.ruleHash, payload }, [], []);
+    writeSnapshot(P.published, boardDate, payload);
+    store.logRun(boardDate, buildTimeUtc, "skipped", skipReason);
+    console.log(`skipped ${boardDate}: ${skipReason}`);
+    process.exit(0);
+  }
+
   const prices: RawPrice[] = [];
   for (const { eventId } of matched) {
     const { prices: p } = await fetchEventOdds(eventId); // any failure fails the run
