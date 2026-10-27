@@ -44,8 +44,10 @@ jobs:
           case "$MODE" in
             live)   node scripts/run-board.ts; node scripts/grade.ts ;;
             dryrun) node scripts/run-board.ts --dry-run; node scripts/grade.ts --dry-run ;;
-            demo)   node scripts/demo-snapshot.ts data/demo-published; node scripts/grade.ts --dir data/demo-published ;;
           esac
+          # Practice board every night in every mode: free, and it keeps the model check growing.
+          node scripts/demo-snapshot.ts data/demo-published
+          node scripts/grade.ts --dir data/demo-published
       - name: Save state
         if: always()
         run: scripts/ci/data-branch.sh push
@@ -54,6 +56,7 @@ jobs:
         env:
           NEXT_BASE_PATH: /${{ github.event.repository.name }}
           BOARD_DATA_DIR: ${{ env.BOARD_DIR }}
+          PRACTICE_DATA_DIR: data/demo-published
       - if: vars.PAGES_ENABLED == '1'
         uses: actions/upload-pages-artifact@v3
         with:

@@ -32,13 +32,19 @@ export function dataDir(): string {
   return existsSync("data/published/index.json") ? "data/published" : "data/dev-published";
 }
 
-export function listDates(): string[] {
-  const f = join(dataDir(), "index.json");
+/** Practice boards (real injuries and box scores, made-up prices): a model check, never picks. */
+export function practiceDir(): string | null {
+  const dir = process.env.PRACTICE_DATA_DIR ?? "data/demo-published";
+  return dir !== dataDir() && existsSync(join(dir, "index.json")) ? dir : null;
+}
+
+export function listDates(dir: string = dataDir()): string[] {
+  const f = join(dir, "index.json");
   return existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : [];
 }
 
-export function loadBoard(date: string): BoardSnapshot {
-  return JSON.parse(readFileSync(join(dataDir(), `${date}.json`), "utf8"));
+export function loadBoard(date: string, dir: string = dataDir()): BoardSnapshot {
+  return JSON.parse(readFileSync(join(dir, `${date}.json`), "utf8"));
 }
 
 export interface NewsFile {
@@ -71,8 +77,8 @@ export interface GradeFile {
   grades: Record<string, { result: string | null; minutes: number; actual: number; profit: number | null; close: { kind: string; movement?: number; direction?: string; move?: string } }>;
 }
 
-export function loadGrades(): GradeFile | null {
-  const f = join(dataDir(), "grades.json");
+export function loadGrades(dir: string = dataDir()): GradeFile | null {
+  const f = join(dir, "grades.json");
   return existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : null;
 }
 

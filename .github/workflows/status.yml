@@ -39,6 +39,7 @@ jobs:
         env:
           NEXT_BASE_PATH: /${{ github.event.repository.name }}
           BOARD_DATA_DIR: ${{ env.BOARD_DIR }}
+          PRACTICE_DATA_DIR: data/demo-published
       - if: vars.PAGES_ENABLED == '1'
         uses: actions/upload-pages-artifact@v3
         with:

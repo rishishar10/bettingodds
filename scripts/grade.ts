@@ -27,7 +27,8 @@ const grades: Record<string, unknown> = {};
 const all: { result: Result | null; decimal: number }[] = [];
 
 for (const boardDate of dates) {
-  const board = JSON.parse(readFileSync(join(dir, `${boardDate}.json`), "utf8")) as { rows: any[] };
+  const board = JSON.parse(readFileSync(join(dir, `${boardDate}.json`), "utf8")) as { rows: any[]; buildTimeUtc?: string; publishedAt: string };
+  const builtAt = board.buildTimeUtc ?? board.publishedAt;
   for (const row of board.rows) {
     const game = h.db.prepare(
       "SELECT g.game_id, g.completed, g.tip_utc FROM games g WHERE g.date = ? AND g.season_type = 2 AND (g.home_id = ? OR g.away_id = ?)",
@@ -42,12 +43,14 @@ for (const boardDate of dates) {
       result = gradeProp(row.line, row.side, minutes, actual);
       store?.recordGrade(boardDate, row.key, result, minutes, actual, now);
     }
-    // Close: last source-timestamped observation before tip, same book and side; any line.
+    // Close: last source-timestamped observation before tip, same book and side, any line,
+    // from a capture made after the board was built (the board's own fetch is not a close).
     const close = store && game ? (store.db.prepare(
       `SELECT line, decimal, source_updated_at FROM odds_observations
-       WHERE player_name = ? AND stat = ? AND side = ? AND book = ? AND source_updated_at IS NOT NULL AND source_updated_at < ?
+       WHERE player_name = ? AND stat = ? AND side = ? AND book = ? AND source_updated_at IS NOT NULL
+         AND source_updated_at < ? AND fetched_at > ?
        ORDER BY source_updated_at DESC, line = ? DESC LIMIT 1`,
-    ).get(row.playerName, row.stat, row.side, row.book, game.tip_utc, row.line) as { line: number; decimal: number } | undefined) : undefined;
+    ).get(row.playerName, row.stat, row.side, row.book, game.tip_utc, builtAt, row.line) as { line: number; decimal: number } | undefined) : undefined;
     const events = store
       ? store.db.prepare("SELECT kind, result, recorded_at FROM grade_events WHERE board_date = ? AND key = ? ORDER BY id").all(boardDate, row.key)
       : [];

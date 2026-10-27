@@ -16,10 +16,11 @@ if [ -n "${ODDS_API_KEY:-}" ]; then
   node scripts/grade.ts --dry-run
   DIR=data/dev-published
 else
-  node scripts/demo-snapshot.ts data/demo-published 2>&1 | grep -v Warning || true
-  node scripts/grade.ts --dir data/demo-published
   DIR=data/demo-published
 fi
+# Practice board every night: free, and it keeps the model check growing.
+node scripts/demo-snapshot.ts data/demo-published 2>&1 | grep -v Warning || true
+node scripts/grade.ts --dir data/demo-published
 
 BOARD_DATA_DIR=$DIR npx next build >/dev/null
 echo "site rebuilt from $DIR"
