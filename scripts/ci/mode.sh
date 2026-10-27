@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Picks how the morning job runs and where the site reads from:
+# Picks how the nightly job runs and where the site reads from:
 #   live   - the test-season report is in the repo and an odds key is set
 #   dryrun - an odds key is set (real prices, labeled development dry run)
 #   demo   - no key (real injuries and box scores, made-up prices, labeled)

@@ -22,7 +22,8 @@ export function oracleAvailability(history: History, game: EspnGame, roster: Ros
 }
 
 const STATUS_MAP: Record<InjuryEntry["status"], TonightStatus> = {
-  out: "out", doubtful: "doubtful", questionable: "questionable", probable: "active", available: "active",
+  // Doubtful players almost never play; they are treated as out.
+  out: "out", doubtful: "out", questionable: "questionable", probable: "active", available: "active",
 };
 
 const addOnce = (xs: string[], x: string) => { if (!xs.includes(x)) xs.push(x); };

@@ -138,7 +138,7 @@ export default function Page() {
         <Nav current="board" />
         <main className="page">
           <h1 className="date">No board yet</h1>
-          <p className="claim">The first board publishes after the test-season replay is in the repo. Run the 8:00am job with --dry-run to preview one.</p>
+          <p className="claim">The first board publishes after the test-season replay is in the repo. Run the 11pm job with --dry-run to preview one.</p>
           <Footer />
         </main>
       </>
@@ -161,8 +161,8 @@ export default function Page() {
             <p className="fine">
               The board re-run at {pacificTime(update.asOf)} with the official report from {pacificTime(update.reportTimeUtc)}
               {news.espnNotesAfterPublish ? " and later ESPN injury notes" : ""}, for games not yet started
-              {update.tippedGames.length ? ` (already started: ${update.tippedGames.join(", ")})` : ""}. Prices are the 8:00am prices. This view is
-              not graded; the 8:00am board below is the record.
+              {update.tippedGames.length ? ` (already started: ${update.tippedGames.join(", ")})` : ""}. Prices are from last night’s 11pm build. This view is
+              not graded; last night’s board below is the record.
             </p>
             {update.rows.length ? (
               <Picks
@@ -178,7 +178,7 @@ export default function Page() {
             )}
             {update.dropped.length > 0 && (
               <>
-                <p className="fine">Dropped from the 8:00am board:</p>
+                <p className="fine">Dropped from last night’s board:</p>
                 <ul className="dropped">
                   {update.dropped.map((d) => {
                     const r = b.rows.find((x) => x.key === d.key);
@@ -191,7 +191,7 @@ export default function Page() {
         )}
 
         <Picks
-          title={update ? "8:00am board" : "Tonight’s picks"}
+          title={update ? "Last night’s board" : "Tonight’s picks"}
           rows={b.rows}
           teams={b.teams}
           tips={tips}

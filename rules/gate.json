@@ -22,7 +22,7 @@
     }
   },
   "snapshots": {
-    "morning": "08:00 America/Los_Angeles on the board date; games tipping at or before it are excluded",
+    "morning": "23:00 America/Los_Angeles the evening before the board date (the 'morning' snapshot key is historical)",
     "close": "last observation at or before tip minus 10 minutes, same book, same side"
   },
   "features": {
@@ -71,16 +71,16 @@
   "dispersion_fit": "per stat, (1 - q) NB(mean, mean + kappa (var - mean)) + q short night; q on a 0.01 grid, kappa by golden section; mean log score on train box scores (scripts/fit-dispersion.ts)",
   "dispersion": {
     "pts": {
-      "kappa": 1.128,
+      "kappa": 1.119,
       "q": 0.07
     },
     "reb": {
-      "kappa": 0.785,
+      "kappa": 0.735,
       "q": 0.02
     },
     "ast": {
-      "kappa": 0.505,
-      "q": 0.03
+      "kappa": 0.55,
+      "q": 0.02
     }
   },
   "model": {
@@ -96,6 +96,7 @@
     "MINUTES_MIN_THIS_SEASON": 3,
     "ROTATION_MEDIAN_MINUTES": 24,
     "ROTATION_LOOKBACK_GAMES": 15,
+    "ROTATION_MIN_GAMES": 8,
     "NEW_STARTER_MIN_GAMES": 3,
     "AVAILABILITY_MINUTES": 10,
     "RETURNING_MIN_MISSES": 3,
@@ -104,6 +105,7 @@
     "SENSITIVITY_MINUTES": 3,
     "RECENT_MINUTES_GAMES": 5,
     "RECENT_MINUTES_WEIGHT": 0.55,
+    "DNP_RECENT_WEIGHT": 0.17,
     "OPP_LOOKBACK_GAMES": 15,
     "OPP_SHRINK_GAMES": 10,
     "OPP_BETA_PTS": 0.97,

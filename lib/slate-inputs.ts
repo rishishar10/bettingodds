@@ -40,7 +40,7 @@ export interface InjuryInputs {
 
 /** The latest official report printed at least 30 minutes before the snapshot. */
 export async function injuryInputs(boardUtc: string): Promise<InjuryInputs> {
-  return { morning: await reportBefore(boardUtc, { bufferMinutes: 30, earliestHourEt: 5 }) };
+  return { morning: await reportBefore(boardUtc, { bufferMinutes: 30 }) };
 }
 
 export function availabilityFor(

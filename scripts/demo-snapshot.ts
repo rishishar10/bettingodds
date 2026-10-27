@@ -1,19 +1,23 @@
 // UI preview only: real box scores and injury report, made-up prices set
 // near the projection. Writes to a scratch directory, never to data/published.
 //   node scripts/demo-snapshot.ts <out-dir> [YYYY-MM-DD]
-import { availabilitySnapshot, boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
+import { availabilitySnapshot, boardRows, currentTeammates, emptyReason, evaluateSlate } from "../lib/board.ts";
 import { POLICY } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
 import { modelState, writePrices, writeSnapshot } from "../lib/publish.ts";
 import { availabilityFor, injuryInputs, slateRoster } from "../lib/slate-inputs.ts";
 import { scoreboard } from "../lib/sources/espn.ts";
 import type { RawPrice } from "../lib/sources/odds.ts";
-import { boardInstant, pacificDate } from "../lib/time.ts";
+import { boardInstant, nextBoardDate, previousSeason, seasonOf } from "../lib/time.ts";
 import { STATS } from "../lib/types.ts";
 
 const [outDir, dateArg] = process.argv.slice(2);
 if (!outDir || outDir.includes("data/published")) throw new Error("pass a scratch output directory");
-const boardDate = dateArg ?? pacificDate(new Date());
+const boardDate = dateArg ?? nextBoardDate(new Date().toISOString());
+if (!dateArg && Date.now() < Date.parse(boardInstant(boardDate))) {
+  console.log(`before the 11:00pm Pacific build for ${boardDate}; nothing to do`);
+  process.exit(0);
+}
 const h = openHistory();
 const boardUtc = boardInstant(boardDate);
 const games = (await scoreboard(boardDate.replaceAll("-", ""), { useCache: false })).filter((g) => g.seasonType === 2);
@@ -23,20 +27,30 @@ const injuries = await injuryInputs(boardUtc);
 const stats = { unmatchedInjuryNames: [] as string[], teamsUnresolved: [] as string[] };
 const avail = availabilityFor("report", h, boardDate, roster, injuries, stats)!;
 
-// First pass with no prices to get projections, then post a made-up line per player and stat.
+// Made-up lines, one book per player and stat, at -110 both sides: the nearest half point to the
+// player's last 10 games of 15+ minutes before the board date. Only players on a current roster
+// (seen in the team's box scores this season, or last season before the team's first game).
 const src = new Date(Date.parse(boardUtc) - 6 * 60000).toISOString();
 const prices: RawPrice[] = [];
+const season = seasonOf(boardDate);
 let k = 0;
 for (const { game, eventId } of matched) {
-  for (const p of roster.filter((r) => r.teamId === game.home.id || r.teamId === game.away.id)) {
-    const last = h.db.prepare("SELECT pts, reb, ast FROM logs WHERE player_id = ? AND minutes > 15 ORDER BY date DESC LIMIT 10").all(p.playerId) as any[];
-    if (last.length < 5) continue;
-    for (const stat of STATS) {
-      const avg = last.reduce((s, x) => s + x[stat], 0) / last.length;
-      if (avg < 2) continue;
-      const line = Math.floor(avg * (k++ % 7 === 0 ? 0.8 : 1.0)) + 0.5;
-      for (const side of ["over", "under"] as const)
-        prices.push({ eventId, playerName: p.playerName, stat, line, side, book: (["draftkings", "fanduel", "betmgm"] as const)[k % 3], decimal: 1.91, sourceUpdatedAt: src });
+  for (const teamId of [game.home.id, game.away.id]) {
+    const teamLogs = h.teamLogsBefore(teamId, [season, previousSeason(season)], boardDate);
+    for (const p of currentTeammates(roster, teamLogs, teamId, season, previousSeason(season), new Map())) {
+      // Books post props for players in the rotation now: 15+ minutes in 3 of the last 5 team games.
+      const recentRows = teamLogs.filter((l) => l.playerId === p.playerId && l.teamId === teamId).sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 5);
+      if (recentRows.filter((l) => l.minutes >= 15).length < 3) continue;
+      const last = h.db.prepare("SELECT pts, reb, ast FROM logs WHERE player_id = ? AND minutes >= 15 AND date < ? ORDER BY date DESC LIMIT 10").all(p.playerId, boardDate) as any[];
+      if (last.length < 5) continue;
+      for (const stat of STATS) {
+        const avg = last.reduce((s, x) => s + x[stat], 0) / last.length;
+        if (avg < 2) continue;
+        const line = Math.round(avg - 0.5) + 0.5;
+        const book = (["draftkings", "fanduel", "betmgm"] as const)[k++ % 3];
+        for (const side of ["over", "under"] as const)
+          prices.push({ eventId, playerName: p.playerName, stat, line, side, book, decimal: 1.91, sourceUpdatedAt: src });
+      }
     }
   }
 }

@@ -1,10 +1,11 @@
-name: Morning board
+name: Nightly board
 
 on:
   schedule:
-    # 8:00am Pacific is 15:00 UTC in summer and 16:00 UTC in winter; the job skips the early one.
-    - cron: "5 15 * * *"
-    - cron: "5 16 * * *"
+    # 11:05pm Pacific builds the next day's board: 06:05 UTC in summer, 07:05 UTC in winter.
+    # Whichever run is early or late sees "before the build" or "already published" and stops.
+    - cron: "5 6 * * *"
+    - cron: "5 7 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -35,16 +36,15 @@ jobs:
       - run: scripts/ci/data-branch.sh pull
       - name: Box-score history (first run ingests two seasons)
         run: node scripts/ci/ensure-history.ts
-      - name: Refresh recent box scores
+      - name: Refresh box scores through today
         run: node scripts/ingest-boxscores.ts --recent 3
       - run: scripts/ci/mode.sh
-      - name: Build the board
+      - name: Build the board and grade earlier ones
         run: |
           case "$MODE" in
-            live)   node scripts/run-board.ts && node scripts/grade.ts ;;
-            dryrun) node scripts/run-board.ts --dry-run && node scripts/grade.ts --dry-run ;;
-            demo)   if [ "$(TZ=America/Los_Angeles date +%H)" -ge 8 ] || [ "${{ github.event_name }}" = workflow_dispatch ]; then
-                      rm -rf data/demo-published && node scripts/demo-snapshot.ts data/demo-published; fi ;;
+            live)   node scripts/run-board.ts; node scripts/grade.ts ;;
+            dryrun) node scripts/run-board.ts --dry-run; node scripts/grade.ts --dry-run ;;
+            demo)   node scripts/demo-snapshot.ts data/demo-published; node scripts/grade.ts --dir data/demo-published ;;
           esac
       - name: Save state
         if: always()

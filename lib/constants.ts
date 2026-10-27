@@ -14,6 +14,8 @@ export const MODEL = {
   MINUTES_MIN_THIS_SEASON: 3,
   ROTATION_MEDIAN_MINUTES: 24,
   ROTATION_LOOKBACK_GAMES: 15,
+  /** A teammate needs this many games played for the team before his median counts (one 26-minute finale is not a role). */
+  ROTATION_MIN_GAMES: 8,
   NEW_STARTER_MIN_GAMES: 3,
   AVAILABILITY_MINUTES: 10,
   /** An active teammate constrains the pool only if returning: missed this many of the team's last RETURNING_LOOKBACK games. */
@@ -24,6 +26,8 @@ export const MODEL = {
   /** Minutes blend: E[M] = w * (last RECENT_MINUTES_GAMES played) + (1 - w) * matched E[M]; w fit on 2023-24 (0.54-0.57). */
   RECENT_MINUTES_GAMES: 5,
   RECENT_MINUTES_WEIGHT: 0.55,
+  /** Then blend toward the last 5 box-score rows counting DNP-CD zeros (injured players have no row): w fit on 2023-24 (0.14-0.19). */
+  DNP_RECENT_WEIGHT: 0.17,
   /** Opponent: rate * factor^beta, factor = opponent's allowed per-minute rate over its last 15 games vs league, shrunk with 10 games. Betas fit on 2023-24. */
   OPP_LOOKBACK_GAMES: 15,
   OPP_SHRINK_GAMES: 10,

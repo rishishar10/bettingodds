@@ -21,7 +21,7 @@ export interface TeamAvailability {
   status: Map<string, TonightStatus>;
   /** No usable report for this team. */
   unresolved: boolean;
-  /** Tonight's starters, when the source knows them (the oracle box score; not the 8am report). */
+  /** Tonight's starters, when the source knows them (the oracle box score; not the overnight report). */
   starters?: Set<string>;
 }
 

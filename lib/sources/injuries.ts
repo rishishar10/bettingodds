@@ -172,17 +172,21 @@ export async function loadReport(url: string): Promise<InjuryReport | null> {
  */
 export async function reportBefore(
   snapshotUtc: string,
-  opts: { bufferMinutes?: number; earliestHourEt?: number } = {},
+  opts: { bufferMinutes?: number; maxHoursBack?: number } = {},
 ): Promise<InjuryReport | null> {
   const deadline = Date.parse(snapshotUtc) - (opts.bufferMinutes ?? 30) * 60000;
-  const et = new Intl.DateTimeFormat("en-CA", { timeZone: EASTERN, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
-    .formatToParts(new Date(deadline));
-  const get = (t: string) => et.find((p) => p.type === t)!.value;
-  const etDate = `${get("year")}-${get("month")}-${get("day")}`;
-  let minutes = Number(get("hour")) * 60 + Math.floor(Number(get("minute")) / 15) * 15;
-  const earliest = (opts.earliestHourEt ?? 0) * 60;
-  for (; minutes >= earliest; minutes -= 15) {
-    for (const url of urlCandidates(etDate, Math.floor(minutes / 60), minutes % 60)) {
+  const fmt = new Intl.DateTimeFormat("en-CA", { timeZone: EASTERN, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  // Walk back in 15-minute steps, across midnight Eastern if needed. No reports
+  // are issued between 1:00 and 6:00am Eastern, so those slots are skipped.
+  const step = 15 * 60000;
+  const stop = deadline - (opts.maxHoursBack ?? 20) * 3600000;
+  for (let t = Math.floor(deadline / step) * step; t >= stop; t -= step) {
+    const parts = fmt.formatToParts(new Date(t));
+    const get = (k: string) => parts.find((p) => p.type === k)!.value;
+    const hour = Number(get("hour"));
+    if (hour >= 1 && hour < 6) continue;
+    const etDate = `${get("year")}-${get("month")}-${get("day")}`;
+    for (const url of urlCandidates(etDate, hour, Number(get("minute")))) {
       const rep = await loadReport(url);
       if (rep && Date.parse(rep.reportTimeUtc) <= deadline) return rep;
     }

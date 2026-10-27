@@ -29,6 +29,8 @@ export interface Pools {
   rotation: { playerId: string; status: TeammateTonight["status"] }[];
   season: string;
   lastSeason: string;
+  /** Minutes in the player's last few box-score rows for this team, DNP-CD zeros included, most recent first. */
+  recentRows: number[];
 }
 
 export type PoolResult =
@@ -50,6 +52,16 @@ export interface PoolContext {
   assumeOut?: string[];
   /** Minimum matched games; the if-they-sit card uses 3. */
   minMatchedGames?: number;
+}
+
+/**
+ * Rotation player: at least ROTATION_MIN_GAMES games played for this team, and
+ * a median of ROTATION_MEDIAN_MINUTES over the last ROTATION_LOOKBACK_GAMES of
+ * them. minutesMostRecentFirst holds games played (minutes > 0) for the team.
+ */
+export function isRotation(minutesMostRecentFirst: number[]): boolean {
+  const recent = minutesMostRecentFirst.slice(0, MODEL.ROTATION_LOOKBACK_GAMES);
+  return recent.length >= MODEL.ROTATION_MIN_GAMES && median(recent) >= MODEL.ROTATION_MEDIAN_MINUTES;
 }
 
 function median(xs: number[]): number {
@@ -118,8 +130,7 @@ export function buildPools(ctx: PoolContext): PoolResult {
         detail: `rotation teammate with no team history: ${t.playerId}`,
       };
     }
-    const recent = theirGames.slice(0, MODEL.ROTATION_LOOKBACK_GAMES).map((l) => l.minutes);
-    if (recent.length > 0 && median(recent) >= MODEL.ROTATION_MEDIAN_MINUTES) {
+    if (isRotation(theirGames.map((l) => l.minutes))) {
       rotation.push({ playerId: t.playerId, status });
     }
   }
@@ -166,7 +177,12 @@ export function buildPools(ctx: PoolContext): PoolResult {
       detail: `matched_pool has ${matched.length} games, ${matchedMinutes} minutes`,
     };
   }
-  return { ok: true, pools: { base, matched, rotation, season: ctx.season, lastSeason: ctx.lastSeason } };
+  const recentRows = teamLogs
+    .filter((l) => l.playerId === ctx.playerId)
+    .sort(byRecent)
+    .slice(0, MODEL.RECENT_MINUTES_GAMES)
+    .map((l) => l.minutes);
+  return { ok: true, pools: { base, matched, rotation, season: ctx.season, lastSeason: ctx.lastSeason, recentRows } };
 }
 
 export interface Projection {
@@ -297,7 +313,11 @@ export function project(pools: Pools, stat: Stat, ctx: ProjectionContext = {}): 
   // Recent role: blend in the last few games played for this team (base pool is most recent first).
   const recent = pools.base.slice(0, MODEL.RECENT_MINUTES_GAMES).map((g) => g.minutes);
   const recentMinutes = recent.reduce((s, x) => s + x, 0) / recent.length;
-  const expMinutes = MODEL.RECENT_MINUTES_WEIGHT * recentMinutes + (1 - MODEL.RECENT_MINUTES_WEIGHT) * expMinutesMatched;
+  const blended = MODEL.RECENT_MINUTES_WEIGHT * recentMinutes + (1 - MODEL.RECENT_MINUTES_WEIGHT) * expMinutesMatched;
+  // Healthy scratches are a role signal: pull toward recent rows with DNP-CD zeros counted.
+  const rows = pools.recentRows ?? recent;
+  const recentWithDnp = rows.length ? rows.reduce((s, x) => s + x, 0) / rows.length : recentMinutes;
+  const expMinutes = Math.max(1, (1 - MODEL.DNP_RECENT_WEIGHT) * blended + MODEL.DNP_RECENT_WEIGHT * recentWithDnp);
   const varMinutes =
     mins.length > 1 ? mins.reduce((s, x) => s + (x - expMinutesMatched) ** 2, 0) / (mins.length - 1) : 0;
 

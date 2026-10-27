@@ -49,9 +49,16 @@ export function zonedToUtc(date: string, hhmm: string, timeZone: string): string
   return new Date(t).toISOString();
 }
 
-/** The board snapshot instant: 8:00am Pacific on the board date. */
+/** The board snapshot instant: 11:00pm Pacific the evening before the board date. */
 export function boardInstant(boardDate: string): string {
-  return pacificToUtc(boardDate, "08:00");
+  return pacificToUtc(addDays(boardDate, -1), "23:00");
+}
+
+/** The board a build at this moment is for: from 8pm Pacific on, tomorrow's games. */
+export function nextBoardDate(nowUtc: string): string {
+  const today = pacificDate(nowUtc);
+  const hour = Number(new Intl.DateTimeFormat("en-US", { timeZone: PACIFIC, hour: "2-digit", hourCycle: "h23" }).format(new Date(nowUtc)));
+  return hour >= 20 ? addDays(today, 1) : today;
 }
 
 export function addDays(date: string, n: number): string {

@@ -3,7 +3,7 @@ import { reportBefore } from "../lib/sources/injuries.ts";
 import { boardInstant } from "../lib/time.ts";
 
 for (const d of process.argv.slice(2)) {
-  const rep = await reportBefore(boardInstant(d), { earliestHourEt: 6 });
+  const rep = await reportBefore(boardInstant(d), {});
   if (!rep) { console.log(`${d}: no report before the snapshot`); continue; }
   const by: Record<string, number> = {};
   for (const e of rep.entries) by[e.status] = (by[e.status] ?? 0) + 1;

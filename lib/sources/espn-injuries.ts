@@ -15,7 +15,7 @@ export interface EspnInjury {
 
 const STATUS: Record<string, EspnInjury["status"]> = {
   out: "out",
-  doubtful: "doubtful",
+  doubtful: "out",
   questionable: "questionable",
   "day-to-day": "questionable",
 };

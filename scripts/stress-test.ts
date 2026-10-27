@@ -58,7 +58,7 @@ function oppFactor(opp: string, date: string, season: string, stat: Stat): numbe
 // ---------- collect rows ----------
 interface Row {
   season: string; date: string; stat: Stat; y: number; minutes: number;
-  pr: Projection; home: boolean; b2b: boolean; opp: number; recencyRate: number; recentMin: number;
+  pr: Projection; home: boolean; b2b: boolean; opp: number; recencyRate: number; recentMin: number; recentMinDnp: number;
   line: number | null; avg10: number | null; outTeammates: number; month: string;
 }
 
@@ -84,6 +84,9 @@ function collect(seasons: string[], step: number): Row[] {
             if (!pools.ok) continue;
             const own = logs.filter((l) => l.playerId === p.playerId && l.teamId === teamId && l.minutes > 0).sort((a, b) => (a.date < b.date ? 1 : -1));
             const recentMin = own.slice(0, 5).reduce((s, l) => s + l.minutes, 0) / Math.min(5, own.length);
+            // Last 5 box-score rows for the team including DNP-CD zeros (injured players have no row).
+            const rowsAll = logs.filter((l) => l.playerId === p.playerId && l.teamId === teamId).sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 5);
+            const recentMinDnp = rowsAll.reduce((s, l) => s + l.minutes, 0) / Math.max(1, rowsAll.length);
             const longGames = own.filter((l) => l.minutes >= 15).slice(0, 10);
             const outTeammates = pools.pools.rotation.filter((r) => r.status === "out").length;
             for (const stat of STATS) {
@@ -94,7 +97,7 @@ function collect(seasons: string[], step: number): Row[] {
               const avg10 = longGames.length >= 5 ? longGames.reduce((s, l) => s + l[stat], 0) / longGames.length : null;
               rows.push({
                 season, date, stat, y: y[stat], minutes: y.minutes, pr, home: teamId === game.home.id, b2b,
-                opp: oppFactor(opponent, date, season, stat), recencyRate: wm > 0 ? ws / wm : pr.rateFinal, recentMin,
+                opp: oppFactor(opponent, date, season, stat), recencyRate: wm > 0 ? ws / wm : pr.rateFinal, recentMin, recentMinDnp,
                 line: avg10 !== null ? Math.floor(avg10) + 0.5 : null, avg10, outTeammates, month: date.slice(0, 7),
               });
             }
@@ -213,6 +216,7 @@ const holdRows = rows.filter((r) => r.season === HOLD);
 const perStat = <T,>(f: (stat: Stat) => T) => Object.fromEntries(STATS.map((s) => [s, f(s)])) as Record<Stat, T>;
 interface Candidate { name: string; make: (p: Record<Stat, number>) => Adjust; lo: number; hi: number; neutral: number }
 const candidates: Candidate[] = [
+  { name: "DNP-CD zeros in recent minutes (blend weight w toward last-5 rows incl. zeros)", make: (p) => (r) => { const m = p[r.stat] * r.recentMinDnp + (1 - p[r.stat]) * r.pr.expMinutes; const c = Math.max(0.05, m) / r.pr.expMinutes; return { c, cMin: c }; }, lo: 0, hi: 1, neutral: 0 },
   { name: "mean scale (× c)", make: (p) => (r) => ({ c: p[r.stat], cMin: 1 }), lo: 0.9, hi: 1.1, neutral: 1 },
   { name: "opponent allowance (mean × factor^β)", make: (p) => (r) => ({ c: r.opp ** p[r.stat], cMin: 1 }), lo: 0, hi: 2, neutral: 0 },
   { name: "home court (× h at home, ÷ h away)", make: (p) => (r) => ({ c: r.home ? p[r.stat] : 1 / p[r.stat], cMin: 1 }), lo: 0.9, hi: 1.1, neutral: 1 },

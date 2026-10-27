@@ -283,3 +283,15 @@ The first run ingests the last two seasons of box scores. The data branch keeps 
 **Holdout line log loss, original → v2:** points 0.648 → 0.636, rebounds 0.647 → 0.635, assists 0.623 → 0.613.
 
 **Provisional shrinkage:** 0.95, fit against book-style lines (`rules/provisional-shrink.json`). It replaces the arbitrary 0.5, which scored worse on the holdout (0.643 vs 0.627), and the real SHRINK from the odds replay replaces it in turn. Model version is now `heuristic-v2`.
+
+## Nightly build, rotation fix, doubtful = out, DNP-aware minutes, grading (2026-10-26)
+
+- **Build at 11:05pm Pacific for the next day's games.** The replay snapshot moves to 11:00pm the evening before, so live and replay match.
+  - The last report before the build, around 12:45am Eastern, already covers the next day well: 1–2 teams unfiled, against 13 at 10:30am Eastern.
+  - The report search now walks back across midnight Eastern. Before this, an 11pm build found no report and would have failed.
+  - The hourly watch, including 11:15am, re-runs the board at the saved 11pm prices with each new report. That costs nothing.
+- **Doubtful is treated as out.**
+- **Rotation needs 8+ games played for the team.** Keshon Gilbert's single 26-minute finale for Atlanta made him a "rotation teammate". His doubtful tag then blocked every Hawk. The watch uses the same definition. Prop-like support went from 58.9% to 62.9%.
+- **DNP-CD rows count in recent minutes**, weight 0.17. Healthy scratches are a role signal, and injured players have no box-score row. This improved the 2024-25 holdout for all three stats.
+- **Grading reads the snapshot folder,** so demo boards are graded too. Their prices are made up, so only calibration means anything; profit stays hidden.
+- **Demo lines** go only to current-rotation players (15+ minutes in 3 of the last 5), at the nearest half point to the pre-board average, with no future games and no shading.

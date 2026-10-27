@@ -19,7 +19,8 @@ let dates: string[] = [];
 const recentIdx = args.indexOf("--recent");
 if (recentIdx >= 0) {
   const n = Number(args[recentIdx + 1] ?? 3);
-  for (let i = n; i >= 1; i--) dates.push(addDays(today, -i));
+  // Through today: the nightly build runs after the day's games finish.
+  for (let i = n; i >= 0; i--) dates.push(addDays(today, -i));
 } else {
   for (const s of args) dates.push(...datesFor(s));
 }

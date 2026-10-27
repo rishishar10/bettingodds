@@ -1,16 +1,16 @@
 // Free news watch for today's board. It compares the availability the board
 // was built on with the latest official injury report and ESPN's injury feed,
 // flags rows whose player or a rotation teammate got worse, and re-runs the
-// board for games not yet tipped with the news factored in, at the saved 8am
-// prices. The 8am publication is never edited; everything goes to
+// board for games not yet tipped with the news factored in, at the saved 11pm
+// prices. The 11pm publication is never edited; everything goes to
 // news-<date>.json beside the snapshot.
 //   node scripts/status-watch.ts [--dir data/published]
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { MODEL } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
 import { detectChanges, flagRows, worse, type CurrentStatus } from "../lib/news.ts";
 import { slateRoster } from "../lib/slate-inputs.ts";
+import { isRotation } from "../lib/project.ts";
 import { normalizeTeam } from "../lib/sources/aliases.ts";
 import { resolvePlayer } from "../lib/sources/crosswalk.ts";
 import { fetchEspnInjuries } from "../lib/sources/espn-injuries.ts";
@@ -61,12 +61,13 @@ const put = (teamId: string, name: string, c: CurrentStatus) => {
   m.set(j.playerId, worse(m.get(j.playerId), c));
 };
 
-const STATUS: Record<string, TonightStatus | null> = { out: "out", doubtful: "doubtful", questionable: "questionable", probable: null, available: null };
+// Doubtful is treated as out.
+const STATUS: Record<string, TonightStatus | null> = { out: "out", doubtful: "out", questionable: "questionable", probable: null, available: null };
 // For each game, the latest official report before its tip (or now, if it hasn't tipped).
 const reports = new Map<number, Awaited<ReturnType<typeof reportBefore>>>();
 for (const tip of new Set(tipByTeam.values())) {
   const at = new Date(Math.min(Date.parse(now), tip - 60000)).toISOString();
-  reports.set(tip, await reportBefore(at, { bufferMinutes: 0, earliestHourEt: 5 }));
+  reports.set(tip, await reportBefore(at, { bufferMinutes: 0 }));
 }
 const report = [...reports.values()].filter(Boolean).sort((a, b) => Date.parse(b!.reportTimeUtc) - Date.parse(a!.reportTimeUtc))[0] ?? null;
 for (const [tip, rep] of reports) {
@@ -100,11 +101,8 @@ const rotation = (teamId: string) => {
   const logs = h.teamLogsBefore(teamId, [season, previousSeason(season)], today).filter((l) => l.teamId === teamId && l.minutes > 0);
   s = new Set<string>();
   for (const pid of new Set(logs.map((l) => l.playerId))) {
-    const mins = logs.filter((l) => l.playerId === pid).sort((a, b) => (a.date < b.date ? 1 : -1))
-      .slice(0, MODEL.ROTATION_LOOKBACK_GAMES).map((l) => l.minutes).sort((a, b) => a - b);
-    const n = mins.length;
-    const median = n % 2 ? mins[(n - 1) / 2] : (mins[n / 2 - 1] + mins[n / 2]) / 2;
-    if (median >= MODEL.ROTATION_MEDIAN_MINUTES) s.add(pid);
+    const mins = logs.filter((l) => l.playerId === pid).sort((a, b) => (a.date < b.date ? 1 : -1)).map((l) => l.minutes);
+    if (isRotation(mins)) s.add(pid);
   }
   rotationCache.set(teamId, s);
   return s;
@@ -114,11 +112,11 @@ const changes = detectChanges(built, current, names);
 const rows = flagRows(board.rows, changes, rotation);
 
 // Re-run the board for games not yet tipped: the latest official report, worse
-// ESPN notes on top, the same 8am prices and build time.
+// ESPN notes on top, the same 11pm prices and build time.
 const pricesFile = join(dir, `prices-${today}.json`);
 const untipped = games.filter((g) => Date.parse(g.tipUtc) > Date.parse(now));
 let update: Record<string, unknown> | null = null;
-const latest = await reportBefore(now, { bufferMinutes: 0, earliestHourEt: 5 });
+const latest = await reportBefore(now, { bufferMinutes: 0 });
 if (existsSync(pricesFile) && untipped.length && latest) {
   const eventOf = new Map(board.games.map((g) => [g.gameId, g.eventId ?? null]));
   const slateGames = untipped.flatMap((g) => (eventOf.get(g.gameId) ? [{ game: g, eventId: eventOf.get(g.gameId) as string }] : []));

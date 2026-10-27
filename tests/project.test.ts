@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { alphaMoM, buildPools, momentsFor, project, sensitivity, type PoolContext } from "../lib/project.ts";
+import { alphaMoM, buildPools, isRotation, momentsFor, project, sensitivity, type PoolContext } from "../lib/project.ts";
 import { countDist } from "../lib/negbin.ts";
 import { MODEL } from "../lib/constants.ts";
 import { P, TEAM, teamGames } from "./fixtures.ts";
@@ -69,6 +69,14 @@ describe("pools and availability", () => {
     expect(!r.ok && r.reason).toBe("teammate_status_unresolved");
   });
 
+  it("one big game does not make a rotation player (the season-finale case)", () => {
+    // Z played a single 26-minute game for the team; questionable tonight must not block P.
+    const logs = teamGames(20, { players: { [P]: () => ({ min: 30 }), Z: (i) => ({ min: i === 19 ? 26 : 0 }) } });
+    expect(buildPools(ctx(logs, { teammates: [{ playerId: "Z", status: "questionable" }] })).ok).toBe(true);
+    expect(isRotation([26])).toBe(false);
+    expect(isRotation(Array(8).fill(26))).toBe(true);
+  });
+
   it("a questionable bench player does not enter the filter", () => {
     const logs = teamGames(20, { players: { [P]: () => ({ min: 30 }), Z: () => ({ min: 6 }) } });
     expect(buildPools(ctx(logs, { teammates: [{ playerId: "Z", status: "questionable" }] })).ok).toBe(true);
@@ -79,9 +87,8 @@ describe("pools and availability", () => {
     const t = [{ playerId: "N", status: "active" as const, listedStarter: true }];
     const r = buildPools(ctx(logs, { teammates: t, startersKnown: true }));
     expect(!r.ok && r.reason).toBe("teammate_no_history");
-    // Without known starters the rule does not fire; his 2 active games still leave too few matches.
-    const r2 = buildPools(ctx(logs, { teammates: t, startersKnown: false }));
-    expect(!r2.ok && r2.reason).toBe("too_few_games");
+    // Without known starters the rule does not fire, and 2 games are too few to make him a rotation player.
+    expect(buildPools(ctx(logs, { teammates: t, startersKnown: false })).ok).toBe(true);
   });
 
   it("fewer than 5 matched games is too few", () => {
@@ -160,7 +167,16 @@ describe("projection", () => {
     expect(pr.varMinutes).toBe(0);
     // Recent role: the last 5 games played (36, 36, 20, 20, 20) are blended in.
     expect(pr.recentMinutes).toBeCloseTo(26.4, 9);
-    expect(pr.expMinutes).toBeCloseTo(0.55 * 26.4 + 0.45 * 20, 9);
+    const blended = 0.55 * 26.4 + 0.45 * 20;
+    expect(pr.expMinutes).toBeCloseTo(0.83 * blended + 0.17 * 26.4, 9);
+  });
+
+  it("healthy scratches (DNP-CD rows) pull expected minutes down", () => {
+    const steady = teamGames(20, { players: { [P]: () => ({ min: 20, pts: 10 }) } });
+    const benched = teamGames(20, { players: { [P]: (i) => (i >= 17 ? { min: 0 } : { min: 20, pts: 10 }) } });
+    const a = project(ok(buildPools(ctx(steady))), "pts");
+    const b = project(ok(buildPools(ctx(benched))), "pts");
+    expect(b.expMinutes).toBeCloseTo(a.expMinutes - 0.17 * (3 / 5) * 20, 9);
   });
 
   it("scales the rate by the opponent factor to the stat's power", () => {

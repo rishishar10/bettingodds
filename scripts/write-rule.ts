@@ -15,7 +15,7 @@ export const RULE = {
     test: { season: "2025-26", snapshots: ["morning", "close"] },
   },
   snapshots: {
-    morning: "08:00 America/Los_Angeles on the board date; games tipping at or before it are excluded",
+    morning: "23:00 America/Los_Angeles the evening before the board date (the 'morning' snapshot key is historical)",
     close: "last observation at or before tip minus 10 minutes, same book, same side",
   },
   features: {

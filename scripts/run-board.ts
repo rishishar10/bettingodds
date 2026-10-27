@@ -1,4 +1,4 @@
-// The 8:00am Pacific job: one fetch of every prop per event, rank once,
+// The 11:00pm Pacific job, for the next day's games: one fetch of every prop per event, rank once,
 // publish that ranking or fail. A failed run leaves the previous board up.
 //   node scripts/run-board.ts [--date YYYY-MM-DD] [--dry-run]
 import { existsSync } from "node:fs";
@@ -11,12 +11,12 @@ import { availabilityFor, injuryInputs, matchEvents, slateRoster } from "../lib/
 import { scoreboard } from "../lib/sources/espn.ts";
 import { fetchEventOdds, listEvents, usage, type RawPrice } from "../lib/sources/odds.ts";
 import { openStore } from "../lib/store.ts";
-import { boardInstant, pacificDate } from "../lib/time.ts";
+import { boardInstant, nextBoardDate } from "../lib/time.ts";
 
 const arg = (n: string) => { const i = process.argv.indexOf(`--${n}`); return i >= 0 ? process.argv[i + 1] : undefined; };
 const dryRun = process.argv.includes("--dry-run");
 const buildTimeUtc = new Date().toISOString();
-const boardDate = arg("date") ?? pacificDate(buildTimeUtc);
+const boardDate = arg("date") ?? nextBoardDate(buildTimeUtc);
 const P = paths(dryRun);
 
 if (!dryRun && !existsSync("reports/test.md")) {
@@ -25,7 +25,7 @@ if (!dryRun && !existsSync("reports/test.md")) {
 }
 
 if (!arg("date") && Date.parse(buildTimeUtc) < Date.parse(boardInstant(boardDate))) {
-  console.log(`before 8:00am Pacific on ${boardDate}; nothing to do`);
+  console.log(`before the 11:00pm Pacific build for ${boardDate}; nothing to do`);
   process.exit(0);
 }
 

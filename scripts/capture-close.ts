@@ -35,7 +35,7 @@ for (const { eventId } of matched) {
 }
 
 // Status changes: the first report time at which the subject is listed out.
-const report = await reportBefore(now, { bufferMinutes: 0, earliestHourEt: 5 });
+const report = await reportBefore(now, { bufferMinutes: 0 });
 for (const c of payload.conditional.filter((x) => x.stat)) {
   const game = h.db.prepare("SELECT game_id, tip_utc, completed FROM games WHERE date = ? AND (home_id = ? OR away_id = ?)").get(boardDate, c.teamId, c.teamId) as any;
   const row = store.db.prepare("SELECT * FROM conditional_states WHERE board_date = ? AND subject_player_id = ? AND player_id = ? AND stat = ? AND line = ? AND side = ?")

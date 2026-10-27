@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Morning Board",
-  description: "Qualifying NBA props among players the model can support, priced against one book at 8:00am Pacific.",
+  description: "Qualifying NBA props among players the model can support, priced against one book at 11pm Pacific the night before.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
