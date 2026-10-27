@@ -10,6 +10,7 @@ The board flags a disagreement between a supported projection and one book's pri
 | Box scores, 2022-23 → now (ESPN public JSON) | free | `node scripts/ingest-boxscores.ts 2022-23 2023-24 2024-25 2025-26 2026-27` |
 | Injury reports (official NBA PDFs, archive back to 2023-24) | free | wired; enables the non-oracle replay |
 | Free projection check, train seasons only | free | `node scripts/check-projection.ts 2023-24 2024-25` |
+| Dispersion fit (q, κ per stat), train box scores | free | `node scripts/fit-dispersion.ts`, which writes `rules/dispersion.json` |
 | Odds coverage probe + full historical pull | **one month of The Odds API 100K plan, $59** | `probe-odds.ts`, then `replay.ts collect` |
 | Live morning board | free tier (500 credits ≈ 16 slates/mo) | starts only after `reports/test.md` exists |
 | 30-minute captures, CLV, if-they-sit grading | $59/mo, optional | set repo variable `CAPTURES_ENABLED=1` |
@@ -20,19 +21,20 @@ The board flags a disagreement between a supported projection and one book's pri
 export ODDS_API_KEY=...
 node scripts/probe-odds.ts --plan          # credits needed
 node scripts/probe-odds.ts                 # writes reports/odds-coverage.md
-# Read it. Set ODDS_MAX_AGE_MINUTES in lib/constants.ts from the last_update finding, then:
+# Read it, fill in its decision lines, set ODDS_MAX_AGE_MINUTES and flip ODDS_MAX_AGE_SET
+# in lib/constants.ts. The pull and the rule hash refuse to run until then.
 node scripts/write-rule.ts --commit        # rules/gate.json + rules/gate.sha256
 git add rules lib/constants.ts reports/odds-coverage.md && git commit -m "Hash the pass/fail rule"
 node scripts/replay.ts plan train && node scripts/replay.ts plan test
-node scripts/replay.ts collect train --max-credits 22000
-node scripts/replay.ts collect test --max-credits 76000
+node scripts/replay.ts collect train --max-credits 20500   # every 4th game date of 2023-24 and 2024-25, ~19.7k
+node scripts/replay.ts collect test --max-credits 75000    # all of 2025-26, morning + close, ~74.3k
 node scripts/replay.ts collect test --availability oracle   # cached odds, no credits
 node scripts/replay.ts fit                 # rules/fitted.json, reports/train.md
 git add rules/fitted.json reports/train.md && git commit -m "Train fit"
 node scripts/replay.ts test                # scores 2025-26 once; refuses a second run
 ```
 
-`replay.ts test` refuses to run if the tree is dirty, the rule hash doesn't match the committed one, the code constants have drifted from the rule, or the season has already been scored. A rerun after a bug fix needs `--post-hoc`, is labeled as such, and can never earn "demonstrated edge".
+`replay.ts fit` and `replay.ts test` refuse to run until every expected date is either collected or skipped with a recorded reason. For the test, that applies to both the report and oracle replays. A partial pull can't lock the season. `replay.ts test` also refuses to run if the tree is dirty, the rule hash doesn't match the committed one, the code constants have drifted from the rule, or the season has already been scored. A rerun after a bug fix needs `--post-hoc`, is labeled as such, and can never earn "demonstrated edge".
 
 ## Live (free)
 

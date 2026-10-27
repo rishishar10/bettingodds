@@ -2,7 +2,8 @@
 // oracle availability and no odds. Train seasons only; never the test season.
 // Usage: node scripts/check-projection.ts 2023-24 [2024-25] [--every 3]
 import { writeFileSync } from "node:fs";
-import { currentTeammates, rosterOnDate } from "../lib/board.ts";
+import { rosterOnDate, teammatesTonight } from "../lib/board.ts";
+import { oracleAvailability } from "../lib/availability.ts";
 import { MODEL } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
 import { cdf } from "../lib/negbin.ts";
@@ -33,6 +34,8 @@ const byStat: Record<Stat, Acc> = { pts: acc(), reb: acc(), ast: acc() };
 const byFlag: Record<string, Acc> = {};
 const reasons: Record<string, number> = {};
 let evaluated = 0;
+let propLike = 0;
+let propLikeSupported = 0;
 
 for (const season of seasons) {
   const lastSeason = previousSeason(season);
@@ -43,19 +46,23 @@ for (const season of seasons) {
       for (const teamId of [game.home.id, game.away.id]) {
         const logs = h.teamLogsBefore(teamId, [season, lastSeason], date);
         const roster = rosterOnDate(h, teamId, logs, date);
-        const status = (pid: string) => ((actual.get(pid)?.minutes ?? 0) > 0 ? "active" : "out") as "active" | "out";
+        const avail = oracleAvailability(h, game, roster)(teamId);
         for (const p of roster) {
           const y = actual.get(p.playerId);
           if (!y || y.minutes <= 0) continue; // a DNP voids the prop
           evaluated++;
+          // Prop-like: median minutes >= 20 over the player's last 10 games played for this team.
+          const recent = logs.filter((l) => l.playerId === p.playerId && l.teamId === teamId && l.minutes > 0)
+            .sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 10).map((l) => l.minutes).sort((a, b) => a - b);
+          const isPropLike = recent.length >= 3 && recent[Math.floor(recent.length / 2)] >= 20;
+          if (isPropLike) propLike++;
           const pools = buildPools({
-            playerId: p.playerId, teamId, boardDate: date, season, lastSeason, logs, startersKnown: false,
-            teammates: currentTeammates(roster, logs, teamId, season, lastSeason,
-              new Map(roster.filter((r) => status(r.playerId) === "active").map((r) => [r.playerId, "active" as const])))
-              .filter((r) => r.playerId !== p.playerId).map((r) => ({ playerId: r.playerId, status: status(r.playerId) })),
+            playerId: p.playerId, teamId, boardDate: date, season, lastSeason, logs,
+            ...teammatesTonight(roster, logs, teamId, season, lastSeason, avail, p.playerId),
           });
           if (!pools.ok) { reasons[pools.reason] = (reasons[pools.reason] ?? 0) + 1; continue; }
           reasons.supported = (reasons.supported ?? 0) + 1;
+          if (isPropLike) propLikeSupported++;
           for (const stat of STATS) {
             const pr = project(pools.pools, stat);
             const dist = projectionDist(pr);
@@ -64,9 +71,9 @@ for (const season of seasons) {
             for (const a of [byStat[stat], ...pr.flags.map((f) => (byFlag[`${stat}:${f}`] ??= acc()))]) {
               a.n++;
               a.pit[Math.min(9, Math.floor(u * 10))]++;
-              a.bias += x - pr.mean;
-              a.sq += (x - pr.mean) ** 2;
-              a.predVar += pr.variance;
+              a.bias += x - dist.mean;
+              a.sq += (x - dist.mean) ** 2;
+              a.predVar += dist.variance;
               if (u >= 0.25 && u <= 0.75) a.in50++;
               if (u >= 0.1 && u <= 0.9) a.in80++;
             }
@@ -88,13 +95,15 @@ Seasons: ${seasons.join(", ")} (every ${every} game date). Availability: **oracl
 Constants: \`${JSON.stringify(MODEL)}\`
 
 Players who played: ${evaluated}. Supported: ${supported} (${pct(supported / evaluated)}).
+Prop-like players (median minutes >= 20 over their last 10 games for the team): ${propLike}; supported ${propLikeSupported} (${pct(propLikeSupported / propLike)}).
+The predictive distribution includes the train-fit dispersion in rules/dispersion.json.
 
 | Unsupported reason | Count |
 |---|---|
 ${Object.entries(reasons).filter(([k]) => k !== "supported").map(([k, v]) => `| ${k} | ${v} |`).join("\n")}
 
 PIT is randomized for counts; a calibrated model has 50% inside [0.25, 0.75], 80% inside [0.1, 0.9], and every decile density near 1.00.
-Bias is actual minus projected mean.
+Bias is actual minus the predictive mean; predicted SD is the predictive standard deviation.
 
 | Slice | n | Bias | RMSE | Predicted SD | In 50% | In 80% | PIT decile densities |
 |---|---|---|---|---|---|---|---|

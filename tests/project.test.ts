@@ -40,6 +40,15 @@ describe("pools and availability", () => {
     expect(active.matched.every((g) => Number(g.gameId.slice(1)) % 2 === 0)).toBe(true);
   });
 
+  it("an active teammate constrains the pool only when returning from a recent absence", () => {
+    // A missed games 2 and 5 long ago but has played the last 10: no constraint.
+    const steady = teamGames(20, { players: { [P]: () => ({ min: 30 }), A: (i) => ({ min: i === 2 || i === 5 ? 0 : 32 }) } });
+    expect(ok(buildPools(ctx(steady, { teammates: [{ playerId: "A", status: "active" }] }))).matched.length).toBe(20);
+    // A missed 4 of the last 10 and is back tonight: games without A are dropped.
+    const back = teamGames(20, { players: { [P]: () => ({ min: 30 }), A: (i) => ({ min: i >= 12 && i < 16 ? 0 : 32 }) } });
+    expect(ok(buildPools(ctx(back, { teammates: [{ playerId: "A", status: "active" }] }))).matched.length).toBe(16);
+  });
+
   it("two out teammates with no shared absence is unsupported with its own reason", () => {
     const logs = teamGames(20, {
       players: {

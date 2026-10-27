@@ -12,7 +12,7 @@ const day = (overrides: Partial<ReplayDay> = {}): ReplayDay => ({
   boardDate: "2026-01-15", boardUtc: "2026-01-15T16:00:00Z", availability: "report", injuryReport: null,
   games: [], observations: [o({}), o({ side: "under" })],
   closes: [o({ decimal: 1.7, sourceUpdatedAt: "2026-01-16T02:50:00Z" }), o({ side: "under", decimal: 2.15 }), o({ book: "fanduel", decimal: 1.5 })],
-  projections: { "p|pts": { mean: 25, variance: 40, flags: [], matched: 20 } },
+  projections: { "p|pts": { mean: 25, variance: 40, rateFinal: 25 / 32, alpha: 0.03, expMinutes: 32, flags: [], matched: 20 } },
   teamOf: { p: { teamId: "T", opponentId: "O", gameId: "g" } },
   results: { p: { minutes: 30, pts: 24, reb: 0, ast: 0 } },
   coverage: {} as ReplayDay["coverage"], unmatchedNames: [], missingOdds: [], missingClose: [],
@@ -30,13 +30,20 @@ describe("replay scoring", () => {
     expect(rows.find((r) => r.side === "under")!.result).toBe("loss");
   });
 
-  it("falls back to the nearest closing line and voids a DNP", () => {
-    const rows = scoreDay(
-      day({ closes: [o({ line: 22.5, decimal: 1.9 })], results: { p: { minutes: 0, pts: 0, reb: 0, ast: 0 } } }),
-      0.8, 0.08, 20,
-    );
+  it("uses the book's two-sided main closing line, not a stray alternate, and voids a DNP", () => {
+    const closes = [
+      o({ line: 21.5, decimal: 1.5 }), // one-sided alternate near the morning line
+      o({ line: 23.5, decimal: 1.95 }), o({ line: 23.5, side: "under", decimal: 1.87 }),
+      o({ line: 25.5, decimal: 2.6 }), o({ line: 25.5, side: "under", decimal: 1.5 }),
+    ];
+    const rows = scoreDay(day({ closes, results: { p: { minutes: 0, pts: 0, reb: 0, ast: 0 } } }), 0.8, 0.08, 20);
     const over = rows.find((r) => r.side === "over")!;
-    expect(over.close?.line).toBe(22.5);
+    expect(over.close?.line).toBe(23.5);
     expect(over.result).toBe("void");
+  });
+
+  it("has no close when the book posts no two-sided line", () => {
+    const rows = scoreDay(day({ closes: [o({ line: 22.5, decimal: 1.9 })] }), 0.8, 0.08, 20);
+    expect(rows.find((r) => r.side === "over")!.close).toBeNull();
   });
 });

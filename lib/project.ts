@@ -1,5 +1,6 @@
 import { MODEL } from "./constants.ts";
-import { countDist, sideProbs, type CountDist } from "./negbin.ts";
+import { dispersionFor, predictive, type DispersionParams } from "./dispersion.ts";
+import { sideProbs, type CountDist } from "./negbin.ts";
 import { expectedValue, shrink } from "./ev.ts";
 import type { GameLog, OutcomeProbs, Side, Stat, TeammateTonight } from "./types.ts";
 
@@ -44,8 +45,8 @@ export interface PoolContext {
   logs: GameLog[];
   teammates: TeammateTonight[];
   startersKnown: boolean;
-  /** Override a teammate as out, for the if-they-sit card. */
-  assumeOut?: string;
+  /** Override teammates as out, for the if-they-sit card. */
+  assumeOut?: string[];
   /** Minimum matched games; the if-they-sit card uses 3. */
   minMatchedGames?: number;
 }
@@ -105,7 +106,7 @@ export function buildPools(ctx: PoolContext): PoolResult {
   const rotation: Pools["rotation"] = [];
   for (const t of ctx.teammates) {
     if (t.playerId === ctx.playerId) continue;
-    const status = ctx.assumeOut === t.playerId ? "out" : t.status;
+    const status = ctx.assumeOut?.includes(t.playerId) ? "out" : t.status;
     const theirGames = teamLogs
       .filter((l) => l.playerId === t.playerId && l.minutes > 0)
       .sort(byRecent);
@@ -132,8 +133,17 @@ export function buildPools(ctx: PoolContext): PoolResult {
     };
   }
 
+  // Active teammates constrain the pool only when returning from a recent absence.
+  const recentTeamGames = [...new Set(teamLogs.map((l) => `${l.date}|${l.gameId}`))]
+    .sort()
+    .reverse()
+    .slice(0, MODEL.RETURNING_LOOKBACK)
+    .map((k) => k.split("|")[1]);
+  const returning = (pid: string) =>
+    recentTeamGames.filter((g) => teammateMinutes(g, pid) < MODEL.AVAILABILITY_MINUTES).length >= MODEL.RETURNING_MIN_MISSES;
+  const constraints = rotation.filter((r) => r.status === "out" || returning(r.playerId));
   const matchesTonight = (g: PoolGame) =>
-    rotation.every((r) => {
+    constraints.every((r) => {
       const m = teammateMinutes(g.gameId, r.playerId);
       return r.status === "out" ? m < MODEL.AVAILABILITY_MINUTES : m >= MODEL.AVAILABILITY_MINUTES;
     });
@@ -172,6 +182,8 @@ export interface Projection {
   rateMatched: number;
   rateFinal: number;
   uncertainty: Uncertainty;
+  /** The minutes sample behind E[M] and Var(M), one entry per game. */
+  minuteSample: number[];
   counts: { rateBase: number; rateMatched: number; alpha: number; minutes: number; matched: number };
   flags: string[];
   matchedGameIds: string[];
@@ -282,7 +294,7 @@ export function project(pools: Pools, stat: Stat): Projection {
     varMeanMinutes: mins.length > 1 ? varMinutes / mins.length : 0,
   };
   const { mean, variance } = momentsFor(rateFinal, alpha, expMinutes, varMinutes, uncertainty);
-  const dist = countDist(mean, variance);
+  const dist = predictive({ mean, variance, rateFinal, alpha, expMinutes }, { kappa: 1, q: 0 });
 
   return {
     stat,
@@ -298,6 +310,7 @@ export function project(pools: Pools, stat: Stat): Projection {
     rateMatched: matched.rate,
     rateFinal,
     uncertainty,
+    minuteSample: mins,
     counts: {
       rateBase: longBase.length,
       rateMatched: longMatched.length,
@@ -310,8 +323,9 @@ export function project(pools: Pools, stat: Stat): Projection {
   };
 }
 
-export function projectionDist(p: Projection): CountDist {
-  return countDist(p.mean, p.variance);
+/** The published predictive distribution: NB moments plus the train-fit dispersion. */
+export function projectionDist(p: Projection, params: DispersionParams = dispersionFor(p.stat)): CountDist {
+  return predictive(p, params);
 }
 
 export interface SensitivityResult {
@@ -331,16 +345,17 @@ export function sensitivity(
   SHRINK: number,
   evMin: number,
 ): SensitivityResult {
-  const evAt = (mean: number, variance: number) => {
-    const raw: OutcomeProbs = sideProbs(countDist(mean, variance), line, side);
+  const evAt = (mean: number, variance: number, expMinutes: number) => {
+    const raw: OutcomeProbs = sideProbs(projectionDist({ ...p, mean, variance, expMinutes }), line, side);
     return expectedValue(shrink(raw, SHRINK), decimal);
   };
   const lowMin = Math.max(0, p.expMinutes - MODEL.SENSITIVITY_MINUTES);
+  const hiMin = p.expMinutes + MODEL.SENSITIVITY_MINUTES;
   const lo = momentsFor(p.rateFinal, p.alpha, lowMin, p.varMinutes, p.uncertainty);
-  const hi = momentsFor(p.rateFinal, p.alpha, p.expMinutes + MODEL.SENSITIVITY_MINUTES, p.varMinutes, p.uncertainty);
-  const minusMinutes = evAt(lo.mean, lo.variance);
-  const plusMinutes = evAt(hi.mean, hi.variance);
-  const wideVariance = evAt(p.mean, p.variance * MODEL.SENSITIVITY_SIGMA ** 2);
+  const hi = momentsFor(p.rateFinal, p.alpha, hiMin, p.varMinutes, p.uncertainty);
+  const minusMinutes = evAt(lo.mean, lo.variance, lowMin);
+  const plusMinutes = evAt(hi.mean, hi.variance, hiMin);
+  const wideVariance = evAt(p.mean, p.variance * MODEL.SENSITIVITY_SIGMA ** 2, p.expMinutes);
   const failing: SensitivityResult["failing"] = [];
   if (minusMinutes < evMin) failing.push("minutes_minus");
   if (plusMinutes < evMin) failing.push("minutes_plus");

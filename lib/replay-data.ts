@@ -15,7 +15,7 @@ export interface ReplayDay {
   observations: PriceObs[];
   /** Same-book closing observations (last at or before tip minus 10 minutes). */
   closes: PriceObs[];
-  projections: Record<string, { mean: number; variance: number; flags: string[]; matched: number }>;
+  projections: Record<string, { mean: number; variance: number; rateFinal: number; alpha: number; expMinutes: number; flags: string[]; matched: number }>;
   teamOf: Record<string, { teamId: string; opponentId: string; gameId: string }>;
   results: Record<string, { minutes: number; pts: number; reb: number; ast: number }>;
   coverage: Record<CoverageReason | "prop_market", number>;
@@ -33,14 +33,42 @@ export function saveDay(mode: string, day: ReplayDay): void {
 }
 
 export function hasDay(mode: string, availability: string, date: string): boolean {
-  return existsSync(join(replayDir(mode, availability), `${date}.json`));
+  const dir = replayDir(mode, availability);
+  return existsSync(join(dir, `${date}.json`)) || existsSync(join(dir, `${date}.skip.json`));
+}
+
+/** A date deliberately not replayed, with the reason; counts as covered. */
+export function saveSkip(mode: string, availability: string, date: string, reason: string): void {
+  const dir = replayDir(mode, availability);
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, `${date}.skip.json`), JSON.stringify({ date, reason }));
+}
+
+export interface Coverage {
+  expected: number;
+  collected: number;
+  skipped: Record<string, string>;
+  missing: string[];
+}
+
+export function coverageOf(mode: string, availability: string, expected: string[]): Coverage {
+  const dir = replayDir(mode, availability);
+  const skipped: Record<string, string> = {};
+  const missing: string[] = [];
+  let collected = 0;
+  for (const d of expected) {
+    if (existsSync(join(dir, `${d}.json`))) collected++;
+    else if (existsSync(join(dir, `${d}.skip.json`))) skipped[d] = JSON.parse(readFileSync(join(dir, `${d}.skip.json`), "utf8")).reason;
+    else missing.push(d);
+  }
+  return { expected: expected.length, collected, skipped, missing };
 }
 
 export function loadDays(mode: string, availability: string): ReplayDay[] {
   const dir = replayDir(mode, availability);
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
+    .filter((f) => f.endsWith(".json") && !f.endsWith(".skip.json"))
     .sort()
     .map((f) => JSON.parse(readFileSync(join(dir, f), "utf8")));
 }

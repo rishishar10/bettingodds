@@ -20,6 +20,8 @@ export interface TeamAvailability {
   status: Map<string, TonightStatus>;
   /** No usable report for this team. */
   unresolved: boolean;
+  /** Tonight's starters, when the source knows them (the oracle box score; not the 8am report). */
+  starters?: Set<string>;
 }
 
 export type CoverageReason =
@@ -46,7 +48,9 @@ export interface SlateInput {
 
 /** If-they-sit card: priced as if one questionable/doubtful teammate sits. */
 export interface ConditionalCard {
+  /** Scenario key: every unresolved rotation teammate sits ("a+b"). */
   subjectPlayerId: string;
+  subjectPlayerIds: string[];
   subjectName: string;
   subjectStatus: string;
   playerId: string;
@@ -121,6 +125,35 @@ export function currentTeammates(
   return roster.filter((r) => r.teamId === teamId && (seen.has(r.playerId) || listed.has(r.playerId)));
 }
 
+/**
+ * Teammates for the availability filter, with tonight's statuses. A source
+ * that knows starters also adds starters with no team history, so the
+ * new-starter rule can fire.
+ */
+export function teammatesTonight(
+  roster: RosterPlayer[],
+  logs: GameLog[],
+  teamId: string,
+  season: string,
+  lastSeason: string,
+  avail: TeamAvailability,
+  playerId: string,
+): { teammates: TeammateTonight[]; startersKnown: boolean } {
+  // Report: anyone listed. Oracle: anyone who plays tonight (a season-long absentee returning).
+  const listed = avail.source === "report" ? avail.status
+    : new Map([...avail.status].filter(([, st]) => st === "active"));
+  const ids = new Set(currentTeammates(roster, logs, teamId, season, lastSeason, listed).map((r) => r.playerId));
+  if (avail.starters) for (const id of avail.starters) ids.add(id);
+  ids.delete(playerId);
+  const startersKnown = Boolean(avail.starters);
+  const teammates = [...ids].map((id) => ({
+    playerId: id,
+    status: avail.status.get(id) ?? "active",
+    ...(startersKnown ? { listedStarter: avail.starters!.has(id) } : {}),
+  }));
+  return { teammates, startersKnown };
+}
+
 export const projKey = (playerId: string, stat: Stat) => `${playerId}|${stat}`;
 
 export function evaluateSlate(input: SlateInput): SlateResult {
@@ -178,22 +211,22 @@ export function evaluateSlate(input: SlateInput): SlateResult {
         unsupported.push({ ...base, reason: "unresolved_status", detail: `player ${own}` });
         continue;
       }
-      // Report: anyone listed. Oracle: anyone who plays tonight (a season-long absentee returning).
-      const listed = avail.source === "report" ? avail.status
-        : new Map([...avail.status].filter(([, st]) => st === "active"));
-      const teammates: TeammateTonight[] = currentTeammates(roster, logsBy.get(teamId) as GameLog[], teamId, season, lastSeason, listed)
-        .filter((r) => r.playerId !== playerId)
-        .map((r) => ({ playerId: r.playerId, status: avail.status.get(r.playerId) ?? "active" }));
-      const pools = buildPools({
-        playerId, teamId, boardDate: input.boardDate, season, lastSeason,
-        logs: logsBy.get(teamId) as GameLog[], teammates, startersKnown: false,
-      });
-      if (!pools.ok && pools.reason === "teammate_status_unresolved" && pools.ids?.length === 1) {
-        const subject = pools.ids[0];
-        const card = { subjectPlayerId: subject, subjectName: rosterNames.get(subject) ?? subject, subjectStatus: avail.status.get(subject) ?? "", playerId, playerName: base.playerName, teamId };
+      const logs = logsBy.get(teamId) as GameLog[];
+      const { teammates, startersKnown } = teammatesTonight(roster, logs, teamId, season, lastSeason, avail, playerId);
+      const pools = buildPools({ playerId, teamId, boardDate: input.boardDate, season, lastSeason, logs, teammates, startersKnown });
+      if (!pools.ok && pools.reason === "teammate_status_unresolved" && pools.ids?.length) {
+        // One scenario: every unresolved rotation teammate sits.
+        const subjects = pools.ids;
+        const card = {
+          subjectPlayerId: subjects.join("+"),
+          subjectPlayerIds: subjects,
+          subjectName: subjects.map((id) => rosterNames.get(id) ?? id).join(" and "),
+          subjectStatus: subjects.map((id) => avail.status.get(id) ?? "").join(", "),
+          playerId, playerName: base.playerName, teamId,
+        };
         const cond = buildPools({
-          playerId, teamId, boardDate: input.boardDate, season, lastSeason, logs: logsBy.get(teamId) as GameLog[],
-          teammates, startersKnown: false, assumeOut: subject, minMatchedGames: MODEL.CONDITIONAL_MIN_GAMES,
+          playerId, teamId, boardDate: input.boardDate, season, lastSeason, logs, teammates, startersKnown,
+          assumeOut: subjects, minMatchedGames: MODEL.CONDITIONAL_MIN_GAMES,
         });
         if (!cond.ok) {
           conditional.push({ ...card, stat: null, line: null, side: null, book: null, decimal: null, sourceUpdatedAt: null, ev: null, pWinFinal: null, pLossFinal: null, matchedGames: 0, thin: true, message: "Role change detected. Projection unavailable." });
@@ -307,7 +340,7 @@ export function boardRows(slate: SlateResult, SHRINK: number, evMin: number): Bo
       pWinRaw: r.raw.win,
       pPush: r.final.push,
       breakEven: breakEven(r.decimal),
-      mean: pr.mean,
+      mean: projectionDist(pr).mean,
       expMinutes: pr.expMinutes,
       flags: pr.flags,
       matchedGames: pr.counts.matched,

@@ -1,0 +1,22 @@
+{
+  "pts": {
+    "kappa": 1.201,
+    "q": 0.07
+  },
+  "reb": {
+    "kappa": 0.881,
+    "q": 0.03
+  },
+  "ast": {
+    "kappa": 0.612,
+    "q": 0.03
+  },
+  "short_fractions": [
+    0.05,
+    0.15,
+    0.25,
+    0.35,
+    0.45
+  ],
+  "fitted_on": "2023-24, 2024-25, every 2 dates, oracle availability, log score"
+}

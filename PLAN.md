@@ -213,3 +213,24 @@ The report prints both hashes and both replays.
   - Predictive variance was plug-in only, and points were overconfident. It now adds **estimation uncertainty**: Var(rate_final) under the model, plus Var(M)/n. This is not a tuned floor.
   - Result: rebounds 49.0% / 79.2%, assists 49.8% / 79.8% in the 50% / 80% bands. Points are 43.5% / 72.4%, still slightly overconfident with a heavy left tail from in-game exits. SHRINK, fit on log loss, absorbs that.
 - **Hosting.** GitHub Actions cron, a force-pushed `data` branch for state, and a GitHub Pages static export.
+
+## Review fixes (2026-10-26)
+
+- **Points distribution.** I decomposed the miss: minutes were 76% inside their 80% band, and points given actual minutes were 75%.
+  - A mixture over the player's own minutes was worse on log score, and a discretized normal fixed the tails but not the body.
+  - What fits is a **short-night component**: the predictive distribution is (1 − q)·NB(mean, mean + κ·excess) + q·(night at 5–45% of expected minutes).
+  - q and κ are fit per stat by log score on train box scores (`rules/dispersion.json`, now part of the rule hash). The fit chose q = 0.07, 0.03, 0.03 and κ = 1.20, 0.88, 0.61 for points, rebounds, assists.
+  - Train results (27,149 player-games):
+    - points: 48.1% / 78.1% in the 50% / 80% bands, outer deciles 1.15 / 1.04 (were 1.69 / 1.04);
+    - rebounds: 49.7% / 79.6%;
+    - assists: 49.1% / 79.1%.
+  - Points' lower body is still slightly heavy (deciles 0.87–0.88).
+- **Coverage.** An active teammate now constrains the pool only when *returning*: active tonight after missing 3+ of the team's last 10 games. Out teammates always constrain it.
+  - Support is now 52.2% of all players who played (was 36.7%), and 58.9% of prop-like players.
+  - The remaining failures are mostly early-season or new-team thinness and empty out-intersections, which the spec intends.
+- **New-starter rule.** It runs wherever starters are known. The oracle replay and the train fits take starters from the box score and include starters new to the team. The 8am report has no lineups, so on the live board and the report replay the rule stays inert. That is stated, not hidden.
+- **If-they-sit with several unresolved teammates.** One joint scenario is priced with all of them out, and it resolves only if all of them sit.
+- **Partial replay can't lock.** `fit` and `test` require every expected date to be collected or skipped with a recorded reason (both availabilities for test).
+- **Train window** is every 4th game date of both 2023-24 and 2024-25, about 19.7k credits; the test season is about 74.3k. That fits one 100K month.
+- **Line moves** use the same line if it's still posted, otherwise the book's two-sided main closing line (no-vig nearest 50%), otherwise no close. A stray alternate is never used.
+- **Odds note.** `replay.ts collect` and `write-rule.ts --commit` refuse until `reports/odds-coverage.md` exists with its decision filled in and `ODDS_MAX_AGE_SET` is true.

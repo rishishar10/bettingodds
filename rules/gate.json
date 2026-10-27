@@ -4,8 +4,11 @@
   "seasons": {
     "regular_season_only": true,
     "train": {
-      "season": "2024-25",
-      "from": "2025-01-01",
+      "seasons": [
+        "2023-24",
+        "2024-25"
+      ],
+      "every_nth_game_date": 4,
       "snapshots": [
         "morning"
       ]
@@ -63,6 +66,21 @@
     "delta_ll": "printed with the DLL_MARGIN; not gating",
     "post_hoc": "a rerun after a code fix is labeled post-hoc and cannot earn demonstrated edge"
   },
+  "dispersion_fit": "per stat, (1 - q) NB(mean, mean + kappa (var - mean)) + q short night; q on a 0.01 grid, kappa by golden section; mean log score on train box scores (scripts/fit-dispersion.ts)",
+  "dispersion": {
+    "pts": {
+      "kappa": 1.201,
+      "q": 0.07
+    },
+    "reb": {
+      "kappa": 0.881,
+      "q": 0.03
+    },
+    "ast": {
+      "kappa": 0.612,
+      "q": 0.03
+    }
+  },
   "model": {
     "BASE_POOL_CAP": 30,
     "MATCHED_POOL_CAP": 30,
@@ -78,6 +96,8 @@
     "ROTATION_LOOKBACK_GAMES": 15,
     "NEW_STARTER_MIN_GAMES": 3,
     "AVAILABILITY_MINUTES": 10,
+    "RETURNING_MIN_MISSES": 3,
+    "RETURNING_LOOKBACK": 10,
     "CONDITIONAL_MIN_GAMES": 3,
     "SENSITIVITY_MINUTES": 3,
     "SENSITIVITY_SIGMA": 1.25
@@ -91,6 +111,7 @@
       0.1
     ],
     "ODDS_MAX_AGE_MINUTES": 20,
+    "ODDS_MAX_AGE_SET": false,
     "MIN_CLV_GAMES": 100,
     "DLL_MARGIN": 0.005
   }

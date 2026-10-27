@@ -12,9 +12,9 @@ import { evaluateGate, type GateReport, type ReplayRow } from "../lib/gate.ts";
 import { summarize } from "../lib/grade.ts";
 import { hashOf, sha256 } from "../lib/hash.ts";
 import { openHistory } from "../lib/history.ts";
-import { hasDay, loadDays, saveDay, type ReplayDay } from "../lib/replay-data.ts";
+import { coverageOf, hasDay, loadDays, saveDay, saveSkip, type Coverage, type ReplayDay } from "../lib/replay-data.ts";
 import { scoreDay } from "../lib/replay-score.ts";
-import { guardTestRun, loadRule, realGuardEnv, writeTestLock } from "../lib/rule.ts";
+import { guardTestRun, loadRule, oddsNoteReady, realGuardEnv, writeTestLock } from "../lib/rule.ts";
 import { availabilityFor, injuryInputs, matchEvents, slateRoster } from "../lib/slate-inputs.ts";
 import { fetchHistoricalEventOdds, listHistoricalEvents, usage, type RawPrice } from "../lib/sources/odds.ts";
 import { clusterBootstrap, fitBlendWeight, fitShrink, mean, widerInterval, type Interval } from "../lib/stats.ts";
@@ -27,14 +27,33 @@ const flag = (name: string) => {
   return i >= 0 ? process.argv[i + 1] : undefined;
 };
 const { rule } = loadRule();
-const seasons = rule.seasons as { train: { season: string; from: string }; test: { season: string } };
+const seasons = rule.seasons as { train: { seasons: string[]; every_nth_game_date: number }; test: { season: string } };
 const h = openHistory();
+
+/** Dates the rule says a mode covers: train is every nth game date of both prior seasons. */
+function ruleDates(mode: "train" | "test"): string[] {
+  if (mode === "train")
+    return seasons.train.seasons.flatMap((s) => h.gameDates(s).filter((_, i) => i % seasons.train.every_nth_game_date === 0));
+  return h.gameDates(seasons.test.season);
+}
+
+/** Rule dates with at least one completed game tipping after the 8:00am snapshot. */
+function expectedDates(mode: "train" | "test"): string[] {
+  return ruleDates(mode).filter((d) => h.gamesOn(d).some((g) => g.completed && Date.parse(g.tipUtc) > Date.parse(boardInstant(d))));
+}
 
 function datesFor(mode: "train" | "test"): string[] {
   const only = flag("dates");
-  if (only) return only.split(",");
-  if (mode === "train") return h.gameDates(seasons.train.season).filter((d) => d >= seasons.train.from);
-  return h.gameDates(seasons.test.season);
+  return only ? only.split(",") : expectedDates(mode);
+}
+
+function requireCoverage(mode: "train" | "test", availability: string): Coverage {
+  const c = coverageOf(mode, availability, expectedDates(mode));
+  if (c.missing.length) {
+    console.error(`refusing: ${mode}/${availability} is missing ${c.missing.length} of ${c.expected} dates (first: ${c.missing.slice(0, 5).join(", ")}). Run collect until every date is collected or skipped with a reason.`);
+    process.exit(1);
+  }
+  return c;
 }
 
 const ODDS_CACHE = "data/cache/odds";
@@ -43,6 +62,13 @@ const cachedEvents = (at: string) => existsSync(join(ODDS_CACHE, "events", `${at
 const closeAt = (tipUtc: string) => new Date(Date.parse(tipUtc) - 10 * 60000).toISOString();
 
 async function collect(mode: "train" | "test", availability: "oracle" | "report", plan: boolean) {
+  if (!plan) {
+    const ready = oddsNoteReady();
+    if (!ready.ok) {
+      console.error(`refusing the historical pull: ${ready.reason}`);
+      process.exit(1);
+    }
+  }
   const maxCredits = Number(flag("max-credits") ?? Infinity);
   let planned = 0;
   let spentEstimate = 0;
@@ -65,6 +91,10 @@ async function collect(mode: "train" | "test", availability: "oracle" | "report"
     if (!cachedEvents(boardUtc)) spentEstimate += 1;
     const events = await listHistoricalEvents(boardUtc);
     const { matched, missing } = matchEvents(games, events);
+    if (matched.length === 0) {
+      saveSkip(mode, availability, date, `no odds events matched (${missing.join(", ")})`);
+      continue;
+    }
     const prices: RawPrice[] = [];
     const closesRaw: RawPrice[] = [];
     const missingClose: string[] = [];
@@ -88,6 +118,7 @@ async function collect(mode: "train" | "test", availability: "oracle" | "report"
     const avail = availabilityFor(availability, h, date, roster, injuries, stats);
     if (!avail) {
       console.log(`${date}: no injury report before the snapshot; skipped`);
+      saveSkip(mode, availability, date, "no injury report before the snapshot");
       continue;
     }
     const slate = evaluateSlate({
@@ -105,7 +136,7 @@ async function collect(mode: "train" | "test", availability: "oracle" | "report"
       results[pid] = l ? { minutes: l.minutes, pts: l.pts, reb: l.reb, ast: l.ast } : { minutes: 0, pts: 0, reb: 0, ast: 0 };
     }
     const projections: ReplayDay["projections"] = {};
-    for (const [k, p] of slate.projections) projections[k] = { mean: p.mean, variance: p.variance, flags: p.flags, matched: p.counts.matched };
+    for (const [k, p] of slate.projections) projections[k] = { mean: p.mean, variance: p.variance, rateFinal: p.rateFinal, alpha: p.alpha, expMinutes: p.expMinutes, flags: p.flags, matched: p.counts.matched };
     saveDay(mode, {
       boardDate: date, boardUtc, availability,
       injuryReport: injuries?.morning ? { url: injuries.morning.url, timeUtc: injuries.morning.reportTimeUtc } : null,
@@ -127,9 +158,10 @@ function scoreAll(days: ReplayDay[], SHRINK: number, evMin: number): ReplayRow[]
 }
 
 function fit() {
-  const days = loadDays("train", "report").length ? loadDays("train", "report") : loadDays("train", "oracle");
+  const availability = loadDays("train", "report").length ? "report" : "oracle";
+  const coverage = requireCoverage("train", availability);
+  const days = loadDays("train", availability);
   if (!days.length) throw new Error("no train days collected");
-  const availability = days[0].availability;
   const rows = scoreAll(days, 1, POLICY.EV_MIN);
   const decisive = rows.filter((r) => r.side === "over" && (r.result === "win" || r.result === "loss"));
   const SHRINK = fitShrink(decisive.map((r) => ({ pModel: r.pRawConditional, won: r.result === "win" ? 1 : 0 })));
@@ -147,10 +179,11 @@ function fit() {
     const roi = clusterBootstrap(settled, (r) => r.gameId, (rs) => mean(rs.map((r) => r.pnl)), { reps: 1000 });
     return `| ${(t * 100).toFixed(0)}% | ${sel.length} | ${(sel.length / nights).toFixed(2)} | ${s.settled} | ${s.voids} | ${iv(roi)} |`;
   });
-  writeFileSync("rules/fitted.json", JSON.stringify({ SHRINK, fitted_on: `train ${seasons.train.season} from ${seasons.train.from}, ${availability} availability`, rows: decisive.length }, null, 2) + "\n");
+  writeFileSync("rules/fitted.json", JSON.stringify({ SHRINK, fitted_on: `train ${seasons.train.seasons.join(", ")} every ${seasons.train.every_nth_game_date} game dates, ${availability} availability`, rows: decisive.length }, null, 2) + "\n");
   const md = `# Train fit
 
 Rule hash: \`${hashOf(rule)}\`  ·  availability: **${availability}**  ·  nights: ${nights}
+Coverage: ${coverage.collected} collected, ${Object.keys(coverage.skipped).length} skipped with a reason, of ${coverage.expected} expected train dates.
 
 SHRINK = **${fmt(SHRINK, 4)}**, fit on conditional log loss over ${decisive.length} decisive over-side props.
 
@@ -195,7 +228,7 @@ function dataHash(trainDays: ReplayDay[], testByAvail: Record<string, ReplayDay[
   const parts: Record<string, string> = {
     odds_dataset: hashOf([...trainDays, ...Object.values(testByAvail).flat()].map((d) => [d.boardDate, d.availability, d.observations.length, d.closes.length])),
     coverage: hashOf([...trainDays, ...Object.values(testByAvail).flat()].map((d) => [d.boardDate, d.coverage, d.missingOdds, d.missingClose])),
-    boxscores_train: logsHash(seasons.train.season),
+    boxscores_train: sha256(seasons.train.seasons.map(logsHash).join()),
     boxscores_test: logsHash(seasons.test.season),
     injury_archive: hashOf((testByAvail.report ?? []).map((d) => d.injuryReport)),
     aliases: sha256(readFileSync("lib/sources/aliases.ts", "utf8")),
@@ -215,6 +248,8 @@ function test() {
     process.exit(1);
   }
   if (!existsSync("rules/fitted.json")) throw new Error("run fit first and commit rules/fitted.json");
+  // Both replays must cover the whole test season before anything is scored or locked.
+  const cov = { report: requireCoverage("test", "report"), oracle: requireCoverage("test", "oracle") };
   const { SHRINK } = JSON.parse(readFileSync("rules/fitted.json", "utf8"));
   const testByAvail: Record<string, ReplayDay[]> = { report: loadDays("test", "report"), oracle: loadDays("test", "oracle") };
   const results: Record<string, GateReport> = {};
@@ -250,6 +285,10 @@ The oracle replay scores players whose teammates were questionable or doubtful, 
 | Availability | EV bar | Selected | CLV | ROI |
 |---|---|---|---|---|
 ${grids.join("\n")}
+
+## Coverage
+
+${Object.entries(cov).map(([k, c]) => `- ${k}: ${c.collected} collected, ${Object.keys(c.skipped).length} skipped of ${c.expected} expected dates${Object.keys(c.skipped).length ? ` (${Object.entries(c.skipped).slice(0, 10).map(([d, r]) => `${d}: ${r}`).join("; ")})` : ""}`).join("\n")}
 
 ## Data hash parts
 

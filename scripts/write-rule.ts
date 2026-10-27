@@ -3,14 +3,15 @@
 import { writeFileSync } from "node:fs";
 import { MODEL, POLICY } from "../lib/constants.ts";
 import { hashOf } from "../lib/hash.ts";
-import { RULE_HASH_PATH, RULE_PATH } from "../lib/rule.ts";
+import { oddsNoteReady, RULE_HASH_PATH, RULE_PATH } from "../lib/rule.ts";
+import { loadDispersion } from "../lib/dispersion.ts";
 
 export const RULE = {
   version: 1,
   model_version_on_fit: "fitted-v1",
   seasons: {
     regular_season_only: true,
-    train: { season: "2024-25", from: "2025-01-01", snapshots: ["morning"] },
+    train: { seasons: ["2023-24", "2024-25"], every_nth_game_date: 4, snapshots: ["morning"] },
     test: { season: "2025-26", snapshots: ["morning", "close"] },
   },
   snapshots: {
@@ -48,6 +49,8 @@ export const RULE = {
     delta_ll: "printed with the DLL_MARGIN; not gating",
     post_hoc: "a rerun after a code fix is labeled post-hoc and cannot earn demonstrated edge",
   },
+  dispersion_fit: "per stat, (1 - q) NB(mean, mean + kappa (var - mean)) + q short night; q on a 0.01 grid, kappa by golden section; mean log score on train box scores (scripts/fit-dispersion.ts)",
+  dispersion: loadDispersion(),
   model: MODEL,
   policy: POLICY,
 };
@@ -57,6 +60,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const hash = hashOf(RULE);
   console.log(`rule hash ${hash}`);
   if (process.argv.includes("--commit")) {
+    const ready = oddsNoteReady();
+    if (!ready.ok) {
+      console.error(`not hashing: ${ready.reason}`);
+      process.exit(1);
+    }
     writeFileSync(RULE_HASH_PATH, hash + "\n");
     console.log(`wrote ${RULE_HASH_PATH}; commit both files before scoring the test season`);
   }

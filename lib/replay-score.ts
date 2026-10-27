@@ -1,13 +1,36 @@
 import { shrink } from "./ev.ts";
 import type { ReplayRow } from "./gate.ts";
 import { gradeProp } from "./grade.ts";
-import { countDist, sideProbs } from "./negbin.ts";
+import { dispersionFor, predictive } from "./dispersion.ts";
+import { sideProbs } from "./negbin.ts";
 import { rankBoard, type PriceObs } from "./rank.ts";
 import { resultFor, type ReplayDay } from "./replay-data.ts";
 import { BOOKS } from "./types.ts";
 
 const sameBookLine = (o: PriceObs, p: PriceObs) =>
   o.eventId === p.eventId && o.playerId === p.playerId && o.stat === p.stat && o.book === p.book;
+
+/**
+ * Same book, same side. The same line if still posted; otherwise the book's
+ * main closing line: both sides posted, no-vig over closest to 50%. With no
+ * two-sided line the close is missing rather than a stray alternate.
+ */
+export function closingLine(day: ReplayDay, r: PriceObs): PriceObs | undefined {
+  const book = day.closes.filter((c) => sameBookLine(c, r));
+  const same = book.find((c) => c.line === r.line && c.side === r.side);
+  if (same) return same;
+  let best: { obs: PriceObs; gap: number } | undefined;
+  for (const c of book) {
+    if (c.side !== r.side) continue;
+    const other = book.find((o) => o.line === c.line && o.side !== c.side);
+    if (!other) continue;
+    const over = c.side === "over" ? c : other;
+    const under = c.side === "over" ? other : c;
+    const gap = Math.abs((1 / over.decimal) / (1 / over.decimal + 1 / under.decimal) - 0.5);
+    if (!best || gap < best.gap) best = { obs: c, gap };
+  }
+  return best?.obs;
+}
 
 /**
  * Re-ranks one frozen day with a given SHRINK and threshold and returns
@@ -20,7 +43,7 @@ export function scoreDay(day: ReplayDay, SHRINK: number, evMin: number, maxAgeMi
     probsFor: ({ playerId, stat, line, side }) => {
       const pr = day.projections[`${playerId}|${stat}`];
       if (!pr) return null;
-      const raw = sideProbs(countDist(pr.mean, pr.variance), line, side);
+      const raw = sideProbs(predictive(pr, dispersionFor(stat)), line, side);
       return { raw, final: shrink(raw, SHRINK) };
     },
     buildTimeUtc: day.boardUtc,
@@ -36,10 +59,7 @@ export function scoreDay(day: ReplayDay, SHRINK: number, evMin: number, maxAgeMi
     const opposing = day.observations.find(
       (o) => sameBookLine(o, r as unknown as PriceObs) && o.line === r.line && o.side !== r.side,
     );
-    // Close: same book and side; same line if posted, else the nearest line.
-    const closes = day.closes.filter((c) => sameBookLine(c, r as unknown as PriceObs) && c.side === r.side);
-    const close = closes.find((c) => c.line === r.line) ??
-      [...closes].sort((a, b) => Math.abs(a.line - r.line) - Math.abs(b.line - r.line))[0];
+    const close = closingLine(day, r as unknown as PriceObs);
     const closeOpp = close
       ? day.closes.find((c) => sameBookLine(c, close) && c.line === close.line && c.side !== close.side)
       : undefined;

@@ -74,6 +74,24 @@ describe("slate evaluation", () => {
     expect(emptyReason(s, 1)).toBe("No supported player had a prop.");
   });
 
+  it("a source that knows starters fires the new-starter rule for a starter with no team history", () => {
+    const withStarters = (teamId: string): TeamAvailability => ({
+      source: "oracle", sourceTime: null, unresolved: false,
+      status: new Map([["star", "active"], ["q", "active"], ["role", "active"], ["newguy", "active"]]),
+      starters: teamId === "H" ? new Set(["star", "q", "newguy"]) : new Set(),
+    });
+    const s = run([price("Star Player", 15.5, "over", 1.9)], withStarters);
+    expect(s.unsupported.find((u) => u.playerId === "star")).toMatchObject({ reason: "teammate_role" });
+    expect(s.unsupported.find((u) => u.playerId === "star")?.detail).toMatch(/no team history/);
+  });
+
+  it("two unresolved teammates produce one joint if-they-sit scenario", () => {
+    const s = run([price("Star Player", 15.5, "over", 1.9)], avail({ q: "questionable", role: "doubtful" }));
+    expect(s.conditional).toHaveLength(1);
+    expect(s.conditional[0].subjectPlayerIds.sort()).toEqual(["q", "role"]);
+    expect(s.conditional[0].subjectName).toMatch(/ and /);
+  });
+
   it("stale prices for supported players are their own empty-board reason", () => {
     const s = run([{ ...price("Star Player", 15.5, "over", 1.9), sourceUpdatedAt: "2026-01-20T12:00:00Z" }], avail({}));
     expect(s.coverage.stale_or_invalid_odds).toBe(1);

@@ -10,11 +10,14 @@ import type { InjuryEntry, InjuryReport } from "./sources/injuries.ts";
  * An upper bound; live knows only the morning report.
  */
 export function oracleAvailability(history: History, game: EspnGame, roster: RosterPlayer[]) {
-  const played = new Map(history.logsForGame(game.gameId).map((l) => [l.playerId, l.minutes]));
+  const tonight = history.logsForGame(game.gameId);
   return (teamId: string): TeamAvailability => {
     const status = new Map<string, TonightStatus>();
-    for (const p of roster) if (p.teamId === teamId) status.set(p.playerId, (played.get(p.playerId) ?? 0) > 0 ? "active" : "out");
-    return { source: "oracle", sourceTime: null, status, unresolved: false };
+    for (const p of roster) if (p.teamId === teamId) status.set(p.playerId, "out");
+    // Everyone in tonight's box score for this team, including players new to it.
+    for (const l of tonight) if (l.teamId === teamId) status.set(l.playerId, l.minutes > 0 ? "active" : "out");
+    const starters = new Set(tonight.filter((l) => l.teamId === teamId && l.starter).map((l) => l.playerId));
+    return { source: "oracle", sourceTime: null, status, unresolved: false, starters };
   };
 }
 
