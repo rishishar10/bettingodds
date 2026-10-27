@@ -9,10 +9,12 @@ export const paths = (dryRun: boolean) => ({
 
 export function modelState(): { SHRINK: number; modelVersion: string; label: string; ruleHash: string | null } {
   const fitted = existsSync("rules/fitted.json") ? JSON.parse(readFileSync("rules/fitted.json", "utf8")) : null;
+  // Until the odds replay fits SHRINK, use the box-score fit against book-style lines.
+  const provisional = existsSync("rules/provisional-shrink.json") ? JSON.parse(readFileSync("rules/provisional-shrink.json", "utf8")) : null;
   const gate = existsSync("reports/gate-result.json") ? JSON.parse(readFileSync("reports/gate-result.json", "utf8")) : null;
   return {
-    SHRINK: fitted?.SHRINK ?? HEURISTIC_SHRINK,
-    modelVersion: fitted && gate ? "fitted-v1" : "heuristic-v1",
+    SHRINK: fitted?.SHRINK ?? provisional?.SHRINK ?? HEURISTIC_SHRINK,
+    modelVersion: fitted && gate ? "fitted-v1" : "heuristic-v2",
     label: gate?.demonstratedEdge ? "demonstrated edge" : "disagreement only, no demonstrated edge",
     ruleHash: gate?.ruleHash ?? null,
   };

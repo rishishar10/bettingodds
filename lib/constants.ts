@@ -7,7 +7,8 @@ export const MODEL = {
   MIN_MATCHED_MINUTES: 50,
   THIN_GAMES: 10,
   THIN_MINUTES: 200,
-  PRIOR_MINUTES: 200,
+  /** 200 in the original spec; 400 scored better on both train seasons (reports/stress-test.md). */
+  PRIOR_MINUTES: 400,
   SHORT_APPEARANCE_MINUTES: 8,
   ALPHA_MIN_GAMES: 10,
   MINUTES_MIN_THIS_SEASON: 3,
@@ -20,6 +21,17 @@ export const MODEL = {
   RETURNING_LOOKBACK: 10,
   CONDITIONAL_MIN_GAMES: 3,
   SENSITIVITY_MINUTES: 3,
+  /** Minutes blend: E[M] = w * (last RECENT_MINUTES_GAMES played) + (1 - w) * matched E[M]; w fit on 2023-24 (0.54-0.57). */
+  RECENT_MINUTES_GAMES: 5,
+  RECENT_MINUTES_WEIGHT: 0.55,
+  /** Opponent: rate * factor^beta, factor = opponent's allowed per-minute rate over its last 15 games vs league, shrunk with 10 games. Betas fit on 2023-24. */
+  OPP_LOOKBACK_GAMES: 15,
+  OPP_SHRINK_GAMES: 10,
+  OPP_BETA_PTS: 0.97,
+  OPP_BETA_REB: 0.54,
+  OPP_BETA_AST: 0.81,
+  /** Points ran ~1% low on 2023-24 (the base-rate prior lags league scoring); fit there, confirmed on 2024-25. */
+  PTS_MEAN_SCALE: 1.012,
   SENSITIVITY_SIGMA: 1.25,
 } as const;
 
@@ -46,5 +58,5 @@ export const FREE_PLAN = {
   CYCLE_RESET_DAY: 26,
 } as const;
 
-/** Shrinkage before the train fit. Replaced by the fitted value in rules/fitted.json. */
+/** Fallback shrinkage if no fitted value exists (rules/provisional-shrink.json, then rules/fitted.json). */
 export const HEURISTIC_SHRINK = 0.5;

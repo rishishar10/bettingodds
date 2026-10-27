@@ -1,4 +1,5 @@
 import { MODEL } from "./constants.ts";
+import { opponentFactors } from "./opponent.ts";
 import { breakEven, decimalToAmerican, expectedValue, shrink, validatePrice } from "./ev.ts";
 import type { History } from "./history.ts";
 import { sideProbs } from "./negbin.ts";
@@ -208,6 +209,7 @@ export function evaluateSlate(input: SlateInput): SlateResult {
       nameToPlayer.set(`${eventId}|${name}`, playerId);
       const opponentId = teamId === game.home.id ? game.away.id : game.home.id;
       teamOf.set(playerId, { teamId, opponentId, gameId: game.gameId });
+      const opp = opponentFactors(input.history, opponentId, season, input.boardDate);
       for (const p of prices) joined.push({ ...p, playerId });
 
       const avail = input.availability(teamId, game);
@@ -246,7 +248,7 @@ export function evaluateSlate(input: SlateInput): SlateResult {
           conditional.push({ ...card, stat: null, line: null, side: null, book: null, decimal: null, sourceUpdatedAt: null, ev: null, pWinFinal: null, pLossFinal: null, matchedGames: 0, thin: true, message: "Role change detected. Projection unavailable." });
         } else {
           for (const stat of new Set(prices.map((p) => p.stat))) {
-            const pr = project(cond.pools, stat);
+            const pr = project(cond.pools, stat, { oppFactor: opp[stat] });
             const dist = projectionDist(pr);
             let best: ConditionalCard | null = null;
             for (const p of prices) {
@@ -270,7 +272,7 @@ export function evaluateSlate(input: SlateInput): SlateResult {
       }
       supportedPlayers.add(playerId);
       for (const stat of new Set(prices.map((p) => p.stat))) {
-        projections.set(projKey(playerId, stat), project(pools.pools, stat));
+        projections.set(projKey(playerId, stat), project(pools.pools, stat, { oppFactor: opp[stat] }));
       }
     }
   }

@@ -25,7 +25,15 @@ export function openHistory(path = "data/history.sqlite") {
     CREATE INDEX IF NOT EXISTS logs_team ON logs (team_id, date);
     CREATE INDEX IF NOT EXISTS logs_player ON logs (player_id, date);
     CREATE INDEX IF NOT EXISTS games_date ON games (date);
+    CREATE INDEX IF NOT EXISTS logs_opp ON logs (opponent_id, season, date);
   `);
+
+  const h_allowed = db.prepare(`SELECT SUM(l.minutes) m, SUM(l.pts) pts, SUM(l.reb) reb, SUM(l.ast) ast
+    FROM logs l JOIN games g ON g.game_id = l.game_id
+    WHERE l.opponent_id = ? AND l.season = ? AND l.date < ? AND g.season_type = 2
+    GROUP BY l.game_id ORDER BY l.date DESC LIMIT ?`);
+  const h_league = db.prepare(`SELECT SUM(l.minutes) m, SUM(l.pts) pts, SUM(l.reb) reb, SUM(l.ast) ast
+    FROM logs l JOIN games g ON g.game_id = l.game_id WHERE l.season = ? AND l.date < ? AND g.season_type = 2`);
 
   const toLog = (r: any): GameLog => ({
     gameId: r.game_id, date: r.date, tipUtc: r.tip_utc, season: r.season, teamId: r.team_id,
@@ -79,6 +87,14 @@ export function openHistory(path = "data/history.sqlite") {
     },
     logsForGame(gameId: string): GameLog[] {
       return (db.prepare("SELECT * FROM logs WHERE game_id = ?").all(gameId) as any[]).map(toLog);
+    },
+    /** What opponents produced against a team, per game, most recent first (regular season, strictly before a date). */
+    allowedBefore(teamId: string, season: string, beforeDate: string, limit: number) {
+      return h_allowed.all(teamId, season, beforeDate, limit) as { m: number; pts: number; reb: number; ast: number }[];
+    },
+    /** League totals for a season strictly before a date. */
+    leagueBefore(season: string, beforeDate: string) {
+      return h_league.get(season, beforeDate) as { m: number | null; pts: number; reb: number; ast: number };
     },
     /** The team a player was on most recently before a date, from box scores. */
     teamOnDate(playerId: string, beforeDate: string): string | null {

@@ -1,0 +1,74 @@
+{
+  "mean scale (× c)": {
+    "params": {
+      "pts": 1.0010049997481283,
+      "reb": 0.9941166289984018,
+      "ast": 0.9963638767525869
+    },
+    "use": {
+      "pts": false,
+      "reb": false,
+      "ast": true
+    }
+  },
+  "opponent allowance (mean × factor^β)": {
+    "params": {
+      "pts": 0.024391856267350034,
+      "reb": 0.02145930652392041,
+      "ast": 0.025298063974919675
+    },
+    "use": {
+      "pts": false,
+      "reb": false,
+      "ast": false
+    }
+  },
+  "home court (× h at home, ÷ h away)": {
+    "params": {
+      "pts": 1.0065044950046267,
+      "reb": 1.0072722464948267,
+      "ast": 1.01540286525061
+    },
+    "use": {
+      "pts": false,
+      "reb": false,
+      "ast": true
+    }
+  },
+  "back-to-back (× b)": {
+    "params": {
+      "pts": 1.016316222819256,
+      "reb": 0.9909646771891563,
+      "ast": 1.000831390311475
+    },
+    "use": {
+      "pts": false,
+      "reb": false,
+      "ast": false
+    }
+  },
+  "recency (rate blend weight w on half-life-8 rate)": {
+    "params": {
+      "pts": 0.0003665687179287021,
+      "reb": 0.0003665687179287021,
+      "ast": 0.0003665687179287021
+    },
+    "use": {
+      "pts": false,
+      "reb": false,
+      "ast": false
+    }
+  },
+  "minutes trend (E[M] blend weight w on last-5 minutes)": {
+    "params": {
+      "pts": 0.0003665687179287021,
+      "reb": 0.031702802451419855,
+      "ast": 0.0003665687179287021
+    },
+    "use": {
+      "pts": false,
+      "reb": false,
+      "ast": false
+    }
+  }
+}

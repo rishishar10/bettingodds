@@ -4,6 +4,7 @@
 import { writeFileSync } from "node:fs";
 import { rosterOnDate, teammatesTonight } from "../lib/board.ts";
 import { oracleAvailability } from "../lib/availability.ts";
+import { opponentFactors } from "../lib/opponent.ts";
 import { MODEL } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
 import { cdf } from "../lib/negbin.ts";
@@ -47,6 +48,7 @@ for (const season of seasons) {
         const logs = h.teamLogsBefore(teamId, [season, lastSeason], date);
         const roster = rosterOnDate(h, teamId, logs, date);
         const avail = oracleAvailability(h, game, roster)(teamId);
+        const opp = opponentFactors(h, teamId === game.home.id ? game.away.id : game.home.id, season, date);
         for (const p of roster) {
           const y = actual.get(p.playerId);
           if (!y || y.minutes <= 0) continue; // a DNP voids the prop
@@ -64,7 +66,7 @@ for (const season of seasons) {
           reasons.supported = (reasons.supported ?? 0) + 1;
           if (isPropLike) propLikeSupported++;
           for (const stat of STATS) {
-            const pr = project(pools.pools, stat);
+            const pr = project(pools.pools, stat, { oppFactor: opp[stat] });
             const dist = projectionDist(pr);
             const x = y[stat];
             const u = cdf(dist, x - 1) + rand() * dist.pmf(x);

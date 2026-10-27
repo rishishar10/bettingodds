@@ -1,4 +1,5 @@
 import { MODEL } from "./constants.ts";
+import { oppBeta } from "./opponent.ts";
 import { dispersionFor, predictive, type DispersionParams } from "./dispersion.ts";
 import { sideProbs, type CountDist } from "./negbin.ts";
 import { expectedValue, shrink } from "./ev.ts";
@@ -181,6 +182,11 @@ export interface Projection {
   rateBase: number;
   rateMatched: number;
   rateFinal: number;
+  /** Opponent factor applied to the rate (1 = league average). */
+  oppFactor: number;
+  /** Matched-pool E[M] before the recent-minutes blend, and the recent average. */
+  expMinutesMatched: number;
+  recentMinutes: number;
   uncertainty: Uncertainty;
   /** The minutes sample behind E[M] and Var(M), one entry per game. */
   minuteSample: number[];
@@ -245,15 +251,23 @@ export function momentsFor(
   return { mean: eMu, variance: eMu + alpha * eMu2 + varMu + estimation };
 }
 
-export function project(pools: Pools, stat: Stat): Projection {
+export interface ProjectionContext {
+  /** Opponent factors from lib/opponent.ts; omitted means league average. */
+  oppFactor?: number;
+}
+
+export function project(pools: Pools, stat: Stat, ctx: ProjectionContext = {}): Projection {
   const flags: string[] = [];
   const longBase = pools.base.filter((g) => !g.shortAppearance);
   const longMatched = pools.matched.filter((g) => !g.shortAppearance);
 
   const base = rateOf(longBase, stat);
   const matched = rateOf(longMatched, stat);
-  const rateFinal =
+  const rateBlended =
     (matched.statSum + MODEL.PRIOR_MINUTES * base.rate) / (matched.minSum + MODEL.PRIOR_MINUTES);
+  const oppFactor = ctx.oppFactor ?? 1;
+  const oppScale = oppFactor ** oppBeta(stat) * (stat === "pts" ? MODEL.PTS_MEAN_SCALE : 1);
+  const rateFinal = rateBlended * oppScale;
 
   const matchedMinutesAll = pools.matched.reduce((s, g) => s + g.minutes, 0);
   if (pools.matched.length < MODEL.THIN_GAMES || matchedMinutesAll < MODEL.THIN_MINUTES) {
@@ -279,18 +293,22 @@ export function project(pools: Pools, stat: Stat): Projection {
     flags.push("minutes_prior_season");
   }
   const mins = minuteGames.map((g) => g.minutes);
-  const expMinutes = mins.reduce((s, x) => s + x, 0) / mins.length;
+  const expMinutesMatched = mins.reduce((s, x) => s + x, 0) / mins.length;
+  // Recent role: blend in the last few games played for this team (base pool is most recent first).
+  const recent = pools.base.slice(0, MODEL.RECENT_MINUTES_GAMES).map((g) => g.minutes);
+  const recentMinutes = recent.reduce((s, x) => s + x, 0) / recent.length;
+  const expMinutes = MODEL.RECENT_MINUTES_WEIGHT * recentMinutes + (1 - MODEL.RECENT_MINUTES_WEIGHT) * expMinutesMatched;
   const varMinutes =
-    mins.length > 1 ? mins.reduce((s, x) => s + (x - expMinutes) ** 2, 0) / (mins.length - 1) : 0;
+    mins.length > 1 ? mins.reduce((s, x) => s + (x - expMinutesMatched) ** 2, 0) / (mins.length - 1) : 0;
 
   // Var(sum of matched stat) under the model, divided by the blended exposure squared.
   let varStatSum = 0;
   for (const g of longMatched) {
-    const e = rateFinal * g.minutes;
+    const e = rateBlended * g.minutes;
     varStatSum += e + alpha * e * e;
   }
   const uncertainty: Uncertainty = {
-    varRate: varStatSum / (matched.minSum + MODEL.PRIOR_MINUTES) ** 2,
+    varRate: (varStatSum / (matched.minSum + MODEL.PRIOR_MINUTES) ** 2) * oppScale * oppScale,
     varMeanMinutes: mins.length > 1 ? varMinutes / mins.length : 0,
   };
   const { mean, variance } = momentsFor(rateFinal, alpha, expMinutes, varMinutes, uncertainty);
@@ -309,6 +327,9 @@ export function project(pools: Pools, stat: Stat): Projection {
     rateBase: base.rate,
     rateMatched: matched.rate,
     rateFinal,
+    oppFactor,
+    expMinutesMatched,
+    recentMinutes,
     uncertainty,
     minuteSample: mins,
     counts: {

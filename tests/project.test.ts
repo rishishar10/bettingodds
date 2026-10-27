@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { alphaMoM, buildPools, momentsFor, project, sensitivity, type PoolContext } from "../lib/project.ts";
 import { countDist } from "../lib/negbin.ts";
+import { MODEL } from "../lib/constants.ts";
 import { P, TEAM, teamGames } from "./fixtures.ts";
 
 const ctx = (logs: PoolContext["logs"], extra: Partial<PoolContext> = {}): PoolContext => ({
@@ -105,7 +106,7 @@ describe("pools and availability", () => {
 });
 
 describe("projection", () => {
-  it("blends the matched rate toward the base rate with a 200-minute prior", () => {
+  it("blends the matched rate toward the base rate with the minutes prior", () => {
     // Base: 30 games of 0.5 pts/min. Matched (A out): 6 games at 1.0 pts/min.
     const logs = teamGames(30, {
       players: {
@@ -118,7 +119,8 @@ describe("projection", () => {
     const rateBase = (6 * 30 + 24 * 15) / (30 * 30);
     expect(pr.rateBase).toBeCloseTo(rateBase, 12);
     expect(pr.rateMatched).toBeCloseTo(1, 12);
-    expect(pr.rateFinal).toBeCloseTo((180 + 200 * rateBase) / (180 + 200), 12);
+    const prior = MODEL.PRIOR_MINUTES;
+    expect(pr.rateFinal).toBeCloseTo(((180 + prior * rateBase) / (180 + prior)) * MODEL.PTS_MEAN_SCALE, 12);
     expect(pr.flags).toContain("thin_sample");
     expect(pr.flags).toContain("dispersion_from_base_pool");
   });
@@ -154,8 +156,20 @@ describe("projection", () => {
     const now = teamGames(2, { players: { [P]: () => ({ min: 36, pts: 18 }) } });
     const pr = project(ok(buildPools(ctx([...last, ...now]))), "pts");
     expect(pr.flags).toContain("minutes_prior_season");
-    expect(pr.expMinutes).toBe(20);
+    expect(pr.expMinutesMatched).toBe(20);
     expect(pr.varMinutes).toBe(0);
+    // Recent role: the last 5 games played (36, 36, 20, 20, 20) are blended in.
+    expect(pr.recentMinutes).toBeCloseTo(26.4, 9);
+    expect(pr.expMinutes).toBeCloseTo(0.55 * 26.4 + 0.45 * 20, 9);
+  });
+
+  it("scales the rate by the opponent factor to the stat's power", () => {
+    const logs = teamGames(20, { players: { [P]: () => ({ min: 30, pts: 15, reb: 6 }) } });
+    const pools = ok(buildPools(ctx(logs)));
+    const base = project(pools, "pts");
+    const soft = project(pools, "pts", { oppFactor: 1.1 });
+    expect(soft.rateFinal / base.rateFinal).toBeCloseTo(1.1 ** 0.97, 9);
+    expect(project(pools, "reb", { oppFactor: 1.1 }).rateFinal / project(pools, "reb").rateFinal).toBeCloseTo(1.1 ** 0.54, 9);
   });
 
   it("method-of-moments alpha recovers the NB2 formula", () => {

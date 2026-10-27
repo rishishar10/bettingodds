@@ -30,9 +30,11 @@
     "base_pool": "most recent 30 same-team played games (minutes > 0), this season and last, before the board date",
     "matched_pool": "most recent 30 same-team played games matching every rotation teammate: out => teammate under 10 min; active => 10+ min",
     "rotation": "median minutes >= 24 over the teammate's last 15 games played for this team",
-    "rate": "(matched stat + 200 * rate_base) / (matched minutes + 200); games under 8 minutes excluded from rates and alpha",
+    "rate": "(matched stat + 400 * rate_base) / (matched minutes + 200); games under 8 minutes excluded from rates and alpha",
     "minutes": "E[M], Var(M) (n-1) from this season's matched games (minutes > 0, short appearances included) if >= 3, else last season's",
     "distribution": "negative binomial with Var = E[mu] + alpha E[mu^2] + Var(mu) + estimation (Var(rate_final) from the matched sample under the model, Var(M)/n); Poisson when Var <= mean",
+    "minutes_blend": "E[M] = 0.55 * last 5 games played for the team + 0.45 * matched E[M]",
+    "opponent": "rate * factor^beta (pts 0.97, reb 0.54, ast 0.81), factor = opponent's allowed per-minute rate over its last 15 games vs league to date, shrunk with 10 games; points also * 1.012",
     "teammates": "on this team now and seen in its box scores this season (DNP rows count) or listed tonight; last season stands in before a team's first game"
   },
   "shrink_fit": "conditional log loss over decisive outcomes, over side, all evaluated train props, report availability; golden section on [0,1]",
@@ -69,15 +71,15 @@
   "dispersion_fit": "per stat, (1 - q) NB(mean, mean + kappa (var - mean)) + q short night; q on a 0.01 grid, kappa by golden section; mean log score on train box scores (scripts/fit-dispersion.ts)",
   "dispersion": {
     "pts": {
-      "kappa": 1.201,
+      "kappa": 1.128,
       "q": 0.07
     },
     "reb": {
-      "kappa": 0.881,
-      "q": 0.03
+      "kappa": 0.785,
+      "q": 0.02
     },
     "ast": {
-      "kappa": 0.612,
+      "kappa": 0.505,
       "q": 0.03
     }
   },
@@ -88,7 +90,7 @@
     "MIN_MATCHED_MINUTES": 50,
     "THIN_GAMES": 10,
     "THIN_MINUTES": 200,
-    "PRIOR_MINUTES": 200,
+    "PRIOR_MINUTES": 400,
     "SHORT_APPEARANCE_MINUTES": 8,
     "ALPHA_MIN_GAMES": 10,
     "MINUTES_MIN_THIS_SEASON": 3,
@@ -100,6 +102,14 @@
     "RETURNING_LOOKBACK": 10,
     "CONDITIONAL_MIN_GAMES": 3,
     "SENSITIVITY_MINUTES": 3,
+    "RECENT_MINUTES_GAMES": 5,
+    "RECENT_MINUTES_WEIGHT": 0.55,
+    "OPP_LOOKBACK_GAMES": 15,
+    "OPP_SHRINK_GAMES": 10,
+    "OPP_BETA_PTS": 0.97,
+    "OPP_BETA_REB": 0.54,
+    "OPP_BETA_AST": 0.81,
+    "PTS_MEAN_SCALE": 1.012,
     "SENSITIVITY_SIGMA": 1.25
   },
   "policy": {

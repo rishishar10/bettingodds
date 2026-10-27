@@ -1,14 +1,14 @@
 {
   "pts": {
-    "kappa": 1.201,
+    "kappa": 1.128,
     "q": 0.07
   },
   "reb": {
-    "kappa": 0.881,
-    "q": 0.03
+    "kappa": 0.785,
+    "q": 0.02
   },
   "ast": {
-    "kappa": 0.612,
+    "kappa": 0.505,
     "q": 0.03
   },
   "short_fractions": [

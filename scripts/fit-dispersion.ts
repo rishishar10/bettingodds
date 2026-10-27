@@ -5,6 +5,7 @@
 import { writeFileSync } from "node:fs";
 import { rosterOnDate, teammatesTonight } from "../lib/board.ts";
 import { oracleAvailability } from "../lib/availability.ts";
+import { opponentFactors } from "../lib/opponent.ts";
 import { loadRule } from "../lib/rule.ts";
 import { openHistory } from "../lib/history.ts";
 import { predictive, type DispersionParams, type DistParts } from "../lib/dispersion.ts";
@@ -30,6 +31,7 @@ for (const season of trainSeasons) {
         const logs = h.teamLogsBefore(teamId, [season, lastSeason], date);
         const roster = rosterOnDate(h, teamId, logs, date);
         const avail = oracleAvailability(h, game, roster)(teamId);
+        const opp = opponentFactors(h, teamId === game.home.id ? game.away.id : game.home.id, season, date);
         for (const p of roster) {
           const y = actual.get(p.playerId);
           if (!y || y.minutes <= 0) continue;
@@ -39,7 +41,7 @@ for (const season of trainSeasons) {
           });
           if (!pools.ok) continue;
           for (const stat of STATS) {
-            const pr = project(pools.pools, stat);
+            const pr = project(pools.pools, stat, { oppFactor: opp[stat] });
             rows[stat].push({ parts: pr, y: y[stat] });
           }
         }

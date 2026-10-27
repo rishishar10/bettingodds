@@ -262,3 +262,24 @@ GitHub workflows pick a mode on their own:
 - **demo:** no key.
 
 The first run ingests the last two seasons of box scores. The data branch keeps `history.sqlite` and the published snapshots, but not the raw API caches. Pages deploys only when the repo variable `PAGES_ENABLED` is `1`.
+
+## Stress test and model v2 (2026-10-26)
+
+`scripts/stress-test.ts` runs on train seasons only. Anything fit is fit on 2023-24 and judged on the 2024-25 holdout; 2025-26 stays untouched. Each projection is also scored against a book-style line, floor(last-10 average) + 0.5, because no odds exist yet. Full report: `reports/stress-test.md`.
+
+**Findings on the original model:**
+- Calibrated on log score and PIT, and better than a naive Poisson-at-average against the line: 0.62–0.65 log loss against 0.66–0.68.
+- Badly overconfident at the extremes, which is where +EV rows come from: "74%" hit 55%.
+- Biased by opponent: +0.73 points against soft defenses, −0.35 against tough ones.
+
+**Adopted** (each improved the 2024-25 holdout):
+- Recent-minutes blend: E[M] = 0.55 × last 5 games + 0.45 × matched. Holdout log score −0.014 per stat; this was the overconfidence.
+- Opponent factor, rate × factor^β: β = 0.97 for points, 0.54 for rebounds, 0.81 for assists.
+- `PRIOR_MINUTES` 400 instead of 200; better on both seasons with the same rows.
+- Points × 1.012; the base-rate prior lags league scoring.
+
+**Rejected** (no holdout gain): home court, back-to-back, recency-weighted rate.
+
+**Holdout line log loss, original → v2:** points 0.648 → 0.636, rebounds 0.647 → 0.635, assists 0.623 → 0.613.
+
+**Provisional shrinkage:** 0.95, fit against book-style lines (`rules/provisional-shrink.json`). It replaces the arbitrary 0.5, which scored worse on the holdout (0.643 vs 0.627), and the real SHRINK from the odds replay replaces it in turn. Model version is now `heuristic-v2`.
