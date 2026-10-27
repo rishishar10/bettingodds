@@ -12,7 +12,8 @@ export interface BoardSnapshot {
   evMin: number;
   ruleHash: string | null;
   injury: { url: string; timeUtc: string; teamsUnresolved: string[] } | null;
-  games: { gameId: string; tipUtc: string; home: string; away: string; hasOdds: boolean }[];
+  games: { gameId: string; tipUtc: string; home: string; away: string; hasOdds: boolean; eventId?: string | null }[];
+  buildTimeUtc?: string;
   teams: Record<string, string>;
   rows: BoardRow[];
   conditional: ConditionalCard[];
@@ -46,6 +47,17 @@ export interface NewsFile {
   espnNotesAfterPublish: number;
   changes: { playerName: string; teamId: string; from: string; to: string; source: string; sourceTime: string; note: string }[];
   rows: Record<string, { kind: "player" | "teammate"; playerName: string; to: string; source: string; sourceTime: string; note: string }[]>;
+  update: {
+    asOf: string;
+    reportTimeUtc: string;
+    rows: BoardRow[];
+    added: string[];
+    dropped: { key: string; reason: string }[];
+    tippedGames: string[];
+    coverage: Record<string, number>;
+    conditional: ConditionalCard[];
+    unresolvedTeams: string[];
+  } | null;
 }
 
 export function loadNews(date: string): NewsFile | null {

@@ -4,7 +4,7 @@
 import { availabilitySnapshot, boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
 import { POLICY } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
-import { modelState, writeSnapshot } from "../lib/publish.ts";
+import { modelState, writePrices, writeSnapshot } from "../lib/publish.ts";
 import { availabilityFor, injuryInputs, slateRoster } from "../lib/slate-inputs.ts";
 import { scoreboard } from "../lib/sources/espn.ts";
 import type { RawPrice } from "../lib/sources/odds.ts";
@@ -44,11 +44,12 @@ const model = modelState();
 const slate = evaluateSlate({ boardDate, buildTimeUtc: boardUtc, games: matched, prices, history: h, availability: avail, SHRINK: model.SHRINK, evMin: POLICY.EV_MIN, maxAgeMinutes: POLICY.ODDS_MAX_AGE_MINUTES });
 const teams: Record<string, string> = {};
 for (const g of games) { teams[g.home.id] = g.home.abbr; teams[g.away.id] = g.away.abbr; }
+writePrices(outDir, boardDate, prices);
 writeSnapshot(outDir, boardDate, {
   boardDate, publishedAt: boardUtc, buildTimeUtc: boardUtc, modelVersion: model.modelVersion,
   label: "DEMO PRICES, not a real board", shrunk: true, SHRINK: model.SHRINK, ruleHash: null, evMin: POLICY.EV_MIN,
   injury: injuries.morning ? { url: injuries.morning.url, timeUtc: injuries.morning.reportTimeUtc, ...stats } : null,
-  games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: true })),
+  games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: true, eventId: `demo-${g.gameId}` })),
   teams, rows: boardRows(slate, model.SHRINK, POLICY.EV_MIN), conditional: slate.conditional, coverage: slate.coverage,
   availability: availabilitySnapshot(matched, avail),
   unmatchedNames: slate.unmatchedNames.length, anomalies: slate.rank.anomalies, emptyReason: emptyReason(slate, games.length),

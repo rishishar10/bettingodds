@@ -18,6 +18,12 @@ export function modelState(): { SHRINK: number; modelVersion: string; label: str
   };
 }
 
+/** The prices a board was built from, kept so the news watch can re-run it. */
+export function writePrices(dir: string, boardDate: string, prices: unknown[]): void {
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, `prices-${boardDate}.json`), JSON.stringify(prices));
+}
+
 /** Writes the snapshot the static pages read, plus an index of dates. */
 export function writeSnapshot(dir: string, boardDate: string, payload: unknown): void {
   mkdirSync(dir, { recursive: true });

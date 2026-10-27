@@ -88,6 +88,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .slip.stale { border-left-color: var(--bad); }
 .slip.stale .line, .slip.stale .ev strong { opacity: 0.55; }
 .news { color: var(--bad); }
+.updated { color: var(--edge); }
+.record { margin-top: 56px; }
+.dropped { list-style: none; padding: 0; margin: 8px 0 0; font-size: 15.5px; color: var(--muted); }
+.dropped li { margin-bottom: 4px; }
 .ev { text-align: right; }
 .ev strong { display: block; font-stretch: 62%; font-weight: 800; font-size: 46px; line-height: 0.95; color: var(--edge); }
 .ev span { color: var(--muted); font-size: 14px; }

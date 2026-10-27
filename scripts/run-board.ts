@@ -5,7 +5,7 @@ import { existsSync } from "node:fs";
 import { availabilitySnapshot, boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
 import { POLICY } from "../lib/constants.ts";
 import { openHistory } from "../lib/history.ts";
-import { modelState, paths, writeSnapshot } from "../lib/publish.ts";
+import { modelState, paths, writePrices, writeSnapshot } from "../lib/publish.ts";
 import { availabilityFor, injuryInputs, matchEvents, slateRoster } from "../lib/slate-inputs.ts";
 import { scoreboard } from "../lib/sources/espn.ts";
 import { fetchEventOdds, listEvents, usage, type RawPrice } from "../lib/sources/odds.ts";
@@ -76,7 +76,7 @@ try {
     ruleHash: model.ruleHash,
     evMin: POLICY.EV_MIN,
     injury: injuries.morning ? { url: injuries.morning.url, timeUtc: injuries.morning.reportTimeUtc, teamsUnresolved: stats.teamsUnresolved } : null,
-    games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: matched.some((m) => m.game.gameId === g.gameId) })),
+    games: games.map((g) => ({ gameId: g.gameId, tipUtc: g.tipUtc, home: g.home.abbr, away: g.away.abbr, hasOdds: matched.some((m) => m.game.gameId === g.gameId), eventId: matched.find((m) => m.game.gameId === g.gameId)?.eventId ?? null })),
     teams,
     rows,
     conditional: slate.conditional,
@@ -98,6 +98,7 @@ try {
     if (c.stat && c.line !== null && c.side)
       store.setConditionalState({ boardDate, subjectPlayerId: c.subjectPlayerId, playerId: c.playerId, stat: c.stat, line: c.line, side: c.side, state: "initially_qualifying", oddsSourceTime: c.sourceUpdatedAt, fetchedAt, decimal: c.decimal, ev: c.ev });
   }
+  writePrices(P.published, boardDate, prices);
   writeSnapshot(P.published, boardDate, payload);
   store.logRun(boardDate, buildTimeUtc, "published", `${rows.length} rows`);
   console.log(`published ${boardDate}: ${rows.length} rows, ${slate.rank.evaluated.length} evaluated, ${slate.conditional.length} if-they-sit cards, coverage ${JSON.stringify(slate.coverage)}, credits remaining ${usage().remaining ?? "?"}`);

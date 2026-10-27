@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Pull or push the state files kept on the orphan `data` branch.
 # The branch is force-pushed as a single commit so binaries never pile up.
+# Raw API caches are not kept (the ESPN cache alone is ~2 GB); history.sqlite is.
 set -euo pipefail
-FILES="data/board.sqlite data/history.sqlite data/published data/cache/espn data/cache/injury"
+FILES="data/board.sqlite data/dev-board.sqlite data/history.sqlite data/published data/dev-published data/demo-published"
 case "${1:-}" in
   pull)
     if git ls-remote --exit-code origin data >/dev/null 2>&1; then

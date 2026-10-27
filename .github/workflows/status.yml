@@ -20,6 +20,7 @@ jobs:
   watch:
     runs-on: ubuntu-latest
     env:
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
       REPO_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
     steps:
       - uses: actions/checkout@v4
@@ -29,14 +30,18 @@ jobs:
           cache: npm
       - run: npm ci
       - run: scripts/ci/data-branch.sh pull
-      - run: node scripts/status-watch.ts --dir data/published
+      - run: scripts/ci/mode.sh
+      - name: Watch injury news and re-run the board for games not yet tipped
+        run: node scripts/status-watch.ts --dir "$BOARD_DIR"
       - run: scripts/ci/data-branch.sh push
       - name: Build site
         run: npm run build
         env:
           NEXT_BASE_PATH: /${{ github.event.repository.name }}
-          BOARD_DATA_DIR: data/published
-      - uses: actions/upload-pages-artifact@v3
+          BOARD_DATA_DIR: ${{ env.BOARD_DIR }}
+      - if: vars.PAGES_ENABLED == '1'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: out
-      - uses: actions/deploy-pages@v4
+      - if: vars.PAGES_ENABLED == '1'
+        uses: actions/deploy-pages@v4

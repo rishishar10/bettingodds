@@ -24,7 +24,13 @@ const BOOK_STATUS: Record<string, string> = {
 
 const SOURCE: Record<string, string> = { official: "official report", espn: "ESPN" };
 
-export function Slip({ row, teams, news }: { row: BoardRow; teams: Record<string, string>; news?: NewsFile["rows"][string] }) {
+export function Slip({ row, teams, news, update }: {
+  row: BoardRow;
+  teams: Record<string, string>;
+  news?: NewsFile["rows"][string];
+  /** Set on rows of the injury-updated board. */
+  update?: { isNew: boolean; asOf: string };
+}) {
   const side = row.side === "over" ? "Over" : "Under";
   const others = Object.entries(row.books).filter(([, s]) => s !== "best");
   const failing = row.sensitivity.failing.map((f) => SENS_TEXT[f]);
@@ -39,6 +45,12 @@ export function Slip({ row, teams, news }: { row: BoardRow; teams: Record<string
         </p>
       </div>
       <ul className="reasons">
+        {update ? (
+          <li className="updated">
+            <b>{update.isNew ? "New since 8am." : "Still qualifies."}</b> Re-projected with the injury news as of {pacificTime(update.asOf)}, at the 8:00am price.
+            {" "}That price has likely moved since the news; check it before acting.
+          </li>
+        ) : null}
         {news?.length ? (
           <li className="news">
             <b>News after publish.</b>{" "}

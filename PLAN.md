@@ -248,3 +248,17 @@ The report prints both hashes and both replays.
   - It compares each board's saved availability with, for each game, the latest official report before tip, plus ESPN notes posted after publish and before tip.
   - Rows are flagged "news after publish" when their player or a rotation teammate got worse. They are never re-ranked, and the publication is unchanged.
   - The ESPN feed has no archive, so it is live-only and never part of a replay.
+
+## Injury news re-runs the board (2026-10-26)
+
+Each hourly watch re-runs the board for games not yet tipped:
+- **Inputs:** the latest official report, worse ESPN notes after publish layered on top, and the same 8am prices and build time.
+- **Output:** an "Updated for injury news" view, shown first. It lists rows new since 8am and rows dropped with the reason, and every row states that its price is the 8am price and has likely moved. The view also has its own if-they-sit cards.
+- **Unchanged:** the 8am board stays the graded record. Updated rows are not graded, because their prices are stale. With paid captures, the same re-run could be priced at post-news odds.
+
+GitHub workflows pick a mode on their own:
+- **live:** a key is set and the test report exists;
+- **dryrun:** a key is set;
+- **demo:** no key.
+
+The first run ingests the last two seasons of box scores. The data branch keeps `history.sqlite` and the published snapshots, but not the raw API caches. Pages deploys only when the repo variable `PAGES_ENABLED` is `1`.

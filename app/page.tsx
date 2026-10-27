@@ -60,6 +60,48 @@ function Header({ b, news }: { b: BoardSnapshot; news: NewsFile | null }) {
   );
 }
 
+function IfTheySit({ cards }: { cards: BoardSnapshot["conditional"] }) {
+  if (!cards.length) return null;
+  const priced = cards.filter((c) => !c.message);
+  const unpriced = new Map<string, number>();
+  for (const c of cards) if (c.message) unpriced.set(c.subjectName, (unpriced.get(c.subjectName) ?? 0) + 1);
+  return (
+    <section>
+      <h2>If they sit</h2>
+      <p className="fine">
+        Priced as if questionable or doubtful teammates are out, using the same matched games. These are not board rows and are not
+        called an edge. They are graded only at the first price posted after the news, and only if it still clears the bar.
+      </p>
+      {priced.length ? (
+        <ul className="cards">
+          {priced.map((c, i) => (
+            <li className="card" key={i}>
+              <b>If {c.subjectName} ({c.subjectStatus}) sit{c.subjectPlayerIds.length > 1 ? "" : "s"}:</b> {c.playerName} {c.side} {c.line}{" "}
+              {STAT_NAMES[c.stat ?? ""]}, {bookName(c.book ?? "")} {american(decimalToAmerican(c.decimal!))}, shrunk probability{" "}
+              {pct(c.pWinFinal ?? 0)}, EV +{((c.ev ?? 0) * 100).toFixed(1)}%, {c.matchedGames} matching games{c.thin ? ", thin sample" : ""}.
+              Priced {pacificTime(c.sourceUpdatedAt!)}.
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="fine">No scenario clears the bar.</p>
+      )}
+      {unpriced.size > 0 && (
+        <details className="fine" style={{ marginTop: 12 }}>
+          <summary>
+            {[...unpriced.values()].reduce((a, b) => a + b, 0)} more players have a role change with no matching games to price it
+          </summary>
+          <ul className="dropped">
+            {[...unpriced].map(([who, n]) => (
+              <li key={who}>If {who} sit{who.includes(" and ") ? "" : "s"}: {n} player{n > 1 ? "s" : ""}, projection unavailable.</li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </section>
+  );
+}
+
 export default function Page() {
   const dates = listDates();
   if (!dates.length) {
@@ -78,37 +120,50 @@ export default function Page() {
     <main className="page">
       <Nav current="board" />
       <Header b={b} news={news} />
-      {b.rows.length ? (
-        <ol className="slips">
-          {b.rows.map((r) => <Slip key={r.key} row={r} teams={b.teams} news={news?.rows[r.key]} />)}
-        </ol>
-      ) : (
-        <p className="empty">Empty board. {b.emptyReason} A sparse board is not a night with no edges; it is a night where nothing the model can support cleared the bar.</p>
-      )}
-
-      {b.conditional.length > 0 && (
+      {news?.update && (
         <section>
-          <h2>If they sit</h2>
+          <h2>Updated for injury news</h2>
           <p className="fine">
-            Priced as if a questionable or doubtful teammate is out, using the same matched games. These are not morning-board rows and
-            are not called an edge. They are graded only at the first price posted after the news, and only if it still clears the bar.
+            The board re-run at {pacificTime(news.update.asOf)} with the official report from {pacificTime(news.update.reportTimeUtc)}
+            {news.espnNotesAfterPublish ? " and later ESPN injury notes" : ""}, for games not yet started
+            {news.update.tippedGames.length ? ` (already started: ${news.update.tippedGames.join(", ")})` : ""}. Prices are the 8:00am prices. This view is
+            not graded; the 8:00am board below is the record.
           </p>
-          <ul className="cards">
-            {b.conditional.map((c, i) => (
-              <li className="card" key={i}>
-                <b>If {c.subjectName} ({c.subjectStatus}) sits:</b>{" "}
-                {c.message ?? (
-                  <>
-                    {c.playerName} {c.side} {c.line} {STAT_NAMES[c.stat ?? ""]}, {bookName(c.book ?? "")} {american(decimalToAmerican(c.decimal!))},
-                    shrunk probability {pct(c.pWinFinal ?? 0)}, EV +{((c.ev ?? 0) * 100).toFixed(1)}%, {c.matchedGames} matching games
-                    {c.thin ? ", thin sample" : ""}. Priced {pacificTime(c.sourceUpdatedAt!)}.
-                  </>
-                )}
-              </li>
-            ))}
-          </ul>
+          {news.update.rows.length ? (
+            <ol className="slips">
+              {news.update.rows.map((r) => (
+                <Slip key={r.key} row={r} teams={b.teams} update={{ isNew: news.update!.added.includes(r.key), asOf: news.update!.asOf }} />
+              ))}
+            </ol>
+          ) : (
+            <p className="empty">Nothing clears the bar with the latest injury information.</p>
+          )}
+          {news.update.dropped.length > 0 && (
+            <>
+              <p className="fine" style={{ marginTop: 20 }}>Dropped from the 8:00am board:</p>
+              <ul className="dropped">
+                {news.update.dropped.map((d) => {
+                  const r = b.rows.find((x) => x.key === d.key);
+                  return <li key={d.key}>{r ? `${r.playerName} ${r.side} ${r.line} ${STAT_NAMES[r.stat]}` : d.key}: {d.reason}.</li>;
+                })}
+              </ul>
+            </>
+          )}
         </section>
       )}
+
+      <section className={news?.update ? "record" : undefined}>
+        {news?.update && <h2>8:00am board (the graded record)</h2>}
+        {b.rows.length ? (
+          <ol className="slips">
+            {b.rows.map((r) => <Slip key={r.key} row={r} teams={b.teams} news={news?.rows[r.key]} />)}
+          </ol>
+        ) : (
+          <p className="empty">Empty board. {b.emptyReason} A sparse board is not a night with no edges; it is a night where nothing the model can support cleared the bar.</p>
+        )}
+      </section>
+
+      <IfTheySit cards={news?.update?.conditional ?? b.conditional} />
 
       {b.anomalies.length > 0 && (
         <p className="fine" style={{ marginTop: 32 }}>
