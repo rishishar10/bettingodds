@@ -92,6 +92,23 @@ describe("slate evaluation", () => {
     expect(s.conditional[0].subjectName).toMatch(/ and /);
   });
 
+  it("a rotation player who left the team counts as out, so the pool uses games he sat", () => {
+    const h = history();
+    // "gone" played 30 minutes for H in all but the last 6 games, then left (no longer on any roster here).
+    const extra: GameLog[] = [];
+    for (let i = 0; i < 30; i++) {
+      const date = addDays(BOARD, -(30 - i));
+      extra.push({ gameId: `H${i}`, date, tipUtc: `${date}T03:00:00Z`, season: "2025-26", teamId: i < 24 ? "H" : "Z", opponentId: "X",
+        playerId: "gone", playerName: "Gone Player", minutes: i < 24 ? 30 : 0, pts: 20, reb: 5, ast: 3, starter: true });
+    }
+    h.insertLogs(extra);
+    const s = evaluateSlate({ boardDate: BOARD, buildTimeUtc: "2026-01-20T16:00:00Z", games: [{ game, eventId: "ev" }],
+      prices: [price("Star Player", 15.5, "over", 1.9)], history: h, availability: avail({}), SHRINK: 0.6, evMin: 0.08, maxAgeMinutes: 20 });
+    // Only the 6 games after he left match; that is enough to support, and the pool excludes the games with him.
+    const pr = s.projections.get("star|pts");
+    expect(pr?.counts.matched).toBe(6);
+  });
+
   it("stale prices for supported players are their own empty-board reason", () => {
     const s = run([{ ...price("Star Player", 15.5, "over", 1.9), sourceUpdatedAt: "2026-01-20T12:00:00Z" }], avail({}));
     expect(s.coverage.stale_or_invalid_odds).toBe(1);

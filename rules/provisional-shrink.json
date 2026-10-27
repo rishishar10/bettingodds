@@ -1,9 +1,9 @@
 {
-  "SHRINK": 0.9266,
+  "SHRINK": 0.9485,
   "fitted_on": "2023-24 book-style lines (floor of last-10 average + 0.5), box scores only",
   "holdout_line_ll": {
-    "none": 0.6275154213990343,
-    "placeholder": 0.6419216029636015,
-    "fitted": 0.6264843517341401
+    "none": 0.6246544316934943,
+    "placeholder": 0.641963783530539,
+    "fitted": 0.6243384387713957
   }
 }

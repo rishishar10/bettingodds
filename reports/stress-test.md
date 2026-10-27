@@ -7,41 +7,41 @@ Book-style line: floor(average over the player's last 10 games of 15+ minutes) +
 
 | Stat | Season | Rows | Log score | In 80% | Bias | Line rows | Over rate | Mean P(over) | Line LL | Naive LL |
 |---|---|---|---|---|---|---|---|---|---|---|
-| pts | 2023-24 | 8283 | 3.0524 | 77.7% | 0.111 | 8028 | 38.4% | 37.0% | 0.6239 | 0.6816 |
-| pts | 2024-25 | 6485 | 3.0691 | 78.4% | 0.244 | 6265 | 38.5% | 35.8% | 0.6341 | 0.6818 |
-| reb | 2023-24 | 8283 | 2.1757 | 79.1% | -0.007 | 8028 | 38.5% | 38.5% | 0.6278 | 0.6744 |
-| reb | 2024-25 | 6485 | 2.1884 | 78.8% | 0.010 | 6265 | 39.3% | 38.2% | 0.6342 | 0.6750 |
-| ast | 2023-24 | 8283 | 1.7939 | 78.4% | -0.004 | 8028 | 38.2% | 37.8% | 0.6233 | 0.6681 |
-| ast | 2024-25 | 6485 | 1.7924 | 78.8% | -0.049 | 6265 | 37.7% | 38.4% | 0.6142 | 0.6604 |
+| pts | 2023-24 | 6674 | 3.0419 | 78.3% | 0.016 | 6449 | 37.9% | 37.0% | 0.6217 | 0.6819 |
+| pts | 2024-25 | 5247 | 3.0617 | 78.5% | 0.065 | 5066 | 38.0% | 36.5% | 0.6309 | 0.6809 |
+| reb | 2023-24 | 6674 | 2.1623 | 79.3% | 0.020 | 6449 | 38.5% | 38.3% | 0.6266 | 0.6738 |
+| reb | 2024-25 | 5247 | 2.1812 | 79.9% | -0.032 | 5066 | 38.6% | 38.3% | 0.6311 | 0.6732 |
+| ast | 2023-24 | 6674 | 1.7837 | 79.3% | -0.011 | 6449 | 37.9% | 38.0% | 0.6211 | 0.6666 |
+| ast | 2024-25 | 5247 | 1.7893 | 80.0% | -0.065 | 5066 | 37.7% | 38.8% | 0.6120 | 0.6602 |
 
 ## 2. Reliability of P(over line), both seasons
 
 | Stat | Bin | Rows | Mean predicted | Observed |
 |---|---|---|---|---|
-| pts | 0–10% | 693 | 5.9% | 8.5% |
-| pts | 10–20% | 1391 | 15.4% | 16.9% |
-| pts | 20–30% | 2408 | 25.4% | 29.9% |
-| pts | 30–40% | 3781 | 35.2% | 38.9% |
-| pts | 40–50% | 3469 | 44.7% | 45.8% |
-| pts | 50–60% | 1818 | 54.2% | 53.0% |
-| pts | 60–70% | 624 | 63.7% | 62.3% |
-| pts | 70–80% | 100 | 73.6% | 66.0% |
-| reb | 0–10% | 636 | 5.8% | 8.0% |
-| reb | 10–20% | 1198 | 15.5% | 17.7% |
-| reb | 20–30% | 2201 | 25.5% | 29.3% |
-| reb | 30–40% | 3420 | 35.1% | 37.0% |
-| reb | 40–50% | 3572 | 44.8% | 44.3% |
-| reb | 50–60% | 2227 | 54.5% | 51.9% |
-| reb | 60–70% | 850 | 63.9% | 59.6% |
-| reb | 70–80% | 174 | 73.4% | 69.5% |
-| ast | 0–10% | 550 | 6.2% | 5.8% |
-| ast | 10–20% | 1410 | 15.4% | 16.9% |
-| ast | 20–30% | 2424 | 25.4% | 28.3% |
-| ast | 30–40% | 3410 | 35.1% | 36.9% |
-| ast | 40–50% | 3262 | 44.8% | 42.8% |
-| ast | 50–60% | 2033 | 54.5% | 51.1% |
-| ast | 60–70% | 900 | 64.2% | 62.0% |
-| ast | 70–80% | 276 | 73.8% | 72.8% |
+| pts | 0–10% | 503 | 5.9% | 8.3% |
+| pts | 10–20% | 1081 | 15.4% | 16.4% |
+| pts | 20–30% | 1829 | 25.7% | 28.4% |
+| pts | 30–40% | 3102 | 35.3% | 37.8% |
+| pts | 40–50% | 3068 | 44.7% | 45.2% |
+| pts | 50–60% | 1453 | 54.1% | 53.0% |
+| pts | 60–70% | 413 | 63.7% | 63.4% |
+| pts | 70–80% | 56 | 74.0% | 62.5% |
+| reb | 0–10% | 490 | 5.9% | 7.8% |
+| reb | 10–20% | 902 | 15.4% | 16.2% |
+| reb | 20–30% | 1704 | 25.7% | 27.9% |
+| reb | 30–40% | 2890 | 35.3% | 37.0% |
+| reb | 40–50% | 3041 | 44.8% | 44.2% |
+| reb | 50–60% | 1798 | 54.3% | 52.6% |
+| reb | 60–70% | 586 | 63.8% | 60.2% |
+| reb | 70–80% | 100 | 73.5% | 65.0% |
+| ast | 0–10% | 407 | 6.0% | 5.2% |
+| ast | 10–20% | 1036 | 15.5% | 15.7% |
+| ast | 20–30% | 1885 | 25.5% | 26.9% |
+| ast | 30–40% | 2846 | 35.1% | 36.2% |
+| ast | 40–50% | 2750 | 44.8% | 42.8% |
+| ast | 50–60% | 1677 | 54.5% | 50.7% |
+| ast | 60–70% | 716 | 64.0% | 65.4% |
+| ast | 70–80% | 183 | 73.7% | 69.4% |
 
 ## 3. Slices (both seasons)
 
@@ -49,72 +49,72 @@ Bias is actual minus predicted mean. A slice with steady bias is a missing featu
 
 | Slice | Group | Stat | Rows | Log score | In 80% | Bias | Line LL |
 |---|---|---|---|---|---|---|---|
-| expected minutes | 20–28 | pts | 4227 | 3.1061 | 78.8% | 0.237 | 0.6672 |
-| expected minutes | 20–28 | reb | 4227 | 2.2082 | 79.1% | 0.012 | 0.6639 |
-| expected minutes | 20–28 | ast | 4227 | 1.8108 | 79.4% | 0.010 | 0.6525 |
-| expected minutes | 28–34 | pts | 3931 | 3.3257 | 81.1% | 0.452 | 0.6779 |
-| expected minutes | 28–34 | reb | 3931 | 2.3330 | 79.8% | 0.039 | 0.6751 |
-| expected minutes | 28–34 | ast | 3931 | 2.0285 | 79.1% | -0.007 | 0.6657 |
-| expected minutes | 34+ | pts | 1978 | 3.4829 | 83.0% | -0.086 | 0.6661 |
-| expected minutes | 34+ | reb | 1978 | 2.4027 | 80.1% | -0.090 | 0.6856 |
-| expected minutes | 34+ | ast | 1978 | 2.2471 | 79.0% | -0.064 | 0.6727 |
-| expected minutes | <20 | pts | 4632 | 2.6109 | 72.3% | -0.023 | 0.5241 |
-| expected minutes | <20 | reb | 4632 | 1.9334 | 77.5% | -0.003 | 0.5286 |
-| expected minutes | <20 | ast | 4632 | 1.3838 | 77.8% | -0.051 | 0.5164 |
-| matched games | 10–19 | pts | 3039 | 3.0269 | 76.9% | 0.217 | 0.6177 |
-| matched games | 10–19 | reb | 3039 | 2.1333 | 79.4% | -0.069 | 0.6276 |
-| matched games | 10–19 | ast | 3039 | 1.7471 | 79.0% | -0.024 | 0.6102 |
-| matched games | 20+ | pts | 8391 | 3.0563 | 79.7% | 0.083 | 0.6218 |
-| matched games | 20+ | reb | 8391 | 2.1919 | 79.6% | 0.011 | 0.6281 |
-| matched games | 20+ | ast | 8391 | 1.8014 | 79.7% | -0.040 | 0.6154 |
-| matched games | <10 | pts | 3338 | 3.0983 | 75.5% | 0.344 | 0.6554 |
-| matched games | <10 | reb | 3338 | 2.1982 | 78.3% | 0.040 | 0.6401 |
-| matched games | <10 | ast | 3338 | 1.8148 | 77.0% | 0.019 | 0.6381 |
-| season phase | Dec–Jan | pts | 5639 | 3.0703 | 77.2% | 0.120 | 0.6261 |
-| season phase | Dec–Jan | reb | 5639 | 2.1721 | 79.6% | -0.028 | 0.6308 |
-| season phase | Dec–Jan | ast | 5639 | 1.7873 | 79.0% | -0.036 | 0.6159 |
-| season phase | Feb–Apr | pts | 6062 | 3.0432 | 78.3% | 0.239 | 0.6318 |
-| season phase | Feb–Apr | reb | 6062 | 2.1734 | 79.3% | 0.009 | 0.6245 |
-| season phase | Feb–Apr | ast | 6062 | 1.7841 | 79.3% | -0.024 | 0.6191 |
-| season phase | Oct–Nov | pts | 3067 | 3.0729 | 78.9% | 0.123 | 0.6258 |
-| season phase | Oct–Nov | reb | 3067 | 2.2137 | 78.3% | 0.038 | 0.6425 |
-| season phase | Oct–Nov | ast | 3067 | 1.8224 | 78.7% | 0.000 | 0.6261 |
-| rotation teammates out | 0 | pts | 6439 | 2.9795 | 78.8% | -0.100 | 0.6050 |
-| rotation teammates out | 0 | reb | 6439 | 2.1366 | 79.5% | -0.028 | 0.6142 |
-| rotation teammates out | 0 | ast | 6439 | 1.7519 | 79.8% | -0.101 | 0.6001 |
-| rotation teammates out | 1 | pts | 5743 | 3.0990 | 77.7% | 0.222 | 0.6384 |
-| rotation teammates out | 1 | reb | 5743 | 2.2070 | 79.0% | -0.016 | 0.6392 |
-| rotation teammates out | 1 | ast | 5743 | 1.8050 | 78.5% | -0.002 | 0.6247 |
-| rotation teammates out | 2+ | pts | 2586 | 3.1723 | 75.8% | 0.724 | 0.6628 |
-| rotation teammates out | 2+ | reb | 2586 | 2.2353 | 78.4% | 0.108 | 0.6513 |
-| rotation teammates out | 2+ | ast | 2586 | 1.8703 | 76.8% | 0.122 | 0.6539 |
-| back-to-back | no | pts | 12557 | 3.0558 | 78.3% | 0.166 | 0.6279 |
-| back-to-back | no | reb | 12557 | 2.1801 | 78.9% | -0.008 | 0.6302 |
-| back-to-back | no | ast | 12557 | 1.7906 | 79.1% | -0.026 | 0.6184 |
-| back-to-back | yes | pts | 2211 | 3.0818 | 76.6% | 0.187 | 0.6309 |
-| back-to-back | yes | reb | 2211 | 2.1878 | 79.3% | 0.053 | 0.6330 |
-| back-to-back | yes | ast | 2211 | 1.8082 | 78.0% | -0.009 | 0.6246 |
-| home/away | away | pts | 7265 | 3.0643 | 77.8% | 0.082 | 0.6269 |
-| home/away | away | reb | 7265 | 2.1874 | 78.7% | -0.007 | 0.6334 |
-| home/away | away | ast | 7265 | 1.7913 | 78.3% | -0.075 | 0.6151 |
-| home/away | home | pts | 7503 | 3.0553 | 78.2% | 0.254 | 0.6298 |
-| home/away | home | reb | 7503 | 2.1753 | 79.5% | 0.008 | 0.6279 |
-| home/away | home | ast | 7503 | 1.7951 | 79.7% | 0.027 | 0.6234 |
-| opponent allowance | average | pts | 10435 | 3.0515 | 78.7% | 0.144 | 0.6262 |
-| opponent allowance | average | reb | 9960 | 2.1822 | 79.1% | 0.022 | 0.6318 |
-| opponent allowance | average | ast | 7097 | 1.7926 | 79.3% | -0.011 | 0.6213 |
-| opponent allowance | soft (>1.03) | pts | 2410 | 3.0994 | 76.4% | 0.293 | 0.6478 |
-| opponent allowance | soft (>1.03) | reb | 2390 | 2.1982 | 79.1% | 0.011 | 0.6378 |
-| opponent allowance | soft (>1.03) | ast | 3682 | 1.8310 | 78.7% | -0.013 | 0.6323 |
-| opponent allowance | tough (<0.97) | pts | 1923 | 3.0543 | 76.3% | 0.151 | 0.6157 |
-| opponent allowance | tough (<0.97) | reb | 2418 | 2.1606 | 78.6% | -0.096 | 0.6185 |
-| opponent allowance | tough (<0.97) | ast | 3989 | 1.7596 | 79.1% | -0.055 | 0.6038 |
-| thin sample | not thin | pts | 10730 | 3.0978 | 79.3% | 0.138 | 0.6298 |
-| thin sample | not thin | reb | 10730 | 2.2080 | 79.6% | -0.004 | 0.6358 |
-| thin sample | not thin | ast | 10730 | 1.8264 | 79.5% | -0.031 | 0.6229 |
-| thin sample | thin | pts | 4038 | 2.9586 | 74.2% | 0.253 | 0.6241 |
-| thin sample | thin | reb | 4038 | 2.1102 | 77.9% | 0.014 | 0.6153 |
-| thin sample | thin | ast | 4038 | 1.7051 | 77.5% | -0.005 | 0.6086 |
+| expected minutes | 20–28 | pts | 3371 | 3.1007 | 79.2% | 0.091 | 0.6656 |
+| expected minutes | 20–28 | reb | 3371 | 2.1947 | 78.9% | -0.001 | 0.6643 |
+| expected minutes | 20–28 | ast | 3371 | 1.7969 | 79.5% | -0.000 | 0.6492 |
+| expected minutes | 28–34 | pts | 3191 | 3.3173 | 81.6% | 0.341 | 0.6740 |
+| expected minutes | 28–34 | reb | 3191 | 2.3251 | 80.9% | 0.063 | 0.6727 |
+| expected minutes | 28–34 | ast | 3191 | 2.0187 | 79.0% | -0.006 | 0.6632 |
+| expected minutes | 34+ | pts | 1639 | 3.4751 | 84.0% | -0.264 | 0.6624 |
+| expected minutes | 34+ | reb | 1639 | 2.4014 | 79.9% | -0.059 | 0.6806 |
+| expected minutes | 34+ | ast | 1639 | 2.2378 | 80.5% | -0.101 | 0.6711 |
+| expected minutes | <20 | pts | 3720 | 2.5895 | 73.2% | -0.138 | 0.5207 |
+| expected minutes | <20 | reb | 3720 | 1.9146 | 78.1% | -0.037 | 0.5242 |
+| expected minutes | <20 | ast | 3720 | 1.3780 | 78.3% | -0.061 | 0.5135 |
+| matched games | 10–19 | pts | 2865 | 3.0210 | 77.0% | 0.075 | 0.6257 |
+| matched games | 10–19 | reb | 2865 | 2.1474 | 79.1% | -0.029 | 0.6304 |
+| matched games | 10–19 | ast | 2865 | 1.7611 | 79.0% | -0.034 | 0.6041 |
+| matched games | 20+ | pts | 5543 | 3.0466 | 80.5% | -0.049 | 0.6177 |
+| matched games | 20+ | reb | 5543 | 2.1728 | 79.2% | 0.016 | 0.6248 |
+| matched games | 20+ | ast | 5543 | 1.7929 | 80.5% | -0.060 | 0.6173 |
+| matched games | <10 | pts | 3513 | 3.0811 | 76.9% | 0.144 | 0.6390 |
+| matched games | <10 | reb | 3513 | 2.1862 | 79.1% | -0.012 | 0.6334 |
+| matched games | <10 | ast | 3513 | 1.7961 | 78.1% | 0.005 | 0.6273 |
+| season phase | Dec–Jan | pts | 4797 | 3.0683 | 77.2% | -0.005 | 0.6260 |
+| season phase | Dec–Jan | reb | 4797 | 2.1682 | 79.7% | -0.006 | 0.6285 |
+| season phase | Dec–Jan | ast | 4797 | 1.7860 | 79.2% | -0.043 | 0.6183 |
+| season phase | Feb–Apr | pts | 5005 | 3.0270 | 79.3% | 0.092 | 0.6271 |
+| season phase | Feb–Apr | reb | 5005 | 2.1613 | 79.1% | 0.002 | 0.6233 |
+| season phase | Feb–Apr | ast | 5005 | 1.7698 | 79.7% | -0.043 | 0.6130 |
+| season phase | Oct–Nov | pts | 2119 | 3.0666 | 78.6% | 0.004 | 0.6219 |
+| season phase | Oct–Nov | reb | 2119 | 2.1981 | 77.7% | -0.008 | 0.6414 |
+| season phase | Oct–Nov | ast | 2119 | 1.8255 | 78.2% | 0.003 | 0.6239 |
+| rotation teammates out | 0 | pts | 1635 | 2.9768 | 78.7% | -0.278 | 0.5998 |
+| rotation teammates out | 0 | reb | 1635 | 2.1098 | 79.6% | -0.039 | 0.6046 |
+| rotation teammates out | 0 | ast | 1635 | 1.7368 | 80.3% | -0.089 | 0.5973 |
+| rotation teammates out | 1 | pts | 2730 | 3.0220 | 79.2% | 0.083 | 0.6225 |
+| rotation teammates out | 1 | reb | 2730 | 2.1682 | 78.8% | -0.015 | 0.6316 |
+| rotation teammates out | 1 | ast | 2730 | 1.7691 | 79.3% | -0.050 | 0.6080 |
+| rotation teammates out | 2+ | pts | 7556 | 3.0769 | 78.0% | 0.089 | 0.6325 |
+| rotation teammates out | 2+ | reb | 7556 | 2.1846 | 79.8% | 0.009 | 0.6327 |
+| rotation teammates out | 2+ | ast | 7556 | 1.8030 | 79.1% | -0.017 | 0.6247 |
+| back-to-back | no | pts | 10140 | 3.0470 | 78.6% | 0.037 | 0.6254 |
+| back-to-back | no | reb | 10140 | 2.1706 | 79.3% | -0.008 | 0.6288 |
+| back-to-back | no | ast | 10140 | 1.7850 | 79.4% | -0.035 | 0.6174 |
+| back-to-back | yes | pts | 1781 | 3.0712 | 77.1% | 0.039 | 0.6278 |
+| back-to-back | yes | reb | 1781 | 2.1708 | 79.4% | 0.027 | 0.6273 |
+| back-to-back | yes | ast | 1781 | 1.7930 | 79.5% | -0.034 | 0.6154 |
+| home/away | away | pts | 5859 | 3.0534 | 78.1% | -0.030 | 0.6235 |
+| home/away | away | reb | 5859 | 2.1756 | 79.1% | -0.012 | 0.6296 |
+| home/away | away | ast | 5859 | 1.7865 | 79.0% | -0.089 | 0.6143 |
+| home/away | home | pts | 6062 | 3.0479 | 78.9% | 0.103 | 0.6279 |
+| home/away | home | reb | 6062 | 2.1658 | 79.8% | 0.006 | 0.6276 |
+| home/away | home | ast | 6062 | 1.7859 | 79.5% | 0.018 | 0.6198 |
+| opponent allowance | average | pts | 8340 | 3.0440 | 79.0% | 0.024 | 0.6259 |
+| opponent allowance | average | reb | 8027 | 2.1724 | 79.4% | 0.016 | 0.6302 |
+| opponent allowance | average | ast | 5681 | 1.7848 | 79.9% | -0.018 | 0.6190 |
+| opponent allowance | soft (>1.03) | pts | 2024 | 3.0912 | 77.3% | 0.087 | 0.6420 |
+| opponent allowance | soft (>1.03) | reb | 1901 | 2.1864 | 81.1% | 0.028 | 0.6339 |
+| opponent allowance | soft (>1.03) | ast | 3074 | 1.8231 | 78.9% | -0.030 | 0.6299 |
+| opponent allowance | tough (<0.97) | pts | 1557 | 3.0336 | 76.1% | 0.043 | 0.6036 |
+| opponent allowance | tough (<0.97) | reb | 1993 | 2.1483 | 78.6% | -0.108 | 0.6170 |
+| opponent allowance | tough (<0.97) | ast | 3166 | 1.7528 | 79.9% | -0.068 | 0.6012 |
+| thin sample | not thin | pts | 7823 | 3.0964 | 79.4% | 0.014 | 0.6314 |
+| thin sample | not thin | reb | 7823 | 2.2003 | 80.1% | 0.007 | 0.6371 |
+| thin sample | not thin | ast | 7823 | 1.8273 | 79.8% | -0.046 | 0.6236 |
+| thin sample | thin | pts | 4098 | 2.9632 | 76.2% | 0.083 | 0.6138 |
+| thin sample | thin | reb | 4098 | 2.1139 | 78.6% | -0.022 | 0.6107 |
+| thin sample | thin | ast | 4098 | 1.7076 | 79.0% | -0.012 | 0.6034 |
 
 ## 4. Candidate improvements (fit on 2023-24, judged on 2024-25)
 
@@ -122,21 +122,21 @@ Bias is actual minus predicted mean. A slice with steady bias is a missing featu
 
 | Candidate | Stat | Fitted value | Fit Δ | Holdout Δ | Adopt |
 |---|---|---|---|---|---|
-| DNP-CD zeros in recent minutes (blend weight w toward last-5 rows incl. zeros) | pts | 0.000 | 0.0000 | 0.0000 | no |
-| DNP-CD zeros in recent minutes (blend weight w toward last-5 rows incl. zeros) | reb | 0.020 | -0.0000 | 0.0000 | no |
-| DNP-CD zeros in recent minutes (blend weight w toward last-5 rows incl. zeros) | ast | 0.000 | 0.0000 | -0.0000 | no |
-| mean scale (× c) | pts | 1.008 | -0.0001 | -0.0005 | yes |
-| mean scale (× c) | reb | 1.000 | -0.0000 | -0.0000 | no |
-| mean scale (× c) | ast | 1.001 | -0.0000 | 0.0000 | no |
-| opponent allowance (mean × factor^β) | pts | 0.075 | -0.0000 | 0.0000 | no |
-| opponent allowance (mean × factor^β) | reb | 0.006 | -0.0000 | -0.0000 | no |
-| opponent allowance (mean × factor^β) | ast | 0.058 | -0.0000 | -0.0001 | no |
-| home court (× h at home, ÷ h away) | pts | 1.005 | -0.0001 | -0.0001 | no |
-| home court (× h at home, ÷ h away) | reb | 1.007 | -0.0001 | 0.0002 | no |
-| home court (× h at home, ÷ h away) | ast | 1.018 | -0.0003 | -0.0004 | yes |
-| back-to-back (× b) | pts | 1.018 | -0.0001 | -0.0001 | no |
-| back-to-back (× b) | reb | 1.002 | -0.0000 | -0.0000 | no |
-| back-to-back (× b) | ast | 1.006 | -0.0000 | 0.0000 | no |
+| DNP-CD zeros in recent minutes (blend weight w toward last-5 rows incl. zeros) | pts | 0.030 | -0.0000 | 0.0002 | no |
+| DNP-CD zeros in recent minutes (blend weight w toward last-5 rows incl. zeros) | reb | 0.044 | -0.0000 | -0.0001 | no |
+| DNP-CD zeros in recent minutes (blend weight w toward last-5 rows incl. zeros) | ast | 0.074 | -0.0001 | 0.0001 | no |
+| mean scale (× c) | pts | 1.001 | -0.0000 | -0.0000 | no |
+| mean scale (× c) | reb | 1.006 | -0.0001 | 0.0002 | no |
+| mean scale (× c) | ast | 0.997 | -0.0000 | -0.0002 | yes |
+| opponent allowance (mean × factor^β) | pts | 0.005 | -0.0000 | 0.0000 | no |
+| opponent allowance (mean × factor^β) | reb | 0.107 | -0.0000 | -0.0001 | yes |
+| opponent allowance (mean × factor^β) | ast | 0.076 | -0.0000 | -0.0000 | no |
+| home court (× h at home, ÷ h away) | pts | 1.008 | -0.0001 | 0.0000 | no |
+| home court (× h at home, ÷ h away) | reb | 1.010 | -0.0002 | 0.0004 | no |
+| home court (× h at home, ÷ h away) | ast | 1.018 | -0.0004 | -0.0004 | yes |
+| back-to-back (× b) | pts | 1.009 | -0.0000 | -0.0000 | no |
+| back-to-back (× b) | reb | 1.004 | -0.0000 | -0.0000 | no |
+| back-to-back (× b) | ast | 1.003 | -0.0000 | 0.0000 | no |
 | recency (rate blend weight w on half-life-8 rate) | pts | 0.000 | 0.0000 | -0.0000 | no |
 | recency (rate blend weight w on half-life-8 rate) | reb | 0.000 | 0.0000 | 0.0000 | no |
 | recency (rate blend weight w on half-life-8 rate) | ast | 0.000 | 0.0000 | 0.0000 | no |
@@ -148,24 +148,24 @@ Bias is actual minus predicted mean. A slice with steady bias is a missing featu
 
 | Stat | Baseline log score | Combined | Δ | Baseline line LL | Combined line LL | In 80% |
 |---|---|---|---|---|---|---|
-| pts | 3.0691 | 3.0686 | -0.0005 | 0.6341 | 0.6336 | 78.4% |
-| reb | 2.1884 | 2.1884 | 0.0000 | 0.6342 | 0.6342 | 78.7% |
-| ast | 1.7924 | 1.7920 | -0.0004 | 0.6142 | 0.6141 | 79.7% |
+| pts | 3.0617 | 3.0617 | 0.0000 | 0.6309 | 0.6309 | 79.0% |
+| reb | 2.1812 | 2.1810 | -0.0001 | 0.6311 | 0.6310 | 79.6% |
+| ast | 1.7893 | 1.7887 | -0.0006 | 0.6120 | 0.6117 | 80.3% |
 
 ## 6. Provisional shrinkage against the book-style line
 
-SHRINK fit on 2023-24 = **0.927** (until the odds replay fits the real one). Holdout line log loss: no shrink 0.6275, 0.5 placeholder 0.6419, fitted 0.6265.
+SHRINK fit on 2023-24 = **0.949** (until the odds replay fits the real one). Holdout line log loss: no shrink 0.6247, 0.5 placeholder 0.6420, fitted 0.6243.
 
 | Bin (shrunk) | Rows | Mean predicted | Observed |
 |---|---|---|---|
-| 0–10% | 410 | 7.4% | 6.1% |
-| 10–20% | 1639 | 15.6% | 15.1% |
-| 20–30% | 3065 | 25.5% | 27.4% |
-| 30–40% | 4869 | 35.2% | 36.5% |
-| 40–50% | 4982 | 44.7% | 44.0% |
-| 50–60% | 2691 | 54.3% | 52.8% |
-| 60–70% | 932 | 63.8% | 62.3% |
-| 70–80% | 200 | 73.2% | 72.5% |
+| 0–10% | 366 | 7.1% | 4.1% |
+| 10–20% | 1298 | 15.6% | 16.0% |
+| 20–30% | 2366 | 25.6% | 26.5% |
+| 30–40% | 3942 | 35.3% | 36.0% |
+| 40–50% | 4169 | 44.8% | 43.4% |
+| 50–60% | 2189 | 54.4% | 52.9% |
+| 60–70% | 713 | 63.7% | 62.8% |
+| 70–80% | 149 | 73.3% | 69.8% |
 
 ## 5. Constant sensitivity (2023-24, every 4th date, one change at a time)
 

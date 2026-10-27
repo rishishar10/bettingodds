@@ -147,11 +147,16 @@ export function teammatesTonight(
   if (avail.starters) for (const id of avail.starters) ids.add(id);
   ids.delete(playerId);
   const startersKnown = Boolean(avail.starters);
-  const teammates = [...ids].map((id) => ({
+  const teammates: TeammateTonight[] = [...ids].map((id) => ({
     playerId: id,
     status: avail.status.get(id) ?? "active",
     ...(startersKnown ? { listedStarter: avail.starters!.has(id) } : {}),
   }));
+  // Players who have left the team are out every night now. Listing them as out
+  // makes the pool use games they sat, instead of last season's lineup with them.
+  for (const id of new Set(logs.filter((l) => l.teamId === teamId).map((l) => l.playerId))) {
+    if (id !== playerId && !ids.has(id)) teammates.push({ playerId: id, status: "out" });
+  }
   return { teammates, startersKnown };
 }
 

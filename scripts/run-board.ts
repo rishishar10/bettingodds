@@ -1,7 +1,10 @@
 // The 11:00pm Pacific job, for the next day's games: one fetch of every prop per event, rank once,
 // publish that ranking or fail. A failed run leaves the previous board up.
-//   node scripts/run-board.ts [--date YYYY-MM-DD] [--dry-run]
-import { existsSync } from "node:fs";
+//   node scripts/run-board.ts [--date YYYY-MM-DD] [--dry-run] [--force]
+// --force skips the free-plan credit pacing for a manual run.
+// --reuse-prices (dry run only) rebuilds a published dry-run board from its saved prices, no credits.
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { availabilitySnapshot, boardRows, emptyReason, evaluateSlate } from "../lib/board.ts";
 import { FREE_PLAN, POLICY } from "../lib/constants.ts";
 import { datesUntilReset, shouldBuildTonight } from "../lib/credits.ts";
@@ -30,6 +33,16 @@ if (!arg("date") && Date.parse(buildTimeUtc) < Date.parse(boardInstant(boardDate
 }
 
 const store = openStore(P.db);
+const reuse = dryRun && process.argv.includes("--reuse-prices");
+// A rebuild validates prices against the original fetch time, not now.
+const originalFetch = reuse ? ((store.getPublication(boardDate)?.payload as { buildTimeUtc?: string } | undefined)?.buildTimeUtc ?? null) : null;
+if (reuse) {
+  // Development only: drop the earlier dry-run publication for this date so it can be rebuilt.
+  store.db.prepare("DELETE FROM publications WHERE board_date = ?").run(boardDate);
+  store.db.prepare("DELETE FROM evaluated_props WHERE board_date = ?").run(boardDate);
+  store.db.prepare("DELETE FROM unsupported WHERE board_date = ?").run(boardDate);
+  store.db.prepare("DELETE FROM conditional_states WHERE board_date = ?").run(boardDate);
+}
 if (store.getPublication(boardDate)) {
   console.log(`board for ${boardDate} already published; nothing to do`);
   store.logRun(boardDate, buildTimeUtc, "skipped", "already published");
@@ -46,7 +59,7 @@ try {
   const { matched, missing } = games.length ? matchEvents(games, await listEvents()) : { matched: [], missing: [] };
 
   // Free plan: keep credits for fuller slates. The events list above is free and reports remaining credits.
-  const paid = process.env.ODDS_PAID_PLAN === "1";
+  const paid = process.env.ODDS_PAID_PLAN === "1" || process.argv.includes("--force") || reuse;
   let skipReason: string | null = null;
   if (!paid && matched.length) {
     const remaining = usage().remaining ?? 0;
@@ -78,12 +91,16 @@ try {
   }
 
   const prices: RawPrice[] = [];
-  for (const { eventId } of matched) {
-    const { prices: p } = await fetchEventOdds(eventId); // any failure fails the run
-    prices.push(...p);
+  if (reuse) {
+    prices.push(...(JSON.parse(readFileSync(join(P.published, `prices-${boardDate}.json`), "utf8")) as RawPrice[]));
+  } else {
+    for (const { eventId } of matched) {
+      const { prices: p } = await fetchEventOdds(eventId); // any failure fails the run
+      prices.push(...p);
+    }
   }
-  const fetchedAt = new Date().toISOString();
-  store.saveObservations(prices.map((p) => ({ ...p, fetchedAt })));
+  const fetchedAt = originalFetch ?? new Date().toISOString();
+  if (!reuse) store.saveObservations(prices.map((p) => ({ ...p, fetchedAt })));
 
   const injuries = await injuryInputs(buildTimeUtc);
   if (games.length && !injuries.morning) throw new Error("no injury report available before the build");
