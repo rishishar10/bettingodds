@@ -8,3 +8,7 @@ data/cache
 data/*.sqlite
 data/*.sqlite-*
 .playwright-mcp
+data/demo-published
+data/dev-published
+data/morning.log
+data/server.log

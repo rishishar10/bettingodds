@@ -42,6 +42,17 @@ node scripts/replay.ts test                # scores 2025-26 once; refuses a seco
 2. `.github/workflows/board.yml` runs at 8:00am Pacific. It refreshes box scores, builds the board, grades earlier boards, saves state to the force-pushed `data` branch, and deploys the static site.
 3. To preview the board without publishing, run it manually with "dry run" checked, or locally with `node scripts/run-board.ts --dry-run`.
 
+## Local morning reset (no GitHub needed)
+
+`scripts/morning.sh` pulls the last three days of box scores and builds today's board. With `ODDS_API_KEY` in `.env` it's a real dry run, costing about 30 free-tier credits. Otherwise it's the labeled demo. It then grades and rebuilds the site. To run it every morning at 8:05 and keep http://localhost:4173 serving the latest build:
+
+```sh
+scripts/install-local-schedule.sh              # installs two user launch agents
+scripts/install-local-schedule.sh --uninstall  # removes them
+```
+
+The log is `data/morning.log`. If the Mac is asleep at 8:05, the job runs when it wakes.
+
 ## Layout
 
 - `lib/project.ts`: pools, availability matching, the rate blend, α, the negative binomial, and sensitivity.
