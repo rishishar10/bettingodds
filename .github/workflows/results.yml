@@ -36,8 +36,8 @@ jobs:
       - name: Grade every board
         run: |
           case "$MODE" in
-            live)   node scripts/grade.ts ;;
-            dryrun) node scripts/grade.ts --dry-run ;;
+            live)   node scripts/grade.ts; node scripts/live-scorecard.ts ;;
+            dryrun) node scripts/grade.ts --dry-run; node scripts/live-scorecard.ts --dry-run ;;
           esac
           node scripts/grade.ts --dir data/demo-published
       - run: scripts/ci/data-branch.sh push

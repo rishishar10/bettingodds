@@ -82,6 +82,23 @@ export function loadGrades(dir: string = dataDir()): GradeFile | null {
   return existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : null;
 }
 
+export interface Scorecard {
+  updatedAt: string;
+  lines: number;
+  minLines: number;
+  modelLogLoss: number;
+  marketLogLoss: number;
+  w: { estimate: number; lo: number; hi: number } | null;
+  ready: boolean;
+  verdict: string;
+  perNight: { date: string; n: number; model: number; market: number }[];
+}
+
+export function loadScorecard(dir: string = dataDir()): Scorecard | null {
+  const f = join(dir, "scorecard.json");
+  return existsSync(f) ? JSON.parse(readFileSync(f, "utf8")) : null;
+}
+
 /** The page shows no profit number until the test-season replay is in the repo. */
 export const replayInRepo = () => existsSync("reports/test.md");
 

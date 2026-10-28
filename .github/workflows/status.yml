@@ -2,9 +2,10 @@ name: Status watch
 
 on:
   schedule:
-    # Hourly at :15, 9:15am to 7:15pm Pacific (covers both DST offsets).
+    # Hourly at :15 from 9:15am to about midnight Pacific: injury news before games,
+    # grading and the running total as games end.
     - cron: "15 16-23 * * *"
-    - cron: "15 0-3 * * *"
+    - cron: "15 0-7 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -33,6 +34,14 @@ jobs:
       - run: scripts/ci/mode.sh
       - name: Watch injury news and re-run the board for games not yet tipped
         run: node scripts/status-watch.ts --dir "$BOARD_DIR"
+      - name: Grade finished games and update the running total
+        run: |
+          node scripts/ingest-boxscores.ts --recent 1
+          case "$MODE" in
+            live)   node scripts/grade.ts; node scripts/live-scorecard.ts ;;
+            dryrun) node scripts/grade.ts --dry-run; node scripts/live-scorecard.ts --dry-run ;;
+          esac
+          node scripts/grade.ts --dir data/demo-published
       - run: scripts/ci/data-branch.sh push
       - name: Build site
         run: npm run build

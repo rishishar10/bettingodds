@@ -42,8 +42,8 @@ jobs:
       - name: Build the board and grade earlier ones
         run: |
           case "$MODE" in
-            live)   node scripts/run-board.ts; node scripts/grade.ts ;;
-            dryrun) node scripts/run-board.ts --dry-run; node scripts/grade.ts --dry-run ;;
+            live)   node scripts/run-board.ts; node scripts/grade.ts; node scripts/live-scorecard.ts ;;
+            dryrun) node scripts/run-board.ts --dry-run; node scripts/grade.ts --dry-run; node scripts/live-scorecard.ts --dry-run ;;
           esac
           # Practice board every night in every mode: free, and it keeps the model check growing.
           node scripts/demo-snapshot.ts data/demo-published

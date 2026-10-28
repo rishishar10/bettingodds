@@ -14,6 +14,8 @@ export interface TrackedPick {
   stat: "pts" | "reb" | "ast";
   line: number;
   side: "over" | "under";
+  /** Saved decimal price: a win pays decimal - 1 per unit. */
+  decimal: number;
   /** Team abbreviations of the game, to find it on ESPN's scoreboard. */
   home: string;
   away: string;
@@ -48,7 +50,12 @@ async function getJson(url: string): Promise<any> {
   return res.json();
 }
 
-export function LiveTracker({ picks, boardDate }: { picks: TrackedPick[]; boardDate: string }) {
+export function LiveTracker({ picks, boardDate, prior }: {
+  picks: TrackedPick[];
+  boardDate: string;
+  /** Graded totals from earlier boards, flat 1 unit per pick. */
+  prior?: { units: number; bets: number };
+}) {
   const [games, setGames] = useState<Record<string, GameState & { id: string }>>({});
   const [players, setPlayers] = useState<Record<string, PlayerLine>>({});
   const [updated, setUpdated] = useState<Date | null>(null);
@@ -132,6 +139,10 @@ export function LiveTracker({ picks, boardDate }: { picks: TrackedPick[]; boardD
   });
   const count = (s: string) => rows.filter((r) => r.status === s).length;
   const decided = count("win") + count("loss");
+  const tonight = rows.reduce((a, r) => a + (r.status === "win" ? r.pk.decimal - 1 : r.status === "loss" ? -1 : 0), 0);
+  const tonightBets = decided + count("push");
+  const total = (prior?.units ?? 0) + tonight;
+  const sign = (x: number) => `${x >= 0 ? "+" : ""}${x.toFixed(2)}`;
 
   return (
     <section>
@@ -141,6 +152,8 @@ export function LiveTracker({ picks, boardDate }: { picks: TrackedPick[]; boardD
       <p className="fine">
         {count("win")} won, {count("loss")} lost{count("push") ? `, ${count("push")} pushed` : ""}{count("void") ? `, ${count("void")} void` : ""}, {count("live")} live,{" "}
         {count("pre")} not started{decided ? `. Hit rate so far ${((count("win") / decided) * 100).toFixed(0)}%.` : "."}{" "}
+        {tonightBets ? ` Tonight at 1 unit a pick: ${sign(tonight)} units.` : ""}
+        {prior || tonightBets ? ` Running total: ${sign(total)} units over ${(prior?.bets ?? 0) + tonightBets} bets.` : ""}{" "}
         Live numbers come from ESPN and refresh every 30 seconds; the official grade is posted after the games.
         {error ? " ESPN didn’t respond on the last try; retrying." : ""}
       </p>

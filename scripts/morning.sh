@@ -14,6 +14,7 @@ node scripts/ingest-boxscores.ts --recent 3
 if [ -n "${ODDS_API_KEY:-}" ]; then
   node scripts/run-board.ts --dry-run || true
   node scripts/grade.ts --dry-run
+  node scripts/live-scorecard.ts --dry-run
   DIR=data/dev-published
 else
   DIR=data/demo-published

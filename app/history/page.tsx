@@ -1,4 +1,4 @@
-import { listDates, loadBoard, loadGrades, practiceDir, replayInRepo, STAT_NAMES, bookName, american, pct, pacificTime, type BoardSnapshot, type GradeFile } from "../../lib/view.ts";
+import { listDates, loadBoard, loadGrades, loadScorecard, practiceDir, replayInRepo, STAT_NAMES, bookName, american, pct, pacificTime, type BoardSnapshot, type GradeFile } from "../../lib/view.ts";
 import { Headshot } from "../components/Headshot.tsx";
 import { Footer, Nav } from "../components/Nav.tsx";
 
@@ -116,6 +116,75 @@ function PickTable({ rows }: { rows: Graded[] }) {
   );
 }
 
+/** Flat 1-unit stakes on every real pick: totals and a running line by board date. */
+function UnitTracker({ rows }: { rows: Graded[] }) {
+  const settled = rows.filter((x) => x.g?.result && x.g.result !== "void");
+  if (!settled.length) return <p className="fine">Nothing graded yet. The running total starts once the first games finish.</p>;
+  const byDate = new Map<string, { net: number; w: number; l: number; p: number; v: number }>();
+  for (const x of rows) {
+    const d = byDate.get(x.b.boardDate) ?? { net: 0, w: 0, l: 0, p: 0, v: 0 };
+    if (x.g?.result === "win") { d.w++; d.net += x.r.decimal - 1; }
+    else if (x.g?.result === "loss") { d.l++; d.net -= 1; }
+    else if (x.g?.result === "push") d.p++;
+    else if (x.g?.result === "void") d.v++;
+    byDate.set(x.b.boardDate, d);
+  }
+  const days = [...byDate.entries()].filter(([, d]) => d.w + d.l + d.p > 0).sort(([a], [b]) => (a < b ? -1 : 1));
+  let run = 0;
+  const points = days.map(([date, d]) => ({ date, ...d, run: (run += d.net) }));
+  const w = points.reduce((a, x) => a + x.w, 0), l = points.reduce((a, x) => a + x.l, 0), p = points.reduce((a, x) => a + x.p, 0);
+  const staked = w + l + p;
+  const lo = Math.min(0, ...points.map((x) => x.run)), hi = Math.max(0, ...points.map((x) => x.run));
+  const span = hi - lo || 1;
+  const X = (i: number) => 40 + (points.length > 1 ? (i / (points.length - 1)) * 250 : 125);
+  const Y = (v: number) => 190 - ((v - lo) / span) * 170;
+  return (
+    <>
+      <dl className="facts">
+        <div><dt>Record</dt><dd>{w}–{l}{p ? `–${p}` : ""}</dd></div>
+        <div><dt>Units bet</dt><dd>{staked}</dd></div>
+        <div><dt>Net units</dt><dd>{run >= 0 ? "+" : ""}{run.toFixed(2)}</dd></div>
+        <div><dt>Return</dt><dd>{run >= 0 ? "+" : ""}{((run / staked) * 100).toFixed(1)}%</dd></div>
+      </dl>
+      <div className="cal">
+        <div className="box">
+          <table>
+            <thead><tr><th>Board</th><th className="num">Record</th><th className="num">Day</th><th className="num">Running</th></tr></thead>
+            <tbody>
+              {[...points].reverse().map((x) => (
+                <tr key={x.date}>
+                  <td className="date-cell">{x.date}</td>
+                  <td className="num mono">{x.w}–{x.l}{x.p ? `–${x.p}` : ""}</td>
+                  <td className="num mono">{x.net >= 0 ? "+" : ""}{x.net.toFixed(2)}</td>
+                  <td className="num mono hi">{x.run >= 0 ? "+" : ""}{x.run.toFixed(2)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <figure>
+          <svg viewBox="0 0 300 220" style={{ width: "100%", height: "auto", display: "block" }} role="img" aria-label="Running units by board">
+            <line x1="40" y1={Y(0)} x2="290" y2={Y(0)} stroke="rgba(242,243,238,0.45)" strokeDasharray="3 4" />
+            <line x1="40" y1="10" x2="40" y2="190" stroke="rgba(255,255,255,0.14)" />
+            <text x="32" y={Y(0) + 3} fontSize="10" fill="#a0a7b0" textAnchor="end" fontFamily="DM Mono, monospace">0</text>
+            {hi > 0 && <text x="32" y={Y(hi) + 3} fontSize="10" fill="#a0a7b0" textAnchor="end" fontFamily="DM Mono, monospace">+{hi.toFixed(1)}</text>}
+            {lo < 0 && <text x="32" y={Y(lo) + 3} fontSize="10" fill="#a0a7b0" textAnchor="end" fontFamily="DM Mono, monospace">{lo.toFixed(1)}</text>}
+            <polyline fill="none" stroke="#d4ff3a" strokeWidth="2" points={points.map((x, i) => `${X(i)},${Y(x.run)}`).join(" ")} />
+            {points.map((x, i) => <circle key={x.date} cx={X(i)} cy={Y(x.run)} r="3.5" fill="#d4ff3a" />)}
+          </svg>
+          <figcaption>Running units if you bet 1 unit on every pick at the saved price. A win pays the odds, a loss costs 1, pushes and voids pay nothing.</figcaption>
+        </figure>
+      </div>
+      <p className="fine">
+        {staked < 200
+          ? `Only ${staked} bets so far. A few hundred are needed before this says whether the model beats the books.`
+          : "Hundreds of bets in, but a run of results is still not proof of an edge on its own."}
+        {" "}The model has not yet passed its test on a full past season.
+      </p>
+    </>
+  );
+}
+
 export default function History() {
   const real = gather();
   const s = real.grades?.summary;
@@ -126,6 +195,7 @@ export default function History() {
   const pDecided = practice ? practice.rows.filter((x) => x.g?.result === "win" || x.g?.result === "loss") : [];
   const pWins = pDecided.filter((x) => x.g?.result === "win").length;
   const realSettled = real.rows.some((x) => x.g?.result === "win" || x.g?.result === "loss");
+  const scorecard = loadScorecard();
 
   return (
     <>
@@ -152,6 +222,22 @@ export default function History() {
           <section>
             <h2>Are the percentages honest?</h2>
             <Calibration rows={real.rows} dates={real.dates} boards={real.boards} />
+          </section>
+        )}
+
+        <section>
+          <h2>If you bet 1 unit on every pick</h2>
+          <UnitTracker rows={real.rows} />
+        </section>
+
+        {scorecard && (
+          <section>
+            <h2>Model vs the books</h2>
+            <p className="fine">
+              Every line on our real-price boards, not just the picks: {scorecard.lines} lines scored. Model log loss{" "}
+              {scorecard.modelLogLoss.toFixed(3)} against the books’ own no-vig odds at {scorecard.marketLogLoss.toFixed(3)} (lower is better).{" "}
+              {scorecard.verdict}
+            </p>
           </section>
         )}
 

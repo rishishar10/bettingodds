@@ -169,7 +169,17 @@ export default function Page() {
   for (const r of [...b.rows, ...(update?.rows ?? [])]) {
     const g = gameOf(r.teamId);
     if (!g || tracked.some((t) => t.key === r.key)) continue;
-    tracked.push({ key: r.key, playerId: r.playerId, playerName: r.playerName, stat: r.stat, line: r.line, side: r.side, home: g.home, away: g.away, tipUtc: g.tipUtc });
+    tracked.push({ key: r.key, playerId: r.playerId, playerName: r.playerName, stat: r.stat, line: r.line, side: r.side, decimal: r.decimal, home: g.home, away: g.away, tipUtc: g.tipUtc });
+  }
+  // Flat 1-unit totals from earlier boards; tonight's finals are added live by the tracker.
+  const prior = { units: 0, bets: 0 };
+  for (const d of dates.filter((x) => x < b.boardDate)) {
+    for (const r of loadBoard(d).rows) {
+      const res = grades?.grades[`${d}|${r.key}`]?.result;
+      if (res === "win") { prior.units += r.decimal - 1; prior.bets++; }
+      else if (res === "loss") { prior.units -= 1; prior.bets++; }
+      else if (res === "push") prior.bets++;
+    }
   }
 
   return (
@@ -185,7 +195,7 @@ export default function Page() {
           </p>
         )}
 
-        <LiveTracker picks={tracked} boardDate={b.boardDate} />
+        <LiveTracker picks={tracked} boardDate={b.boardDate} prior={prior.bets ? prior : undefined} />
 
         {update && (
           <section>
