@@ -1,0 +1,55 @@
+name: Results
+
+on:
+  schedule:
+    # 11:30pm Pacific, after the late games: 06:30 UTC in summer, 07:30 UTC in winter.
+    - cron: "30 6 * * *"
+    - cron: "30 7 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: board-state
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    env:
+      ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+      REPO_URL: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: scripts/ci/data-branch.sh pull
+      - name: Tonight's box scores
+        run: node scripts/ingest-boxscores.ts --recent 1
+      - run: scripts/ci/mode.sh
+      - name: Grade every board
+        run: |
+          case "$MODE" in
+            live)   node scripts/grade.ts ;;
+            dryrun) node scripts/grade.ts --dry-run ;;
+          esac
+          node scripts/grade.ts --dir data/demo-published
+      - run: scripts/ci/data-branch.sh push
+      - name: Build site
+        run: npm run build
+        env:
+          NEXT_BASE_PATH: /${{ github.event.repository.name }}
+          BOARD_DATA_DIR: ${{ env.BOARD_DIR }}
+          PRACTICE_DATA_DIR: data/demo-published
+      - if: vars.PAGES_ENABLED == '1'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+      - if: vars.PAGES_ENABLED == '1'
+        uses: actions/deploy-pages@v4

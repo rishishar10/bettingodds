@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Installs three user launch agents: the 11:05pm nightly build, the hourly
+# Installs three user launch agents: the 9:05am board build, the hourly
 # status watch, and a static server for out/ on http://localhost:4173.
 # Remove with --uninstall.
 set -euo pipefail
@@ -22,7 +22,7 @@ cat > "$AGENTS/$MORNING.plist" <<PLIST
 <plist version="1.0"><dict>
   <key>Label</key><string>$MORNING</string>
   <key>ProgramArguments</key><array><string>/bin/zsh</string><string>$REPO/scripts/morning.sh</string></array>
-  <key>StartCalendarInterval</key><dict><key>Hour</key><integer>23</integer><key>Minute</key><integer>5</integer></dict>
+  <key>StartCalendarInterval</key><dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>5</integer></dict>
   <key>StandardOutPath</key><string>$REPO/data/morning.log</string>
   <key>StandardErrorPath</key><string>$REPO/data/morning.log</string>
 </dict></plist>
@@ -54,5 +54,5 @@ PLIST
 pkill -f "http.server 4173" 2>/dev/null || true
 pkill -f "scripts/serve.py" 2>/dev/null || true
 for label in $MORNING $WATCH $SERVER; do launchctl bootstrap "gui/$(id -u)" "$AGENTS/$label.plist"; done
-echo "installed: nightly build at 11:05pm, status watch hourly at :15 from 9:15am to 7:15pm (local time; runs on wake if asleep), server on http://localhost:4173"
+echo "installed: board build at 9:05am, status watch hourly at :15 from 9:15am to 7:15pm (local time; runs on wake if asleep), server on http://localhost:4173"
 echo "log: $REPO/data/morning.log · remove with: scripts/install-local-schedule.sh --uninstall"

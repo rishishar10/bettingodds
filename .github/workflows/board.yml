@@ -1,11 +1,11 @@
-name: Nightly board
+name: Morning board
 
 on:
   schedule:
-    # 11:05pm Pacific builds the next day's board: 06:05 UTC in summer, 07:05 UTC in winter.
-    # Whichever run is early or late sees "before the build" or "already published" and stops.
-    - cron: "5 6 * * *"
-    - cron: "5 7 * * *"
+    # 9:05am Pacific: 16:05 UTC in summer, 17:05 UTC in winter. The early one in winter
+    # sees "before the build" and stops; the late one in summer sees "already published".
+    - cron: "5 16 * * *"
+    - cron: "5 17 * * *"
   workflow_dispatch:
 
 concurrency:

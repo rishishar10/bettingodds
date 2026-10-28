@@ -49,7 +49,7 @@ export function Slip({ row, rank, teams, tipUtc, news, update, collapsible = fal
       {update && (
         <div className="slip-update">
           <span>
-            <b>{update.isNew ? "New since last night." : "Still qualifies."}</b> Re-projected with the injury news as of {pacificTime(update.asOf)}, at last night’s 11pm price.
+            <b>{update.isNew ? "New since this morning." : "Still qualifies."}</b> Re-projected with the injury news as of {pacificTime(update.asOf)}, at the 9am price.
             {" "}That price has likely moved since the news; check it before acting.
           </span>
         </div>
@@ -60,7 +60,7 @@ export function Slip({ row, rank, teams, tipUtc, news, update, collapsible = fal
           <span>
             <b>Injury update since we published.</b>{" "}
             {news!.map((n) => `${n.kind === "player" ? "" : "Teammate "}${n.playerName} is now ${n.to} (${SOURCE[n.source] ?? n.source}, ${pacificTime(n.sourceTime)})`).join("; ")}.
-            {" "}This pick assumed {news!.some((n) => n.kind === "player") ? "he plays" : "last night’s lineup"} and hasn’t been updated, so treat it with caution.
+            {" "}This pick assumed {news!.some((n) => n.kind === "player") ? "he plays" : "this morning’s lineup"} and hasn’t been updated, so treat it with caution.
           </span>
         </div>
       )}

@@ -1,8 +1,8 @@
 // Free news watch for today's board. It compares the availability the board
 // was built on with the latest official injury report and ESPN's injury feed,
 // flags rows whose player or a rotation teammate got worse, and re-runs the
-// board for games not yet tipped with the news factored in, at the saved 11pm
-// prices. The 11pm publication is never edited; everything goes to
+// board for games not yet tipped with the news factored in, at the saved 9am
+// prices. The 9am publication is never edited; everything goes to
 // news-<date>.json beside the snapshot.
 //   node scripts/status-watch.ts [--dir data/published]
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
@@ -112,7 +112,7 @@ const changes = detectChanges(built, current, names);
 const rows = flagRows(board.rows, changes, rotation);
 
 // Re-run the board for games not yet tipped: the latest official report, worse
-// ESPN notes on top, the same 11pm prices and build time.
+// ESPN notes on top, the same 9am prices and build time.
 const pricesFile = join(dir, `prices-${today}.json`);
 const untipped = games.filter((g) => Date.parse(g.tipUtc) > Date.parse(now));
 let update: Record<string, unknown> | null = null;

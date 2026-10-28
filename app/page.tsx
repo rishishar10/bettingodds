@@ -1,9 +1,10 @@
-import { listDates, loadBoard, loadNews, pacificTime, pct, STAT_NAMES, bookName, american, type BoardSnapshot, type NewsFile } from "../lib/view.ts";
+import { listDates, loadBoard, loadGrades, loadNews, pacificTime, pct, STAT_NAMES, bookName, american, type BoardSnapshot, type NewsFile } from "../lib/view.ts";
 import { decimalToAmerican } from "../lib/ev.ts";
 import { Age } from "./components/Age.tsx";
 import { Headshot } from "./components/Headshot.tsx";
 import { Footer, Nav } from "./components/Nav.tsx";
 import { Picks } from "./components/Picks.tsx";
+import { LiveTracker, type TrackedPick } from "./components/LiveTracker.tsx";
 import type { ConditionalCard } from "../lib/board.ts";
 
 const COVERAGE: [string, string][] = [
@@ -138,7 +139,7 @@ export default function Page() {
         <Nav current="board" />
         <main className="page">
           <h1 className="date">No board yet</h1>
-          <p className="claim">The first board publishes after the test-season replay is in the repo. Run the 11pm job with --dry-run to preview one.</p>
+          <p className="claim">The first board publishes after the test-season replay is in the repo. Run the 9am job with --dry-run to preview one.</p>
           <Footer />
         </main>
       </>
@@ -149,6 +150,27 @@ export default function Page() {
   const tips: Record<string, string> = {};
   for (const g of b.games) { tips[g.home] = g.tipUtc; tips[g.away] = g.tipUtc; }
   const update = news?.update;
+  // Yesterday's (most recent earlier board's) graded results, for a one-line recap.
+  const grades = loadGrades();
+  const prevDate = dates.find((d) => d < b.boardDate);
+  const prev = prevDate ? loadBoard(prevDate) : null;
+  const prevResults = prev ? prev.rows.map((r) => grades?.grades[`${prev.boardDate}|${r.key}`]?.result ?? null) : [];
+  const recap = prev && prevResults.some((x) => x) ? {
+    date: prev.boardDate,
+    win: prevResults.filter((x) => x === "win").length,
+    loss: prevResults.filter((x) => x === "loss").length,
+    push: prevResults.filter((x) => x === "push").length,
+    void: prevResults.filter((x) => x === "void").length,
+    pending: prevResults.filter((x) => x === null).length,
+  } : null;
+  // Every pick on today's board (and the injury update), for the live tracker.
+  const gameOf = (teamId: string) => b.games.find((g) => g.home === b.teams[teamId] || g.away === b.teams[teamId]);
+  const tracked: TrackedPick[] = [];
+  for (const r of [...b.rows, ...(update?.rows ?? [])]) {
+    const g = gameOf(r.teamId);
+    if (!g || tracked.some((t) => t.key === r.key)) continue;
+    tracked.push({ key: r.key, playerId: r.playerId, playerName: r.playerName, stat: r.stat, line: r.line, side: r.side, home: g.home, away: g.away, tipUtc: g.tipUtc });
+  }
 
   return (
     <>
@@ -156,13 +178,22 @@ export default function Page() {
       <main className="page">
         <Header b={b} news={news} />
 
+        {recap && (
+          <p className="fine">
+            Last board ({recap.date}): {recap.win} won, {recap.loss} lost{recap.push ? `, ${recap.push} pushed` : ""}{recap.void ? `, ${recap.void} void` : ""}
+            {recap.pending ? `, ${recap.pending} still to grade` : ""}. Every pick is on the Track record page.
+          </p>
+        )}
+
+        <LiveTracker picks={tracked} boardDate={b.boardDate} />
+
         {update && (
           <section>
             <p className="fine">
               The board re-run at {pacificTime(update.asOf)} with the official report from {pacificTime(update.reportTimeUtc)}
               {news.espnNotesAfterPublish ? " and later ESPN injury notes" : ""}, for games not yet started
-              {update.tippedGames.length ? ` (already started: ${update.tippedGames.join(", ")})` : ""}. Prices are from last night’s 11pm build. This view is
-              not graded; last night’s board below is the record.
+              {update.tippedGames.length ? ` (already started: ${update.tippedGames.join(", ")})` : ""}. Prices are from the 9am build. This view is
+              not graded; the 9am board below is the record.
             </p>
             {update.rows.length ? (
               <Picks
@@ -178,7 +209,7 @@ export default function Page() {
             )}
             {update.dropped.length > 0 && (
               <>
-                <p className="fine">Dropped from last night’s board:</p>
+                <p className="fine">Dropped from the 9am board:</p>
                 <ul className="dropped">
                   {update.dropped.map((d) => {
                     const r = b.rows.find((x) => x.key === d.key);
@@ -191,7 +222,7 @@ export default function Page() {
         )}
 
         <Picks
-          title={update ? "Last night’s board" : "Tonight’s picks"}
+          title={update ? "9am board" : "Tonight’s picks"}
           rows={b.rows}
           teams={b.teams}
           tips={tips}

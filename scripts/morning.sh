@@ -1,6 +1,6 @@
 #!/bin/zsh
-# Local nightly build (11:05pm): box scores through today, tomorrow's board,
-# grades for earlier boards, rebuilt site.
+# Local board build (9:05am): recent box scores, today's board, grades for
+# earlier boards, rebuilt site.
 # With ODDS_API_KEY in .env it builds a real dry-run board (about 30 free-tier
 # credits a slate); without one it builds the labeled demo board.
 set -euo pipefail
@@ -8,7 +8,7 @@ cd "$(dirname "$0")/.."
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
 [ -f .env ] && set -a && source .env && set +a
 
-echo "=== nightly build $(date '+%F %T %Z') ==="
+echo "=== board build $(date '+%F %T %Z') ==="
 node scripts/ingest-boxscores.ts --recent 3
 
 if [ -n "${ODDS_API_KEY:-}" ]; then

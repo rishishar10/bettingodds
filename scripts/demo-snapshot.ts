@@ -15,7 +15,7 @@ const [outDir, dateArg] = process.argv.slice(2);
 if (!outDir || outDir.includes("data/published")) throw new Error("pass a scratch output directory");
 const boardDate = dateArg ?? nextBoardDate(new Date().toISOString());
 if (!dateArg && Date.now() < Date.parse(boardInstant(boardDate))) {
-  console.log(`before the 11:00pm Pacific build for ${boardDate}; nothing to do`);
+  console.log(`before the 9:00am Pacific build for ${boardDate}; nothing to do`);
   process.exit(0);
 }
 const h = openHistory();

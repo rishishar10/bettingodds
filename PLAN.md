@@ -295,3 +295,10 @@ The first run ingests the last two seasons of box scores. The data branch keeps 
 - **DNP-CD rows count in recent minutes**, weight 0.17. Healthy scratches are a role signal, and injured players have no box-score row. This improved the 2024-25 holdout for all three stats.
 - **Grading reads the snapshot folder,** so demo boards are graded too. Their prices are made up, so only calibration means anything; profit stays hidden.
 - **Demo lines** go only to current-rotation players (15+ minutes in 3 of the last 5), at the nearest half point to the pre-board average, with no future games and no shading.
+
+## Schedule and review loop (2026-10-27)
+
+- **The board builds at 9:05am Pacific.** Measured on 10 nights, the injury report at 9am is identical to 11pm, because teams don't file between about 1am and 1pm Eastern. 9am adds BetMGM's props. The free 11:15am watch re-runs the board at the 9am prices once more teams have filed. The replay snapshot is 9:00am.
+- **Live tracker on the board page.** The browser polls ESPN's public scoreboard and box scores every 30 seconds; ESPN allows cross-origin reads. Each pick shows the stat so far, the game clock, what's still needed, and the pace, then won, lost, push, or void at the final.
+- **Results job at 11:30pm Pacific** (`results.yml`): it pulls the night's box scores, grades the real and practice boards, and redeploys. The next board shows a one-line recap of the last one.
+- **First real board, 2026-10-27:** 8–10, −2.59 units at a flat 1 unit. Four losses missed by a point or less. The model's probabilities summed to about 10.6 expected wins. One night is noise.
