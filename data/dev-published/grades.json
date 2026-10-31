@@ -1,0 +1,302 @@
+{
+ "updatedAt": "2026-10-31T13:45:23.542Z",
+ "summary": {
+  "bets": 18,
+  "settled": 18,
+  "voids": 0,
+  "pending": 0,
+  "unitsStaked": 18,
+  "netUnits": -2.59,
+  "roi": -0.14388888888888887
+ },
+ "grades": {
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4845367|ast|6.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934672|ast|5.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 7,
+   "profit": 0.9299999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934672|pts|24.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 23,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5037871|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4395630|ast|2.5|over": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 8,
+   "profit": 1.1600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5037871|ast|3.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 6,
+   "profit": 0.75,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5104157|pts|27.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 29,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3147657|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934719|ast|1.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5037871|pts|17.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 13,
+   "profit": 0.9299999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3147657|reb|3.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 3,
+   "profit": 0.79,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934719|pts|16.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 13,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4845367|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3062679|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4066259|pts|15.5|over": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934719|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3062679|reb|7.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4395723|pts|10.5|over": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 14,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  }
+ }
+}

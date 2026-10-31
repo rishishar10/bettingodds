@@ -1,0 +1,5584 @@
+{
+ "updatedAt": "2026-10-31T13:45:23.838Z",
+ "summary": {
+  "bets": 557,
+  "settled": 478,
+  "voids": 79,
+  "pending": 0,
+  "unitsStaked": 478,
+  "netUnits": 169.48999999999904,
+  "roi": 0.354581589958157
+ },
+ "grades": {
+  "2026-10-27|demo-401909877|5279130|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 15,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4702384|pts|13.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4702384|ast|4.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909877|5279130|ast|4.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909877|5279130|reb|2.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4702384|reb|4.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909880|4592691|reb|5.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|4431823|pts|13.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|3155942|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|3064560|pts|6.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4431679|pts|15.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3136195|ast|4.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|4431823|reb|2.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4845367|reb|7.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909880|3945274|pts|36.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 41,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4395723|reb|5.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|5037871|ast|3.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|4431823|ast|2.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909880|4066457|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 39,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3934719|ast|2.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909880|4066457|pts|23.5|under": {
+   "result": "loss",
+   "minutes": 39,
+   "actual": 26,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|5104157|reb|13.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 10,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4066259|reb|4.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909880|4592691|pts|7.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3914044|pts|5.5|over": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 13,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3934719|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4431679|reb|8.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3062679|ast|3.5|over": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3062679|reb|6.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|3064560|reb|5.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|5104157|pts|27.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 29,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3934719|pts|16.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 13,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|5037871|reb|3.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909880|3945274|ast|7.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|3064440|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3934672|reb|3.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4845367|pts|18.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 15,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3934672|pts|23.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 23,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4845367|ast|8.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|3064440|pts|20.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4395723|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909879|4395630|ast|2.5|over": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3147657|pts|10.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-27|demo-401909878|3934672|ast|7.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4395626|pts|18.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|4997526|ast|5.5|under": {
+   "result": "win",
+   "minutes": 3,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|4997526|pts|13.5|under": {
+   "result": "win",
+   "minutes": 3,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|4397475|pts|15.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4871145|ast|10.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4711294|reb|7.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4395626|reb|3.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|4997526|reb|5.5|under": {
+   "result": "win",
+   "minutes": 3,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4433192|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4066757|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4432822|pts|10.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4711294|ast|2.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4278039|pts|23.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 12,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|4591725|pts|19.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 19,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4065804|pts|11.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|4397475|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909868|4845374|pts|13.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4593841|pts|10.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909871|4278053|pts|14.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 21,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4397424|pts|12.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909868|4845374|ast|5.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4397424|ast|2.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4397189|pts|12.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4701230|reb|10.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909871|4601025|reb|4.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4711294|pts|16.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4395626|ast|4.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4869342|pts|13.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|3146557|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4869342|ast|5.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4065648|ast|7.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4432822|reb|2.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4869342|reb|7.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4711272|pts|14.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 13,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4432158|reb|9.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909876|4431767|pts|12.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|3908809|reb|5.5|under": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4683747|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4593841|ast|2.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909871|4066261|ast|4.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4684740|pts|20.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 15,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|3908809|ast|4.5|over": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|2490149|ast|4.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909871|4278053|ast|7.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|5044385|pts|14.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|3134907|ast|3.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4278039|reb|3.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909871|4601025|pts|13.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 12,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909876|3936299|ast|6.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4683747|pts|12.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909872|3134907|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4711272|reb|3.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4683689|pts|5.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4871145|reb|7.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4683689|reb|4.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909868|5104155|pts|13.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4433192|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4684740|ast|5.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|3078576|pts|10.5|over": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909876|3064290|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4432639|pts|17.5|under": {
+   "result": "win",
+   "minutes": 39,
+   "actual": 16,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909876|3064290|pts|13.5|over": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4066757|ast|2.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4871145|pts|10.5|over": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4066328|reb|7.5|over": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|3146557|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4066328|pts|16.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 10,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4432639|reb|5.5|over": {
+   "result": "win",
+   "minutes": 39,
+   "actual": 12,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4593841|reb|3.5|over": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4871144|ast|6.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4066757|pts|11.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|3992|pts|18.5|under": {
+   "result": "loss",
+   "minutes": 39,
+   "actual": 19,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4432158|ast|3.5|under": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4683747|reb|4.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|3992|ast|7.5|under": {
+   "result": "loss",
+   "minutes": 39,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|2490149|pts|17.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 20,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4066354|reb|3.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4431680|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4397424|reb|7.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909869|4432158|pts|17.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 18,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|4066354|pts|16.5|under": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 28,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4871144|reb|8.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909870|3078576|reb|3.5|over": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-26|demo-401909874|4701230|ast|7.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|5093267|pts|12.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|3448|reb|6.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|4278077|reb|5.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4432241|ast|6.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4433134|ast|7.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4683778|pts|13.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4222252|reb|9.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4702352|pts|9.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4684272|ast|2.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4702352|ast|2.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|3448|pts|13.5|under": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 15,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3914044|reb|2.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|2991139|ast|4.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4395625|pts|21.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 20,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4683692|pts|8.5|under": {
+   "result": "win",
+   "minutes": 6,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|4066457|ast|5.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|3936099|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|3945274|pts|35.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 52,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4432241|pts|6.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4222252|ast|3.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|4431823|pts|13.5|under": {
+   "result": "win",
+   "minutes": 13,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4702352|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4222252|pts|7.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|3134908|pts|10.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3934719|ast|2.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|3134908|reb|4.5|over": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4395625|ast|3.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|4066457|pts|22.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 29,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909862|5106060|ast|3.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4395724|ast|5.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3062679|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3934672|reb|2.5|over": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|4431823|reb|2.5|under": {
+   "result": "win",
+   "minutes": 13,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|4592691|reb|4.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4900671|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4433255|reb|9.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909862|5106060|pts|12.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|4592691|pts|7.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3934719|reb|5.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4278073|ast|6.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|3945274|ast|7.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4684272|pts|9.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3136195|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|5093267|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4684272|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909862|5106060|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|4066457|reb|4.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|4431823|ast|2.5|under": {
+   "result": "win",
+   "minutes": 13,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909861|4278077|pts|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3062679|reb|6.5|over": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3914044|pts|6.5|over": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909865|4593803|ast|5.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3934672|pts|24.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 28,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909863|3147657|pts|11.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-25|demo-401909864|4395724|reb|2.5|over": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|5105637|pts|6.5|under": {
+   "result": "win",
+   "minutes": 10,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5279130|pts|11.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|3934723|reb|6.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5037873|pts|9.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5242502|pts|11.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5279130|ast|4.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5279130|reb|2.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4066757|reb|3.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4701233|reb|4.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5242502|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|5124612|ast|5.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4701233|pts|4.5|under": {
+   "result": "win",
+   "minutes": 5,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|5105637|reb|4.5|under": {
+   "result": "win",
+   "minutes": 10,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4683747|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909859|3936299|ast|6.5|over": {
+   "result": "loss",
+   "minutes": 43,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5037873|reb|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|3908809|reb|5.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|3934723|pts|9.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4432158|reb|9.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4066328|pts|17.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 21,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|3907823|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5175643|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|3908809|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|4431678|ast|5.5|over": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|3992|reb|3.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5175643|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|3059318|pts|26.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 28,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909859|3064290|pts|14.5|over": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|3059318|ast|3.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 10,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4683747|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 15,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4432194|pts|9.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4066757|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909859|3064290|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4683747|reb|4.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|4431678|reb|3.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909859|3064290|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|5175643|pts|8.5|over": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 22,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4432158|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909855|4431678|pts|24.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 26,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4432194|ast|2.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|3908809|pts|27.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 22,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-24|demo-401909854|4701233|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 5,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4395626|pts|20.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|5107199|ast|6.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|5107199|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4278562|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4433134|ast|8.5|under": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4433621|ast|3.5|under": {
+   "result": "win",
+   "minutes": 10,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|3448|reb|7.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4397475|pts|16.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4395626|reb|4.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909844|4278049|pts|14.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4711294|reb|7.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|5104155|pts|14.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|5144126|pts|18.5|under": {
+   "result": "win",
+   "minutes": 1,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4431823|ast|3.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909844|5041939|pts|27.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 14,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4278572|reb|4.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|5093267|pts|11.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909844|4701208|pts|8.5|under": {
+   "result": "win",
+   "minutes": 1,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4277843|pts|12.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4997526|ast|5.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|2581184|pts|12.5|under": {
+   "result": "win",
+   "minutes": 1,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4348700|reb|7.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|4702352|pts|10.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4277922|pts|9.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|5107199|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 15,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4432241|ast|6.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4066372|pts|11.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4066372|ast|3.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4065804|pts|11.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|4702352|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4431823|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 20,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3914044|reb|2.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4066354|pts|20.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4278562|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 19,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909844|4701208|reb|9.5|under": {
+   "result": "win",
+   "minutes": 1,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4432166|ast|10.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|5144126|ast|3.5|under": {
+   "result": "win",
+   "minutes": 1,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|2596112|pts|10.5|under": {
+   "result": "win",
+   "minutes": 13,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909844|4278049|reb|8.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|3936099|reb|4.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4593841|pts|10.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4684272|ast|2.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4278572|pts|10.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4348700|ast|2.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4278562|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4432241|pts|7.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4277922|ast|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4348700|pts|8.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|2581184|ast|2.5|under": {
+   "result": "win",
+   "minutes": 1,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|3157465|pts|15.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|3448|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4997526|reb|6.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4871145|ast|10.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4845374|pts|13.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4397189|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909849|4684793|pts|17.5|under": {
+   "result": "win",
+   "minutes": 8,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4601025|reb|4.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4065648|ast|7.5|under": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4278053|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 18,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909844|5041939|reb|7.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4432822|pts|10.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4395625|pts|21.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 23,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4432907|pts|11.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4684742|ast|4.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4591725|pts|20.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4395626|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|5093267|reb|6.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4431823|reb|2.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4397424|ast|2.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|4702352|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4397424|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 15,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|4278039|pts|24.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 14,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4397475|ast|2.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4997526|pts|13.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4432573|ast|6.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4593841|ast|2.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4066261|reb|11.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|3146557|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|3134908|reb|4.5|over": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4845374|ast|5.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4871145|pts|11.5|over": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|5144126|reb|4.5|under": {
+   "result": "win",
+   "minutes": 1,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4395625|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4278053|ast|6.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4431687|ast|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4711294|pts|16.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|4869342|pts|13.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 11,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|3133635|ast|2.5|under": {
+   "result": "win",
+   "minutes": 13,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4683689|pts|5.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|3134907|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4066372|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|3995|ast|4.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4702382|ast|2.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4601025|pts|13.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909849|4684793|ast|3.5|under": {
+   "result": "win",
+   "minutes": 8,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4683689|reb|4.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4277922|reb|8.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3062679|ast|3.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4066261|ast|4.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3147657|ast|2.5|over": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|4431736|pts|16.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 19,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|5104155|ast|2.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|4701230|reb|10.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|3134908|pts|10.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909849|4684793|reb|8.5|under": {
+   "result": "win",
+   "minutes": 8,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4432165|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|3157465|ast|2.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4397189|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|3995|reb|5.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4397475|reb|3.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|3936099|pts|6.5|over": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 16,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4397424|reb|8.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4432165|ast|6.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4684742|reb|6.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3934719|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4432166|reb|4.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|2490149|pts|19.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 13,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|2596112|reb|3.5|under": {
+   "result": "win",
+   "minutes": 13,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|4683021|pts|24.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 26,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4432907|reb|6.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3078576|pts|10.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 12,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4395724|reb|3.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3136195|ast|3.5|under": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|4431736|ast|2.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4277847|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 20,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4432573|pts|19.5|over": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4684272|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4432573|reb|8.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4684272|pts|9.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|4869342|reb|7.5|under": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4593841|reb|3.5|over": {
+   "result": "loss",
+   "minutes": 11,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4432166|pts|18.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 16,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3147657|reb|2.5|over": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4395625|reb|4.5|over": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3934672|reb|2.5|over": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4433621|pts|21.5|under": {
+   "result": "win",
+   "minutes": 10,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|3059319|ast|2.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|4066211|reb|8.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909851|2991139|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|4869342|ast|5.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3062679|pts|11.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 10,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909846|4433134|reb|5.5|over": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 14,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|4278039|reb|3.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|2490149|ast|4.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4683771|pts|8.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|4601025|ast|3.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|3133635|pts|6.5|under": {
+   "result": "win",
+   "minutes": 13,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4702382|pts|9.5|over": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|5105565|pts|10.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|3934672|ast|7.5|under": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909847|3059319|reb|3.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4432822|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909852|5105565|reb|10.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909848|4591725|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909845|4432165|pts|13.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909095|4066354|reb|3.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-23|demo-401909843|4701230|pts|20.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 19,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4576087|ast|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909093|5105637|pts|6.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4683778|pts|14.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4065670|pts|10.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4222252|reb|9.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4576087|pts|16.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4683692|pts|8.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|3138196|pts|14.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909093|5124612|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4065670|ast|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4222252|ast|3.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|3138196|reb|4.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4431767|pts|13.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|3064290|ast|3.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4576087|reb|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909093|5105637|reb|4.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4065670|reb|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4900671|ast|3.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|3112335|reb|14.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4278073|ast|6.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4433255|pts|16.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 12,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909093|4431678|ast|5.5|over": {
+   "result": "win",
+   "minutes": 42,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|3112335|ast|11.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|3138196|ast|2.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4593803|pts|17.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 21,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|4433255|reb|8.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909094|3936299|pts|27.5|under": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909093|3059318|pts|27.5|over": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 24,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-22|demo-401909093|4431678|reb|4.5|under": {
+   "result": "win",
+   "minutes": 42,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4683774|ast|3.5|under": {
+   "result": "win",
+   "minutes": 7,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|3913174|ast|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|2779|pts|6.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|4278049|pts|15.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4433134|ast|8.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|3448|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|5041939|pts|27.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 32,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|4278049|reb|9.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4591725|pts|21.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4397475|pts|16.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|4431714|ast|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4066261|ast|5.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5279130|ast|5.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4397077|pts|11.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4277843|pts|12.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5279130|pts|12.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|5093267|pts|11.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4277922|pts|9.5|under": {
+   "result": "win",
+   "minutes": 2,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4277922|ast|3.5|under": {
+   "result": "win",
+   "minutes": 2,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4397475|reb|4.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4348700|reb|7.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|3936099|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|5214640|pts|9.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5242502|pts|11.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4683774|pts|6.5|under": {
+   "result": "win",
+   "minutes": 7,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|3448|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|4431714|reb|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5037873|pts|9.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|4702352|pts|10.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|2779|ast|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4684272|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4601025|pts|14.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|4601023|pts|8.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4278077|reb|5.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4432241|ast|6.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4397140|pts|17.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|2990992|ast|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|2779|reb|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4592691|reb|5.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5242502|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|3134907|ast|3.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4348700|ast|2.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4278572|reb|4.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|4712896|reb|4.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|3134908|pts|12.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4348700|pts|8.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|4431714|pts|11.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|4433629|ast|8.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4869342|pts|14.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 20,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|4432194|pts|10.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|2595516|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4432241|pts|7.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4869342|reb|8.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|4601023|reb|6.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4278580|pts|13.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|2490149|ast|5.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4278580|ast|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4432848|pts|18.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|3913174|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4397140|reb|5.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|3032977|reb|10.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5279130|reb|2.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4066261|reb|11.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|3945274|pts|36.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 28,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4278129|pts|12.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4278053|pts|10.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4702382|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|6583|pts|23.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4278039|pts|24.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 31,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|2583632|reb|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|4433629|pts|9.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|2583632|pts|8.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4278572|pts|10.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|3146557|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|5214640|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4397077|reb|5.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|6583|reb|12.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4601025|reb|4.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4395625|ast|3.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|6475|pts|12.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|4702352|reb|2.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4066648|pts|12.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|5214640|ast|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|4433629|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5037873|reb|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|3907823|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|3155526|pts|18.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 10,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|4278585|reb|3.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4066457|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|2991139|pts|4.5|over": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4278580|reb|5.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4277922|reb|8.5|under": {
+   "result": "win",
+   "minutes": 2,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4684272|pts|10.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 10,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|2595516|pts|18.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|3135045|ast|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|3059319|reb|3.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|3133635|ast|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|4712896|pts|10.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 9,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909836|5175643|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|2990992|reb|2.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|3936099|pts|6.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4591725|ast|5.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4395625|pts|20.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 20,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4432165|ast|6.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4432165|reb|4.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|4397040|ast|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4601025|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|5105623|pts|11.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|2991139|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4395725|ast|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|3913174|pts|10.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4433134|reb|5.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 6,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909840|4397040|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4433247|reb|4.5|over": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4395724|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|3913176|reb|5.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|3134907|pts|10.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4432573|reb|8.5|under": {
+   "result": "win",
+   "minutes": 41,
+   "actual": 7,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|2990992|pts|8.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|3059319|ast|2.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4397140|ast|6.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|4397475|ast|2.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|3945274|reb|6.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|4278585|pts|8.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 0,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|5093267|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|3146557|pts|7.5|over": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 10,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4278039|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|4601023|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 15,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4432573|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 41,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4432573|pts|19.5|over": {
+   "result": "win",
+   "minutes": 41,
+   "actual": 35,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4701230|ast|6.5|over": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|3136193|ast|6.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909841|4278585|ast|3.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 2,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4395725|pts|18.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909837|4684272|reb|3.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|2490149|pts|19.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 19,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|6450|reb|6.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|6450|ast|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|3134907|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4066648|reb|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909842|2991139|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4869342|ast|5.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909834|4277847|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909092|4278077|pts|3.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909835|3032977|ast|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  },
+  "2026-10-21|demo-401909091|4432848|reb|4.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": []
+  }
+ }
+}
