@@ -39,9 +39,16 @@ export interface Usage {
 let lastUsage: Usage = { remaining: null, last: null };
 export const usage = () => lastUsage;
 
+// Pasted secrets often carry a stray newline, space, quotes or a "NAME=" prefix.
+export function cleanKey(raw: string | undefined): string {
+  return (raw ?? "").trim().replace(/^ODDS_API_KEY\s*=\s*/, "").replace(/^["']|["']$/g, "").trim();
+}
+
 function key(): string {
-  const k = process.env.ODDS_API_KEY;
+  const k = cleanKey(process.env.ODDS_API_KEY);
   if (!k) throw new Error("ODDS_API_KEY is not set");
+  // Length only, never the key: these logs are public.
+  if (!/^[0-9a-f]{32}$/i.test(k)) console.error(`ODDS_API_KEY looks malformed (${k.length} characters, expected 32 hex)`);
   return k;
 }
 
