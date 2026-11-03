@@ -38,6 +38,8 @@ jobs:
         run: node scripts/ci/ensure-history.ts
       - name: Refresh box scores through today
         run: node scripts/ingest-boxscores.ts --recent 3
+      - name: Check the odds key (free)
+        run: node scripts/ci/check-key.ts
       - run: scripts/ci/mode.sh
       - name: Build the board and grade earlier ones
         run: |
