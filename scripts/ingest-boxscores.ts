@@ -34,6 +34,8 @@ for (const d of dates) {
   let board;
   try {
     board = await scoreboard(ymd, { useCache: !recent });
+    // A cached scoreboard saved before the games finished never updates on its own.
+    if (!recent && board.some((g) => !g.completed && Date.parse(g.tipUtc) < Date.now())) board = await scoreboard(ymd, { useCache: false });
   } catch (e) {
     console.error(`scoreboard ${d}: ${(e as Error).message}`);
     continue;
