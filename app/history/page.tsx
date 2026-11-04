@@ -1,6 +1,7 @@
 import { listDates, loadBoard, loadGrades, loadScorecard, practiceDir, replayInRepo, STAT_NAMES, bookName, american, pct, pacificTime, type BoardSnapshot, type GradeFile } from "../../lib/view.ts";
 import { Headshot } from "../components/Headshot.tsx";
 import { Footer, Nav } from "../components/Nav.tsx";
+import { safestPicks, SAFE_MIN_CHANCE } from "../../lib/safest.ts";
 
 const BANDS = [0.5, 0.55, 0.6, 0.65, 0.7, 1.01];
 const RESULT: Record<string, string> = { win: "Won", loss: "Lost", void: "Void, didn’t play" };
@@ -196,6 +197,14 @@ export default function History() {
   const pWins = pDecided.filter((x) => x.g?.result === "win").length;
   const realSettled = real.rows.some((x) => x.g?.result === "win" || x.g?.result === "loss");
   const scorecard = loadScorecard();
+  // The lowest-risk subset of each board, picked by the same rule the board page uses.
+  const safeOnly = (g: ReturnType<typeof gather>) => {
+    const keep = new Set(g.boards.flatMap((b) => safestPicks(b.rows).map((r) => `${b.boardDate}|${r.key}`)));
+    return g.rows.filter((x) => keep.has(`${x.b.boardDate}|${x.r.key}`));
+  };
+  const realSafe = safeOnly(real);
+  const pSafe = practice ? safeOnly(practice).filter((x) => x.g?.result === "win" || x.g?.result === "loss") : [];
+  const pSafeWins = pSafe.filter((x) => x.g?.result === "win").length;
 
   return (
     <>
@@ -228,6 +237,16 @@ export default function History() {
         <section>
           <h2>If you bet 1 unit on every pick</h2>
           <UnitTracker rows={real.rows} />
+        </section>
+
+        <section>
+          <h2>Lowest-risk picks only</h2>
+          <p className="fine">
+            The same running total for just the picks shown as lowest-risk on each board (at least a {pct(SAFE_MIN_CHANCE, 0)} chance and
+            still worth it if minutes change).
+            {pSafe.length ? ` On the practice boards these hit ${pSafeWins} of ${pSafe.length} (${pct(pSafeWins / pSafe.length)}).` : ""}
+          </p>
+          <UnitTracker rows={realSafe} />
         </section>
 
         {scorecard && (

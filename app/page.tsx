@@ -6,6 +6,7 @@ import { Footer, Nav } from "./components/Nav.tsx";
 import { Picks } from "./components/Picks.tsx";
 import { LiveTracker, type TrackedPick } from "./components/LiveTracker.tsx";
 import type { ConditionalCard } from "../lib/board.ts";
+import { safestPicks, SAFE_MIN_CHANCE } from "../lib/safest.ts";
 
 const COVERAGE: [string, string][] = [
   ["too_few_games", "haven’t played enough games"],
@@ -193,6 +194,25 @@ export default function Page() {
             Last board ({recap.date}): {recap.win} won, {recap.loss} lost{recap.push ? `, ${recap.push} pushed` : ""}{recap.void ? `, ${recap.void} void` : ""}
             {recap.pending ? `, ${recap.pending} still to grade` : ""}. Every pick is on the Track record page.
           </p>
+        )}
+
+        {b.rows.length > 0 && (
+          <section>
+            <Picks
+              title="Lowest-risk picks"
+              rows={safestPicks(b.rows)}
+              teams={b.teams}
+              tips={tips}
+              news={news?.rows}
+              emptyReason={`No pick tonight has at least a ${pct(SAFE_MIN_CHANCE, 0)} chance and holds up if minutes change.`}
+              collapsible
+            />
+            <p className="fine">
+              The picks most likely to hit: at least a {pct(SAFE_MIN_CHANCE, 0)} chance in our model, still worth it if the player plays
+              more or fewer minutes than expected, one per player. Safer means a higher hit rate, not a sure thing, and these usually pay
+              less per win. They’re also in the full list below.
+            </p>
+          </section>
         )}
 
         <LiveTracker picks={tracked} boardDate={b.boardDate} prior={prior.bets ? prior : undefined} />

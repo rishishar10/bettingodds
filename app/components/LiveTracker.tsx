@@ -60,6 +60,17 @@ export function LiveTracker({ picks, boardDate, prior }: {
   const [players, setPlayers] = useState<Record<string, PlayerLine>>({});
   const [updated, setUpdated] = useState<Date | null>(null);
   const [error, setError] = useState(false);
+  const [open, setOpen] = useState(true);
+  // Remembers whether the viewer minimized it; storage can be missing or blocked.
+  useEffect(() => {
+    try { if (localStorage.getItem("liveTrackerOpen") === "0") setOpen(false); } catch {}
+  }, []);
+  const toggle = () => {
+    setOpen((o) => {
+      try { localStorage.setItem("liveTrackerOpen", o ? "0" : "1"); } catch {}
+      return !o;
+    });
+  };
 
   useEffect(() => {
     let stop = false;
@@ -148,6 +159,11 @@ export function LiveTracker({ picks, boardDate, prior }: {
     <section>
       <div className="section-head">
         <h2>Live tracker <small>{updated ? `updated ${updated.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}` : "loading"}</small></h2>
+        <div className="pills small">
+          <button type="button" className="pill" aria-expanded={open} aria-controls="live-tracker-table" onClick={toggle}>
+            {open ? "Minimize" : "Show picks"}
+          </button>
+        </div>
       </div>
       <p className="fine">
         {count("win")} won, {count("loss")} lost{count("push") ? `, ${count("push")} pushed` : ""}{count("void") ? `, ${count("void")} void` : ""}, {count("live")} live,{" "}
@@ -157,7 +173,7 @@ export function LiveTracker({ picks, boardDate, prior }: {
         Live numbers come from ESPN and refresh every 30 seconds; the official grade is posted after the games.
         {error ? " ESPN didn’t respond on the last try; retrying." : ""}
       </p>
-      <div className="box">
+      {open && <div className="box" id="live-tracker-table">
         <table>
           <thead><tr><th>Pick</th><th className="num">Now</th><th>Game</th><th>Status</th></tr></thead>
           <tbody>
@@ -175,7 +191,7 @@ export function LiveTracker({ picks, boardDate, prior }: {
             ))}
           </tbody>
         </table>
-      </div>
+      </div>}
     </section>
   );
 }
