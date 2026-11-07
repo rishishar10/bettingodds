@@ -1,0 +1,35 @@
+{
+ "updatedAt": "2026-11-07T14:14:39.068Z",
+ "lines": 493,
+ "minLines": 500,
+ "modelLogLoss": 0.7036206532324923,
+ "marketLogLoss": 0.6924560819389493,
+ "w": {
+  "estimate": 0.13082676075248634,
+  "lo": -0.47211844381342094,
+  "hi": 0.8778411082390076,
+  "clusters": 18
+ },
+ "ready": false,
+ "verdict": "493 of the 500 lines needed before this says anything. One night is noise.",
+ "perNight": [
+  {
+   "date": "2026-10-27",
+   "n": 38,
+   "model": 0.6616852488777766,
+   "market": 0.6674743117774627
+  },
+  {
+   "date": "2026-11-04",
+   "n": 266,
+   "model": 0.7007529184001257,
+   "market": 0.6919473892702487
+  },
+  {
+   "date": "2026-11-06",
+   "n": 189,
+   "model": 0.7160881814382513,
+   "market": 0.6981948095368911
+  }
+ ]
+}

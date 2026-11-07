@@ -1,0 +1,122 @@
+{
+ "checkedAt": "2026-11-05T06:49:24.466Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-04_10_15PM.pdf",
+  "timeUtc": "2026-11-05T03:15:00.000Z"
+ },
+ "espnNotesAfterPublish": 28,
+ "changes": [
+  {
+   "playerId": "4701230",
+   "playerName": "Jalen Johnson",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-04T23:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Sprain"
+  },
+  {
+   "playerId": "4702745",
+   "playerName": "Amari Williams",
+   "teamId": "2",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T00:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4397688",
+   "playerName": "Trey Murphy III",
+   "teamId": "3",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T00:45:00.000Z",
+   "note": "Injury/Illness - Bilateral Patella Tendinopathy"
+  },
+  {
+   "playerId": "3133603",
+   "playerName": "Kelly Oubre Jr.",
+   "teamId": "11",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T00:45:00.000Z",
+   "note": "Injury/Illness - Left Calf Contusion"
+  },
+  {
+   "playerId": "5105977",
+   "playerName": "Rasheer Fleming",
+   "teamId": "21",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T01:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Sprain"
+  },
+  {
+   "playerId": "4278402",
+   "playerName": "Jordan Goodwin",
+   "teamId": "21",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T01:45:00.000Z",
+   "note": "Injury/Illness - Right Calf Soreness"
+  },
+  {
+   "playerId": "4279318",
+   "playerName": "Daeqwon Plowden",
+   "teamId": "23",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T02:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4432823",
+   "playerName": "Jaylin Williams",
+   "teamId": "25",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T00:45:00.000Z",
+   "note": "Injury/Illness - Low Back Spasms"
+  },
+  {
+   "playerId": "5105817",
+   "playerName": "Carson Cooper",
+   "teamId": "29",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T00:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4781746",
+   "playerName": "Javon Small",
+   "teamId": "29",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-05T00:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}
