@@ -1,0 +1,111 @@
+{
+ "checkedAt": "2026-11-09T06:33:53.282Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-08_08_45PM.pdf",
+  "timeUtc": "2026-11-09T01:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 5,
+ "changes": [
+  {
+   "playerId": "2595516",
+   "playerName": "Norman Powell",
+   "teamId": "4",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T20:15:00.000Z",
+   "note": "Injury/Illness - Right Shoulder Inflammation / Soreness"
+  },
+  {
+   "playerId": "4277843",
+   "playerName": "Gary Trent Jr.",
+   "teamId": "15",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T00:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "5101761",
+   "playerName": "Mikel Brown Jr.",
+   "teamId": "17",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T00:15:00.000Z",
+   "note": "Injury/Illness - Back, Injury Management"
+  },
+  {
+   "playerId": "5175643",
+   "playerName": "Egor Demin",
+   "teamId": "17",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T00:15:00.000Z",
+   "note": "Injury/Illness - Right Bone Bruise"
+  },
+  {
+   "playerId": "4870564",
+   "playerName": "Joshua Jefferson",
+   "teamId": "17",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T00:15:00.000Z",
+   "note": "G League - On Assignment"
+  },
+  {
+   "playerId": "4702670",
+   "playerName": "Grant Nelson",
+   "teamId": "17",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T00:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "5242502",
+   "playerName": "Ben Saraf",
+   "teamId": "17",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T00:15:00.000Z",
+   "note": "G League - On Assignment"
+  },
+  {
+   "playerId": "3155942",
+   "playerName": "Domantas Sabonis",
+   "teamId": "23",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T01:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Soreness"
+  },
+  {
+   "playerId": "4066336",
+   "playerName": "Lauri Markkanen",
+   "teamId": "26",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T23:45:00.000Z",
+   "note": "Injury/Illness - Right Wrist Sprain"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

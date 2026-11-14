@@ -1,0 +1,7608 @@
+{
+ "updatedAt": "2026-11-14T06:26:19.172Z",
+ "summary": {
+  "bets": 474,
+  "settled": 472,
+  "voids": 2,
+  "pending": 0,
+  "unitsStaked": 472,
+  "netUnits": 31.399999999999984,
+  "roi": 0.06652542372881352
+ },
+ "grades": {
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4711272|pts|11.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 0,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|5144091|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|5081727|pts|8.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 3,
+   "profit": 0.9299999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|3934672|pts|25.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 33,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|4869780|ast|2.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 2,
+   "profit": 1.0499999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|6585|reb|6.5|over": {
+   "result": "loss",
+   "minutes": 14,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|4277813|pts|8.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 8,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|1fae7f34ec6035dffa74feb148ee26c7|6589|reb|4.5|under": {
+   "result": "win",
+   "minutes": 16,
+   "actual": 3,
+   "profit": 1.15,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4432639|pts|14.5|over": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|5105565|ast|1.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|5344669fd560d317ffaee0a1d16be7c8|4066648|pts|14.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 7,
+   "profit": 0.96,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|5344669fd560d317ffaee0a1d16be7c8|4396907|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|3147657|pts|8.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 18,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|4277813|reb|3.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 2,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|4997538|reb|5.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 3,
+   "profit": 0.79,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|3934719|pts|17.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 11,
+   "profit": 0.9199999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|4431736|pts|12.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 14,
+   "profit": 0.97,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|6606|ast|4.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|3147657|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|5344669fd560d317ffaee0a1d16be7c8|4702352|pts|7.5|over": {
+   "result": "loss",
+   "minutes": 15,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|5344669fd560d317ffaee0a1d16be7c8|2991139|pts|7.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 2,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|5041955|pts|18.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 28,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|6606|pts|21.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 29,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|6585|pts|3.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 0,
+   "profit": 1.08,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|5144091|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|1fae7f34ec6035dffa74feb148ee26c7|4066436|pts|12.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 8,
+   "profit": 0.94,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4433192|pts|9.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|1fae7f34ec6035dffa74feb148ee26c7|4709138|reb|5.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 3,
+   "profit": 0.8899999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4432811|pts|4.5|under": {
+   "result": "win",
+   "minutes": 14,
+   "actual": 2,
+   "profit": 1.0299999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4711272|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|4395628|reb|5.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 5,
+   "profit": 1.1099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4433192|ast|1.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|3202|pts|21.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 22,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|8a40b260e8fa0d67c1f2bc2b39a24982|4869780|pts|11.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 10,
+   "profit": 0.78,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|1fae7f34ec6035dffa74feb148ee26c7|4709138|ast|3.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 0,
+   "profit": 1.25,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|6606|reb|3.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 2,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|3995|pts|12.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|5344669fd560d317ffaee0a1d16be7c8|3936099|pts|10.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|1fae7f34ec6035dffa74feb148ee26c7|4709138|pts|17.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 8,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4684740|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 41,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4433627|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|4871144|pts|20.5|over": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 43,
+   "profit": 0.96,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|5344669fd560d317ffaee0a1d16be7c8|4702352|reb|2.5|over": {
+   "result": "loss",
+   "minutes": 15,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|3934672|reb|3.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 1,
+   "profit": 0.6599999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|a51c350318d7570c2b74af08eedb9fcd|5081727|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|d04acca7f0f369fc53bf04cd3357cb0d|3202|ast|3.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 6,
+   "profit": 0.73,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-13|6669b911691463c669a5c10574742e8e|3934719|ast|1.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 1,
+   "profit": 1.4,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-14T06:26:19.172Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|3908845|pts|12.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 10,
+   "profit": 0.8999999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|4066383|pts|15.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 11,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|3908845|reb|6.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 4,
+   "profit": 1.1600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|4432166|pts|24.5|under": {
+   "result": "loss",
+   "minutes": 48,
+   "actual": 52,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|3908845|ast|1.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 0,
+   "profit": 0.5700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|4684742|pts|10.5|under": {
+   "result": "loss",
+   "minutes": 43,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4432816|reb|3.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 3,
+   "profit": 1.2000000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|3032976|pts|9.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 9,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|5107199|pts|14.5|under": {
+   "result": "loss",
+   "minutes": 42,
+   "actual": 21,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4433247|pts|13.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|4437244|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4432816|pts|20.5|under": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|3157465|pts|15.5|over": {
+   "result": "loss",
+   "minutes": 41,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|4601023|ast|2.5|over": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 7,
+   "profit": 1.2000000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|4278585|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|4278585|reb|2.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 2,
+   "profit": 1.1400000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4397002|reb|4.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|4278585|pts|8.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4278594|ast|2.5|over": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 4,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|5203685|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 16,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4433247|ast|2.5|over": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 5,
+   "profit": 1.1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4397002|pts|17.5|over": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 18,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|4278562|pts|10.5|over": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 13,
+   "profit": 0.99,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|3136193|reb|2.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 1,
+   "profit": 1.2999999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|5107199|ast|5.5|over": {
+   "result": "loss",
+   "minutes": 42,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|f3f429e773bfb2340ba2bb90f2b9dd1e|4278402|reb|2.5|over": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 5,
+   "profit": 0.71,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|3c93e4724d36d796aed71c0ca4055b1b|4278078|reb|6.5|over": {
+   "result": "loss",
+   "minutes": 16,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-12|d5c5ae8d56762b45d1ec4b85337878f3|4278562|ast|1.5|over": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 3,
+   "profit": 0.6100000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-13T06:48:11.276Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|4397136|pts|14.5|over": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 15,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|21792501482fecfaacd3a4a24776c9e6|3978|pts|11.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 8,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|3202|ast|3.5|over": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 5,
+   "profit": 0.97,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|3975|reb|3.5|under": {
+   "result": "win",
+   "minutes": 6,
+   "actual": 0,
+   "profit": 1.17,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|5144091|reb|4.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 4,
+   "profit": 0.94,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4997536|reb|3.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 3,
+   "profit": 1.02,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|37f4c00ff7ec01d5aa7c33dd1ac84bbc|4683689|pts|4.5|under": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4684740|ast|3.5|over": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 4,
+   "profit": 1.21,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|21792501482fecfaacd3a4a24776c9e6|3112335|pts|25.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 27,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|4395628|ast|2.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 2,
+   "profit": 1.2999999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|6589|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|4277813|ast|1.5|over": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 3,
+   "profit": 0.8899999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|37f4c00ff7ec01d5aa7c33dd1ac84bbc|4397424|ast|1.5|over": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 3,
+   "profit": 1.12,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|37f4c00ff7ec01d5aa7c33dd1ac84bbc|4397424|reb|6.5|over": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 13,
+   "profit": 0.8899999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4684740|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|4277813|pts|8.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 2,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4432639|pts|14.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4997536|pts|7.5|under": {
+   "result": "win",
+   "minutes": 12,
+   "actual": 0,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|21792501482fecfaacd3a4a24776c9e6|3936299|ast|6.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|4395628|reb|5.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 4,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|37f4c00ff7ec01d5aa7c33dd1ac84bbc|3078576|pts|13.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 19,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|2990992|pts|6.5|over": {
+   "result": "loss",
+   "minutes": 17,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|37f4c00ff7ec01d5aa7c33dd1ac84bbc|3078576|ast|4.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|3202|reb|5.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 4,
+   "profit": 1.0699999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4709138|pts|15.5|over": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 22,
+   "profit": 0.99,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|4397136|ast|1.5|over": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 2,
+   "profit": 0.5700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|37f4c00ff7ec01d5aa7c33dd1ac84bbc|3078576|reb|3.5|under": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 1,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4432639|ast|1.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|095441822e3b9b1b84bff9e482b9057a|3908809|pts|22.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 23,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4433192|pts|8.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 6,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-11|21792501482fecfaacd3a4a24776c9e6|3138196|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 23,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|095441822e3b9b1b84bff9e482b9057a|4432158|ast|3.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 3,
+   "profit": 0.81,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|e6a37eea1dddcbd0384c81237e81f47f|3907497|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-12T03:47:48.751Z"
+    }
+   ]
+  },
+  "2026-11-11|f41d186dc7a7dcf01adab32579a82ca3|4066436|ast|1.5|over": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 4,
+   "profit": 0.6200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-12T07:13:17.806Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|4702352|pts|7.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 9,
+   "profit": 0.96,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|3064482|pts|7.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 5,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|2991350|pts|6.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 5,
+   "profit": 0.97,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4278073|pts|31.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 26,
+   "profit": 1.1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|3032977|ast|5.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 4,
+   "profit": 1.06,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|5241364|pts|7.5|over": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 13,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|4396907|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4065648|pts|26.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 21,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|5254165|ast|2.5|over": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 4,
+   "profit": 1.1800000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|3133626|pts|7.5|over": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4222252|pts|9.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 7,
+   "profit": 0.76,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|5254165|pts|8.5|over": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 11,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|4601025|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|2991350|reb|3.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 2,
+   "profit": 0.77,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4683689|pts|3.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|4066648|pts|15.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 13,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|4601025|ast|3.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 2,
+   "profit": 0.97,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|4278053|pts|12.5|over": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 19,
+   "profit": 0.77,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4900671|reb|3.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 3,
+   "profit": 1.13,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|6606|reb|3.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 3,
+   "profit": 0.96,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4683021|reb|7.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 6,
+   "profit": 0.79,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|4066648|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|3032977|pts|30.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 30,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4900671|ast|3.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 3,
+   "profit": 1.08,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4351852|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 17,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|1966|pts|15.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 11,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4683678|reb|2.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 1,
+   "profit": 0.94,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4683021|pts|23.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 24,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4683778|pts|11.5|over": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 21,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4900671|pts|18.5|under": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 14,
+   "profit": 0.99,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|2991350|ast|1.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 1,
+   "profit": 1.35,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|6475|reb|2.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 1,
+   "profit": 0.56,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|4601025|pts|12.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|5124612|ast|3.5|over": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 5,
+   "profit": 1.4,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|6475|pts|12.5|over": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|3448|reb|5.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 4,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|4431736|reb|4.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 3,
+   "profit": 0.71,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|5254165|reb|2.5|over": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|9ac02cb22adf276b325b1e9c9c6c588e|4278053|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4251|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|3078576|reb|3.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 1,
+   "profit": 0.94,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|5174983|pts|8.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 10,
+   "profit": 1.0499999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|5105565|reb|10.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|3078576|pts|13.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 5,
+   "profit": 0.8600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|3936099|pts|11.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 11,
+   "profit": 0.76,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|3448|pts|12.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4351852|pts|5.5|under": {
+   "result": "win",
+   "minutes": 17,
+   "actual": 2,
+   "profit": 1.1099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|8178ff2ec61f604b61dfe6d7b8d71103|3448|ast|1.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 1,
+   "profit": 0.74,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4065648|ast|6.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 4,
+   "profit": 1.0099999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|f5477c781c94e09e85374bbf9149c0f1|5105565|pts|11.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 7,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T14:35:59.069Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4431678|pts|23.5|over": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 24,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4397424|pts|9.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 4,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|4397424|reb|6.5|over": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-10|cfa503c66cd505776a910921875ef7dd|5124612|pts|12.5|over": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-11T06:25:28.132Z"
+    }
+   ]
+  },
+  "2026-11-09|9866fa22adc8509d487522ef4cf0fc24|4278355|pts|11.5|under": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 10,
+   "profit": 0.97,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|6589|reb|5.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 3,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|9866fa22adc8509d487522ef4cf0fc24|4395712|ast|6.5|over": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 12,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|4709138|pts|15.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 25,
+   "profit": 0.9299999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|3975|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|9866fa22adc8509d487522ef4cf0fc24|4396909|reb|3.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 2,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|07361a8381206817e27bd2697fad7479|5149077|pts|8.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 8,
+   "profit": 0.97,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|9866fa22adc8509d487522ef4cf0fc24|3149673|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|4997536|pts|8.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 3,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|4997536|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|2991230|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|4433192|pts|9.5|under": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|07361a8381206817e27bd2697fad7479|4397020|pts|7.5|over": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|3202|pts|20.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 23,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|6589|ast|6.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|4066436|reb|3.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 4,
+   "profit": 1.42,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|07361a8381206817e27bd2697fad7479|4397183|pts|13.5|over": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 15,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|4684740|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|4684740|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|07361a8381206817e27bd2697fad7479|4278039|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|4432639|ast|1.5|over": {
+   "result": "win",
+   "minutes": 38,
+   "actual": 3,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|4871144|reb|8.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    },
+    {
+     "kind": "correction",
+     "result": "loss",
+     "recorded_at": "2026-11-11T19:01:07.880Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|3975|pts|28.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 25,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|07361a8381206817e27bd2697fad7479|2490149|ast|3.5|over": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 4,
+   "profit": 1.19,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|3202|ast|3.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 8,
+   "profit": 0.6799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|5175737|ast|4.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 4,
+   "profit": 0.6699999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|dc61de43b5db9de357f48f44c8022494|4871144|ast|6.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-09|3619e1cf4b0a325c3e0ba5b1fb7f3d91|5175737|reb|7.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 7,
+   "profit": 0.81,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-10T07:21:17.069Z"
+    }
+   ]
+  },
+  "2026-11-08|182e2b5349fa0ff4ad3c0e8359c1a9a0|3908845|pts|11.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|5144091|ast|3.5|over": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 5,
+   "profit": 1.17,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|7ea5547b35ef782963e4f384d3414dfa|3064482|pts|8.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 4,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|4432816|ast|6.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 5,
+   "profit": 1.13,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4066648|pts|16.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 14,
+   "profit": 0.97,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|4431678|pts|25.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 27,
+   "profit": 1.02,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|182e2b5349fa0ff4ad3c0e8359c1a9a0|4278562|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4396907|reb|2.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 0,
+   "profit": 0.8899999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4395628|reb|5.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 4,
+   "profit": 1.1800000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|1966|pts|17.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|7ea5547b35ef782963e4f384d3414dfa|6475|reb|2.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 2,
+   "profit": 0.6699999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|3907497|ast|5.5|over": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|3912848|pts|4.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 0,
+   "profit": 0.8400000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|3912848|reb|3.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 1,
+   "profit": 1.1600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|4432816|pts|21.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 24,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|3059318|ast|3.5|over": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 5,
+   "profit": 1.2200000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|4397002|ast|4.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 1,
+   "profit": 1.1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4066648|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|2991139|pts|8.5|under": {
+   "result": "loss",
+   "minutes": 24,
+   "actual": 14,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|5144091|pts|14.5|over": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 25,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|3032976|pts|8.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|4432816|reb|4.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 3,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|3448|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|4433247|pts|15.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 4,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|98eae523edadc7d4d42ab37222eb2c88|4065648|reb|7.5|over": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4397136|pts|12.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 13,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4395628|pts|19.5|over": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 25,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|2991139|ast|4.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 4,
+   "profit": 1.02,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|4433247|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|98eae523edadc7d4d42ab37222eb2c88|4683689|pts|4.5|under": {
+   "result": "win",
+   "minutes": 11,
+   "actual": 0,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|4351851|ast|1.5|under": {
+   "result": "loss",
+   "minutes": 16,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|182e2b5349fa0ff4ad3c0e8359c1a9a0|3157465|pts|14.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|5124612|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|182e2b5349fa0ff4ad3c0e8359c1a9a0|5107199|ast|3.5|over": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 4,
+   "profit": 0.71,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|758ca94b2abd151c0593b182254dab32|3032976|reb|11.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 15,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|7ea5547b35ef782963e4f384d3414dfa|3064482|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|7ea5547b35ef782963e4f384d3414dfa|4278053|pts|13.5|over": {
+   "result": "win",
+   "minutes": 40,
+   "actual": 17,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|182e2b5349fa0ff4ad3c0e8359c1a9a0|4684742|pts|10.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 7,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|182e2b5349fa0ff4ad3c0e8359c1a9a0|3908845|reb|5.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 4,
+   "profit": 1.0499999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|5144091|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|3448|ast|1.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 1,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|98eae523edadc7d4d42ab37222eb2c88|4251|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|5124612|pts|12.5|over": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 13,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|3448|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 20,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4397688|ast|2.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 3,
+   "profit": 0.77,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|4395628|ast|2.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 2,
+   "profit": 1.2400000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|3936099|pts|11.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 8,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|7ea5547b35ef782963e4f384d3414dfa|3032977|pts|30.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 29,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|7ea5547b35ef782963e4f384d3414dfa|4066261|reb|9.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 8,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|7ea5547b35ef782963e4f384d3414dfa|3032977|ast|5.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 3,
+   "profit": 1.1400000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|98eae523edadc7d4d42ab37222eb2c88|4397424|pts|10.5|under": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|c205d8d8102fbb0e72929fff3c1fd089|5254165|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 15,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T06:34:05.209Z"
+    }
+   ]
+  },
+  "2026-11-08|a5d2d9c68b7446860de658aa4bc33c5b|4351851|reb|1.5|under": {
+   "result": "loss",
+   "minutes": 16,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-09T00:50:12.561Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|3202|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|4431823|pts|7.5|over": {
+   "result": "loss",
+   "minutes": 16,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|39099dc03208d0771daaab5f7993478a|4712849|ast|4.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4711272|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 13,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|39099dc03208d0771daaab5f7993478a|5239561|pts|7.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 2,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|5149077|pts|8.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 10,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|2990992|reb|2.5|over": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4711272|pts|8.5|over": {
+   "result": "loss",
+   "minutes": 13,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|3914044|pts|10.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 9,
+   "profit": 0.81,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|3136195|reb|13.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 13,
+   "profit": 0.75,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|39099dc03208d0771daaab5f7993478a|4712849|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|2990992|pts|6.5|over": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|2490149|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|2991230|ast|5.5|over": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4871144|reb|9.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 6,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|39099dc03208d0771daaab5f7993478a|4712849|pts|15.5|under": {
+   "result": "loss",
+   "minutes": 38,
+   "actual": 18,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4433192|pts|9.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 2,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|3136195|ast|3.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 3,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|39099dc03208d0771daaab5f7993478a|5239561|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|3934672|pts|27.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 31,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|3147657|pts|9.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 9,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|5149077|reb|2.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 2,
+   "profit": 1.2400000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|39099dc03208d0771daaab5f7993478a|4066320|ast|2.5|over": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "void",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|3914044|reb|2.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 1,
+   "profit": 0.6699999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4684740|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 39,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    },
+    {
+     "kind": "correction",
+     "result": "loss",
+     "recorded_at": "2026-11-09T19:01:09.427Z"
+    }
+   ]
+  },
+  "2026-11-07|39099dc03208d0771daaab5f7993478a|4277847|reb|9.5|under": {
+   "result": "loss",
+   "minutes": 40,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|2490149|pts|13.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4684740|pts|14.5|over": {
+   "result": "win",
+   "minutes": 39,
+   "actual": 17,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|4397020|pts|8.5|over": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|3914044|ast|1.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 1,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|4869342|ast|4.5|under": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|4432158|reb|9.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 9,
+   "profit": 0.74,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|fdf3b77f50b2fad3988193af5ef4b00e|4432158|pts|18.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 12,
+   "profit": 0.94,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|4701230|pts|20.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 30,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4432639|pts|14.5|over": {
+   "result": "win",
+   "minutes": 39,
+   "actual": 15,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|af8d920f175d73f12933c64ae296573f|4871144|ast|6.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 5,
+   "profit": 1.02,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-07|ee45341df802cfb42dd48f1ad60c8b81|4397020|reb|3.5|over": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-08T06:04:17.451Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4066262|reb|1.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 0,
+   "profit": 1.4,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|2991350|ast|2.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 2,
+   "profit": 1.0499999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4066262|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|2991350|pts|8.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 5,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4432816|pts|21.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4066262|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 18,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|5142620|ast|5.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 8,
+   "profit": 0.9099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4251|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4433247|pts|15.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|4278073|pts|32.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 28,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4845367|ast|5.5|over": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 7,
+   "profit": 0.76,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|4432582|pts|7.5|under": {
+   "result": "win",
+   "minutes": 9,
+   "actual": 0,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|4900671|pts|18.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 35,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|3917376|pts|19.5|over": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 20,
+   "profit": 0.8899999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|4900671|reb|3.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 1,
+   "profit": 1.25,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|5041939|pts|25.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 21,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|4278078|pts|12.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 26,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4397136|pts|11.5|over": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 17,
+   "profit": 0.79,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4432816|ast|7.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|3078576|pts|13.5|under": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 18,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|5144091|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|5124612|pts|11.5|over": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 19,
+   "profit": 0.8600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4397002|reb|4.5|over": {
+   "result": "loss",
+   "minutes": 39,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4065648|pts|26.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 34,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|5211175|pts|7.5|under": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 4,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4395628|pts|18.5|over": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|5081727|pts|5.5|under": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|3907497|ast|5.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|5041939|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4433247|ast|2.5|over": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 4,
+   "profit": 1.1099999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|3059318|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|4431736|pts|11.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 18,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|3059318|pts|21.5|over": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|2991350|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 20,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4432816|reb|4.5|under": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 2,
+   "profit": 0.77,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|1966|pts|16.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 8,
+   "profit": 0.94,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|4683678|reb|2.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 2,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|4222252|pts|9.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 2,
+   "profit": 0.8300000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|5124612|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|5081727|ast|1.5|over": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 3,
+   "profit": 0.9299999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|3064440|reb|2.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4395723|pts|10.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|5144091|ast|3.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 5,
+   "profit": 1.2999999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|4683778|ast|1.5|under": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 0,
+   "profit": 1.44,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4066259|pts|15.5|over": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|5211175|reb|3.5|over": {
+   "result": "win",
+   "minutes": 21,
+   "actual": 4,
+   "profit": 0.79,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4065804|pts|7.5|under": {
+   "result": "loss",
+   "minutes": 17,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4395628|ast|2.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4397002|ast|4.5|under": {
+   "result": "win",
+   "minutes": 39,
+   "actual": 4,
+   "profit": 1.0499999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|4431678|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|6606|pts|21.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4251|reb|4.5|over": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 5,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|4683021|ast|6.5|over": {
+   "result": "win",
+   "minutes": 39,
+   "actual": 11,
+   "profit": 1.2400000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|4431678|pts|24.5|over": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|5124612|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|5037871|pts|17.5|over": {
+   "result": "win",
+   "minutes": 28,
+   "actual": 19,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4592479|reb|4.5|over": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 7,
+   "profit": 1.1400000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4065732|ast|1.5|under": {
+   "result": "void",
+   "minutes": 0,
+   "actual": 0,
+   "profit": 0,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "void",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|4432582|reb|2.5|under": {
+   "result": "win",
+   "minutes": 9,
+   "actual": 1,
+   "profit": 0.94,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|5174983|reb|7.5|under": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 7,
+   "profit": 0.71,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|4683678|pts|12.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 2,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4065648|reb|7.5|over": {
+   "result": "win",
+   "minutes": 29,
+   "actual": 8,
+   "profit": 1.2000000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4431671|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 40,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|1966|reb|6.5|over": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 7,
+   "profit": 0.76,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|4431736|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|5142620|reb|3.5|over": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4397424|reb|6.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 3,
+   "profit": 1.12,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4397424|pts|9.5|under": {
+   "result": "win",
+   "minutes": 15,
+   "actual": 4,
+   "profit": 0.96,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4431671|ast|2.5|over": {
+   "result": "win",
+   "minutes": 40,
+   "actual": 5,
+   "profit": 0.72,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|49daf3d42e20ce4bc70f8a68cf70ce4c|4251|pts|17.5|over": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|5142620|pts|22.5|over": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 22,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4395628|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|4433247|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|4900671|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|3155942|ast|5.5|under": {
+   "result": "win",
+   "minutes": 31,
+   "actual": 5,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4845367|pts|16.5|under": {
+   "result": "loss",
+   "minutes": 28,
+   "actual": 19,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|3155942|reb|12.5|over": {
+   "result": "loss",
+   "minutes": 31,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|85869b2fdc16ef10d3e2582bf05ead95|1966|ast|6.5|over": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|4683678|ast|2.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 0,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|86684f64a8ec8385537a36c3b3768935|4222252|ast|3.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 7,
+   "profit": 1.2000000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|4395630|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|83d77fe350d56a036fd7a3404e78249a|5081727|reb|2.5|over": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T13:04:12.337Z"
+    }
+   ]
+  },
+  "2026-11-06|d24eb5492983d6e28be3b96df396fa12|5104157|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|62a92e31b546d31ba57caf792815bf65|4278078|reb|6.5|over": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-06|5e4708fadda49a3c06fd7ac50414020e|5144091|pts|13.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 24,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-07T06:00:05.050Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|3908845|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 16,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|2995706|pts|9.5|under": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|4684742|pts|10.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|2995706|reb|4.5|over": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 8,
+   "profit": 1.2000000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|4396907|reb|2.5|under": {
+   "result": "win",
+   "minutes": 39,
+   "actual": 1,
+   "profit": 1.02,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|6b25f3932db93d4c5ad7658def2645bf|4395723|pts|9.5|over": {
+   "result": "loss",
+   "minutes": 19,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|4683678|reb|2.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 2,
+   "profit": 1.15,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|6b25f3932db93d4c5ad7658def2645bf|4592479|reb|4.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|4433137|pts|7.5|over": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 10,
+   "profit": 0.81,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|3914044|reb|2.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 2,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|4397014|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 25,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|3059318|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|6606|ast|4.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|3907498|reb|2.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 1,
+   "profit": 0.72,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|4871145|pts|11.5|under": {
+   "result": "win",
+   "minutes": 27,
+   "actual": 10,
+   "profit": 1.0099999999999998,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|3907498|pts|6.5|over": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|4278073|pts|31.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 42,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|5107199|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|4683678|pts|13.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 9,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|4683678|ast|2.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 1,
+   "profit": 1.1600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|4431678|pts|23.5|over": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 19,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|3059318|pts|19.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 26,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|4066648|reb|5.5|over": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 9,
+   "profit": 1.2400000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|5124612|ast|2.5|over": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 3,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|4066648|pts|15.5|under": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 21,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|3059319|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|b2557f74f4d7675ed3b76a4a064e0bc9|4871144|reb|8.5|under": {
+   "result": "loss",
+   "minutes": 39,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|4431823|pts|8.5|over": {
+   "result": "loss",
+   "minutes": 11,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|4431678|ast|4.5|over": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 7,
+   "profit": 0.96,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|4066457|reb|3.5|under": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 3,
+   "profit": 1.21,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|5124612|reb|5.5|over": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 6,
+   "profit": 1.15,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|b2557f74f4d7675ed3b76a4a064e0bc9|3202|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|6b25f3932db93d4c5ad7658def2645bf|4395723|reb|3.5|over": {
+   "result": "win",
+   "minutes": 19,
+   "actual": 5,
+   "profit": 0.6699999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|4900671|pts|18.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 23,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|3908809|reb|4.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 3,
+   "profit": 0.98,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|4278053|pts|11.5|over": {
+   "result": "loss",
+   "minutes": 43,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|5124612|pts|11.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|3136195|reb|13.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 12,
+   "profit": 0.81,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|1966|ast|6.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 8,
+   "profit": 1.1600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|4222252|pts|10.5|under": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 3,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|2596112|pts|5.5|over": {
+   "result": "loss",
+   "minutes": 15,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|b2557f74f4d7675ed3b76a4a064e0bc9|4433192|pts|9.5|under": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 9,
+   "profit": 0.8,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|4431736|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|1966|reb|5.5|over": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 10,
+   "profit": 0.6799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|4431736|pts|11.5|over": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|4433137|reb|2.5|over": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 4,
+   "profit": 1.31,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|2595516|ast|1.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 1,
+   "profit": 1.35,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|4432166|pts|24.5|under": {
+   "result": "loss",
+   "minutes": 40,
+   "actual": 26,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|3914044|pts|10.5|under": {
+   "result": "win",
+   "minutes": 25,
+   "actual": 7,
+   "profit": 0.8200000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|3945274|pts|34.5|over": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 40,
+   "profit": 1.02,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|4395626|reb|2.5|over": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 3,
+   "profit": 1.58,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|4433134|pts|22.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 17,
+   "profit": 0.8899999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|3157465|pts|13.5|over": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 27,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|6b25f3932db93d4c5ad7658def2645bf|5037871|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 0,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|3032977|ast|5.5|under": {
+   "result": "loss",
+   "minutes": 41,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|3157465|reb|2.5|over": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|3917376|ast|3.5|over": {
+   "result": "loss",
+   "minutes": 37,
+   "actual": 1,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|5095151|pts|19.5|over": {
+   "result": "loss",
+   "minutes": 22,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|6b25f3932db93d4c5ad7658def2645bf|5104157|ast|2.5|over": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|3032977|pts|30.5|under": {
+   "result": "win",
+   "minutes": 41,
+   "actual": 27,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|4395626|pts|8.5|over": {
+   "result": "win",
+   "minutes": 18,
+   "actual": 14,
+   "profit": 0.81,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|4432241|pts|6.5|under": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 3,
+   "profit": 1.02,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|4900671|ast|3.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|6b25f3932db93d4c5ad7658def2645bf|4845367|ast|5.5|over": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|2595516|reb|2.5|under": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 1,
+   "profit": 1.25,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|4684742|ast|4.5|under": {
+   "result": "win",
+   "minutes": 34,
+   "actual": 3,
+   "profit": 0.75,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|5093267|pts|9.5|under": {
+   "result": "loss",
+   "minutes": 23,
+   "actual": 13,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|5105565|reb|10.5|under": {
+   "result": "loss",
+   "minutes": 29,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|6606|pts|21.5|under": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 25,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|4222252|ast|3.5|over": {
+   "result": "win",
+   "minutes": 26,
+   "actual": 4,
+   "profit": 1.1800000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|3147657|ast|2.5|over": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 4,
+   "profit": 0.95,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|4683021|ast|5.5|over": {
+   "result": "win",
+   "minutes": 35,
+   "actual": 12,
+   "profit": 0.8799999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|4432241|ast|4.5|over": {
+   "result": "win",
+   "minutes": 20,
+   "actual": 6,
+   "profit": 0.79,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|3917376|reb|6.5|over": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 7,
+   "profit": 1.1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|6b25f3932db93d4c5ad7658def2645bf|4845367|pts|16.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|4592691|pts|6.5|under": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 9,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|4397189|pts|10.5|over": {
+   "result": "loss",
+   "minutes": 7,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|4395625|reb|5.5|under": {
+   "result": "win",
+   "minutes": 33,
+   "actual": 5,
+   "profit": 1.06,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|4684742|reb|6.5|under": {
+   "result": "loss",
+   "minutes": 34,
+   "actual": 17,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|29988f1011d7738962e13e0a0beb693f|4592691|reb|3.5|over": {
+   "result": "loss",
+   "minutes": 21,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|4433134|reb|7.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 6,
+   "profit": 0.81,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|38fdb396939e8aabebd93cb509618927|4900671|reb|3.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|4433134|ast|5.5|over": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 6,
+   "profit": 0.74,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|91df86557819598ca270ba35410cfcfa|4278562|ast|2.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 4,
+   "profit": 1.3599999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|4278053|reb|2.5|under": {
+   "result": "win",
+   "minutes": 43,
+   "actual": 2,
+   "profit": 0.8700000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|87d2b814c3f0d3691e9cebbf2de76295|4711294|ast|1.5|under": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|50bdc20ea9ea3c88d4bfa261b9b2307e|5093267|reb|5.5|under": {
+   "result": "win",
+   "minutes": 23,
+   "actual": 3,
+   "profit": 0.69,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|d3d91c40111aca301d41c9cdb9d64608|6606|reb|3.5|over": {
+   "result": "loss",
+   "minutes": 33,
+   "actual": 3,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|3936099|reb|4.5|over": {
+   "result": "win",
+   "minutes": 37,
+   "actual": 8,
+   "profit": 1.2200000000000002,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-11-04|72c786e70ad9360fdc41e4c2a50fa788|3448|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 35,
+   "actual": 8,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-11-05T06:49:36.715Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4845367|ast|6.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934672|ast|5.5|over": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 7,
+   "profit": 0.9299999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934672|pts|24.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 23,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5037871|reb|4.5|under": {
+   "result": "loss",
+   "minutes": 30,
+   "actual": 6,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4395630|ast|2.5|over": {
+   "result": "win",
+   "minutes": 24,
+   "actual": 8,
+   "profit": 1.1600000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5037871|ast|3.5|over": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 6,
+   "profit": 0.75,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5104157|pts|27.5|under": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 29,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3147657|pts|11.5|under": {
+   "result": "loss",
+   "minutes": 32,
+   "actual": 12,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934719|ast|1.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 2,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|5037871|pts|17.5|under": {
+   "result": "win",
+   "minutes": 30,
+   "actual": 13,
+   "profit": 0.9299999999999999,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3147657|reb|3.5|under": {
+   "result": "win",
+   "minutes": 32,
+   "actual": 3,
+   "profit": 0.79,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934719|pts|16.5|under": {
+   "result": "win",
+   "minutes": 36,
+   "actual": 13,
+   "profit": 0.8500000000000001,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4845367|reb|5.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 5,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3062679|ast|4.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4066259|pts|15.5|over": {
+   "result": "loss",
+   "minutes": 26,
+   "actual": 11,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3934719|reb|5.5|under": {
+   "result": "loss",
+   "minutes": 36,
+   "actual": 7,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|bde272846214fd6cf197e14c278c12f2|3062679|reb|7.5|over": {
+   "result": "loss",
+   "minutes": 27,
+   "actual": 4,
+   "profit": -1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "loss",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  },
+  "2026-10-27|7a640609d2c74cbbfd05008d0875455b|4395723|pts|10.5|over": {
+   "result": "win",
+   "minutes": 22,
+   "actual": 14,
+   "profit": 1,
+   "close": {
+    "kind": "missing_close"
+   },
+   "events": [
+    {
+     "kind": "grade",
+     "result": "win",
+     "recorded_at": "2026-10-28T06:44:02.092Z"
+    }
+   ]
+  }
+ }
+}

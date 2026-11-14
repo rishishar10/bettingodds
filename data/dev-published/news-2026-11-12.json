@@ -1,0 +1,34 @@
+{
+ "checkedAt": "2026-11-13T06:47:59.248Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-12_08_45PM.pdf",
+  "timeUtc": "2026-11-13T01:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 4,
+ "changes": [
+  {
+   "playerId": "4592714",
+   "playerName": "Pat Spencer",
+   "teamId": "21",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-13T01:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-12T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

@@ -1,0 +1,331 @@
+{
+ "checkedAt": "2026-11-08T06:04:04.448Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-07_09_45PM.pdf",
+  "timeUtc": "2026-11-08T02:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 9,
+ "changes": [
+  {
+   "playerId": "4431941",
+   "playerName": "RayJ Dennis",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4066320",
+   "playerName": "Desmond Bane",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T01:15:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4578893",
+   "playerName": "Vit Krejci",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T02:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Fracture"
+  },
+  {
+   "playerId": "4279888",
+   "playerName": "Ja Morant",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T02:45:00.000Z",
+   "note": "Injury/Illness - Left Hamstring Strain"
+  },
+  {
+   "playerId": "4914336",
+   "playerName": "Shaedon Sharpe",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T02:45:00.000Z",
+   "note": "Injury/Illness - Right Meniscus Surgery"
+  },
+  {
+   "playerId": "4593043",
+   "playerName": "John Tonje",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4066211",
+   "playerName": "Robert Williams III",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T02:45:00.000Z",
+   "note": "Rest"
+  },
+  {
+   "playerId": "5105337",
+   "playerName": "Maliq Brown",
+   "teamId": "24",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "5107968",
+   "playerName": "Ja'Kobi Gillespie",
+   "teamId": "24",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4433255",
+   "playerName": "Chet Holmgren",
+   "teamId": "25",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Right Knee/ Injury Recovery"
+  },
+  {
+   "playerId": "5159925",
+   "playerName": "Nikola Topic",
+   "teamId": "25",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "G League - On Assignment"
+  },
+  {
+   "playerId": "4683692",
+   "playerName": "Cason Wallace",
+   "teamId": "25",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Left Shoulder Surgery"
+  },
+  {
+   "playerId": "4593803",
+   "playerName": "Jalen Williams",
+   "teamId": "25",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Surgery"
+  },
+  {
+   "playerId": "4432823",
+   "playerName": "Jaylin Williams",
+   "teamId": "25",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Low Back Spasms"
+  },
+  {
+   "playerId": "4432187",
+   "playerName": "Reece Beekman",
+   "teamId": "27",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Right AC Joint Injury"
+  },
+  {
+   "playerId": "4432907",
+   "playerName": "Justin Champagnie",
+   "teamId": "27",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Right Foot Surgery"
+  },
+  {
+   "playerId": "6583",
+   "playerName": "Anthony Davis",
+   "teamId": "27",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Right Ankle Sprain"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4997537",
+   "playerName": "Tristan Vukcevic",
+   "teamId": "27",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Left Hip Impingement"
+  },
+  {
+   "playerId": "4606840",
+   "playerName": "Jamir Watkins",
+   "teamId": "27",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-08T00:45:00.000Z",
+   "note": "Injury/Illness - Left ACL Repair / Surgery"
+  }
+ ],
+ "rows": {
+  "39099dc03208d0771daaab5f7993478a|4712849|ast|4.5|under": [
+   {
+    "playerId": "4066320",
+    "playerName": "Desmond Bane",
+    "teamId": "19",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-08T01:15:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "39099dc03208d0771daaab5f7993478a|5239561|pts|7.5|under": [
+   {
+    "playerId": "4066320",
+    "playerName": "Desmond Bane",
+    "teamId": "19",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-08T01:15:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "39099dc03208d0771daaab5f7993478a|4712849|reb|4.5|under": [
+   {
+    "playerId": "4066320",
+    "playerName": "Desmond Bane",
+    "teamId": "19",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-08T01:15:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "39099dc03208d0771daaab5f7993478a|4712849|pts|15.5|under": [
+   {
+    "playerId": "4066320",
+    "playerName": "Desmond Bane",
+    "teamId": "19",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-08T01:15:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "39099dc03208d0771daaab5f7993478a|5239561|reb|2.5|under": [
+   {
+    "playerId": "4066320",
+    "playerName": "Desmond Bane",
+    "teamId": "19",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-08T01:15:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "39099dc03208d0771daaab5f7993478a|4066320|ast|2.5|over": [
+   {
+    "playerId": "4066320",
+    "playerName": "Desmond Bane",
+    "teamId": "19",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-08T01:15:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "player"
+   }
+  ],
+  "39099dc03208d0771daaab5f7993478a|4277847|reb|9.5|under": [
+   {
+    "playerId": "4066320",
+    "playerName": "Desmond Bane",
+    "teamId": "19",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-08T01:15:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ]
+ },
+ "update": null
+}

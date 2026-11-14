@@ -1,0 +1,243 @@
+{
+ "checkedAt": "2026-11-10T07:21:04.399Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-09_09_45PM.pdf",
+  "timeUtc": "2026-11-10T02:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 23,
+ "changes": [
+  {
+   "playerId": "4431941",
+   "playerName": "RayJ Dennis",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4431714",
+   "playerName": "Jalen Wilson",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "5061589",
+   "playerName": "Yves Missi",
+   "teamId": "3",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T02:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Contusion / Bone Bruise"
+  },
+  {
+   "playerId": "4397688",
+   "playerName": "Trey Murphy III",
+   "teamId": "3",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T02:45:00.000Z",
+   "note": "Injury/Illness - Bilateral Patellar Tendinopathy"
+  },
+  {
+   "playerId": "4431675",
+   "playerName": "Trendon Watford",
+   "teamId": "3",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T02:45:00.000Z",
+   "note": "Injury/Illness - Right Ankle Sprain"
+  },
+  {
+   "playerId": "4395628",
+   "playerName": "Zion Williamson",
+   "teamId": "3",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T02:45:00.000Z",
+   "note": "Rest"
+  },
+  {
+   "playerId": "5279129",
+   "playerName": "Sergio de Larrea",
+   "teamId": "6",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T00:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Sprain"
+  },
+  {
+   "playerId": "4873153",
+   "playerName": "Morez Johnson Jr.",
+   "teamId": "6",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T00:45:00.000Z",
+   "note": "Injury/Illness - Left Shin / Tibia Contusion"
+  },
+  {
+   "playerId": "4683688",
+   "playerName": "Dereck Lively II",
+   "teamId": "6",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T00:45:00.000Z",
+   "note": "Injury/Illness - Right Foot Surgery"
+  },
+  {
+   "playerId": "4433621",
+   "playerName": "Jalen Duren",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T23:45:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Strain"
+  },
+  {
+   "playerId": "4397449",
+   "playerName": "Elijah Harkless",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4395702",
+   "playerName": "Isaiah Joe",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T23:45:00.000Z",
+   "note": "Injury/Illness - Right Hip Contusion"
+  },
+  {
+   "playerId": "3134903",
+   "playerName": "Gary Payton II",
+   "teamId": "9",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T02:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Inflammation"
+  },
+  {
+   "playerId": "4066457",
+   "playerName": "Austin Reaves",
+   "teamId": "13",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T23:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4278402",
+   "playerName": "Jordan Goodwin",
+   "teamId": "21",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T01:45:00.000Z",
+   "note": "Injury/Illness - Right Calf Injury Management"
+  },
+  {
+   "playerId": "4395630",
+   "playerName": "Devin Vassell",
+   "teamId": "24",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T01:45:00.000Z",
+   "note": "Injury/Illness - Left Adductor Tightness"
+  },
+  {
+   "playerId": "5104155",
+   "playerName": "Bilal Coulibaly",
+   "teamId": "27",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-09T23:45:00.000Z",
+   "note": "Injury/Illness - Left Hand Soreness"
+  },
+  {
+   "playerId": "4433134",
+   "playerName": "Scottie Barnes",
+   "teamId": "28",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T00:15:00.000Z",
+   "note": "Injury/Illness - Left Groin Strain"
+  },
+  {
+   "playerId": "5093267",
+   "playerName": "Collin Murray-Boyles",
+   "teamId": "28",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T00:15:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4395724",
+   "playerName": "Immanuel Quickley",
+   "teamId": "28",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T00:15:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Tightness / Soreness"
+  },
+  {
+   "playerId": "4683934",
+   "playerName": "Jahmai Mashack",
+   "teamId": "29",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-10T00:15:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}
