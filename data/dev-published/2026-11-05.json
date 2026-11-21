@@ -1,0 +1,47 @@
+{
+ "boardDate": "2026-11-05",
+ "publishedAt": "2026-11-05T19:01:12.651Z",
+ "buildTimeUtc": "2026-11-05T19:00:58.592Z",
+ "modelVersion": "heuristic-v2",
+ "label": "disagreement only, no demonstrated edge",
+ "shrunk": true,
+ "SHRINK": 0.9485,
+ "ruleHash": null,
+ "evMin": 0.08,
+ "injury": null,
+ "games": [
+  {
+   "gameId": "401909936",
+   "tipUtc": "2026-11-06T02:00:00.000Z",
+   "home": "PHX",
+   "away": "ORL",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909937",
+   "tipUtc": "2026-11-06T03:00:00.000Z",
+   "home": "GS",
+   "away": "MIA",
+   "hasOdds": false,
+   "eventId": null
+  }
+ ],
+ "teams": {
+  "9": "GS",
+  "14": "MIA",
+  "19": "ORL",
+  "21": "PHX"
+ },
+ "rows": [],
+ "conditional": [],
+ "coverage": {},
+ "unmatchedNames": 0,
+ "anomalies": [],
+ "emptyReason": "Light slate (2 games) skipped to save free-plan odds credits.",
+ "availability": {},
+ "missingEvents": [],
+ "closeCollected": false,
+ "dryRun": true,
+ "skipped": true
+}

@@ -1,0 +1,38 @@
+{
+ "boardDate": "2026-11-03",
+ "publishedAt": "2026-11-03T17:00:00.000Z",
+ "buildTimeUtc": "2026-11-03T17:00:00.000Z",
+ "modelVersion": "heuristic-v2",
+ "label": "DEMO PRICES, not a real board",
+ "shrunk": true,
+ "SHRINK": 0.9485,
+ "ruleHash": null,
+ "evMin": 0.08,
+ "injury": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-03_11_30AM.pdf",
+  "timeUtc": "2026-11-03T16:30:00.000Z",
+  "unmatchedInjuryNames": [],
+  "teamsUnresolved": []
+ },
+ "games": [],
+ "teams": {},
+ "rows": [],
+ "conditional": [],
+ "coverage": {
+  "prop_market": 0,
+  "supported": 0,
+  "too_few_games": 0,
+  "unresolved_status": 0,
+  "teammate_role": 0,
+  "unmatched_name": 0,
+  "stale_or_invalid_odds": 0,
+  "player_out": 0,
+  "report_not_submitted": 0
+ },
+ "availability": {},
+ "unmatchedNames": 0,
+ "anomalies": [],
+ "emptyReason": "The slate was empty.",
+ "closeCollected": false,
+ "dryRun": true
+}

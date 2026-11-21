@@ -1,0 +1,56 @@
+{
+ "checkedAt": "2026-11-14T06:26:07.840Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-13_10_15PM.pdf",
+  "timeUtc": "2026-11-14T03:15:00.000Z"
+ },
+ "espnNotesAfterPublish": 10,
+ "changes": [
+  {
+   "playerId": "4848625",
+   "playerName": "Dailyn Swain",
+   "teamId": "4",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-14T00:45:00.000Z",
+   "note": "Injury/Illness - Right Disc Irritation"
+  },
+  {
+   "playerId": "6475",
+   "playerName": "Klay Thompson",
+   "teamId": "14",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-14T00:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Soreness"
+  },
+  {
+   "playerId": "4431679",
+   "playerName": "Precious Achiuwa",
+   "teamId": "23",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-14T02:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Soreness"
+  },
+  {
+   "playerId": "4900671",
+   "playerName": "Ajay Mitchell",
+   "teamId": "25",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-14T03:15:00.000Z",
+   "note": "Injury/Illness - Left Ankle Sprain"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

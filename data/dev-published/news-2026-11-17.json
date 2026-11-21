@@ -1,0 +1,144 @@
+{
+ "checkedAt": "2026-11-18T07:31:37.909Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-17_10_45PM.pdf",
+  "timeUtc": "2026-11-18T03:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 8,
+ "changes": [
+  {
+   "playerId": "4398390",
+   "playerName": "Jalen Pickett",
+   "teamId": "12",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T03:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4432247",
+   "playerName": "Jaylen Clark",
+   "teamId": "16",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Strain"
+  },
+  {
+   "playerId": "3934673",
+   "playerName": "Donte DiVincenzo",
+   "teamId": "16",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Right Achilles Tendon Repair / Surgery"
+  },
+  {
+   "playerId": "4594268",
+   "playerName": "Anthony Edwards",
+   "teamId": "16",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Arthroscopy"
+  },
+  {
+   "playerId": "4433247",
+   "playerName": "Jonathan Kuminga",
+   "teamId": "16",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Right Shoulder Contusion"
+  },
+  {
+   "playerId": "4592979",
+   "playerName": "Zyon Pullin",
+   "teamId": "16",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Right Quadriceps Contusion"
+  },
+  {
+   "playerId": "4683021",
+   "playerName": "Deni Avdija",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Left Foot Inflammation / Soreness"
+  },
+  {
+   "playerId": "4578893",
+   "playerName": "Vit Krejci",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Fracture"
+  },
+  {
+   "playerId": "4279888",
+   "playerName": "Ja Morant",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Left Hamstring Strain"
+  },
+  {
+   "playerId": "4914336",
+   "playerName": "Shaedon Sharpe",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Right Meniscus Surgery"
+  },
+  {
+   "playerId": "4706557",
+   "playerName": "Chris Youngblood",
+   "teamId": "22",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T00:45:00.000Z",
+   "note": "Injury/Illness - Right Heel Contusion / Bone Bruise"
+  },
+  {
+   "playerId": "3135045",
+   "playerName": "Grayson Allen",
+   "teamId": "30",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T03:45:00.000Z",
+   "note": "Injury/Illness - Concussion- like symptoms"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

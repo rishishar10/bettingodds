@@ -1,0 +1,67 @@
+{
+ "checkedAt": "2026-11-17T07:56:43.295Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-16_08_45PM.pdf",
+  "timeUtc": "2026-11-17T01:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 19,
+ "changes": [
+  {
+   "playerId": "4397424",
+   "playerName": "Neemias Queta",
+   "teamId": "2",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-16T23:45:00.000Z",
+   "note": "Rest"
+  },
+  {
+   "playerId": "4684740",
+   "playerName": "Amen Thompson",
+   "teamId": "10",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-17T00:15:00.000Z",
+   "note": "Injury/Illness - Left Knee Soreness"
+  },
+  {
+   "playerId": "4997528",
+   "playerName": "Nikola Jovic",
+   "teamId": "14",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-17T00:15:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4701232",
+   "playerName": "Mark Williams",
+   "teamId": "21",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-17T01:45:00.000Z",
+   "note": "Injury/Illness - Left Shoulder Surgery"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-16T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

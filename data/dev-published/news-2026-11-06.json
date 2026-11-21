@@ -1,0 +1,241 @@
+{
+ "checkedAt": "2026-11-07T05:59:54.570Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-06_09_45PM.pdf",
+  "timeUtc": "2026-11-07T02:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 10,
+ "changes": [
+  {
+   "playerId": "4431941",
+   "playerName": "RayJ Dennis",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4701230",
+   "playerName": "Jalen Johnson",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T23:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Sprain"
+  },
+  {
+   "playerId": "4066328",
+   "playerName": "Jarrett Allen",
+   "teamId": "5",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-07T00:15:00.000Z",
+   "note": "Injury/Illness - Right Knee Contusion"
+  },
+  {
+   "playerId": "4065732",
+   "playerName": "De'Andre Hunter",
+   "teamId": "23",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-07T02:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "6583",
+   "playerName": "Anthony Davis",
+   "teamId": "27",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T23:45:00.000Z",
+   "note": "Injury/Illness - Right Ankle Sprain"
+  },
+  {
+   "playerId": "4433134",
+   "playerName": "Scottie Barnes",
+   "teamId": "28",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-07T00:45:00.000Z",
+   "note": "Injury/Illness - Left Groin Strain"
+  },
+  {
+   "playerId": "4395724",
+   "playerName": "Immanuel Quickley",
+   "teamId": "28",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-07T00:45:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Tightness / Soreness"
+  },
+  {
+   "playerId": "5105817",
+   "playerName": "Carson Cooper",
+   "teamId": "29",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-07T00:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {
+  "d24eb5492983d6e28be3b96df396fa12|4066262|reb|1.5|under": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|4066262|ast|3.5|under": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|4066262|pts|11.5|under": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|5142620|ast|5.5|over": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|3064440|reb|2.5|under": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|4065732|ast|1.5|under": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "player"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|5142620|reb|3.5|over": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|5142620|pts|22.5|over": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|3155942|ast|5.5|under": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ],
+  "d24eb5492983d6e28be3b96df396fa12|3155942|reb|12.5|over": [
+   {
+    "playerId": "4065732",
+    "playerName": "De'Andre Hunter",
+    "teamId": "23",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-07T02:45:00.000Z",
+    "note": "Injury/Illness - Illness",
+    "kind": "teammate"
+   }
+  ]
+ },
+ "update": null
+}

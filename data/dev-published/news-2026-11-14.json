@@ -1,0 +1,240 @@
+{
+ "checkedAt": "2026-11-15T06:35:39.593Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-14_07_45PM.pdf",
+  "timeUtc": "2026-11-15T00:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 18,
+ "changes": [
+  {
+   "playerId": "4683634",
+   "playerName": "Bennedict Mathurin",
+   "teamId": "3",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-14T23:45:00.000Z",
+   "note": "Injury/Illness - Left Plantar Fasciitis"
+  },
+  {
+   "playerId": "4278067",
+   "playerName": "Nic Claxton",
+   "teamId": "4",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Injury/Illness - Left Hamstring Injury Management"
+  },
+  {
+   "playerId": "4397189",
+   "playerName": "Jalen Smith",
+   "teamId": "4",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Injury/Illness - Left Finger Sprain"
+  },
+  {
+   "playerId": "4066328",
+   "playerName": "Jarrett Allen",
+   "teamId": "5",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:15:00.000Z",
+   "note": "Injury/Illness - Right Knee Injury Management"
+  },
+  {
+   "playerId": "3992",
+   "playerName": "James Harden",
+   "teamId": "5",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:15:00.000Z",
+   "note": "Injury/Illness - Left Lower Leg/Calf Tightness"
+  },
+  {
+   "playerId": "3908809",
+   "playerName": "Donovan Mitchell",
+   "teamId": "5",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:15:00.000Z",
+   "note": "Injury/Illness - Left Knee Contusion/Injury Management"
+  },
+  {
+   "playerId": "4576087",
+   "playerName": "Peyton Watson",
+   "teamId": "5",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:15:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Injury Management"
+  },
+  {
+   "playerId": "4278104",
+   "playerName": "Michael Porter Jr.",
+   "teamId": "17",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Personal Reasons"
+  },
+  {
+   "playerId": "4600663",
+   "playerName": "Zach Edey",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Injury Management"
+  },
+  {
+   "playerId": "2991070",
+   "playerName": "Jerami Grant",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Injury/Illness - Head Injury"
+  },
+  {
+   "playerId": "4065733",
+   "playerName": "Ty Jerome",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Injury/Illness - Right Hip Soreness"
+  },
+  {
+   "playerId": "4431785",
+   "playerName": "Scotty Pippen Jr.",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Injury/Illness - Lumbar Disc Herniation"
+  },
+  {
+   "playerId": "4593016",
+   "playerName": "Quinten Post",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T00:45:00.000Z",
+   "note": "Injury/Illness - Concussion Protocol"
+  }
+ ],
+ "rows": {
+  "a7cb6062530bd69eb6caee84a015abd0|4432194|ast|3.5|under": [
+   {
+    "playerId": "4278104",
+    "playerName": "Michael Porter Jr.",
+    "teamId": "17",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-15T00:45:00.000Z",
+    "note": "Personal Reasons",
+    "kind": "teammate"
+   }
+  ],
+  "a7cb6062530bd69eb6caee84a015abd0|4278104|ast|2.5|over": [
+   {
+    "playerId": "4278104",
+    "playerName": "Michael Porter Jr.",
+    "teamId": "17",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-15T00:45:00.000Z",
+    "note": "Personal Reasons",
+    "kind": "player"
+   }
+  ],
+  "a7cb6062530bd69eb6caee84a015abd0|5175643|pts|10.5|under": [
+   {
+    "playerId": "4278104",
+    "playerName": "Michael Porter Jr.",
+    "teamId": "17",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-15T00:45:00.000Z",
+    "note": "Personal Reasons",
+    "kind": "teammate"
+   }
+  ],
+  "a7cb6062530bd69eb6caee84a015abd0|4278104|reb|6.5|under": [
+   {
+    "playerId": "4278104",
+    "playerName": "Michael Porter Jr.",
+    "teamId": "17",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-15T00:45:00.000Z",
+    "note": "Personal Reasons",
+    "kind": "player"
+   }
+  ],
+  "a7cb6062530bd69eb6caee84a015abd0|5175643|reb|2.5|under": [
+   {
+    "playerId": "4278104",
+    "playerName": "Michael Porter Jr.",
+    "teamId": "17",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-15T00:45:00.000Z",
+    "note": "Personal Reasons",
+    "kind": "teammate"
+   }
+  ],
+  "a7cb6062530bd69eb6caee84a015abd0|5175643|ast|2.5|under": [
+   {
+    "playerId": "4278104",
+    "playerName": "Michael Porter Jr.",
+    "teamId": "17",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-15T00:45:00.000Z",
+    "note": "Personal Reasons",
+    "kind": "teammate"
+   }
+  ]
+ },
+ "update": null
+}

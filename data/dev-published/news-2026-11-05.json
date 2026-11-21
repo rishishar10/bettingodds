@@ -1,0 +1,144 @@
+{
+ "checkedAt": "2026-11-06T06:50:16.673Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-05_09_45PM.pdf",
+  "timeUtc": "2026-11-06T02:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 3,
+ "changes": [
+  {
+   "playerId": "6430",
+   "playerName": "Jimmy Butler III",
+   "teamId": "9",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T02:45:00.000Z",
+   "note": "Injury/Illness - Right ACL Repair / Surgery"
+  },
+  {
+   "playerId": "4432171",
+   "playerName": "Moses Moody",
+   "teamId": "9",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T02:45:00.000Z",
+   "note": "Injury/Illness - Left Patellar Tendon"
+  },
+  {
+   "playerId": "3102531",
+   "playerName": "Kristaps Porzingis",
+   "teamId": "9",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T02:45:00.000Z",
+   "note": "Not With Team"
+  },
+  {
+   "playerId": "4997536",
+   "playerName": "Gui Santos",
+   "teamId": "9",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T02:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Tendinitis"
+  },
+  {
+   "playerId": "4700818",
+   "playerName": "Vladislav Goldin",
+   "teamId": "14",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4432573",
+   "playerName": "Paolo Banchero",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T01:45:00.000Z",
+   "note": "Injury/Illness - Right High Ankle Sprain"
+  },
+  {
+   "playerId": "4065654",
+   "playerName": "Jonathan Isaac",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T01:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Injury Management"
+  },
+  {
+   "playerId": "5214637",
+   "playerName": "Noah Penda",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T01:45:00.000Z",
+   "note": "Injury/Illness - Right Partially Torn Hamstring"
+  },
+  {
+   "playerId": "4432165",
+   "playerName": "Jalen Suggs",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T01:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Contusion / Bone Bruise"
+  },
+  {
+   "playerId": "5105977",
+   "playerName": "Rasheer Fleming",
+   "teamId": "21",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T01:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Sprain"
+  },
+  {
+   "playerId": "4278402",
+   "playerName": "Jordan Goodwin",
+   "teamId": "21",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T01:45:00.000Z",
+   "note": "Injury/Illness - Right Calf Soreness"
+  },
+  {
+   "playerId": "4701232",
+   "playerName": "Mark Williams",
+   "teamId": "21",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-06T01:45:00.000Z",
+   "note": "Injury/Illness - Left Shoulder Surgery"
+  }
+ ],
+ "rows": {},
+ "update": null
+}
