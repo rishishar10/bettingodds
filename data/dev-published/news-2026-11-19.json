@@ -1,0 +1,166 @@
+{
+ "checkedAt": "2026-11-20T07:18:24.386Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-19_07_45PM.pdf",
+  "timeUtc": "2026-11-20T00:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 9,
+ "changes": [
+  {
+   "playerId": "6430",
+   "playerName": "Jimmy Butler III",
+   "teamId": "9",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Right ACL Repair / Surgery"
+  },
+  {
+   "playerId": "3975",
+   "playerName": "Stephen Curry",
+   "teamId": "9",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Right Oblique Tear"
+  },
+  {
+   "playerId": "6589",
+   "playerName": "Draymond Green",
+   "teamId": "9",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Right Elbow Injury Management"
+  },
+  {
+   "playerId": "4432171",
+   "playerName": "Moses Moody",
+   "teamId": "9",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Left Patellar Tendon Repair / Surgery"
+  },
+  {
+   "playerId": "3102531",
+   "playerName": "Kristaps Porzingis",
+   "teamId": "9",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Not With Team"
+  },
+  {
+   "playerId": "4397040",
+   "playerName": "Brandon Williams",
+   "teamId": "9",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Left Hamstring Strain"
+  },
+  {
+   "playerId": "4997526",
+   "playerName": "Ousmane Dieng",
+   "teamId": "15",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Left Finger Fracture"
+  },
+  {
+   "playerId": "3134907",
+   "playerName": "Kyle Kuzma",
+   "teamId": "15",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Right Shoulder Contusion"
+  },
+  {
+   "playerId": "3133628",
+   "playerName": "Myles Turner",
+   "teamId": "15",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Left Shoulder Contusion"
+  },
+  {
+   "playerId": "4683021",
+   "playerName": "Deni Avdija",
+   "teamId": "22",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Left Foot Inflammation / Soreness"
+  },
+  {
+   "playerId": "4600663",
+   "playerName": "Zach Edey",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Injury Management"
+  },
+  {
+   "playerId": "5105550",
+   "playerName": "GG Jackson",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Left 5th Metatarsal Fracture"
+  },
+  {
+   "playerId": "4065733",
+   "playerName": "Ty Jerome",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Right Hip Impingement"
+  },
+  {
+   "playerId": "4431785",
+   "playerName": "Scotty Pippen Jr.",
+   "teamId": "29",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T00:45:00.000Z",
+   "note": "Injury/Illness - Lumbar Disc Herniation"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

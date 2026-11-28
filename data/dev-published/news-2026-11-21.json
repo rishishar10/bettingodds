@@ -1,0 +1,224 @@
+{
+ "checkedAt": "2026-11-22T06:51:22.576Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-21_09_45PM.pdf",
+  "timeUtc": "2026-11-22T02:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 8,
+ "changes": [
+  {
+   "playerId": "4351852",
+   "playerName": "Mitchell Robinson",
+   "teamId": "2",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T02:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4065648",
+   "playerName": "Jayson Tatum",
+   "teamId": "2",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T02:45:00.000Z",
+   "note": "Rest"
+  },
+  {
+   "playerId": "3078576",
+   "playerName": "Derrick White",
+   "teamId": "2",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T02:45:00.000Z",
+   "note": "Injury/Illness - Left AC Joint Contusion"
+  },
+  {
+   "playerId": "4395628",
+   "playerName": "Zion Williamson",
+   "teamId": "3",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T00:45:00.000Z",
+   "note": "Injury/Illness - Left Thigh Contusion"
+  },
+  {
+   "playerId": "5105806",
+   "playerName": "Jett Howard",
+   "teamId": "6",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T00:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4278078",
+   "playerName": "P.J. Washington",
+   "teamId": "6",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T00:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "3136195",
+   "playerName": "Karl-Anthony Towns",
+   "teamId": "18",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T00:15:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "5107897",
+   "playerName": "Jonathan Mogbo",
+   "teamId": "23",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4898371",
+   "playerName": "Maxime Raynaud",
+   "teamId": "23",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T02:45:00.000Z",
+   "note": "Injury/Illness - Right Patella"
+  }
+ ],
+ "rows": {
+  "1139ffb82856378723c5465df4e13d96|4397136|ast|2.5|over": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "teammate"
+   }
+  ],
+  "1139ffb82856378723c5465df4e13d96|5061589|reb|6.5|under": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "teammate"
+   }
+  ],
+  "1139ffb82856378723c5465df4e13d96|4397136|pts|17.5|over": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "teammate"
+   }
+  ],
+  "1139ffb82856378723c5465df4e13d96|4397136|reb|4.5|over": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "teammate"
+   }
+  ],
+  "1139ffb82856378723c5465df4e13d96|4395628|ast|2.5|over": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "player"
+   }
+  ],
+  "1139ffb82856378723c5465df4e13d96|4395628|pts|18.5|over": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "player"
+   }
+  ],
+  "1139ffb82856378723c5465df4e13d96|5061589|pts|5.5|under": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "teammate"
+   }
+  ],
+  "1139ffb82856378723c5465df4e13d96|5144091|pts|16.5|over": [
+   {
+    "playerId": "4395628",
+    "playerName": "Zion Williamson",
+    "teamId": "3",
+    "from": "active",
+    "to": "out",
+    "status": "out",
+    "source": "official",
+    "sourceTime": "2026-11-22T00:45:00.000Z",
+    "note": "Injury/Illness - Left Thigh Contusion",
+    "kind": "teammate"
+   }
+  ]
+ },
+ "update": null
+}

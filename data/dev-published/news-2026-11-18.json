@@ -1,0 +1,243 @@
+{
+ "checkedAt": "2026-11-19T07:27:57.044Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-18_09_45PM.pdf",
+  "timeUtc": "2026-11-19T02:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 16,
+ "changes": [
+  {
+   "playerId": "5105806",
+   "playerName": "Jett Howard",
+   "teamId": "6",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4432166",
+   "playerName": "Cade Cunningham",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Soreness"
+  },
+  {
+   "playerId": "4433621",
+   "playerName": "Jalen Duren",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Strain"
+  },
+  {
+   "playerId": "4683771",
+   "playerName": "Ronald Holland II",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Contusion / Bone Bruise"
+  },
+  {
+   "playerId": "5258459",
+   "playerName": "Ebuka Okorie",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "G League - On Assignment"
+  },
+  {
+   "playerId": "2990962",
+   "playerName": "Taurean Prince",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Soreness"
+  },
+  {
+   "playerId": "3157465",
+   "playerName": "Duncan Robinson",
+   "teamId": "8",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "Injury/Illness - Left Quadriceps Strain"
+  },
+  {
+   "playerId": "3213",
+   "playerName": "Al Horford",
+   "teamId": "9",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:45:00.000Z",
+   "note": "Injury/Illness - Bilateral Low Back Injury Management"
+  },
+  {
+   "playerId": "4395712",
+   "playerName": "Andrew Nembhard",
+   "teamId": "11",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T23:45:00.000Z",
+   "note": "Injury/Illness - Left Hip Soreness / Tightness"
+  },
+  {
+   "playerId": "4066457",
+   "playerName": "Austin Reaves",
+   "teamId": "13",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "Injury/Illness - Left Heel Contusion / Bone Bruise"
+  },
+  {
+   "playerId": "4431678",
+   "playerName": "Tyrese Maxey",
+   "teamId": "20",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T23:45:00.000Z",
+   "note": "Injury/Illness - Right Foot Soreness"
+  },
+  {
+   "playerId": "3912848",
+   "playerName": "Dean Wade",
+   "teamId": "20",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-18T23:45:00.000Z",
+   "note": "Injury/Illness - Left Hamstring Tightness / Soreness"
+  },
+  {
+   "playerId": "4066268",
+   "playerName": "Duop Reath",
+   "teamId": "21",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4592714",
+   "playerName": "Pat Spencer",
+   "teamId": "21",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4683736",
+   "playerName": "Kobe Bufkin",
+   "teamId": "26",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4433618",
+   "playerName": "Harrison Ingram",
+   "teamId": "26",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4277961",
+   "playerName": "Jaren Jackson Jr.",
+   "teamId": "26",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "Injury/Illness - Right MCL Tear"
+  },
+  {
+   "playerId": "4066336",
+   "playerName": "Lauri Markkanen",
+   "teamId": "26",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "Injury/Illness - Right Hand Fracture"
+  },
+  {
+   "playerId": "3102530",
+   "playerName": "Jusuf Nurkic",
+   "teamId": "26",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T02:45:00.000Z",
+   "note": "Injury/Illness - Right Foot; 2nd Plantar Plate Tear"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4395625",
+   "playerName": "RJ Barrett",
+   "teamId": "28",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-19T00:15:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Tightness / Soreness"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

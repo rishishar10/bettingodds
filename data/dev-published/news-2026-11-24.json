@@ -1,0 +1,254 @@
+{
+ "checkedAt": "2026-11-25T00:38:55.347Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-24_07_30PM.pdf",
+  "timeUtc": "2026-11-25T00:30:00.000Z"
+ },
+ "espnNotesAfterPublish": 1,
+ "changes": [
+  {
+   "playerId": "5106283",
+   "playerName": "Dillon Mitchell",
+   "teamId": "2",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4351852",
+   "playerName": "Mitchell Robinson",
+   "teamId": "2",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4702745",
+   "playerName": "Amari Williams",
+   "teamId": "2",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "5279129",
+   "playerName": "Sergio de Larrea",
+   "teamId": "6",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Right Knee Sprain"
+  },
+  {
+   "playerId": "5106040",
+   "playerName": "Tobi Lawal",
+   "teamId": "6",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Right Groin Strain"
+  },
+  {
+   "playerId": "4683688",
+   "playerName": "Dereck Lively II",
+   "teamId": "6",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Right Foot Surgery"
+  },
+  {
+   "playerId": "4278078",
+   "playerName": "P.J. Washington",
+   "teamId": "6",
+   "from": "active",
+   "to": "questionable",
+   "status": "questionable",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4432166",
+   "playerName": "Cade Cunningham",
+   "teamId": "8",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Soreness"
+  },
+  {
+   "playerId": "4433621",
+   "playerName": "Jalen Duren",
+   "teamId": "8",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Strain"
+  },
+  {
+   "playerId": "5107818",
+   "playerName": "Isaac Jones",
+   "teamId": "8",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "5258459",
+   "playerName": "Ebuka Okorie",
+   "teamId": "8",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Left Oblique Strain"
+  },
+  {
+   "playerId": "2990962",
+   "playerName": "Taurean Prince",
+   "teamId": "8",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Arthroscopy"
+  },
+  {
+   "playerId": "3157465",
+   "playerName": "Duncan Robinson",
+   "teamId": "8",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Left Quadriceps Strain"
+  },
+  {
+   "playerId": "4432573",
+   "playerName": "Paolo Banchero",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Right High Ankle Sprain"
+  },
+  {
+   "playerId": "4397204",
+   "playerName": "Colin Castleton",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4065654",
+   "playerName": "Jonathan Isaac",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Injury Management"
+  },
+  {
+   "playerId": "5214637",
+   "playerName": "Noah Penda",
+   "teamId": "19",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-24T23:45:00.000Z",
+   "note": "Injury/Illness - Right Partially torn hamstring"
+  },
+  {
+   "playerId": "4432187",
+   "playerName": "Reece Beekman",
+   "teamId": "27",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Right AC Joint Sprain / Separation"
+  },
+  {
+   "playerId": "4432907",
+   "playerName": "Justin Champagnie",
+   "teamId": "27",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Right Foot Surgery"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4997537",
+   "playerName": "Tristan Vukcevic",
+   "teamId": "27",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Left Hip Impingement"
+  },
+  {
+   "playerId": "4606840",
+   "playerName": "Jamir Watkins",
+   "teamId": "27",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-25T00:30:00.000Z",
+   "note": "Injury/Illness - Left ACL Repair / Surgery"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

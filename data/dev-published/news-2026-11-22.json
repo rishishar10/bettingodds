@@ -1,0 +1,188 @@
+{
+ "checkedAt": "2026-11-23T07:41:12.586Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-22_08_15PM.pdf",
+  "timeUtc": "2026-11-23T01:15:00.000Z"
+ },
+ "espnNotesAfterPublish": 11,
+ "changes": [
+  {
+   "playerId": "4251",
+   "playerName": "Paul George",
+   "teamId": "2",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-23T01:15:00.000Z",
+   "note": "Rest"
+  },
+  {
+   "playerId": "5106283",
+   "playerName": "Dillon Mitchell",
+   "teamId": "2",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-23T01:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4351852",
+   "playerName": "Mitchell Robinson",
+   "teamId": "2",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-23T01:15:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4702745",
+   "playerName": "Amari Williams",
+   "teamId": "2",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-23T01:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4278067",
+   "playerName": "Nic Claxton",
+   "teamId": "4",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T23:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "2595516",
+   "playerName": "Norman Powell",
+   "teamId": "4",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T23:45:00.000Z",
+   "note": "Injury/Illness - Right Hamstring Strain"
+  },
+  {
+   "playerId": "5279129",
+   "playerName": "Sergio de Larrea",
+   "teamId": "6",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T23:45:00.000Z",
+   "note": "Injury/Illness - Right Knee Sprain"
+  },
+  {
+   "playerId": "5106040",
+   "playerName": "Tobi Lawal",
+   "teamId": "6",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T23:45:00.000Z",
+   "note": "Injury/Illness - Right Groin Strain"
+  },
+  {
+   "playerId": "4683688",
+   "playerName": "Dereck Lively II",
+   "teamId": "6",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T23:45:00.000Z",
+   "note": "Injury/Illness - Right Foot Surgery"
+  },
+  {
+   "playerId": "4278078",
+   "playerName": "P.J. Washington",
+   "teamId": "6",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T23:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "5107818",
+   "playerName": "Isaac Jones",
+   "teamId": "8",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T20:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "3032977",
+   "playerName": "Giannis Antetokounmpo",
+   "teamId": "14",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T22:45:00.000Z",
+   "note": "Injury/Illness - Right Groin tendinitis"
+  },
+  {
+   "playerId": "4431823",
+   "playerName": "Miles McBride",
+   "teamId": "18",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-23T00:45:00.000Z",
+   "note": "Injury/Illness - Left Left Adductor Tightness"
+  },
+  {
+   "playerId": "4278073",
+   "playerName": "Shai Gilgeous-Alexander",
+   "teamId": "25",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T22:45:00.000Z",
+   "note": "Injury/Illness - Low Back Contusion/ Neck Strain"
+  },
+  {
+   "playerId": "5174983",
+   "playerName": "Aday Mara",
+   "teamId": "25",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T22:45:00.000Z",
+   "note": "Injury/Illness - Right Shin Contusion"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-22T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

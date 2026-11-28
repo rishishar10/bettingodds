@@ -1,0 +1,137 @@
+{
+ "boardDate": "2026-11-27",
+ "publishedAt": "2026-11-27T19:01:04.693Z",
+ "buildTimeUtc": "2026-11-27T19:00:45.028Z",
+ "modelVersion": "heuristic-v2",
+ "label": "disagreement only, no demonstrated edge",
+ "shrunk": true,
+ "SHRINK": 0.9485,
+ "ruleHash": null,
+ "evMin": 0.08,
+ "injury": null,
+ "games": [
+  {
+   "gameId": "401909326",
+   "tipUtc": "2026-11-28T00:00:00.000Z",
+   "home": "NY",
+   "away": "MIA",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909327",
+   "tipUtc": "2026-11-28T00:30:00.000Z",
+   "home": "DET",
+   "away": "MIL",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909328",
+   "tipUtc": "2026-11-28T00:30:00.000Z",
+   "home": "IND",
+   "away": "PHI",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909329",
+   "tipUtc": "2026-11-28T00:30:00.000Z",
+   "home": "TOR",
+   "away": "BKN",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909330",
+   "tipUtc": "2026-11-28T01:00:00.000Z",
+   "home": "BOS",
+   "away": "ATL",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909331",
+   "tipUtc": "2026-11-28T01:30:00.000Z",
+   "home": "MIN",
+   "away": "MEM",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909332",
+   "tipUtc": "2026-11-28T02:00:00.000Z",
+   "home": "PHX",
+   "away": "DAL",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909333",
+   "tipUtc": "2026-11-28T02:30:00.000Z",
+   "home": "SA",
+   "away": "LAL",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909334",
+   "tipUtc": "2026-11-28T02:30:00.000Z",
+   "home": "UTAH",
+   "away": "DEN",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909335",
+   "tipUtc": "2026-11-28T02:30:00.000Z",
+   "home": "LAC",
+   "away": "NO",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909336",
+   "tipUtc": "2026-11-28T02:30:00.000Z",
+   "home": "POR",
+   "away": "GS",
+   "hasOdds": false,
+   "eventId": null
+  }
+ ],
+ "teams": {
+  "1": "ATL",
+  "2": "BOS",
+  "3": "NO",
+  "6": "DAL",
+  "7": "DEN",
+  "8": "DET",
+  "9": "GS",
+  "11": "IND",
+  "12": "LAC",
+  "13": "LAL",
+  "14": "MIA",
+  "15": "MIL",
+  "16": "MIN",
+  "17": "BKN",
+  "18": "NY",
+  "20": "PHI",
+  "21": "PHX",
+  "22": "POR",
+  "24": "SA",
+  "26": "UTAH",
+  "28": "TOR",
+  "29": "MEM"
+ },
+ "rows": [],
+ "conditional": [],
+ "coverage": {},
+ "unmatchedNames": 0,
+ "anomalies": [],
+ "emptyReason": "Skipped to save free-plan odds credits for bigger slates before they reset (26 left, 1 bigger slates still to cover).",
+ "availability": {},
+ "missingEvents": [],
+ "closeCollected": false,
+ "dryRun": true,
+ "skipped": true
+}

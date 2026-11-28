@@ -1,0 +1,133 @@
+{
+ "checkedAt": "2026-11-16T06:32:14.884Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-15_08_45PM.pdf",
+  "timeUtc": "2026-11-16T01:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 13,
+ "changes": [
+  {
+   "playerId": "3146557",
+   "playerName": "Jock Landale",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-16T00:45:00.000Z",
+   "note": "Injury/Illness - Right Hip Inflammation"
+  },
+  {
+   "playerId": "4593125",
+   "playerName": "Santi Aldama",
+   "teamId": "6",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T22:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Sprain"
+  },
+  {
+   "playerId": "6442",
+   "playerName": "Kyrie Irving",
+   "teamId": "6",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T22:45:00.000Z",
+   "note": "Injury/Illness - Left Knee Injury Management"
+  },
+  {
+   "playerId": "5105832",
+   "playerName": "Nick Martinelli",
+   "teamId": "12",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T21:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4591725",
+   "playerName": "Ryan Rollins",
+   "teamId": "15",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-16T00:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4431679",
+   "playerName": "Precious Achiuwa",
+   "teamId": "23",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-16T01:45:00.000Z",
+   "note": "Injury/Illness - Left Ankle Soreness"
+  },
+  {
+   "playerId": "4065732",
+   "playerName": "De'Andre Hunter",
+   "teamId": "23",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-16T01:45:00.000Z",
+   "note": "Injury/Illness - Left Hip Soreness / Tightness"
+  },
+  {
+   "playerId": "3064440",
+   "playerName": "Zach LaVine",
+   "teamId": "23",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-16T01:45:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4066259",
+   "playerName": "De'Aaron Fox",
+   "teamId": "24",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T21:45:00.000Z",
+   "note": "Injury/Illness - Left Hip Tightness"
+  },
+  {
+   "playerId": "5238230",
+   "playerName": "Tre Johnson",
+   "teamId": "27",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T23:45:00.000Z",
+   "note": "Injury/Illness - Low Back Soreness"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-15T23:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

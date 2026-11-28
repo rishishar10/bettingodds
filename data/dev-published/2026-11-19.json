@@ -1,0 +1,1481 @@
+{
+ "boardDate": "2026-11-19",
+ "publishedAt": "2026-11-19T19:01:05.696Z",
+ "buildTimeUtc": "2026-11-19T19:01:05.037Z",
+ "modelVersion": "heuristic-v2",
+ "label": "disagreement only, no demonstrated edge",
+ "shrunk": true,
+ "SHRINK": 0.9485,
+ "ruleHash": null,
+ "evMin": 0.08,
+ "injury": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-19_01_30PM.pdf",
+  "timeUtc": "2026-11-19T18:30:00.000Z",
+  "teamsUnresolved": [
+   "golden state warriors",
+   "memphis grizzlies",
+   "milwaukee bucks"
+  ]
+ },
+ "games": [
+  {
+   "gameId": "401910019",
+   "tipUtc": "2026-11-20T01:00:00.000Z",
+   "home": "MEM",
+   "away": "GS",
+   "hasOdds": true,
+   "eventId": "3c082b72aa002131c276ff5e24bada1b"
+  },
+  {
+   "gameId": "401910020",
+   "tipUtc": "2026-11-20T01:00:00.000Z",
+   "home": "MIL",
+   "away": "POR",
+   "hasOdds": true,
+   "eventId": "006df00e5e48650d849d1bb4cd81565d"
+  },
+  {
+   "gameId": "401910021",
+   "tipUtc": "2026-11-20T01:00:00.000Z",
+   "home": "MIN",
+   "away": "NY",
+   "hasOdds": true,
+   "eventId": "5ee4efd00c1daaebd8249ff44fd6ac9d"
+  },
+  {
+   "gameId": "401910022",
+   "tipUtc": "2026-11-20T01:00:00.000Z",
+   "home": "SA",
+   "away": "LAC",
+   "hasOdds": true,
+   "eventId": "20fa5e2d73cec494c113790161a89aec"
+  }
+ ],
+ "teams": {
+  "9": "GS",
+  "12": "LAC",
+  "15": "MIL",
+  "16": "MIN",
+  "18": "NY",
+  "22": "POR",
+  "24": "SA",
+  "29": "MEM"
+ },
+ "rows": [
+  {
+   "key": "5ee4efd00c1daaebd8249ff44fd6ac9d|3147657|pts|9.5|under",
+   "playerId": "3147657",
+   "playerName": "Mikal Bridges",
+   "teamId": "18",
+   "opponentId": "16",
+   "stat": "pts",
+   "line": 9.5,
+   "side": "under",
+   "book": "fanduel",
+   "decimal": 2,
+   "american": 100,
+   "sourceUpdatedAt": "2026-11-19T18:59:46Z",
+   "ev": 0.27527955546503957,
+   "pWinFinal": 0.6376397777325198,
+   "pWinRaw": 0.6451131025118817,
+   "pPush": 0,
+   "breakEven": 0.5,
+   "mean": 8.361356117949297,
+   "expMinutes": 25.475363636363635,
+   "flags": [],
+   "matchedGames": 30,
+   "matchedGameIds": [
+    "401910002",
+    "401909990",
+    "401909296",
+    "401909967",
+    "401909910",
+    "401909280",
+    "401909886",
+    "401909878",
+    "401909863",
+    "401909095",
+    "401909089",
+    "401811031",
+    "401811023",
+    "401810998",
+    "401810978",
+    "401810858",
+    "401810957",
+    "401810944",
+    "401810918",
+    "401810903",
+    "401810889",
+    "401810849",
+    "401810836",
+    "401810790",
+    "401810777",
+    "401810766",
+    "401810748",
+    "401810742",
+    "401810723",
+    "401810715"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.40303623176982706,
+    "plusMinutes": 0.1483056962901208,
+    "wideVariance": 0.3012701109230669,
+    "failing": [],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "no_market",
+    "fanduel": "best",
+    "betmgm": "no_market"
+   }
+  },
+  {
+   "key": "5ee4efd00c1daaebd8249ff44fd6ac9d|3934672|pts|25.5|under",
+   "playerId": "3934672",
+   "playerName": "Jalen Brunson",
+   "teamId": "18",
+   "opponentId": "16",
+   "stat": "pts",
+   "line": 25.5,
+   "side": "under",
+   "book": "fanduel",
+   "decimal": 1.93,
+   "american": -108,
+   "sourceUpdatedAt": "2026-11-19T18:59:46Z",
+   "ev": 0.22981104579736367,
+   "pWinFinal": 0.6372077957499294,
+   "pWinRaw": 0.6446576655244379,
+   "pPush": 0,
+   "breakEven": 0.5181347150259068,
+   "mean": 22.652294432890827,
+   "expMinutes": 35.010518181818185,
+   "flags": [],
+   "matchedGames": 30,
+   "matchedGameIds": [
+    "401910002",
+    "401909990",
+    "401909296",
+    "401909967",
+    "401909910",
+    "401909280",
+    "401909886",
+    "401909878",
+    "401909863",
+    "401909095",
+    "401909089",
+    "401811031",
+    "401811023",
+    "401810998",
+    "401810978",
+    "401810957",
+    "401810944",
+    "401810918",
+    "401810903",
+    "401810889",
+    "401810836",
+    "401810790",
+    "401810777",
+    "401810766",
+    "401810748",
+    "401810742",
+    "401810723",
+    "401810715",
+    "401810690",
+    "401810680"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.42218139918340813,
+    "plusMinutes": 0.0336252129331277,
+    "wideVariance": 0.21796413054237318,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "best",
+    "betmgm": "no_market"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4395630|reb|3.5|under",
+   "playerId": "4395630",
+   "playerName": "Devin Vassell",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "reb",
+   "line": 3.5,
+   "side": "under",
+   "book": "draftkings",
+   "decimal": 2.19,
+   "american": 119,
+   "sourceUpdatedAt": "2026-11-19T19:00:31Z",
+   "ev": 0.20311182189724397,
+   "pWinFinal": 0.5493661287202027,
+   "pWinRaw": 0.552046524744547,
+   "pPush": 0,
+   "breakEven": 0.4566210045662101,
+   "mean": 3.4281488202541794,
+   "expMinutes": 29.483623076923074,
+   "flags": [
+    "dispersion_floor",
+    "minutes_prior_season"
+   ],
+   "matchedGames": 13,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810136",
+    "401810122",
+    "401810107",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043",
+    "401809774",
+    "401810034"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.35665374512782433,
+    "plusMinutes": 0.05612720148166328,
+    "wideVariance": 0.24236322192499482,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "best",
+    "fanduel": "lower_price",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|5104157|ast|3.5|over",
+   "playerId": "5104157",
+   "playerName": "Victor Wembanyama",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "ast",
+   "line": 3.5,
+   "side": "over",
+   "book": "fanduel",
+   "decimal": 2.22,
+   "american": 122,
+   "sourceUpdatedAt": "2026-11-19T19:00:36Z",
+   "ev": 0.20174702638605535,
+   "pWinFinal": 0.5413274893630879,
+   "pWinRaw": 0.543571417356972,
+   "pPush": 0,
+   "breakEven": 0.4504504504504504,
+   "mean": 3.8905881272735385,
+   "expMinutes": 31.0766,
+   "flags": [
+    "thin_sample",
+    "dispersion_from_base_pool",
+    "minutes_prior_season"
+   ],
+   "matchedGames": 9,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043",
+    "401809774",
+    "401810034"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.04256172350222698,
+    "plusMinutes": 0.3472634696890359,
+    "wideVariance": 0.15300491918708015,
+    "failing": [
+     "minutes_minus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "best",
+    "betmgm": "no_market"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4845367|pts|17.5|under",
+   "playerId": "4845367",
+   "playerName": "Stephon Castle",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "pts",
+   "line": 17.5,
+   "side": "under",
+   "book": "draftkings",
+   "decimal": 1.97,
+   "american": -103,
+   "sourceUpdatedAt": "2026-11-19T19:00:31Z",
+   "ev": 0.1969968432247985,
+   "pWinFinal": 0.6076126107740094,
+   "pWinRaw": 0.6134555727717547,
+   "pPush": 0,
+   "breakEven": 0.5076142131979695,
+   "mean": 15.879100856716805,
+   "expMinutes": 30.522899999999996,
+   "flags": [
+    "dispersion_floor",
+    "minutes_prior_season"
+   ],
+   "matchedGames": 10,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043",
+    "401809774",
+    "401810034"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.3839437059259728,
+    "plusMinutes": -0.000906012545223156,
+    "wideVariance": 0.20397868400030517,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "best",
+    "fanduel": "lower_price",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "5ee4efd00c1daaebd8249ff44fd6ac9d|3147657|reb|3.5|under",
+   "playerId": "3147657",
+   "playerName": "Mikal Bridges",
+   "teamId": "18",
+   "opponentId": "16",
+   "stat": "reb",
+   "line": 3.5,
+   "side": "under",
+   "book": "betmgm",
+   "decimal": 1.67,
+   "american": -149,
+   "sourceUpdatedAt": "2026-11-19T19:01:03Z",
+   "ev": 0.19204133930566863,
+   "pWinFinal": 0.7137972091650711,
+   "pWinRaw": 0.7254055974328635,
+   "pPush": 0,
+   "breakEven": 0.5988023952095809,
+   "mean": 2.5801694423949506,
+   "expMinutes": 25.475363636363635,
+   "flags": [],
+   "matchedGames": 30,
+   "matchedGameIds": [
+    "401910002",
+    "401909990",
+    "401909296",
+    "401909967",
+    "401909910",
+    "401909280",
+    "401909886",
+    "401909878",
+    "401909863",
+    "401909095",
+    "401909089",
+    "401811031",
+    "401811023",
+    "401810998",
+    "401810978",
+    "401810858",
+    "401810957",
+    "401810944",
+    "401810918",
+    "401810903",
+    "401810889",
+    "401810849",
+    "401810836",
+    "401810790",
+    "401810777",
+    "401810766",
+    "401810748",
+    "401810742",
+    "401810723",
+    "401810715"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.27934967132584976,
+    "plusMinutes": 0.10189506028016959,
+    "wideVariance": 0.18691962986147442,
+    "failing": [],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "lower_price",
+    "betmgm": "best"
+   }
+  },
+  {
+   "key": "5ee4efd00c1daaebd8249ff44fd6ac9d|3934672|ast|5.5|over",
+   "playerId": "3934672",
+   "playerName": "Jalen Brunson",
+   "teamId": "18",
+   "opponentId": "16",
+   "stat": "ast",
+   "line": 5.5,
+   "side": "over",
+   "book": "draftkings",
+   "decimal": 1.76,
+   "american": -132,
+   "sourceUpdatedAt": "2026-11-19T19:01:02Z",
+   "ev": 0.16324490058117813,
+   "pWinFinal": 0.6609346026029421,
+   "pWinRaw": 0.6696727491860222,
+   "pPush": 0,
+   "breakEven": 0.5681818181818182,
+   "mean": 6.939143329767935,
+   "expMinutes": 35.010518181818185,
+   "flags": [],
+   "matchedGames": 30,
+   "matchedGameIds": [
+    "401910002",
+    "401909990",
+    "401909296",
+    "401909967",
+    "401909910",
+    "401909280",
+    "401909886",
+    "401909878",
+    "401909863",
+    "401909095",
+    "401909089",
+    "401811031",
+    "401811023",
+    "401810998",
+    "401810978",
+    "401810957",
+    "401810944",
+    "401810918",
+    "401810903",
+    "401810889",
+    "401810836",
+    "401810790",
+    "401810777",
+    "401810766",
+    "401810748",
+    "401810742",
+    "401810723",
+    "401810715",
+    "401810690",
+    "401810680"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.03791120636909201,
+    "plusMinutes": 0.2699273259928303,
+    "wideVariance": 0.10546587928739026,
+    "failing": [
+     "minutes_minus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "best",
+    "fanduel": "lower_price",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4066259|ast|6.5|under",
+   "playerId": "4066259",
+   "playerName": "De'Aaron Fox",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "ast",
+   "line": 6.5,
+   "side": "under",
+   "book": "betmgm",
+   "decimal": 1.74,
+   "american": -135,
+   "sourceUpdatedAt": "2026-11-19T19:01:01Z",
+   "ev": 0.1532989635780982,
+   "pWinFinal": 0.6628154963092519,
+   "pWinRaw": 0.6716557683808664,
+   "pPush": 0,
+   "breakEven": 0.5747126436781609,
+   "mean": 5.493211005125833,
+   "expMinutes": 29.092263636363633,
+   "flags": [
+    "minutes_prior_season"
+   ],
+   "matchedGames": 11,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810136",
+    "401810122",
+    "401810107",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.28450299426241976,
+    "plusMinutes": 0.01984949419396631,
+    "wideVariance": 0.1462897708909408,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "lower_price",
+    "betmgm": "best"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4066259|reb|3.5|under",
+   "playerId": "4066259",
+   "playerName": "De'Aaron Fox",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "reb",
+   "line": 3.5,
+   "side": "under",
+   "book": "fanduel",
+   "decimal": 2.24,
+   "american": 124,
+   "sourceUpdatedAt": "2026-11-19T19:00:36Z",
+   "ev": 0.14792035875329534,
+   "pWinFinal": 0.5124644458720068,
+   "pWinRaw": 0.5131412186315306,
+   "pPush": 0,
+   "breakEven": 0.4464285714285714,
+   "mean": 3.6046584100415577,
+   "expMinutes": 29.092263636363633,
+   "flags": [
+    "dispersion_floor",
+    "minutes_prior_season"
+   ],
+   "matchedGames": 11,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810136",
+    "401810122",
+    "401810107",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.31499993020515704,
+    "plusMinutes": -0.008301315219842564,
+    "wideVariance": 0.19828491207564725,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "no_market",
+    "fanduel": "best",
+    "betmgm": "no_market"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4592479|reb|5.5|under",
+   "playerId": "4592479",
+   "playerName": "Julian Champagnie",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "reb",
+   "line": 5.5,
+   "side": "under",
+   "book": "draftkings",
+   "decimal": 1.76,
+   "american": -132,
+   "sourceUpdatedAt": "2026-11-19T19:00:31Z",
+   "ev": 0.14180095143185417,
+   "pWinFinal": 0.6487505405862808,
+   "pWinRaw": 0.6568271382037751,
+   "pPush": 0,
+   "breakEven": 0.5681818181818182,
+   "mean": 4.695270722564973,
+   "expMinutes": 27.616123076923074,
+   "flags": [
+    "minutes_prior_season"
+   ],
+   "matchedGames": 13,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810136",
+    "401810122",
+    "401810107",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043",
+    "401809774",
+    "401810034"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.25722434991356125,
+    "plusMinutes": 0.028246303317632393,
+    "wideVariance": 0.14755021850893252,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "best",
+    "fanduel": "lower_price",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4066259|pts|15.5|over",
+   "playerId": "4066259",
+   "playerName": "De'Aaron Fox",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "pts",
+   "line": 15.5,
+   "side": "over",
+   "book": "draftkings",
+   "decimal": 1.97,
+   "american": -103,
+   "sourceUpdatedAt": "2026-11-19T19:00:31Z",
+   "ev": 0.14168457784125732,
+   "pWinFinal": 0.5795353187011458,
+   "pWinRaw": 0.5838537888256676,
+   "pPush": 0,
+   "breakEven": 0.5076142131979695,
+   "mean": 16.53211475987208,
+   "expMinutes": 29.092263636363633,
+   "flags": [
+    "minutes_prior_season"
+   ],
+   "matchedGames": 11,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810136",
+    "401810122",
+    "401810107",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043"
+   ],
+   "sensitivity": {
+    "minusMinutes": -0.10597776191540265,
+    "plusMinutes": 0.3481915893597122,
+    "wideVariance": 0.06319522391221188,
+    "failing": [
+     "minutes_minus",
+     "variance_wide"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "best",
+    "fanduel": "lower_price",
+    "betmgm": "no_market"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4845367|reb|5.5|over",
+   "playerId": "4845367",
+   "playerName": "Stephon Castle",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "reb",
+   "line": 5.5,
+   "side": "over",
+   "book": "fanduel",
+   "decimal": 2.28,
+   "american": 128,
+   "sourceUpdatedAt": "2026-11-19T19:00:36Z",
+   "ev": 0.13757935382795972,
+   "pWinFinal": 0.4989383130824385,
+   "pWinRaw": 0.49888066745644544,
+   "pPush": 0,
+   "breakEven": 0.4385964912280702,
+   "mean": 5.7035731919150265,
+   "expMinutes": 30.522899999999996,
+   "flags": [
+    "dispersion_floor",
+    "minutes_prior_season"
+   ],
+   "matchedGames": 10,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043",
+    "401809774",
+    "401810034"
+   ],
+   "sensitivity": {
+    "minusMinutes": -0.05023400594368421,
+    "plusMinutes": 0.3154107119989974,
+    "wideVariance": 0.08682572613299289,
+    "failing": [
+     "minutes_minus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "best",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|5254165|pts|9.5|over",
+   "playerId": "5254165",
+   "playerName": "Keaton Wagler",
+   "teamId": "12",
+   "opponentId": "24",
+   "stat": "pts",
+   "line": 9.5,
+   "side": "over",
+   "book": "draftkings",
+   "decimal": 1.89,
+   "american": -112,
+   "sourceUpdatedAt": "2026-11-19T19:00:31Z",
+   "ev": 0.12192405622232283,
+   "pWinFinal": 0.5936106117578428,
+   "pWinRaw": 0.5986933176150161,
+   "pPush": 0,
+   "breakEven": 0.5291005291005292,
+   "mean": 10.971351559194702,
+   "expMinutes": 21.660807692307692,
+   "flags": [],
+   "matchedGames": 13,
+   "matchedGameIds": [
+    "401910006",
+    "401909987",
+    "401909304",
+    "401909962",
+    "401909950",
+    "401909935",
+    "401909920",
+    "401909905",
+    "401909284",
+    "401909892",
+    "401909865",
+    "401909851",
+    "401909842"
+   ],
+   "sensitivity": {
+    "minusMinutes": -0.11819690980245273,
+    "plusMinutes": 0.322277541546377,
+    "wideVariance": 0.0317292292958104,
+    "failing": [
+     "minutes_minus",
+     "variance_wide"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "best",
+    "fanduel": "lower_price",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4066648|reb|4.5|over",
+   "playerId": "4066648",
+   "playerName": "Rui Hachimura",
+   "teamId": "12",
+   "opponentId": "24",
+   "stat": "reb",
+   "line": 4.5,
+   "side": "over",
+   "book": "fanduel",
+   "decimal": 1.85,
+   "american": -118,
+   "sourceUpdatedAt": "2026-11-19T19:00:36Z",
+   "ev": 0.1184051093470252,
+   "pWinFinal": 0.6045433023497433,
+   "pWinRaw": 0.6102196123877104,
+   "pPush": 0,
+   "breakEven": 0.5405405405405405,
+   "mean": 5.375676042273582,
+   "expMinutes": 27.052590909090902,
+   "flags": [
+    "dispersion_floor"
+   ],
+   "matchedGames": 11,
+   "matchedGameIds": [
+    "401910006",
+    "401909987",
+    "401909304",
+    "401909962",
+    "401909950",
+    "401909935",
+    "401909905",
+    "401909284",
+    "401909865",
+    "401909851",
+    "401909842"
+   ],
+   "sensitivity": {
+    "minusMinutes": -0.050456236353485895,
+    "plusMinutes": 0.26503591626237466,
+    "wideVariance": 0.05089844077945971,
+    "failing": [
+     "minutes_minus",
+     "variance_wide"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "best",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4066648|pts|11.5|under",
+   "playerId": "4066648",
+   "playerName": "Rui Hachimura",
+   "teamId": "12",
+   "opponentId": "24",
+   "stat": "pts",
+   "line": 11.5,
+   "side": "under",
+   "book": "betmgm",
+   "decimal": 2,
+   "american": 100,
+   "sourceUpdatedAt": "2026-11-19T19:01:01Z",
+   "ev": 0.0993471346738839,
+   "pWinFinal": 0.549673567336942,
+   "pWinRaw": 0.5523706561275087,
+   "pPush": 0,
+   "breakEven": 0.5,
+   "mean": 11.460196131103817,
+   "expMinutes": 27.052590909090902,
+   "flags": [],
+   "matchedGames": 11,
+   "matchedGameIds": [
+    "401910006",
+    "401909987",
+    "401909304",
+    "401909962",
+    "401909950",
+    "401909935",
+    "401909905",
+    "401909284",
+    "401909865",
+    "401909851",
+    "401909842"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.2580092413195598,
+    "plusMinutes": -0.04700435154444671,
+    "wideVariance": 0.14942210927774946,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "no_market",
+    "betmgm": "best"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4845367|ast|7.5|over",
+   "playerId": "4845367",
+   "playerName": "Stephon Castle",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "ast",
+   "line": 7.5,
+   "side": "over",
+   "book": "draftkings",
+   "decimal": 2.14,
+   "american": 114,
+   "sourceUpdatedAt": "2026-11-19T19:00:31Z",
+   "ev": 0.09665043740640522,
+   "pWinFinal": 0.5124534754235538,
+   "pWinRaw": 0.5131296525287863,
+   "pPush": 0,
+   "breakEven": 0.4672897196261682,
+   "mean": 7.778587961666942,
+   "expMinutes": 30.522899999999996,
+   "flags": [
+    "dispersion_floor",
+    "minutes_prior_season"
+   ],
+   "matchedGames": 10,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043",
+    "401809774",
+    "401810034"
+   ],
+   "sensitivity": {
+    "minusMinutes": -0.10900317864681619,
+    "plusMinutes": 0.2893538921409018,
+    "wideVariance": 0.060531178243966144,
+    "failing": [
+     "minutes_minus",
+     "variance_wide"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "best",
+    "fanduel": "lower_price",
+    "betmgm": "lower_price"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|4592479|ast|1.5|under",
+   "playerId": "4592479",
+   "playerName": "Julian Champagnie",
+   "teamId": "24",
+   "opponentId": "12",
+   "stat": "ast",
+   "line": 1.5,
+   "side": "under",
+   "book": "fanduel",
+   "decimal": 1.88,
+   "american": -114,
+   "sourceUpdatedAt": "2026-11-19T19:00:36Z",
+   "ev": 0.09102291195150247,
+   "pWinFinal": 0.5803313361444162,
+   "pWinRaw": 0.584693027036812,
+   "pPush": 0,
+   "breakEven": 0.5319148936170213,
+   "mean": 1.4717157851870957,
+   "expMinutes": 27.616123076923074,
+   "flags": [
+    "minutes_prior_season"
+   ],
+   "matchedGames": 13,
+   "matchedGameIds": [
+    "401810845",
+    "401810828",
+    "401810585",
+    "401810136",
+    "401810122",
+    "401810107",
+    "401810089",
+    "401809789",
+    "401810075",
+    "401810057",
+    "401810043",
+    "401809774",
+    "401810034"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.17825869207102707,
+    "plusMinutes": 0.008967295563532152,
+    "wideVariance": 0.13459841883476897,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "best",
+    "betmgm": "no_market"
+   }
+  },
+  {
+   "key": "20fa5e2d73cec494c113790161a89aec|2991139|pts|5.5|under",
+   "playerId": "2991139",
+   "playerName": "Kris Dunn",
+   "teamId": "12",
+   "opponentId": "24",
+   "stat": "pts",
+   "line": 5.5,
+   "side": "under",
+   "book": "betmgm",
+   "decimal": 1.91,
+   "american": -110,
+   "sourceUpdatedAt": "2026-11-19T19:01:01Z",
+   "ev": 0.08818012038182654,
+   "pWinFinal": 0.5697278117182338,
+   "pWinRaw": 0.5735137709206473,
+   "pPush": 0,
+   "breakEven": 0.5235602094240838,
+   "mean": 5.493900199792925,
+   "expMinutes": 23.4916,
+   "flags": [],
+   "matchedGames": 13,
+   "matchedGameIds": [
+    "401910006",
+    "401909987",
+    "401909304",
+    "401909962",
+    "401909950",
+    "401909935",
+    "401909920",
+    "401909905",
+    "401909284",
+    "401909892",
+    "401909865",
+    "401909851",
+    "401909842"
+   ],
+   "sensitivity": {
+    "minusMinutes": 0.22320533976899015,
+    "plusMinutes": -0.03710516117550522,
+    "wideVariance": 0.14530033156332856,
+    "failing": [
+     "minutes_plus"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "lower_price",
+    "betmgm": "best"
+   }
+  },
+  {
+   "key": "5ee4efd00c1daaebd8249ff44fd6ac9d|3934719|reb|4.5|over",
+   "playerId": "3934719",
+   "playerName": "OG Anunoby",
+   "teamId": "18",
+   "opponentId": "16",
+   "stat": "reb",
+   "line": 4.5,
+   "side": "over",
+   "book": "betmgm",
+   "decimal": 1.83,
+   "american": -120,
+   "sourceUpdatedAt": "2026-11-19T19:01:03Z",
+   "ev": 0.08311201322953632,
+   "pWinFinal": 0.5918644881035717,
+   "pWinRaw": 0.5968523859816255,
+   "pPush": 0,
+   "breakEven": 0.5464480874316939,
+   "mean": 5.355181771913707,
+   "expMinutes": 35.19320909090909,
+   "flags": [],
+   "matchedGames": 30,
+   "matchedGameIds": [
+    "401910002",
+    "401909990",
+    "401909296",
+    "401909967",
+    "401909910",
+    "401909280",
+    "401909886",
+    "401909878",
+    "401909863",
+    "401909095",
+    "401909089",
+    "401811031",
+    "401811023",
+    "401810998",
+    "401810978",
+    "401810858",
+    "401810957",
+    "401810944",
+    "401810918",
+    "401810903",
+    "401810889",
+    "401810849",
+    "401810836",
+    "401810790",
+    "401810777",
+    "401810766",
+    "401810748",
+    "401810742",
+    "401810723",
+    "401810715"
+   ],
+   "sensitivity": {
+    "minusMinutes": -0.03659056690812701,
+    "plusMinutes": 0.1901074430564128,
+    "wideVariance": 0.015720058896036115,
+    "failing": [
+     "minutes_minus",
+     "variance_wide"
+    ],
+    "zeroMinuteCase": false
+   },
+   "books": {
+    "draftkings": "lower_price",
+    "fanduel": "lower_price",
+    "betmgm": "best"
+   }
+  }
+ ],
+ "conditional": [
+  {
+   "subjectPlayerId": "4431736+4683021",
+   "subjectPlayerIds": [
+    "4431736",
+    "4683021"
+   ],
+   "subjectName": "Toumani Camara and Deni Avdija",
+   "subjectStatus": "questionable, questionable",
+   "playerId": "5105565",
+   "playerName": "Donovan Clingan",
+   "teamId": "22",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4431736+4683021",
+   "subjectPlayerIds": [
+    "4431736",
+    "4683021"
+   ],
+   "subjectName": "Toumani Camara and Deni Avdija",
+   "subjectStatus": "questionable, questionable",
+   "playerId": "6606",
+   "playerName": "Damian Lillard",
+   "teamId": "22",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4431736+4683021",
+   "subjectPlayerIds": [
+    "4431736",
+    "4683021"
+   ],
+   "subjectName": "Toumani Camara and Deni Avdija",
+   "subjectStatus": "questionable, questionable",
+   "playerId": "3995",
+   "playerName": "Jrue Holiday",
+   "teamId": "22",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4431736+4683021",
+   "subjectPlayerIds": [
+    "4431736",
+    "4683021"
+   ],
+   "subjectName": "Toumani Camara and Deni Avdija",
+   "subjectStatus": "questionable, questionable",
+   "playerId": "5081727",
+   "playerName": "Sidy Cissoko",
+   "teamId": "22",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4431736+4683021",
+   "subjectPlayerIds": [
+    "4431736",
+    "4683021"
+   ],
+   "subjectName": "Toumani Camara and Deni Avdija",
+   "subjectStatus": "questionable, questionable",
+   "playerId": "4683678",
+   "playerName": "Scoot Henderson",
+   "teamId": "22",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4433247",
+   "subjectPlayerIds": [
+    "4433247"
+   ],
+   "subjectName": "Jonathan Kuminga",
+   "subjectStatus": "questionable",
+   "playerId": "4432847",
+   "playerName": "Terrence Shannon Jr.",
+   "teamId": "16",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4433247",
+   "subjectPlayerIds": [
+    "4433247"
+   ],
+   "subjectName": "Jonathan Kuminga",
+   "subjectStatus": "questionable",
+   "playerId": "4432816",
+   "playerName": "LaMelo Ball",
+   "teamId": "16",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4433247",
+   "subjectPlayerIds": [
+    "4433247"
+   ],
+   "subjectName": "Jonathan Kuminga",
+   "subjectStatus": "questionable",
+   "playerId": "4431671",
+   "playerName": "Jaden McDaniels",
+   "teamId": "16",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4433247",
+   "subjectPlayerIds": [
+    "4433247"
+   ],
+   "subjectName": "Jonathan Kuminga",
+   "subjectStatus": "questionable",
+   "playerId": "3032976",
+   "playerName": "Rudy Gobert",
+   "teamId": "16",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4433247",
+   "subjectPlayerIds": [
+    "4433247"
+   ],
+   "subjectName": "Jonathan Kuminga",
+   "subjectStatus": "questionable",
+   "playerId": "4397002",
+   "playerName": "Ayo Dosunmu",
+   "teamId": "16",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  },
+  {
+   "subjectPlayerId": "4433247",
+   "subjectPlayerIds": [
+    "4433247"
+   ],
+   "subjectName": "Jonathan Kuminga",
+   "subjectStatus": "questionable",
+   "playerId": "3136196",
+   "playerName": "Trey Lyles",
+   "teamId": "16",
+   "stat": null,
+   "line": null,
+   "side": null,
+   "book": null,
+   "decimal": null,
+   "sourceUpdatedAt": null,
+   "ev": null,
+   "pWinFinal": null,
+   "pLossFinal": null,
+   "matchedGames": 0,
+   "thin": true,
+   "message": "Role change detected. Projection unavailable."
+  }
+ ],
+ "availability": {
+  "9": {
+   "unresolved": true,
+   "status": {}
+  },
+  "12": {
+   "unresolved": false,
+   "status": {
+    "6580": "out",
+    "4396818": "out",
+    "5105832": "out"
+   }
+  },
+  "15": {
+   "unresolved": true,
+   "status": {}
+  },
+  "16": {
+   "unresolved": false,
+   "status": {
+    "3934673": "out",
+    "4432247": "out",
+    "4433247": "questionable",
+    "4592979": "questionable",
+    "4594268": "out",
+    "5279133": "active"
+   }
+  },
+  "18": {
+   "unresolved": false,
+   "status": {}
+  },
+  "22": {
+   "unresolved": false,
+   "status": {
+    "4066211": "out",
+    "4279888": "out",
+    "4431736": "questionable",
+    "4578893": "out",
+    "4592435": "active",
+    "4683021": "questionable",
+    "4706557": "out",
+    "4914336": "out"
+   }
+  },
+  "24": {
+   "unresolved": false,
+   "status": {
+    "5037871": "out",
+    "5105337": "out",
+    "5107968": "out"
+   }
+  },
+  "29": {
+   "unresolved": true,
+   "status": {}
+  }
+ },
+ "coverage": {
+  "prop_market": 47,
+  "supported": 18,
+  "too_few_games": 0,
+  "unresolved_status": 14,
+  "teammate_role": 0,
+  "unmatched_name": 0,
+  "stale_or_invalid_odds": 0,
+  "player_out": 0,
+  "report_not_submitted": 15
+ },
+ "unmatchedNames": 0,
+ "anomalies": [],
+ "emptyReason": null,
+ "missingEvents": [],
+ "closeCollected": false,
+ "dryRun": true
+}

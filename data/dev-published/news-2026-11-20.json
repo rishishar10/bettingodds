@@ -1,0 +1,78 @@
+{
+ "checkedAt": "2026-11-21T07:10:41.626Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-20_09_45PM.pdf",
+  "timeUtc": "2026-11-21T02:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 14,
+ "changes": [
+  {
+   "playerId": "5149077",
+   "playerName": "Kingston Flemings",
+   "teamId": "1",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-20T23:45:00.000Z",
+   "note": "Injury/Illness - Lumbar Strain"
+  },
+  {
+   "playerId": "4397189",
+   "playerName": "Jalen Smith",
+   "teamId": "4",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-21T00:45:00.000Z",
+   "note": "Injury/Illness - Gastrointestinal Illness"
+  },
+  {
+   "playerId": "4702099",
+   "playerName": "Zack Austin",
+   "teamId": "5",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-21T00:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4066268",
+   "playerName": "Duop Reath",
+   "teamId": "21",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-21T02:15:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "2991350",
+   "playerName": "Alex Caruso",
+   "teamId": "25",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-21T00:45:00.000Z",
+   "note": "Injury/Illness - Right Hip Soreness"
+  },
+  {
+   "playerId": "5105841",
+   "playerName": "Felix Okpara",
+   "teamId": "27",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-21T00:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

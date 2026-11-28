@@ -1,0 +1,111 @@
+{
+ "checkedAt": "2026-11-11T06:25:13.808Z",
+ "officialReport": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-10_10_45PM.pdf",
+  "timeUtc": "2026-11-11T03:45:00.000Z"
+ },
+ "espnNotesAfterPublish": 5,
+ "changes": [
+  {
+   "playerId": "4845363",
+   "playerName": "Cam Christie",
+   "teamId": "12",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T01:45:00.000Z",
+   "note": "Injury/Illness - Right Ankle Sprain"
+  },
+  {
+   "playerId": "5105832",
+   "playerName": "Nick Martinelli",
+   "teamId": "12",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T01:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4395725",
+   "playerName": "Tyler Herro",
+   "teamId": "15",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T00:15:00.000Z",
+   "note": "Injury/Illness - Right Knee Contusion"
+  },
+  {
+   "playerId": "3062679",
+   "playerName": "Josh Hart",
+   "teamId": "18",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T00:15:00.000Z",
+   "note": "Injury/Illness - Illness"
+  },
+  {
+   "playerId": "4702382",
+   "playerName": "Tristan da Silva",
+   "teamId": "19",
+   "from": "questionable",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T02:45:00.000Z",
+   "note": "Injury/Illness - Left Calf Strain"
+  },
+  {
+   "playerId": "4066268",
+   "playerName": "Duop Reath",
+   "teamId": "21",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T01:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4592714",
+   "playerName": "Pat Spencer",
+   "teamId": "21",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T01:45:00.000Z",
+   "note": "G League - Two- Way"
+  },
+  {
+   "playerId": "4701232",
+   "playerName": "Mark Williams",
+   "teamId": "21",
+   "from": "unknown",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T01:45:00.000Z",
+   "note": "Injury/Illness - Left Shoulder Surgery"
+  },
+  {
+   "playerId": "4703889",
+   "playerName": "Jayson Kent",
+   "teamId": "22",
+   "from": "active",
+   "to": "out",
+   "status": "out",
+   "source": "official",
+   "sourceTime": "2026-11-11T03:45:00.000Z",
+   "note": "G League - Two- Way"
+  }
+ ],
+ "rows": {},
+ "update": null
+}

@@ -1,0 +1,38 @@
+{
+ "boardDate": "2026-11-26",
+ "publishedAt": "2026-11-26T19:00:52.929Z",
+ "buildTimeUtc": "2026-11-26T19:00:52.544Z",
+ "modelVersion": "heuristic-v2",
+ "label": "disagreement only, no demonstrated edge",
+ "shrunk": true,
+ "SHRINK": 0.9485,
+ "ruleHash": null,
+ "evMin": 0.08,
+ "injury": {
+  "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-26_01_30PM.pdf",
+  "timeUtc": "2026-11-26T18:30:00.000Z",
+  "teamsUnresolved": []
+ },
+ "games": [],
+ "teams": {},
+ "rows": [],
+ "conditional": [],
+ "availability": {},
+ "coverage": {
+  "prop_market": 0,
+  "supported": 0,
+  "too_few_games": 0,
+  "unresolved_status": 0,
+  "teammate_role": 0,
+  "unmatched_name": 0,
+  "stale_or_invalid_odds": 0,
+  "player_out": 0,
+  "report_not_submitted": 0
+ },
+ "unmatchedNames": 0,
+ "anomalies": [],
+ "emptyReason": "The slate was empty.",
+ "missingEvents": [],
+ "closeCollected": false,
+ "dryRun": true
+}

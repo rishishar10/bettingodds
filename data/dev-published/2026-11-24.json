@@ -1,0 +1,57 @@
+{
+ "boardDate": "2026-11-24",
+ "publishedAt": "2026-11-24T19:00:53.582Z",
+ "buildTimeUtc": "2026-11-24T19:00:52.838Z",
+ "modelVersion": "heuristic-v2",
+ "label": "disagreement only, no demonstrated edge",
+ "shrunk": true,
+ "SHRINK": 0.9485,
+ "ruleHash": null,
+ "evMin": 0.08,
+ "injury": null,
+ "games": [
+  {
+   "gameId": "401909314",
+   "tipUtc": "2026-11-25T00:00:00.000Z",
+   "home": "ORL",
+   "away": "DET",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909315",
+   "tipUtc": "2026-11-25T01:00:00.000Z",
+   "home": "WSH",
+   "away": "BOS",
+   "hasOdds": false,
+   "eventId": null
+  },
+  {
+   "gameId": "401909316",
+   "tipUtc": "2026-11-25T03:00:00.000Z",
+   "home": "DEN",
+   "away": "DAL",
+   "hasOdds": false,
+   "eventId": null
+  }
+ ],
+ "teams": {
+  "2": "BOS",
+  "6": "DAL",
+  "7": "DEN",
+  "8": "DET",
+  "19": "ORL",
+  "27": "WSH"
+ },
+ "rows": [],
+ "conditional": [],
+ "coverage": {},
+ "unmatchedNames": 0,
+ "anomalies": [],
+ "emptyReason": "Light slate (3 games) skipped to save free-plan odds credits.",
+ "availability": {},
+ "missingEvents": [],
+ "closeCollected": false,
+ "dryRun": true,
+ "skipped": true
+}
